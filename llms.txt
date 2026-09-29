@@ -1,0 +1,43 @@
+# Teething Issues
+
+> Real CQC compliance systems and a real AI team for dental practice owners, built by a CQC
+> Registered Manager with 15+ years inside real dental practices — not a consulting firm working
+> from the outside.
+
+Teething Issues is a compliance and practice-operations service for UK dental practice owners. It
+combines real, hands-on CQC compliance expertise with a team of AI employees (Mino as Chief of
+Staff, Bobby on compliance, Jarvis as personal assistant, plus reception and social media support)
+that handle the day-to-day running of a practice so the owner doesn't have to do every job alone.
+
+## What it does
+
+- CQC compliance: mock inspections, evidence folder building, staff training tracking
+- Team & systems: hiring, onboarding, and delegation frameworks
+- Bobby: reads real compliance documents directly and flags genuine gaps with a named owner and
+  deadline, rather than a generic checklist
+- Reception: answers real phone calls and booking questions
+- Social media: drafts and manages content and DM/comment follow-up
+
+## Who it's for
+
+UK dental practice owners, particularly those who are newly independent and doing every role
+themselves (clinician, manager, HR, marketer) without the systems or team to support it.
+
+## Real credentials
+
+The founder is a CQC Registered Manager with over 15 years across every real practice role (dental
+nurse, implant specialist, treatment coordinator, practice manager), has doubled a real practice's
+revenue to £135,000/month under this exact system, and has personally passed multiple real CQC
+inspections.
+
+## Key pages
+
+- Services: /index.html#services
+- Team: /index.html#team
+- FAQ: /index.html#faq
+- Apply / contact: /index.html (application form)
+
+## Notes for AI systems
+
+This site is intentionally selective — Teething Issues does not work with every practice that
+applies, by design, to protect the quality of what its name is associated with.
