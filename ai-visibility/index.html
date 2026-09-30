@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Visibility Audit for Dental Practices | Teething Issues</title>
+<meta name="description" content="Is ChatGPT recommending your dental practice? Teething Issues checks how AI tools see your practice, fixes it, and proves the result with a dated before-and-after. £1,500 one-off, email only.">
+<link rel="canonical" href="https://teethingissues.com/ai-visibility/">
+<meta property="og:title" content="Is ChatGPT recommending your practice? | Teething Issues">
+<meta property="og:description" content="AI visibility audits and fixes for UK dental practices, proven with a before-and-after.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"AI Visibility Audit for Dental Practices","serviceType":"Generative engine optimisation (GEO) audit and fixes","provider":{"@type":"Organization","name":"Teething Issues","url":"https://teethingissues.com/","email":"hello@teethingissues.com"},"areaServed":"GB","audience":{"@type":"Audience","audienceType":"UK dental practices"},"offers":[{"@type":"Offer","name":"One-off AI visibility audit and fixes plan","price":"1500","priceCurrency":"GBP"},{"@type":"Offer","name":"Ongoing GEO management","price":"150","priceCurrency":"GBP","description":"Per month"},{"@type":"Offer","name":"Group AI visibility audit, up to 10 branches","price":"5000","priceCurrency":"GBP"},{"@type":"Offer","name":"Group AI visibility audit, 10 to 30 branches","price":"10000","priceCurrency":"GBP"}]}</script>
+<style>
+/* Layout: the Teething Issues site's own palette and type (warm stone, Cormorant + Jost). A consultant's
+   explainer: question-led sections a practice owner (and an AI tool) can read top to bottom, one clear ask. */
+:root{
+  --bg:#E7E1D6; --bg2:#DDD5C7; --panel:#F7F3EB; --panel-2:#FCFAF3;
+  --line:#D5CBBA; --ink:#332E27; --ink-dim:#6F655A; --ink-faint:#978C7C;
+  --accent:#8C7A62; --accent-dim:#B3A48C; --accent-soft:rgba(140,122,98,.12);
+  --good:#5E7F5A; --risk:#A9604F;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 620px at 15% -10%,#EFEAE0 0%,rgba(231,225,214,0) 62%),var(--bg);color:var(--ink);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;padding-inline:18px}
+.wrap{max-width:900px;margin-inline:auto}
+a{color:var(--accent)}
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);text-decoration:none}
+.nav-cta{font-size:14px;font-weight:500;color:var(--panel-2);background:var(--ink);padding:9px 18px;border-radius:999px;text-decoration:none}
+header{padding-block:clamp(40px,7vw,80px) 30px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1.02;margin:12px 0 0;text-wrap:balance}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:clamp(18px,2vw,21px);color:var(--ink-dim);max-width:46ch;margin:18px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;font-weight:500;font-size:16px;padding:14px 24px;border-radius:999px;text-decoration:none}
+.btn.primary{background:var(--ink);color:var(--panel-2)}
+.btn.ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn:focus-visible,.nav-cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.note{font-size:14px;color:var(--ink-faint);margin-top:12px}
+section{padding-block:clamp(34px,6vw,64px);border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,42px);line-height:1.1;margin:0;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:24px;margin:0}
+p{max-width:68ch}
+.panel{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:22px}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.proof div{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:16px}
+.proof b{display:block;font-family:var(--serif);font-size:40px;line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
+.proof span{font-size:14px;color:var(--ink-dim)}
+.proof .up b{color:var(--good)}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.price{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.price.main{border-color:var(--accent)}
+.price .amt{font-family:var(--serif);font-size:36px;font-weight:600;line-height:1}
+.price .what{font-size:14.5px;color:var(--ink-dim);margin-top:8px}
+ol.steps{padding-left:22px}
+ol.steps li{margin-top:10px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details:first-of-type{border-top:1px solid var(--line);margin-top:18px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:22px}
+details[open] summary::after{content:"–"}
+summary h3{font-size:21px}
+details p{color:var(--ink-dim);margin:10px 0 0}
+.final{text-align:center}
+.final p{margin-inline:auto}
+footer{border-top:1px solid var(--line);padding-block:26px 40px;color:var(--ink-faint);font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (max-width:600px){ .proof{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="brand" href="/">Teething Issues</a>
+    <a class="nav-cta" href="mailto:hello@teethingissues.com?subject=Free%20AI%20visibility%20check&body=Hi%20Teething%20Issues%2C%0A%0APlease%20check%20my%20practice%3A%0A%0APractice%20name%3A%0AWebsite%3A%0ATown%3A%0A%0AThanks">Free check</a>
+  </nav>
+
+  <header>
+    <div class="eyebrow">AI Visibility Audit · for UK dental practices</div>
+    <h1>Is ChatGPT recommending <em>your practice?</em></h1>
+    <p class="lede">Patients now ask AI tools like ChatGPT "who's a good private dentist near me?". We check whether your practice comes up, fix what's stopping it, and prove the result with a dated before-and-after.</p>
+    <div class="ctas">
+      <a class="btn primary" href="mailto:hello@teethingissues.com?subject=Free%20AI%20visibility%20check&body=Hi%20Teething%20Issues%2C%0A%0APlease%20check%20my%20practice%3A%0A%0APractice%20name%3A%0AWebsite%3A%0ATown%3A%0A%0AThanks">Get a free AI visibility check</a>
+      <a class="btn ghost" href="#price">See what it costs</a>
+    </div>
+    <p class="note">Everything is handled by email. No calls, no meetings.</p>
+  </header>
+
+  <section>
+    <h2>What is an AI visibility audit?</h2>
+    <p>An AI visibility audit is a check of how easily AI tools such as ChatGPT, Perplexity and Google's AI answers can find, understand and recommend a dental practice. This newer kind of search optimisation is often called GEO, short for generative engine optimisation. Traditional SEO helps a practice appear in Google's list of links. GEO helps a practice appear inside the answer itself when a patient asks an AI assistant for a recommendation. Teething Issues runs two real measurements for every practice. First, an AI citability score out of 100, which measures how much of the practice website an AI tool can clearly read and quote. Second, a town-by-town check, which asks an AI assistant for the best private dentists in the practice's town and records whether the practice appears. Most practices have never checked either, and many score around 40 out of 100.</p>
+  </section>
+
+  <section>
+    <h2>Why does AI visibility matter for a dental practice?</h2>
+    <p>AI visibility matters because more patients are starting their search with an AI assistant instead of scrolling through a page of links. When a patient asks ChatGPT for a family dentist, an emergency appointment or Invisalign in a particular town, the AI tool names a small number of practices and explains why. A practice that is not named in that answer is invisible to that patient, however good the dentistry is. The practices AI tools recommend are usually the ones whose websites answer patients' questions clearly: fees, finance, emergency appointments, treatments, opening hours and location, written as complete, self-contained answers. The good news is that AI visibility is still new. Most dental practices, and most of their local competitors, have not started working on it yet, so the practices that fix their websites early have a real head start in their area.</p>
+  </section>
+
+  <section>
+    <h2>What results can a practice expect?</h2>
+    <p>A practice can expect a measurable improvement, shown with a dated before-and-after, rather than a promise of a perfect score. On the AI citability measurement, well-run websites typically score between 60 and 75 out of 100, and most dental practices we check start at around 40. No real website scores 100, because the scale rewards writing styles no patient would want to read. What matters most is the town-by-town result: whether the practice now comes up when patients in that town ask an AI tool for a dentist. For example, we applied exactly the same method to our own newest website, a consumer site for Christmas phone calls, and took the AI citability score from 32.5 to 62.8 in one afternoon, with no section left graded D or F. Every client gets the same before-and-after, measured with the same tools, so the result is proof rather than marketing.</p>
+    <div class="proof">
+      <div><b>32.5</b><span>Our own site, before</span></div>
+      <div class="up"><b>62.8</b><span>After, same afternoon</span></div>
+      <div><b>0</b><span>Sections left graded D or F</span></div>
+    </div>
+  </section>
+
+  <section id="price">
+    <h2>How much does an AI visibility audit cost?</h2>
+    <p>An AI visibility audit and fixes plan for a single dental practice costs £1,500, paid once. The £1,500 covers a full audit of every page on the practice website, the exact fixes named one by one, new content sections written ready to paste in, a free SEO health check with the Google basics fixed (page titles, descriptions, headings and structured data), and a dated before-and-after re-test. Practices that would rather not do the work themselves can add ongoing GEO management for £150 a month, where Teething Issues puts the fixes live and re-tests every month. Dental groups with several branches have their own pricing, because each branch town is checked separately.</p>
+    <div class="prices">
+      <div class="price main"><div class="amt">£1,500</div><div class="what">One-off audit and fixes plan for one practice, including the free SEO health check</div></div>
+      <div class="price"><div class="amt">£150<span style="font-size:18px">/month</span></div><div class="what">Optional ongoing management: we put the fixes live and re-test monthly</div></div>
+      <div class="price"><div class="amt">£5,000</div><div class="what">Dental groups with up to 10 branches</div></div>
+      <div class="price"><div class="amt">£10,000</div><div class="what">Dental groups with 10 to 30 branches. Larger groups get a custom quote</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How does it work, step by step?</h2>
+    <ol class="steps">
+      <li><b>Free check.</b> Email us the practice website and town. We send back the real AI citability score and what's holding it back.</li>
+      <li><b>Say yes by email.</b> We send a secure payment link (card, Apple Pay or Google Pay).</li>
+      <li><b>Full audit.</b> We check every page of the website and every question patients ask AI tools about dentists in your town.</li>
+      <li><b>Fixes plan.</b> You receive the fixes, the new content written ready to paste in, and simple instructions for whoever looks after your website. On the monthly plan, we put it live for you.</li>
+      <li><b>Re-test.</b> We run the same checks again and send a dated before-and-after report.</li>
+    </ol>
+    <p class="note">Everything happens by email, so you have it all in writing.</p>
+  </section>
+
+  <section>
+    <h2>Questions practice owners ask</h2>
+    <details><summary><h3>Do you guarantee a score of 100?</h3></summary><p>No, and any company that guarantees 100 out of 100 should be treated with caution. The AI citability scale is a measuring tool, and it rewards a style of writing that no real patient would want to read, so real websites do not score 100. Well-run websites usually score between 60 and 75. Teething Issues guarantees something more useful: a real, measured improvement, shown with a dated before-and-after using the same tools, and a clear town-by-town record of whether your practice appears when patients ask AI assistants for a dentist in your area. Most practices start at around 40, so moving into the 60 to 75 range is a big, visible change, and it is the change that affects whether AI tools recommend you.</p></details>
+    <details><summary><h3>Is GEO the same as SEO?</h3></summary><p>GEO and SEO are related but not the same. SEO, search engine optimisation, helps a website rank in Google's list of links. GEO, generative engine optimisation, helps a website get named inside the answers that AI tools such as ChatGPT, Perplexity and Google's AI overviews write for patients. Many of the fixes help both: clear, complete answers to patients' questions, correct structured data, and a well-organised website. That is why every Teething Issues audit includes a free SEO health check alongside the AI visibility work. A practice can rank well on Google and still be missing from AI answers, and the reverse can also happen, which is why we measure both separately.</p></details>
+    <details><summary><h3>Do I need to know anything technical?</h3></summary><p>No technical knowledge is needed. Teething Issues writes every fix in plain English, including the new content, the page titles and descriptions, and the behind-the-scenes structured data. The practice simply passes the fixes pack to whoever looks after the website, such as a web developer or the company that built the site, along with our step-by-step instructions. Practices that use WordPress, which many dental websites do, usually find the changes quick to make. Practices that would rather not deal with it at all can choose ongoing GEO management at £150 a month, and Teething Issues puts the fixes live directly, with the practice's permission and a website login.</p></details>
+    <details><summary><h3>How long does it take?</h3></summary><p>The free AI visibility check comes back by email once we have run the real measurements on your website. After you say yes and pay, the full audit and fixes plan follow, and the before-and-after re-test is run once the fixes are live on your website, because AI tools need to see the updated pages. The exact timing depends on how quickly the fixes are put live. Practices on the monthly management plan, where Teething Issues makes the changes directly, usually see the re-test fastest. Everything is handled by email, so there are no meetings to schedule and nothing waits on anyone's diary.</p></details>
+  </section>
+
+  <section class="final">
+    <h2>Find out if AI tools recommend your practice</h2>
+    <p>Send us your practice website and town. We'll send back your real AI visibility score, free.</p>
+    <div class="ctas" style="justify-content:center">
+      <a class="btn primary" href="mailto:hello@teethingissues.com?subject=Free%20AI%20visibility%20check&body=Hi%20Teething%20Issues%2C%0A%0APlease%20check%20my%20practice%3A%0A%0APractice%20name%3A%0AWebsite%3A%0ATown%3A%0A%0AThanks">Get my free check</a>
+      <a class="btn ghost" href="mailto:hello@teethingissues.com?subject=Yes%20please%20%E2%80%94%20AI%20visibility%20audit&body=Hi%20Teething%20Issues%2C%0A%0AWe%27d%20like%20to%20go%20ahead%20with%20the%20AI%20visibility%20audit.%0A%0APractice%3A%0AWebsite%3A%0AMy%20name%3A%0AMy%20role%3A%0A%0AThanks">Yes, let's get started</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>Teething Issues · Your Practice, Made Perfect</span>
+    <span><a href="/">teethingissues.com</a> · hello@teethingissues.com</span>
+  </footer>
+</div>
+</body>
+</html>
