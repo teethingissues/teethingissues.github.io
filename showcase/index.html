@@ -84,6 +84,17 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
 .case .q{font-style:italic}
 .case .win{border-top:1px solid var(--line);padding-top:10px}
 @media (max-width:760px){ .cases{grid-template-columns:1fr} }
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.vs-col{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.vs-col.bobby{border-color:var(--gold);box-shadow:0 18px 40px -30px rgba(90,70,30,.5)}
+.vs-col h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:0}
+.vs-col ul{margin:10px 0 0;padding-left:20px;color:var(--dim);font-size:15.5px}
+.vs-col li{margin-top:8px} .vs-col b{color:var(--ink);font-weight:500}
+.traps-h{font-family:var(--serif);font-weight:600;font-size:24px;margin:26px 0 0}
+.traps{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.traps div{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 16px;font-size:15px;color:var(--dim)}
+.traps b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
+@media (max-width:760px){ .vs,.traps{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -108,7 +119,7 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
     <h2 style="margin-top:10px">Working right now</h2>
     <div class="items">
       <div class="item">
-        <h3>Sales AI: autonomous outreach to dental practices</h3>
+        <h3>Our outreach engine: finding and emailing dental practices</h3>
         <p>Every weekday it finds UK private practices, checks each one is a registered company (UK marketing law), scores how visible they are to AI tools like ChatGPT, writes a personal email with the real findings and sends it. Replies are sorted and answered automatically, genuine interest pings me instantly, non-repliers get one polite follow-up, and a live sheet tracks it all.</p>
         <div class="proof"><b>23 min</b><span>first practice reply, on day one</span></div>
         <div class="links">10 practices a day · 1 group pitch a day (£5k–£10k) · <a href="https://teethingissues.com/ai-visibility/">the offer</a></div>
@@ -221,6 +232,41 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
     </div>
   </section>
   <section>
+    <span class="tag live">Real example · Staff Paperwork</span>
+    <h2 style="margin-top:10px">Checking staff files: by hand vs with Bobby</h2>
+    <p class="lede">Every staff member needs the right paperwork on file before they can work, and CQC checks it. It sounds simple. It isn't.</p>
+    <div class="vs">
+      <div class="vs-col">
+        <h3>By hand</h3>
+        <ul>
+          <li>The practice manager opens every staff file, paper folder or portal, one by one.</li>
+          <li>Up to <b>19 different documents</b> per person, and the list changes with the role: a receptionist, a trainee nurse, a qualified nurse and a dentist all need different things.</li>
+          <li>A 12-person team can mean <b>150+ individual checks</b>, each needing the right dates, names and details read correctly.</li>
+          <li>The traps are easy to miss, and are usually found by the inspector, on the day.</li>
+        </ul>
+      </div>
+      <div class="vs-col bobby">
+        <h3>With Bobby</h3>
+        <ul>
+          <li>Bobby knows exactly which documents each person needs for their role, across four role categories.</li>
+          <li>She opens each document herself and applies the right check for that document, not just "is there a file?".</li>
+          <li>Every failure comes back with the reason, who needs to fix it and by when.</li>
+          <li>She stays on the compliant line and never goes overboard, because staff stop co-operating when compliance becomes paperwork for its own sake.</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="traps-h">The traps Bobby knows to look for</h3>
+    <div class="traps">
+      <div><b>The GDC certificate's two dates.</b> The date near the registrant's name is often the original registration date, not the expiry, and in a real test the practice portal's own summary pointed at the wrong one. Bobby reads the sentence that states the actual current dates.</div>
+      <div><b>A Hep B vaccination card isn't enough.</b> Many staff hand in the card and think they're done. Bobby checks for the blood test result too, with an antibody level of at least 100 mIU/mL before anyone does exposure-prone work.</div>
+      <div><b>An "in-date" proof of address that isn't.</b> In a real test, a portal-uploaded proof of address turned out to be dated about three years before it was uploaded. Bobby checks the document's own date, not just when it arrived.</div>
+      <div><b>The DBS that's there but not right.</b> It must be an Enhanced DBS with nothing recorded, and CQC likes to see it renewed every three years (a CQC preference, not a legal rule). If it's missing or pending, Bobby flags that an "Awaiting DBS" risk assessment is needed.</div>
+      <div><b>The nurse indemnity marked "N/A".</b> Sometimes the practice covers its nurses, sometimes it doesn't. Bobby never takes "N/A" at face value: she asks once and reuses the answer for every nurse.</div>
+      <div><b>Joined-up thinking CQC loves.</b> If a staff medical form discloses something the practice needs to support, Bobby flags that a related risk assessment may be needed, linking staff paperwork to risk assessments the way an inspector hopes to see.</div>
+    </div>
+  </section>
+
+  <section>
     <span class="tag live">Real examples · practice details removed</span>
     <h2 style="margin-top:10px">Bobby's cleverest catches</h2>
     <p class="lede">When Bobby builds a practice's compliance knowledge, she checks every source against every other source, and against current CQC rules. Anything that doesn't add up goes into a contradiction register. Nothing is quietly "fixed". These are real examples from that work.</p>
@@ -276,7 +322,7 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
     <div class="items">
       <div class="item"><h3>Bobby · compliance officer</h3><p>The CQC expert: a 25-area compliance brain, reads real documents line by line, thinks like an inspector, never guesses, and chases every gap until it's closed.</p></div>
       <div class="item"><h3>Jarvis · personal assistant</h3><p>The right-hand man. Runs email, calendar, reminders, notes and drafting through Gmail and Google Workspace; has his own UK phone line where he answers as a receptionist, knows the owner by caller ID and a security code, rings with reminders and can place calls; takes Telegram texts and voice notes from anywhere; drafts invoices, quotes and proposals; and answers from the live business numbers, so a quick call from the car gets a real update.</p></div>
-      <div class="item"><h3>Sales AI · growth</h3><p>Finds and checks practices, writes and sends personal emails, answers replies, follows up once, and closes dead leads cleanly.</p></div>
+      <div class="item"><h3>Sales AI · growth <span class="tag vision" style="margin-left:6px;vertical-align:middle">In development</span></h3><p>A KPI-driven growth system for the practice. It will track every step from enquiry to consultation to treatment booked, measure conversion rates and revenue growth, spot exactly where patients drop off, and show what actually increases sales, so growth is measured, not guessed.</p></div>
       <div class="item"><h3>Spark · social media</h3><p>Drafts posts, watches comments and DMs, and follows up leads from social. Nothing posts without approval.</p></div>
       <div class="item"><h3>Case · the actioner</h3><p>Runs background research and build jobs in the background, and reports back when they're done.</p></div>
     </div>
