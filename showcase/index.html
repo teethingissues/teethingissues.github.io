@@ -95,6 +95,39 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
 .traps div{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:14px 16px;font-size:15px;color:var(--dim)}
 .traps b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px}
 @media (max-width:760px){ .vs,.traps{grid-template-columns:1fr} }
+
+.fc-controls{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:end;margin-top:20px;padding:16px 18px;background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.fc-ctl{display:flex;flex-direction:column;gap:4px;min-width:180px}
+.fc-lbl{font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.fc-ctl output{font-weight:500;font-size:15px;font-variant-numeric:tabular-nums}
+.fc-ctl input[type=range]{width:100%;accent-color:var(--ink)}
+.seg{display:flex;background:var(--oat);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{font:inherit;font-size:14px;font-weight:500;border:0;background:transparent;color:var(--dim);padding:7px 14px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.fc-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.fc-tile,.fc-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.fc-card{margin-top:14px}
+.fc-tile .k{font-size:13px;color:var(--faint)}
+.fc-tile .v{font-family:var(--serif);font-weight:600;font-size:38px;line-height:1.05;font-variant-numeric:tabular-nums;margin-top:4px}
+.fc-tile .s{font-size:13px;color:var(--dim)}
+.fc-card h3{font-family:var(--serif);font-weight:600;font-size:24px;margin:0}
+.fc-legend{display:flex;gap:18px;margin-top:6px;font-size:14px;color:var(--dim)}
+.fc-legend span{display:inline-flex;align-items:center;gap:7px}
+.fc-legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.fc-chartwrap{position:relative;margin-top:10px;overflow-x:auto}
+.fc-chartwrap svg{display:block;width:100%;height:auto;min-width:560px}
+.fc-tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--paper);font-size:13px;line-height:1.5;padding:9px 11px;border-radius:10px;white-space:nowrap;opacity:0;transform:translate(-50%,-110%);transition:opacity .12s;font-variant-numeric:tabular-nums}
+.fc-tip .sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.fc-table{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums;min-width:720px}
+.fc-table th,.fc-table td{padding:9px 8px;text-align:right;border-bottom:1px solid var(--line)}
+.fc-table th:first-child,.fc-table td:first-child{text-align:left}
+.fc-table th{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.fc-table tr.tot td,.fc-table td.keep{font-weight:500}
+.fc-notes{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fc-notes ul{margin:8px 0 0;padding-left:20px;color:var(--dim);font-size:15px}
+.fc-notes li{margin-top:5px}
+.fc-warn{border-left:4px solid var(--gold)}
+@media (max-width:760px){ .fc-tiles,.fc-notes{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -111,6 +144,7 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
   <button role="tab" id="t-mino" aria-controls="p-mino" aria-selected="false">Mino</button>
   <button role="tab" id="t-bobby" aria-controls="p-bobby" aria-selected="false">Bobby</button>
   <button role="tab" id="t-team" aria-controls="p-team" aria-selected="false">Mino &amp; the AI Team</button>
+  <button role="tab" id="t-rev" aria-controls="p-rev" aria-selected="false">Potential revenue</button>
 </nav>
 
 <div class="panel" role="tabpanel" id="p-overview" aria-labelledby="t-overview">
@@ -294,6 +328,53 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
   </section>
 </div>
 
+<div class="panel" role="tabpanel" id="p-rev" aria-labelledby="t-rev" hidden>
+  <section>
+    <span class="tag vision">Forecast · estimates, not results</span>
+    <h2 style="margin-top:10px">Potential revenue</h2>
+    <p class="lede">Two income streams: tailored AI systems for practices, sold once, and Bobby OS compliance, paid monthly. Switch scenarios or move the sliders and every figure updates. Before tax, prices excluding VAT.</p>
+    <div class="fc-controls">
+      <div class="fc-ctl"><span class="fc-lbl">Scenario</span>
+        <div class="seg" role="group" aria-label="Scenario">
+          <button type="button" data-s="cautious" aria-pressed="false">Cautious</button>
+          <button type="button" data-s="realistic" aria-pressed="true">Realistic</button>
+          <button type="button" data-s="ambitious" aria-pressed="false">Ambitious</button>
+        </div>
+      </div>
+      <div class="fc-ctl"><label class="fc-lbl" for="fc-buildPrice">Tailored AI system price</label><input id="fc-buildPrice" type="range" min="10000" max="50000" step="1000" value="30000"><output id="fc-buildPriceOut"></output></div>
+      <div class="fc-ctl"><label class="fc-lbl" for="fc-bobbyPrice">Bobby OS per practice / month</label><input id="fc-bobbyPrice" type="range" min="50" max="400" step="10" value="150"><output id="fc-bobbyPriceOut"></output></div>
+      <div class="fc-ctl"><label class="fc-lbl" for="fc-churn">Practices leaving Bobby each year</label><input id="fc-churn" type="range" min="0" max="40" step="1" value="15"><output id="fc-churnOut"></output></div>
+    </div>
+    <div class="fc-tiles">
+      <div class="fc-tile"><div class="k">2027 takings</div><div class="v" id="fc-t1">—</div><div class="s" id="fc-t1s"></div></div>
+      <div class="fc-tile"><div class="k">Five years (2027–2031)</div><div class="v" id="fc-t2">—</div><div class="s" id="fc-t2s"></div></div>
+      <div class="fc-tile"><div class="k">Bobby OS income by end of 2031</div><div class="v" id="fc-t3">—</div><div class="s" id="fc-t3s"></div></div>
+    </div>
+    <div class="fc-card">
+      <h3>Takings by year</h3>
+      <div class="fc-legend"><span><i style="background:#B8741F"></i>Tailored AI systems</span><span><i style="background:#276E9E"></i>Bobby OS subscriptions</span></div>
+      <div class="fc-chartwrap" id="fc-cw"><svg id="fc-chart" viewBox="0 0 960 360" role="img" aria-label="Stacked bar chart of yearly takings"></svg><div class="fc-tip" id="fc-tip" role="status"></div></div>
+    </div>
+    <div class="fc-card">
+      <h3>The numbers</h3>
+      <div class="tw"><table class="fc-table">
+        <thead><tr><th>Year</th><th>AI systems sold</th><th>Bobby practices (end of year)</th><th>AI systems £</th><th>Bobby OS £</th><th>Total takings</th><th>Running costs</th><th>Kept (before tax)</th></tr></thead>
+        <tbody id="fc-tbody"></tbody>
+      </table></div>
+    </div>
+    <div class="fc-notes">
+      <div class="fc-card"><h3>What each scenario assumes</h3><ul id="fc-assume"></ul></div>
+      <div class="fc-card fc-warn"><h3>Reality check</h3><ul>
+        <li>These are estimates, not results. Teething Issues is at the start: the first paying clients come next.</li>
+        <li>A £30,000 system is a considered purchase, so sales take one to three months. Larger practices and groups are the likeliest buyers.</li>
+        <li>Solo delivery is roughly one tailored system a month; the ambitious scenario includes hiring help.</li>
+        <li>Bobby OS builds repeat income: around 12,000 UK dental practices, so 140 new sign-ups a year is about 1% of the market.</li>
+        <li>Figures exclude VAT and are before tax.</li>
+      </ul></div>
+    </div>
+  </section>
+</div>
+
   <footer>Teething Issues · hello@teethingissues.com · teethingissues.com · Figures as of 30 September 2026.</footer>
 </div>
 
@@ -318,6 +399,109 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
   });
   var h = (location.hash || "").replace("#", "");
   if (h && document.getElementById("p-" + h)) show("p-" + h, false);
+})();
+</script>
+<script>
+(function(){
+
+const YEARS = ["Rest of 2026", "2027", "2028", "2029", "2030", "2031"];
+const MONTHS = [3, 12, 12, 12, 12, 12];
+const S = {
+  cautious:  { builds: [0, 1, 2, 4, 5, 6],     subs: [0, 10, 25, 40, 55, 70],     overhead: [1500, 8000, 10000, 12000, 12000, 12000],
+               say: ["Rest of 2026: no sales yet.", "Tailored systems: 1 in 2027, rising to 6 a year by 2031.", "Bobby OS: 10 new practices in 2027, rising to 70 new a year.", "Overheads: software, insurance, ICO, server (£8k–£12k a year)."] },
+  realistic: { builds: [0, 3, 5, 8, 10, 12],   subs: [3, 25, 50, 80, 110, 140],   overhead: [1500, 8000, 12000, 15000, 15000, 15000],
+               say: ["Rest of 2026: 3 practices start Bobby OS as early adopters, no big builds yet.", "Tailored systems: 3 in 2027 (one a quarter-ish), rising to 12 a year by 2031 (one a month, my solo capacity).", "Bobby OS: 25 new practices in 2027, rising to 140 new a year.", "Overheads: £8k–£15k a year."] },
+  ambitious: { builds: [1, 6, 10, 14, 18, 24], subs: [5, 50, 100, 160, 220, 280], overhead: [1500, 10000, 50000, 55000, 90000, 95000],
+               say: ["Rest of 2026: 1 tailored system sold and 5 Bobby OS practices.", "Tailored systems: 6 in 2027, rising to 24 a year by 2031.", "Bobby OS: 50 new practices in 2027, rising to 280 new a year.", "Needs help: one delivery hire from 2028 and a second from 2030 (about £35k–£40k each, included in overheads)."] },
+};
+const BUILD_COST = 0.20;   // share of each build spent on delivery (tools, contractor help, set-up costs)
+const BOBBY_COST = 25;     // running cost per Bobby practice per month (AI, hosting, support)
+const FEES = 0.015;        // card/payment fees
+
+let scen = "realistic";
+const $ = id => document.getElementById(id);
+const gbp = n => (n < 0 ? "−£" : "£") + Math.abs(Math.round(n)).toLocaleString("en-GB");
+const short = n => n >= 1e6 ? "£" + (n / 1e6).toFixed(n >= 1e7 ? 0 : 2).replace(/\.00$/, "") + "m" : n >= 1e3 ? "£" + Math.round(n / 1e3) + "k" : gbp(n);
+
+function model() {
+  const bp = +$("fc-buildPrice").value, sp = +$("fc-bobbyPrice").value, churn = +$("fc-churn").value / 100, s = S[scen];
+  let subsEnd = 0; const rows = [];
+  YEARS.forEach((y, i) => {
+    const start = subsEnd, yearChurn = churn * MONTHS[i] / 12;
+    const end = start * (1 - yearChurn) + s.subs[i];
+    const avg = (start + end) / 2;
+    const buildRev = s.builds[i] * bp, bobbyRev = avg * sp * MONTHS[i], rev = buildRev + bobbyRev;
+    const cost = buildRev * BUILD_COST + avg * BOBBY_COST * MONTHS[i] + rev * FEES + s.overhead[i];
+    rows.push({ y, builds: s.builds[i], subsEnd: end, buildRev, bobbyRev, rev, cost, keep: rev - cost });
+    subsEnd = end;
+  });
+  return { rows, sp };
+}
+
+function render() {
+  $("fc-buildPriceOut").textContent = gbp(+$("fc-buildPrice").value) + " per practice";
+  $("fc-bobbyPriceOut").textContent = gbp(+$("fc-bobbyPrice").value) + " a month";
+  $("fc-churnOut").textContent = $("fc-churn").value + "% a year";
+  const { rows, sp } = model();
+  const five = rows.slice(1), sum = k => five.reduce((a, r) => a + r[k], 0);
+  $("fc-t1").textContent = short(rows[1].rev); $("fc-t1s").textContent = "you keep about " + short(rows[1].keep) + " before tax";
+  $("fc-t2").textContent = short(sum("rev")); $("fc-t2s").textContent = "you keep about " + short(sum("keep")) + " before tax";
+  const last = rows[rows.length - 1];
+  $("fc-t3").textContent = short(last.subsEnd * sp * 12) + " a year"; $("fc-t3s").textContent = Math.round(last.subsEnd) + " practices paying every month";
+  $("fc-assume").innerHTML = S[scen].say.map(x => "<li>" + x + "</li>").join("");
+  // table
+  let html = rows.map(r => `<tr><td>${r.y}</td><td>${r.builds}</td><td>${Math.round(r.subsEnd)}</td><td>${gbp(r.buildRev)}</td><td>${gbp(r.bobbyRev)}</td><td>${gbp(r.rev)}</td><td>${gbp(r.cost)}</td><td class="keep">${gbp(r.keep)}</td></tr>`).join("");
+  html += `<tr class="tot"><td>2027–2031 total</td><td>${sum("builds")}</td><td>—</td><td>${gbp(sum("buildRev"))}</td><td>${gbp(sum("bobbyRev"))}</td><td>${gbp(sum("rev"))}</td><td>${gbp(sum("cost"))}</td><td class="keep">${gbp(sum("keep"))}</td></tr>`;
+  $("fc-tbody").innerHTML = html;
+  drawChart(rows);
+}
+
+function niceMax(v) { const p = Math.pow(10, Math.floor(Math.log10(v || 1))); const m = v / p; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * p; }
+
+function drawChart(rows) {
+  const W = 960, H = 360, L = 70, R = 16, T = 18, B = 42, svg = $("fc-chart");
+  const max = niceMax(Math.max(...rows.map(r => r.rev)) * 1.05), ih = H - T - B, iw = W - L - R;
+  const y = v => T + ih - v / max * ih, band = iw / rows.length, bw = Math.min(64, band * .46);
+  let g = "";
+  for (let i = 0; i <= 4; i++) {
+    const v = max * i / 4, yy = y(v);
+    g += `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" stroke="#E6DED1" stroke-width="1"/>`;
+    g += `<text x="${L - 10}" y="${yy + 4}" text-anchor="end" font-size="12" fill="#8F8474">${short(v)}</text>`;
+  }
+  rows.forEach((r, i) => {
+    const cx = L + band * i + band / 2, x = cx - bw / 2;
+    const yb = y(r.buildRev), yt = y(r.rev);
+    const hb = Math.max(0, T + ih - yb), hs = Math.max(0, yb - yt - (r.buildRev > 0 && r.bobbyRev > 0 ? 2 : 0));
+    if (hb > 0) g += `<path d="${barPath(x, yb, bw, hb, r.bobbyRev <= 0)}" fill="#B8741F"/>`;
+    if (hs > 0) g += `<path d="${barPath(x, yt, bw, hs, true)}" fill="#276E9E"/>`;
+    g += `<text x="${cx}" y="${yt - 8}" text-anchor="middle" font-size="12.5" font-weight="500" fill="#2F2A24">${short(r.rev)}</text>`;
+    g += `<text x="${cx}" y="${H - 16}" text-anchor="middle" font-size="12.5" fill="#5E554A">${r.y}</text>`;
+    g += `<rect class="hit" data-i="${i}" x="${L + band * i}" y="${T}" width="${band}" height="${ih}" fill="transparent"/>`;
+  });
+  g += `<line x1="${L}" x2="${W - R}" y1="${T + ih}" y2="${T + ih}" stroke="#CFC4B2" stroke-width="1"/>`;
+  svg.innerHTML = g;
+  const tip = $("fc-tip"), cw = $("fc-cw");
+  svg.querySelectorAll(".hit").forEach(h => {
+    h.addEventListener("mousemove", e => {
+      const r = rows[+h.dataset.i], box = cw.getBoundingClientRect();
+      tip.innerHTML = `<b>${r.y}</b><br><span class="sw" style="background:#B8741F"></span>AI systems ${gbp(r.buildRev)} (${r.builds})<br><span class="sw" style="background:#276E9E"></span>Bobby OS ${gbp(r.bobbyRev)}<br>Total ${gbp(r.rev)} · keep ${gbp(r.keep)}`;
+      tip.style.left = (e.clientX - box.left + cw.scrollLeft) + "px"; tip.style.top = (e.clientY - box.top) + "px"; tip.style.opacity = 1;
+    });
+    h.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+  });
+}
+function barPath(x, y, w, h, roundTop) {
+  const r = Math.min(4, h, w / 2);
+  if (!roundTop) return `M${x},${y}H${x + w}V${y + h}H${x}Z`;
+  return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+}
+
+document.querySelectorAll("#p-rev .seg button").forEach(b => b.addEventListener("click", () => {
+  scen = b.dataset.s; document.querySelectorAll("#p-rev .seg button").forEach(x => x.setAttribute("aria-pressed", x === b)); render();
+}));
+["fc-buildPrice", "fc-bobbyPrice", "fc-churn"].forEach(id => $(id).addEventListener("input", render));
+render();
+
 })();
 </script>
 </body>
