@@ -54,8 +54,9 @@ form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .full{grid-column:1/-1}
 label{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim)}
 label .opt{text-transform:none;letter-spacing:0;color:var(--ink-faint);font-weight:300}
-input,select{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;width:100%}
-input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+textarea{resize:vertical;min-height:84px}
+input,select,textarea{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
 .consent{grid-column:1/-1;display:flex;gap:10px;align-items:flex-start;font-size:13.5px;text-transform:none;letter-spacing:0;font-weight:300;color:var(--ink-dim)}
 .consent input{width:18px;height:18px;margin-top:4px;flex:none;accent-color:var(--gold)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
@@ -91,7 +92,7 @@ footer{border-top:1px solid var(--line);padding-block:26px 40px;color:var(--ink-
   </nav>
 
   <header class="hero">
-    <figure class="photo"><img src="mino.jpg" width="1100" height="1017" alt="Mino, a calm knitted figure with a small gold tooth stitched on his chest, reading a clipboard in a bright dental reception."></figure>
+    <figure class="photo"><img src="mino.jpg" width="1100" height="1015" alt="Mino, a calm knitted figure with a small gold tooth stitched on his chest, reading a tablet in a bright dental reception."></figure>
     <div>
       <div class="soon">Introducing Mino</div>
       <h1>The calm at the centre of your <em>practice.</em></h1>
@@ -106,8 +107,8 @@ footer{border-top:1px solid var(--line);padding-block:26px 40px;color:var(--ink-
             <select id="role"><option>Practice owner</option><option>Practice manager</option><option>Clinician</option><option>Other</option></select></div>
           <div class="field"><label for="size">We have…</label>
             <select id="size"><option>1 practice</option><option>2–5 practices</option><option>6 or more practices</option></select></div>
-          <div class="field"><label for="name">First name <span class="opt">(optional)</span></label><input id="name" type="text" autocomplete="given-name"></div>
-          <div class="field"><label for="practice">Practice <span class="opt">(optional)</span></label><input id="practice" type="text" autocomplete="organization"></div>
+          <div class="field full"><label for="name">First name <span class="opt">(optional)</span></label><input id="name" type="text" autocomplete="given-name"></div>
+          <div class="field full"><label for="issues">What's your biggest headache right now? <span class="opt">(optional)</span></label><textarea id="issues" rows="3" maxlength="600" placeholder="e.g. CQC paperwork, staff rotas, keeping on top of training…"></textarea></div>
           <label class="consent" for="consent"><input id="consent" type="checkbox" required> Yes, email me about Mino and Teething Issues, including when Mino launches. I can unsubscribe any time.</label>
           <input class="hp" type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="submit" id="btn">Join the Mino waitlist</button>
@@ -159,7 +160,7 @@ document.getElementById("wl").addEventListener("submit", function (e) {
   if (!document.getElementById("consent").checked) { err.textContent = "Please tick the box so we can email you when Mino launches."; return; }
   btn.disabled = true; btn.textContent = "Adding you…";
   fetch("https://ti-waitlist.teethingissues.workers.dev", { method: "POST", headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email.value, name: document.getElementById("name").value, practice: document.getElementById("practice").value,
+    body: JSON.stringify({ email: email.value, name: document.getElementById("name").value, issues: document.getElementById("issues").value,
       role: document.getElementById("role").value, size: document.getElementById("size").value, consent: true, website: document.getElementById("website").value }) })
     .then(function (r) { return r.json(); })
     .then(function (d) {
