@@ -29,7 +29,7 @@ def bold_serif(d, xy, text, f, fill):
     # Cormorant variable font renders light; a 1px stroke gives the semibold look of the site
     d.text(xy, text, font=f, fill=fill, stroke_width=max(1, f.size // 60), stroke_fill=fill)
 
-FOOT = "TEETHING ISSUES CIRCLE  ·  ON SKOOL  ·  LINK IN BIO"
+FOOT = "FREE TO JOIN  ·  TEETHING ISSUES CIRCLE ON SKOOL"
 
 def ad(photo, headline, sub, out, w, h, photo_frac, focus=0.3, scale=1.0):
     img = Image.new("RGB", (w, h), PAPER)
