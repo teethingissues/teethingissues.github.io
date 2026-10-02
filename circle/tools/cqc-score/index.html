@@ -30,14 +30,21 @@ textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:var(
 button{font:inherit;font-weight:500;font-size:15px;color:var(--panel);background:var(--ink);border:0;border-radius:999px;padding:10px 18px;cursor:pointer;margin-top:10px}
 button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .note{font-size:13.5px;color:var(--faint)}
+.calm{margin:12px 0 0;max-width:62ch;font-size:15px;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.officer{margin-top:18px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;gap:6px}
+.officer b{font-family:var(--serif);font-weight:600;font-size:24px}
+.officer span:last-child{color:var(--dim);font-size:15px}
+h1,h2,.big{font-variant-numeric:lining-nums}
 </style></head><body><div class="wrap">
 <div class="eyebrow">Teething Issues Circle · Inspection Ready</div>
 <h1>Your CQC Pre-Inspection Score</h1>
 <p class="sub">Tick only what's present, current and in date today. No judgement: this is your starting line. It takes about 5 minutes, and your answers stay on this device.</p>
+<p class="calm"><strong>Don't overcomplicate it.</strong> This is a quick, rough check, not a full audit. Go with your gut: if you're not sure something's in place, leave it unticked.</p>
 <div class="score" aria-live="polite"><div><div class="label">Your score</div><div class="big" id="total">0%</div></div><div class="bar"><i id="bar"></i></div><div class="label" id="verdict">Start ticking below</div></div>
 <div id="areas"></div>
 <div class="share"><h2>Share your score</h2><p class="note">Copy this and post it in the Inspection Ready discussion. We'll help you with your weakest area first.</p>
 <textarea id="post" rows="5" readonly aria-label="Your score to share"></textarea><button type="button" id="copy">Copy my score</button> <span class="note" id="copied" role="status"></span></div>
+<div class="officer"><span class="eyebrow">Want the full check?</span><b>Meet our AI compliance officer</b><span>This score is a rough guide. Our AI compliance officer goes through the real documents: every staff file, certificate, training record and audit, the way a CQC inspector would. You get a clear Yes/No report and an action plan, and your files never leave your computer. It unlocks for Teething Issues Circle members when the Circle reaches 50 members.</span></div>
 <p class="note">Based on the original Teething Issues CQC Pre-Inspection Checklist. A preparation tool, not a guarantee of an inspection outcome.</p>
 </div>
 <script>
