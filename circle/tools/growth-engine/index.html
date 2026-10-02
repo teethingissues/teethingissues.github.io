@@ -1,4 +1,4 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>Practice Growth Engine</title>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex,nofollow"><title>Practice Growth Engine</title></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -35,7 +35,33 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,48px);line-
 .grp{display:grid;gap:8px}
 .f{display:grid;grid-template-columns:1fr 104px;align-items:center;gap:8px;font-size:14px;color:var(--dim)}
 .f input{font:inherit;font-size:15px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:6px 8px;width:100%;text-align:right;font-variant-numeric:tabular-nums}
-.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.summary.s4{grid-template-columns:repeat(4,1fr)}
+.targets{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:12px;display:grid;gap:10px}
+.targets.new{border:2px solid var(--gold)}
+.th{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}.th h3{margin:0}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 16px}
+.tc{display:grid;gap:4px}.tc .f{grid-template-columns:1fr 110px}
+.tc .bar{height:8px;background:var(--panel-2);border:1px solid var(--line);border-radius:99px;overflow:hidden}.tc .bar i{display:block;height:100%;width:0}
+.tc .tl{font-size:13px;color:var(--dim)}
+.trow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.addp{display:flex;gap:8px;flex-wrap:wrap}.addp input,#dPrac{font:inherit;font-size:15px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:14px}
+.pc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;align-content:start}
+.pc .top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.pc h3{margin:0;font-family:var(--serif);font-size:24px;font-weight:600}
+.pc .big{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.pc .bar{height:8px;background:var(--panel-2);border:1px solid var(--line);border-radius:99px;overflow:hidden}.pc .bar i{display:block;height:100%}
+.pc dl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;margin:0;font-size:14px}.pc dt{color:var(--dim)}.pc dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.pc .acts{display:flex;gap:8px;flex-wrap:wrap}
+.pcbody{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.kpis{list-style:none;margin:0;padding:0;display:grid;gap:10px;flex:1;min-width:170px}
+.kpis li{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;font-size:15px}
+.kpis .dot{width:12px;height:12px;border-radius:50%}
+.kpis b{font-weight:600;font-variant-numeric:tabular-nums lining-nums}.kpis small{font-weight:400;color:var(--dim)}
+.pc .big,.sum .v,.gain,.kpis b{font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum" 1,"tnum" 1}
+.tset{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.tset .f{grid-template-columns:1fr 80px}
+.tc .per{font-size:13px;color:var(--ink);font-weight:500}
 .sum{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
 .sum .k{font-size:13px;color:var(--faint)}
 .sum .v{font-family:var(--serif);font-weight:600;font-size:34px;line-height:1.05;font-variant-numeric:tabular-nums}
@@ -80,27 +106,36 @@ th{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase
 tfoot td{font-weight:600;border-top:2px solid var(--line)}
 input[type=date],input[type=month]{font:inherit;font-size:14px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:6px 8px;width:100%}
 footer{margin-top:28px;color:var(--faint);font-size:13px}
-@media (max-width:900px){.layout,.money{grid-template-columns:1fr}.rail{position:static}.summary{grid-template-columns:1fr}.board,.acts{grid-template-columns:1fr}}
+@media (max-width:900px){.layout,.money{grid-template-columns:1fr}.rail{position:static}.summary,.summary.s4{grid-template-columns:1fr 1fr}.board,.acts{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
+</style>
 
 <div class="wrap">
 <header>
-  <div><div class="eyebrow">Teething Issues Circle · Premium tool</div>
+  <div><div class="eyebrow">Teething Issues · Sales & Growth</div>
   <h1>Practice Growth Engine</h1>
   <p class="sub">Your weekly sales review, the money left on the table in consultations, and the actions that bring cash in. Built from our own KPI reviews and consult tracker.</p></div>
   <span class="example">Example practice · type your own numbers</span>
 </header>
 
 <div class="tabs" role="tablist">
-  <button class="tab" role="tab" aria-selected="true" data-p="p0" id="t0">Daily log</button>
+  <button class="tab" role="tab" aria-selected="true" data-p="pH" id="tH">Practices</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p0" id="t0">Daily log</button>
   <button class="tab" role="tab" aria-selected="false" data-p="p1" id="t1">Weekly review</button>
   <button class="tab" role="tab" aria-selected="false" data-p="p2" id="t2">Conversion money</button>
   <button class="tab" role="tab" aria-selected="false" data-p="p3" id="t3">Money actions</button>
 </div>
 
 <!-- DAILY LOG -->
-<section class="panel on" id="p0" role="tabpanel" aria-labelledby="t0">
+<section class="panel on" id="pH" role="tabpanel" aria-labelledby="tH">
+ <div class="monthbar"><label class="f" style="grid-template-columns:auto 160px">Month<input id="hMonth" type="month"></label>
+  <form class="addp" id="addP"><input id="newP" type="text" maxlength="60" placeholder="New practice name" aria-label="New practice name"><button type="submit" class="ghost">Add practice</button></form></div>
+ <div class="summary" style="margin-top:12px" id="hSum"></div>
+ <div class="pgrid" id="hGrid"></div>
+ <p class="note">Green means on track for where you should be by today; red means behind. The ring is the average of cash, invoices and plans. Each practice keeps its own numbers: open one to fill in its day and set its targets.</p>
+</section>
+
+<section class="panel" id="p0" role="tabpanel" aria-labelledby="t0">
  <div class="layout">
   <form class="rail" id="dayForm" aria-label="End of day numbers">
    <div class="grp"><h3>End of day</h3>
@@ -108,35 +143,42 @@ footer{margin-top:28px;color:var(--faint);font-size:13px}
    <div class="grp"><h3>Money taken (£)</h3>
     <label class="f">Cash<input id="dCash" type="number" step="0.01" min="0" placeholder="0"></label>
     <label class="f">Card<input id="dCard" type="number" step="0.01" min="0" placeholder="0"></label>
-    <label class="f">Finance<input id="dFin" type="number" step="0.01" min="0" placeholder="0"></label>
+    <label class="f">Finance accepted<input id="dFin" type="number" step="0.01" min="0" placeholder="0"></label>
+    <label class="f">Finance declined<input id="dFinX" type="number" step="0.01" min="0" placeholder="0"></label>
     <label class="f">Refunds<input id="dRef" type="number" step="0.01" min="0" placeholder="0"></label>
     <label class="f">Invoiced<input id="dInv" type="number" step="0.01" min="0" placeholder="0"></label></div>
    <div class="grp"><h3>Patients</h3>
-    <label class="f">Plan sign-ups<input id="dPlan" type="number" min="0" placeholder="0"></label>
-    <label class="f">Plan cancellations<input id="dPlanX" type="number" min="0" placeholder="0"></label>
-    <label class="f">New patients<input id="dNp" type="number" min="0" placeholder="0"></label>
+    <label class="f">Consults in the diary<input id="dConsB" type="number" min="0" placeholder="0"></label>
     <label class="f">Consults seen<input id="dCons" type="number" min="0" placeholder="0"></label>
     <label class="f">Consults went ahead<input id="dAhead" type="number" min="0" placeholder="0"></label>
-    <label class="f">FTAs (all)<input id="dFta" type="number" min="0" placeholder="0"></label>
-    <label class="f">Appointments booked<input id="dAppts" type="number" min="0" placeholder="0"></label>
+    <label class="f">New patients<input id="dNp" type="number" min="0" placeholder="0"></label>
+    <label class="f">Plan sign-ups<input id="dPlan" type="number" min="0" placeholder="0"></label>
+    <label class="f">Plan cancellations<input id="dPlanX" type="number" min="0" placeholder="0"></label>
     <label class="f">Google reviews<input id="dRev" type="number" min="0" placeholder="0"></label></div>
    <label class="grp" style="font-size:14px;color:var(--dim)">Notes<textarea id="dNotes" rows="2" style="font:inherit;font-size:14px;color:var(--ink);background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:6px 8px;resize:vertical"></textarea></label>
    <button type="submit" class="save" id="dSave">Save day</button>
    <p class="note" id="dStatus" role="status"></p>
   </form>
   <div>
-   <div class="monthbar"><label class="f" style="grid-template-columns:auto 160px">Month<input id="dMonth" type="month"></label>
+   <div class="monthbar"><label class="f" style="grid-template-columns:auto 200px">Practice<select id="dPrac"></select></label><label class="f" style="grid-template-columns:auto 160px">Month<input id="dMonth" type="month"></label>
     <button type="button" class="ghost" id="dFill">Send this month to the review and calculator</button></div>
-   <div class="summary" style="margin-top:12px">
-    <div class="sum"><div class="k">Takings this month</div><div class="v" id="mTak">–</div><div class="s" id="mTakS">cash + card + finance − refunds</div></div>
+   <div class="targets" id="tBox">
+    <div class="th"><h3 id="tTitle">This month's targets</h3><span class="note" id="tHint"></span></div>
+    <div class="tset" id="tSet"></div>
+    <div class="tgrid" id="tGrid"></div>
+    <div class="trow"><button type="button" class="ghost" id="tSave">Save targets</button><span class="note" id="tStatus" role="status"></span></div>
+   </div>
+   <div class="summary s4" style="margin-top:12px">
+    <div class="sum"><div class="k">Taken this month</div><div class="v" id="mTak">–</div><div class="s" id="mTakS">cash + card + finance accepted</div></div>
+    <div class="sum"><div class="k">Finance accepted</div><div class="v" id="mFinR">–</div><div class="s" id="mFinS"></div></div>
     <div class="sum"><div class="k">Plans this month</div><div class="v" id="mPlans">–</div><div class="s" id="mPlansS"></div></div>
     <div class="sum"><div class="k">Consult conversion</div><div class="v" id="mConvD">–</div><div class="s" id="mConvS"></div></div>
    </div>
    <div class="tw" style="margin-top:14px"><table aria-label="Daily log for the month">
-    <thead><tr><th>Date</th><th>Cash</th><th>Card</th><th>Finance</th><th>Refunds</th><th>Takings</th><th>Plans</th><th>New pts</th><th>Consults</th><th>Ahead</th><th>FTA</th><th>Reviews</th></tr></thead>
+    <thead><tr><th>Date</th><th>Cash</th><th>Card</th><th>Finance ✓</th><th>Finance ✗</th><th>Refunds</th><th>Taken</th><th>Plans</th><th>New pts</th><th>Consults in diary</th><th>Seen</th><th>Ahead</th><th>Reviews</th></tr></thead>
     <tbody id="dRows"></tbody><tfoot id="dFoot"></tfoot></table></div>
    <p class="note" id="dEmpty">No days logged for this month yet. Fill in today's numbers on the left and press Save day.</p>
-   <p class="note">Your numbers are saved privately in this browser on this computer only. Nothing is sent to Teething Issues. Click a row to edit that day.</p>
+   <p class="note">Each day is saved to this tool's own database, so the totals are kept for finance and reporting later. Click a row to edit that day.</p>
   </div>
  </div>
 </section>
@@ -147,29 +189,29 @@ footer{margin-top:28px;color:var(--faint);font-size:13px}
   <aside class="rail" aria-label="This month's numbers">
    <div class="grp"><h3>The month</h3>
     <label class="f">Working days in month<input id="days" type="number" value="22"></label>
-    <label class="f">Days worked so far<input id="done" type="number" value="5"></label>
-    <label class="f">Dentists working<input id="dentists" type="number" value="3"></label>
-    <label class="f">Team members<input id="staff" type="number" value="8"></label></div>
+    <label class="f">Days worked so far<input id="done" type="number" value="0"></label>
+    <label class="f">Dentists working<input id="dentists" type="number" value=""></label>
+    <label class="f">Team members<input id="staff" type="number" value=""></label></div>
    <div class="grp"><h3>Cash & invoices (£)</h3>
-    <label class="f">Cash target<input id="cashT" type="number" value="75000"></label>
-    <label class="f">Cash taken so far<input id="cashA" type="number" value="14159"></label>
-    <label class="f">Finance pending<input id="fin" type="number" value="0"></label>
-    <label class="f">Invoice target<input id="invT" type="number" value="70000"></label>
-    <label class="f">Invoiced so far<input id="invA" type="number" value="3300"></label></div>
+    <label class="f">Cash target<input id="cashT" type="number" value=""></label>
+    <label class="f">Cash taken so far<input id="cashA" type="number" value=""></label>
+    <label class="f">Finance pending<input id="fin" type="number" value=""></label>
+    <label class="f">Invoice target<input id="invT" type="number" value=""></label>
+    <label class="f">Invoiced so far<input id="invA" type="number" value=""></label></div>
    <div class="grp"><h3>Patients</h3>
-    <label class="f">Practice plans target<input id="planT" type="number" value="35"></label>
-    <label class="f">Plans signed so far<input id="planA" type="number" value="4"></label>
-    <label class="f">New patients so far<input id="npA" type="number" value="12"></label>
-    <label class="f">New patient goal<input id="npT" type="number" value="50"></label>
-    <label class="f">Consults this month<input id="cons" type="number" value="18"></label>
-    <label class="f">Consults that went ahead<input id="ahead" type="number" value="8"></label></div>
+    <label class="f">Practice plans target<input id="planT" type="number" value=""></label>
+    <label class="f">Plans signed so far<input id="planA" type="number" value=""></label>
+    <label class="f">New patients so far<input id="npA" type="number" value=""></label>
+    <label class="f">New patient goal<input id="npT" type="number" value=""></label>
+    <label class="f">Consults this month<input id="cons" type="number" value=""></label>
+    <label class="f">Consults that went ahead<input id="ahead" type="number" value=""></label></div>
    <div class="grp"><h3>Health checks</h3>
-    <label class="f">FTA rate, dentists %<input id="ftaD" type="number" value="6"></label>
-    <label class="f">FTA rate, consults %<input id="ftaC" type="number" value="41"></label>
-    <label class="f">Open courses of treatment<input id="open" type="number" value="45"></label>
-    <label class="f">Recall rate %<input id="recall" type="number" value="13"></label>
-    <label class="f">Google rating<input id="rating" type="number" step="0.1" value="4.6"></label>
-    <label class="f">Google reviews this week<input id="reviews" type="number" value="4"></label></div>
+    <label class="f">FTA rate, dentists %<input id="ftaD" type="number" value=""></label>
+    <label class="f">FTA rate, consults %<input id="ftaC" type="number" value=""></label>
+    <label class="f">Open courses of treatment<input id="open" type="number" value=""></label>
+    <label class="f">Recall rate %<input id="recall" type="number" value=""></label>
+    <label class="f">Google rating<input id="rating" type="number" step="0.1" value=""></label>
+    <label class="f">Google reviews this week<input id="reviews" type="number" value=""></label></div>
   </aside>
   <div>
    <div class="summary">
@@ -221,7 +263,7 @@ footer{margin-top:28px;color:var(--faint);font-size:13px}
  <div class="acts" id="acts"></div>
 </section>
 
-<footer>Teething Issues · Practice Growth Engine · figures are estimates and examples until you enter your own.</footer>
+<footer>Teething Issues · Practice Growth Engine · figures come from the numbers you enter.</footer>
 </div>
 
 <script>
@@ -237,7 +279,7 @@ document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{
 }));
 
 /* persist inputs per browser */
-const KEY="tiGrowthEngine:v1";
+const KEY="tiGrowthEngine:v2"; // v2: fresh start, no example figures
 function load(){try{const s=JSON.parse(localStorage.getItem(KEY)||"{}");Object.entries(s.inputs||{}).forEach(([k,val])=>{if($(k)&&!$(k).closest("#dayForm"))$(k).value=val});return s}catch(e){return {}}}
 function save(extra){try{const inputs={};document.querySelectorAll("input[type=number],input[type=range]").forEach(i=>{if(!i.closest("#dayForm"))inputs[i.id]=i.value});const s=JSON.parse(localStorage.getItem(KEY)||"{}");localStorage.setItem(KEY,JSON.stringify({...s,inputs,...(extra||{})}))}catch(e){}}
 
@@ -277,13 +319,13 @@ function weekly(){
   const items=[
    ["cash","Cash",st(cashA,cashShould),N("Target",gbp(cashT))+N("Taken",gbp(cashA))+N("Should be on",gbp(cashShould))+N(cashGap>=0?"Ahead by":"Behind by",gbp(Math.abs(cashGap)))+N("Daily needed",gbp(cashDaily)),"cash"],
    ["inv","Invoices",st(invA,invShould),N("Target",gbp(invT))+N("Invoiced",gbp(invA))+N("Should be on",gbp(invShould))+N("Daily needed",gbp(invDaily))+N("Per dentist / day",gbp(invDaily/dent)),"inv"],
-   ["plans","Practice plans",st(planA,planShould),N("Target",planT)+N("Signed",planA)+N("Should be on",planShould.toFixed(1))+N("Per day needed",planDaily.toFixed(1))+N("Per team member / week",(planDaily*5/staff).toFixed(1)),"plans"],
+   ["plans","Practice plans",st(planA,planShould),N("Target",planT)+N("Signed",planA)+N("Should be on",Math.ceil(planShould-1e-9))+N("Per day needed",Math.max(0,Math.ceil(planDaily-1e-9)))+N("Per team member / week",Math.max(0,Math.ceil(planDaily*5/staff-1e-9))),"plans"],
    ["conv","Consult conversion",hi(conv,70,40),N("Consults",cons)+N("Went ahead",ahead)+N("Conversion",conv.toFixed(0)+"%")+N("Target","70%"),"conv"],
    ["ftaD","FTA rate · dentists",lo(v("ftaD"),7,10),N("This week",v("ftaD")+"%")+N("Target","7% or less"),"ftaD"],
    ["ftaC","FTA rate · consults",lo(v("ftaC"),15,25),N("This week",v("ftaC")+"%")+N("Target","15% or less"),"ftaC"],
    ["open","Open courses of treatment",lo(v("open"),20,35),N("Open now",v("open"))+N("Target","20 or fewer"),"open"],
    ["recall","Recall rate",hi(v("recall"),70,40),N("This week",v("recall")+"%")+N("Target","70%"),"recall"],
-   ["np","New patients",st(npA,npShould),N("So far",npA)+N("Goal",npT)+N("Should be on",npShould.toFixed(0)),"np"],
+   ["np","New patients",st(npA,npShould),N("So far",npA)+N("Goal",npT)+N("Should be on",Math.ceil(npShould-1e-9)),"np"],
    ["reviews","Google reviews",hi(v("rating"),4.8,4.5),N("Rating",v("rating").toFixed(1))+N("New this week",v("reviews"))+N("One bad review needs","about 10 good ones"),"reviews"]
   ];
   $("board").innerHTML=items.map(i=>kpi(...i)).join("");
@@ -306,7 +348,7 @@ function money(){
   const extraT=fromFta+fromConv+fromSave, gain=extraT*val, nw=now+gain;
   $("mNow").textContent=kgbp(now);$("mNew").textContent=kgbp(nw);$("mGain").textContent="+"+kgbp(gain);$("mGainY").textContent="about "+kgbp(gain*12)+" a year";
   const rows=[["Fewer missed consults",fromFta],["Better conversion",fromConv],["Maybes & declined finance won back",fromSave]];
-  $("mTable").innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1].toFixed(1)}</td><td>${gbp(r[1]*val)}</td><td>${gbp(r[1]*val*12)}</td></tr>`).join("")+`<tr><td><strong>Total</strong></td><td><strong>${extraT.toFixed(1)}</strong></td><td><strong>${gbp(gain)}</strong></td><td><strong>${gbp(gain*12)}</strong></td></tr>`;
+  $("mTable").innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td>${Math.round(r[1])}</td><td>${gbp(r[1]*val)}</td><td>${gbp(r[1]*val*12)}</td></tr>`).join("")+`<tr><td><strong>Total</strong></td><td><strong>${Math.round(extraT)}</strong></td><td><strong>${gbp(gain)}</strong></td><td><strong>${gbp(gain*12)}</strong></td></tr>`;
   drawChart(now,nw);
 }
 function drawChart(now,nw){
@@ -341,31 +383,137 @@ function prog(){const total=ACTS.reduce((a,g)=>a+g[1].length,0),done=Object.valu
 
 
 /* ---------- daily log (stored in the artifact database) ---------- */
-let db=null, days={};
-const DF=[["dCash","cash"],["dCard","card"],["dFin","finance"],["dRef","refunds"],["dInv","invoiced"],["dPlan","plans"],["dPlanX","planCancels"],["dNp","newPatients"],["dCons","consults"],["dAhead","ahead"],["dFta","fta"],["dAppts","appointments"],["dRev","reviews"]];
+let db=null, days={}, allDays={}, allTargets={}, practices={}, curP="main";
+try{ curP=localStorage.getItem("tiPractice")||"main" }catch(e){}
+// Practice "main" keeps the plain ids used before multi-practice (days/2026-10-01), so old data stays put.
+const docId=(pid,key)=>pid==="main"?key:pid+"__"+key;
+const splitId=id=>{const i=id.indexOf("__");return i<0?["main",id]:[id.slice(0,i),id.slice(i+2)]};
+const forP=(all,pid)=>{const o={};Object.entries(all).forEach(([id,d])=>{const [p,k]=splitId(id);if(p===pid)o[k]=d});return o};
+const pName=pid=>(practices[pid]&&practices[pid].name)||(pid==="main"?"My practice":"Practice");
+function pids(){const set=new Set(["main",...Object.keys(practices)]);[allDays,allTargets].forEach(a=>Object.keys(a).forEach(id=>set.add(splitId(id)[0])));return [...set]}
+function rebuild(){days=forP(allDays,curP);targets=forP(allTargets,curP);
+  $("dPrac").innerHTML=pids().map(p=>`<option value="${p}"${p===curP?" selected":""}>${esc(pName(p))}</option>`).join("")}
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function totals(dmap,m){const T={cash:0,card:0,finance:0,financeDeclined:0,refunds:0,invoiced:0,consultsBooked:0,appointments:0,plans:0,planCancels:0,newPatients:0,consults:0,ahead:0,fta:0,reviews:0};
+  const list=Object.keys(dmap).filter(k=>k.startsWith(m)).sort(); list.forEach(k=>Object.keys(T).forEach(f=>T[f]+=num(dmap[k][f]))); return {T,list}}
+const DF=[["dCash","cash"],["dCard","card"],["dFin","finance"],["dFinX","financeDeclined"],["dRef","refunds"],["dInv","invoiced"],["dPlan","plans"],["dPlanX","planCancels"],["dNp","newPatients"],["dConsB","consultsBooked"],["dCons","consults"],["dAhead","ahead"],["dRev","reviews"]];
 const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const num=x=>+x||0;
-const tak=d=>num(d.cash)+num(d.card)+num(d.finance)-num(d.refunds);
+// "finance" = finance ACCEPTED (kept as the key so days logged before 2 Oct 2026 still count).
+// Taken = cash + card + finance accepted: all of it counts towards the month's target. Refunds are tracked against their own cap.
+const tak=d=>num(d.cash)+num(d.card)+num(d.finance);
 function fillForm(date){const d=days[date]||{};$("dDate").value=date;DF.forEach(([id,k])=>$(id).value=d[k]??"");$("dNotes").value=d.notes||""}
 function renderMonth(){
   const m=$("dMonth").value, list=Object.keys(days).filter(k=>k.startsWith(m)).sort();
-  const T={cash:0,card:0,finance:0,refunds:0,plans:0,planCancels:0,newPatients:0,consults:0,ahead:0,fta:0,reviews:0};
+  const T={cash:0,card:0,finance:0,financeDeclined:0,refunds:0,invoiced:0,consultsBooked:0,appointments:0,plans:0,planCancels:0,newPatients:0,consults:0,ahead:0,fta:0,reviews:0};
   $("dRows").innerHTML=list.map(k=>{const d=days[k];Object.keys(T).forEach(f=>T[f]+=num(d[f]));
-    const dd=new Date(k+"T12:00:00");return `<tr data-d="${k}"><td>${dd.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"})}</td><td>${gbp(num(d.cash))}</td><td>${gbp(num(d.card))}</td><td>${gbp(num(d.finance))}</td><td>${gbp(num(d.refunds))}</td><td><strong>${gbp(tak(d))}</strong></td><td>${num(d.plans)}</td><td>${num(d.newPatients)}</td><td>${num(d.consults)}</td><td>${num(d.ahead)}</td><td>${num(d.fta)}</td><td>${num(d.reviews)}</td></tr>`}).join("");
-  const tk=T.cash+T.card+T.finance-T.refunds;
-  $("dFoot").innerHTML=list.length?`<tr><td>Total</td><td>${gbp(T.cash)}</td><td>${gbp(T.card)}</td><td>${gbp(T.finance)}</td><td>${gbp(T.refunds)}</td><td>${gbp(tk)}</td><td>${T.plans}</td><td>${T.newPatients}</td><td>${T.consults}</td><td>${T.ahead}</td><td>${T.fta}</td><td>${T.reviews}</td></tr>`:"";
+    const dd=new Date(k+"T12:00:00");return `<tr data-d="${k}"><td>${dd.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"})}</td><td>${gbp(num(d.cash))}</td><td>${gbp(num(d.card))}</td><td>${gbp(num(d.finance))}</td><td>${gbp(num(d.financeDeclined))}</td><td>${gbp(num(d.refunds))}</td><td><strong>${gbp(tak(d))}</strong></td><td>${num(d.plans)}</td><td>${num(d.newPatients)}</td><td>${num(d.consultsBooked)}</td><td>${num(d.consults)}</td><td>${num(d.ahead)}</td><td>${num(d.reviews)}</td></tr>`}).join("");
+  const tk=T.cash+T.card+T.finance;
+  $("dFoot").innerHTML=list.length?`<tr><td>Total</td><td>${gbp(T.cash)}</td><td>${gbp(T.card)}</td><td>${gbp(T.finance)}</td><td>${gbp(T.financeDeclined)}</td><td>${gbp(T.refunds)}</td><td>${gbp(tk)}</td><td>${T.plans}</td><td>${T.newPatients}</td><td>${T.consultsBooked}</td><td>${T.consults}</td><td>${T.ahead}</td><td>${T.reviews}</td></tr>`:"";
   $("dEmpty").hidden=list.length>0;
-  $("mTak").textContent=kgbp(tk); $("mTakS").textContent=`${list.length} day${list.length===1?"":"s"} logged · cash + card + finance − refunds`;
+  $("mTak").textContent=kgbp(tk); $("mTakS").textContent=`${list.length} day${list.length===1?"":"s"} logged · ${gbp(tk-T.refunds)} after ${gbp(T.refunds)} refunds`;
+  const fa=T.finance+T.financeDeclined; $("mFinR").textContent=fa?Math.round(T.finance/fa*100)+"%":"–"; $("mFinS").textContent=fa?`${gbp(T.finance)} accepted, ${gbp(T.financeDeclined)} declined`:"no finance logged yet";
+  renderTargets(T,list);
   $("mPlans").textContent=T.plans-T.planCancels; $("mPlansS").textContent=`${T.plans} signed, ${T.planCancels} cancelled`;
-  $("mConvD").textContent=T.consults?Math.round(T.ahead/T.consults*100)+"%":"–"; $("mConvS").textContent=`${T.ahead} of ${T.consults} consults went ahead`;
+  $("mConvD").textContent=T.consults?Math.round(T.ahead/T.consults*100)+"%":"–";
+  const cFta=T.consultsBooked?Math.max(0,T.consultsBooked-T.consults)/T.consultsBooked*100:null, dFta=T.appointments?T.fta/T.appointments*100:null;
+  $("mConvS").textContent=`${T.ahead} of ${T.consults} consults went ahead`+(cFta!==null?` · consult FTA ${Math.round(cFta)}%`:"");
   $("dRows").querySelectorAll("tr").forEach(r=>r.addEventListener("click",()=>{fillForm(r.dataset.d);$("dStatus").textContent="Editing "+r.dataset.d}));
+  if($("hGrid")&&typeof renderHome==="function"&&document.activeElement&&!document.activeElement.closest("#hGrid")) renderHome();
   return {T,list};
 }
+/* monthly targets (db: targets/YYYY-MM) */
+let targets={};
+const TGT=[["taken","Taken (cash + card + finance) £","£"],["invoiced","Invoiced £","£"],["plans","Plan sign-ups (net)",""],["reviews","Google reviews",""],["newPatients","New patients",""],["refundsMax","Refunds: keep under £","£"]];
+// who the targets are shared between: money per dentist, plans and reviews per team member
+const TSET=[["openDays","Days open this month"],["dentists","Dentists working"],["staff","Team members"]];
+const PER={taken:"dentists",invoiced:"dentists",plans:"staff",reviews:"staff"};
+function workdaysIn(m){const [y,mo]=m.split("-").map(Number);let n=0;for(let d=1;d<=new Date(y,mo,0).getDate();d++){const w=new Date(y,mo-1,d).getDay();if(w&&w<6)n++}return n}
+function workdaysTo(m,upto){const [y,mo]=m.split("-").map(Number);let n=0;for(let d=1;d<=upto;d++){const w=new Date(y,mo-1,d).getDay();if(w&&w<6)n++}return n}
+function renderTargets(T,list){
+  const m=$("dMonth").value, tg=targets[m]||{}, isSet=Object.keys(tg).some(k=>k!=="updated"&&num(tg[k])>0);
+  const [y,mo]=m.split("-").map(Number), now=new Date(), cur=now.getFullYear()===y&&now.getMonth()+1===mo;
+  const wdAll=workdaysIn(m), wdGone=cur?workdaysTo(m,now.getDate()):(new Date(y,mo-1,1)<now?wdAll:0), frac=wdAll?wdGone/wdAll:0;
+  const open=num(tg.openDays)||wdAll, openGone=Math.round(open*frac*10)/10, openLeft=Math.max(0,open-openGone);
+  const share={dentists:Math.max(0,num(tg.dentists)),staff:Math.max(0,num(tg.staff))};
+  const actual={taken:T.cash+T.card+T.finance,invoiced:T.invoiced,plans:T.plans-T.planCancels,reviews:T.reviews,newPatients:T.newPatients,refundsMax:T.refunds};
+  $("tTitle").textContent=new Date(y,mo-1,1).toLocaleDateString("en-GB",{month:"long",year:"numeric"})+" targets";
+  $("tBox").classList.toggle("new",!isSet);
+  $("tHint").textContent=isSet?`about ${Math.round(openGone)} of ${open} open days gone`:"New month: set your targets to start tracking";
+  const active=document.activeElement&&document.activeElement.closest&&document.activeElement.closest("#tGrid");
+  const activeSet=document.activeElement&&document.activeElement.closest&&document.activeElement.closest("#tSet");
+  if(!activeSet) $("tSet").innerHTML=TSET.map(([k,label])=>`<label class="f">${label}<input type="number" min="0" step="1" data-t="${k}" value="${k==="openDays"?(tg[k]??wdAll):(tg[k]??"")}"></label>`).join("");
+  if(active) return; // don't redraw while someone is typing a target
+  $("tGrid").innerHTML=TGT.map(([k,label,u])=>{
+    const t=num(k==="refundsMax"?(tg[k]??5000):tg[k]), a=actual[k], cap=k==="refundsMax";
+    const pct=t?Math.min(100,a/t*100):0, should=t*frac;
+    const ok=cap?a<=t*frac||a<=t*0.5:a>=should, warn=cap?a<=t:a>=should*0.85;
+    const col=!t?"var(--line)":ok?"var(--good)":warn?"var(--warn)":"var(--bad)";
+    const fmt=x=>u?gbp(x):Math.ceil(x-1e-9); // people, plans and reviews: always whole numbers, rounded up
+    const line=!t?"No target yet":cap?`${fmt(a)} of ${fmt(t)} limit${a>t?" · OVER":""}`:`${fmt(a)} of ${fmt(t)} · should be on ${fmt(should)}${a<t&&cur&&openLeft>0?" · "+fmt((t-a)/openLeft)+"/day needed":""}`;
+    const who=PER[k], n=who?share[who]:0;
+    const per=!t||!n?"":who==="dentists"?`Per dentist: ${fmt(t/n)} this month${cur&&openLeft>0&&a<t?" · "+fmt((t-a)/n/openLeft)+"/day":""}`:`Per team member: ${fmt(t/n)} this month (about ${fmt(t/n/Math.max(1,open/5))} a week)`;
+    return `<div class="tc"><label class="f">${label}<input type="number" min="0" step="${u?"100":"1"}" data-t="${k}" value="${k==="refundsMax"?(tg[k]??5000):(tg[k]??"")}"></label><div class="bar"><i style="width:${pct}%;background:${col}"></i></div><div class="tl">${line}</div>${per?`<div class="per">${per}</div>`:""}</div>`}).join("");
+}
+$("tSave").addEventListener("click",async()=>{
+  const m=$("dMonth").value, body={updated:Date.now()};
+  document.querySelectorAll("#tGrid input[data-t], #tSet input[data-t]").forEach(i=>body[i.dataset.t]=num(i.value));
+  targets[m]=body; allTargets[docId(curP,m)]=body; document.activeElement.blur(); renderMonth();
+  try{ if(db){await db.doc("targets/"+docId(curP,m)).set(body); $("tStatus").textContent="Targets saved."} else {localStorage.setItem("tiTargets",JSON.stringify(allTargets)); $("tStatus").textContent="Saved on this device only."} }
+  catch(err){ $("tStatus").textContent="Couldn't save the targets: please try again." }
+});
+/* practices home: every practice at a glance for the chosen month */
+function paceFor(m,tg){const [y,mo]=m.split("-").map(Number),now=new Date(),cur=now.getFullYear()===y&&now.getMonth()+1===mo;
+  const wdAll=workdaysIn(m),wdGone=cur?workdaysTo(m,now.getDate()):(new Date(y,mo-1,1)<now?wdAll:0);return wdAll?wdGone/wdAll:0}
+function renderHome(){
+  const m=$("hMonth").value||today().slice(0,7); let gT=0,gTarget=0,gOn=0,n=0;
+  // Overall score = how far each of cash, invoices and plans is towards where it should be by today (each capped at 100%), averaged.
+  const cards=pids().map(pid=>{
+    const dm=forP(allDays,pid), tm=forP(allTargets,pid), tg=tm[m]||{}, {T,list}=totals(dm,m), frac=paceFor(m,tg);
+    const rows=[["Cash taken",T.cash+T.card+T.finance,num(tg.taken),true],["Invoiced",T.invoiced,num(tg.invoiced),true],["Plans (net)",T.plans-T.planCancels,num(tg.plans),false]];
+    const scored=rows.filter(r=>r[2]>0).map(r=>{const should=r[2]*frac;return should>0?Math.min(1,r[1]/should):1});
+    const score=scored.length?Math.round(scored.reduce((a,b)=>a+b,0)/scored.length*100):null;
+    const good=score!==null&&score>=100*0.95; n++; gT+=rows[0][1]; gTarget+=rows[0][2]; if(good)gOn++;
+    const col=score===null?"var(--line)":good?"var(--good)":"var(--bad)";
+    const R=46,C=2*Math.PI*R,dash=score===null?0:C*Math.min(score,100)/100;
+    const ring=`<svg viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="${score===null?"No targets set":"Overall "+score+"% of where it should be"}">
+      <circle cx="60" cy="60" r="${R}" fill="none" stroke="var(--panel-2)" stroke-width="12"/>
+      <circle cx="60" cy="60" r="${R}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${dash} ${C}" transform="rotate(-90 60 60)"/>
+      <text x="60" y="58" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="600" font-size="30" fill="var(--ink)" style="font-variant-numeric:lining-nums">${score===null?"–":score+"%"}</text>
+      <text x="60" y="78" text-anchor="middle" font-family="Jost,sans-serif" font-size="11" fill="var(--dim)">${score===null?"set targets":good?"on track":"behind"}</text></svg>`;
+    const line=([label,a,t,money])=>{const should=t*frac, ok=!t||a>=should*0.95, f=x=>money?gbp(x):Math.ceil(x-1e-9);
+      return `<li><span class="dot" style="background:${!t?"var(--line)":ok?"var(--good)":"var(--bad)"}"></span><span>${label}</span><b>${f(a)}${t?` <small>of ${f(t)}</small>`:""}</b></li>`};
+    return `<article class="pc"><div class="top"><h3>${esc(pName(pid))}</h3><span class="note">${list.length} day${list.length===1?"":"s"} logged</span></div>
+      <div class="pcbody">${ring}<ul class="kpis">${rows.map(line).join("")}</ul></div>
+      <div class="acts"><button type="button" class="save" style="padding:8px 16px;font-size:15px" data-open="${pid}">Open practice</button><button type="button" class="ghost" data-ren="${pid}">Rename</button></div></article>`}).join("");
+  $("hGrid").innerHTML=cards;
+  $("hSum").innerHTML=`<div class="sum"><div class="k">All practices: taken</div><div class="v">${kgbp(gT)}</div><div class="s">${gTarget?"of "+gbp(gTarget)+" combined target":"set targets to compare"}</div></div>
+    <div class="sum"><div class="k">Practices</div><div class="v">${n}</div><div class="s">${gOn} on track this month</div></div>
+    <div class="sum"><div class="k">Month</div><div class="v" style="font-size:26px">${new Date(m+"-01T12:00").toLocaleDateString("en-GB",{month:"long",year:"numeric"})}</div><div class="s">pace counts working days</div></div>`;
+  $("hGrid").querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{switchP(b.dataset.open);$("dMonth").value=m;renderMonth();$("t0").click()}));
+  $("hGrid").querySelectorAll("[data-ren]").forEach(b=>b.addEventListener("click",()=>{
+    const card=b.closest(".pc"), h=card.querySelector("h3"), pid=b.dataset.ren;
+    h.innerHTML=`<input type="text" maxlength="60" value="${esc(pName(pid))}" style="font:inherit;font-size:20px;width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:4px 8px">`;
+    const inp=h.querySelector("input"); inp.focus(); inp.select();
+    const done=()=>{const v=inp.value.trim(); if(v&&v!==pName(pid)) savePractice(pid,v); else renderHome()};
+    inp.addEventListener("keydown",e=>{if(e.key==="Enter")done();if(e.key==="Escape")renderHome()}); inp.addEventListener("blur",done);
+  }));
+}
+async function savePractice(pid,name){
+  practices[pid]={...(practices[pid]||{}),name,updated:Date.now()}; refreshAll();
+  try{ if(db) await db.doc("practices/"+pid).set(practices[pid]); else localStorage.setItem("tiPractices",JSON.stringify(practices)) }catch(e){}
+}
+function switchP(pid){curP=pid;try{localStorage.setItem("tiPractice",pid)}catch(e){};rebuild();renderMonth();fillForm($("dDate").value)}
+function refreshAll(){rebuild();renderMonth();renderHome()}
+$("addP").addEventListener("submit",e=>{e.preventDefault();const name=$("newP").value.trim();if(!name)return;
+  const pid="p"+Date.now().toString(36); $("newP").value=""; savePractice(pid,name)});
+$("hMonth").addEventListener("input",renderHome);
+$("dPrac").addEventListener("change",()=>switchP($("dPrac").value));
 document.getElementById("dayForm").addEventListener("submit",async e=>{
   e.preventDefault(); const date=$("dDate").value; if(!date){$("dStatus").textContent="Pick a date first.";return}
   const body={date,updated:Date.now(),notes:$("dNotes").value.trim()}; DF.forEach(([id,k])=>body[k]=num($(id).value));
-  days[date]=body; renderMonth(); $("dSave").disabled=true;
-  try{ if(db){await db.doc("days/"+date).set(body); $("dStatus").textContent="Saved "+date+"."} else {localStorage.setItem("tiDays",JSON.stringify(days)); $("dStatus").textContent="Saved on this computer."} }
+  days[date]=body; allDays[docId(curP,date)]=body; renderMonth(); $("dSave").disabled=true;
+  try{ if(db){await db.doc("days/"+docId(curP,date)).set(body); $("dStatus").textContent="Saved "+date+" for "+pName(curP)+"."} else {localStorage.setItem("tiDays",JSON.stringify(allDays)); $("dStatus").textContent="Saved on this device only (the database isn't available here)."} }
   catch(err){ $("dStatus").textContent="Couldn't save: "+(err&&err.code==="not_granted"?"you don't have permission to edit this tool.":"please try again in a moment.") }
   $("dSave").disabled=false;
 });
@@ -374,22 +522,28 @@ $("dDate").addEventListener("change",()=>fillForm($("dDate").value));
 $("dFill").addEventListener("click",()=>{
   const {T,list}=renderMonth(); if(!list.length){$("dStatus").textContent="Log some days first.";return}
   const set=(id,val)=>{$(id).value=val};
-  set("cashA",Math.round(T.cash+T.card+T.finance-T.refunds)); set("done",list.length);
+  set("cashA",Math.round(T.cash+T.card+T.finance)); set("done",list.length);
+  const tg=targets[$("dMonth").value]; if(tg){ if(tg.taken) set("cashT",tg.taken); if(tg.invoiced) set("invT",tg.invoiced); if(tg.plans) set("planT",tg.plans); if(tg.newPatients) set("npT",tg.newPatients);
+    if(tg.openDays) set("days",tg.openDays); if(tg.dentists) set("dentists",tg.dentists); if(tg.staff) set("staff",tg.staff); }
   set("planA",T.plans-T.planCancels); set("npA",T.newPatients); set("cons",T.consults); set("ahead",T.ahead);
   const inv=list.reduce((a,k)=>a+num(days[k].invoiced),0); if(inv) set("invA",Math.round(inv));
   const wk=list.filter(k=>new Date(k)>=new Date(Date.now()-7*864e5)).reduce((a,k)=>a+num(days[k].reviews),0); set("reviews",wk);
   const appts=list.reduce((a,k)=>a+num(days[k].appointments),0);
   if(appts) set("ftaD",Math.round(T.fta/appts*1000)/10);
+  // consult FTA = consults in the diary that weren't seen; this also feeds the conversion calculator
+  if(T.consultsBooked){ const cf=Math.round(Math.max(0,T.consultsBooked-T.consults)/T.consultsBooked*1000)/10; set("ftaC",cf); set("mFta",cf); }
   if(T.consults){ const conv=Math.round(T.ahead/T.consults*1000)/10; set("mConv",conv);
-    const perDay=T.consults/list.length, wd=Math.max(1,v("days")); set("mBook",Math.round(perDay*wd/(1-(v("mFta")/100||0)))); }
+    const wd=Math.max(1,v("days")); const booked=T.consultsBooked||T.consults/(1-(v("mFta")/100||0)); set("mBook",Math.round(booked/list.length*wd)); }
   weekly(); money(); save(); document.getElementById("t1").click();
   $("dStatus").textContent="Sent: the weekly review and the conversion calculator now use this month's numbers.";
 });
 (async()=>{
-  $("dDate").value=today(); $("dMonth").value=today().slice(0,7); renderMonth();
+  $("dDate").value=today(); $("dMonth").value=today().slice(0,7); $("hMonth").value=today().slice(0,7); refreshAll();
   try{ db = window.claude && window.claude.use ? await window.claude.use("db") : null }catch(e){ db=null }
-  if(!db){ try{days=JSON.parse(localStorage.getItem("tiDays")||"{}")}catch(e){} renderMonth(); fillForm($("dDate").value); return }
-  db.collection("days").onSnapshot(snap=>{ days={}; snap.docs.forEach(d=>{ if(d.exists) days[d.id]=d.data() }); renderMonth(); if(!$("dCash").value && days[$("dDate").value]) fillForm($("dDate").value) },
+  if(!db){ try{allDays=JSON.parse(localStorage.getItem("tiDays")||"{}");allTargets=JSON.parse(localStorage.getItem("tiTargets")||"{}");practices=JSON.parse(localStorage.getItem("tiPractices")||"{}")}catch(e){} refreshAll(); fillForm($("dDate").value); return }
+  db.collection("practices").onSnapshot(snap=>{ practices={}; snap.docs.forEach(d=>{ if(d.exists) practices[d.id]=d.data() }); refreshAll() }, ()=>{});
+  db.collection("targets").onSnapshot(snap=>{ allTargets={}; snap.docs.forEach(d=>{ if(d.exists) allTargets[d.id]=d.data() }); refreshAll() }, ()=>{});
+  db.collection("days").onSnapshot(snap=>{ allDays={}; snap.docs.forEach(d=>{ if(d.exists) allDays[d.id]=d.data() }); refreshAll(); if(!$("dCash").value && days[$("dDate").value]) fillForm($("dDate").value) },
     ()=>{ $("dStatus").textContent="Showing saved days may be delayed: the connection dropped." });
 })();
 
