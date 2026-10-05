@@ -34,13 +34,15 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 <div>
   <div class="e">Free for UK dental practices</div>
   <h1>Stop finding out <em>at month end.</em></h1>
-  <p class="lede">Your free Practice Growth Plan shows you where you stand every single day, while there's still time to fix it.</p>
+  <p class="lede">Your free Practice Growth Plan shows you where you stand every single day, while there's still time to fix it. Pop in your day's numbers and it works it all out for you.</p>
   <ul class="b">
     <li>What you've taken today, and exactly what you need each day to hit your month</li>
     <li>If you're behind, you'll know on the 3rd, not the 28th</li>
     <li>Simple daily actions for your team: who to call back, which "maybes" to chase, how to fill gaps in the diary</li>
+    <li>A month-end forecast: at this pace, here's where you'll finish</li>
     <li>The money left on the table in consultations, and how to win it back</li>
   </ul>
+  <p class="lede" style="font-size:17px;margin-top:-6px"><b style="color:var(--ink);font-weight:500">Taking £30,000 a month and want £100,000?</b> It shows you the daily target to get there, and what your team needs to do each day to hit it.</p>
   <img class="shot" src="/circle/ads/growth-portrait.jpg" alt="The Practice Growth Engine showing money left on the table for an example practice">
 </div>
 <div class="card">
@@ -50,6 +52,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
     <label for="email">Email</label><input id="email" type="email" autocomplete="email" required>
     <label for="role">Your role</label>
     <select id="role"><option>Practice owner</option><option>Practice manager</option><option>Dentist</option><option>Dental nurse</option><option>Other</option></select>
+    <label for="concern">Your main area of concern</label>
+    <select id="concern"><option>Not hitting monthly targets</option><option>Consultations not converting</option><option>No-shows and cancellations</option><option>Not enough new patients</option><option>Selling practice plans</option><option>Finance being declined</option><option>Team not knowing what to focus on</option><option>Something else</option></select>
     <label for="practice">Practice name (optional)</label><input id="practice" autocomplete="organization">
     <input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="consent"><input type="checkbox" id="consent"><label for="consent" style="margin:0;font-weight:400">Email me the plan and occasional practical tips. Unsubscribe any time. <a href="/privacy/">Privacy</a></label></div>
@@ -77,7 +81,7 @@ $("f").addEventListener("submit",async e=>{
   $("go").disabled=true; $("go").textContent="Sending…";
   try{
     const r=await fetch("https://hnp-waitlist.teethingissues.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({email,role:$("role").value,practice:$("practice").value,consent:true,website:$("website").value,source:"growth-"+src})});
+      body:JSON.stringify({email,role:$("role").value,concern:$("concern").value,practice:$("practice").value,consent:true,website:$("website").value,source:"growth-"+src})});
     const d=await r.json();
     if(d.ok){ $("f").style.display="none"; $("ok").style.display="block"; window.scrollTo({top:0,behavior:"smooth"}); }
     else { $("err").textContent=d.error||"Something went wrong. Please try again."; $("go").disabled=false; $("go").textContent="Send me the free plan"; }

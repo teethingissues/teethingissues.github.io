@@ -484,7 +484,7 @@ function renderHome(){
     const line=([label,a,t,money])=>{const should=t*frac, ok=!t||a>=should*0.95, f=x=>money?gbp(x):Math.ceil(x-1e-9);
       return `<li><span class="dot" style="background:${!t?"var(--line)":ok?"var(--good)":"var(--bad)"}"></span><span>${label}</span><b>${f(a)}${t?` <small>of ${f(t)}</small>`:""}</b></li>`};
     return `<article class="pc"><div class="top"><h3>${esc(pName(pid))}</h3><span class="note">${list.length} day${list.length===1?"":"s"} logged</span></div>
-      <div class="pcbody">${ring}<ul class="kpis">${rows.map(line).join("")}</ul></div>
+      <div class="pcbody">${ring}<ul class="kpis">${rows.map(line).join("")}</ul>${(()=>{const tk=rows[0][1],tt=rows[0][2];if(!frac||frac>=1||!tk)return"";const fc=tk/frac;const gap=tt?fc-tt:0;return `<p class="fc" style="margin:10px 0 0;font-size:14px;color:var(--dim)"><b style="color:var(--ink)">Forecast:</b> at this pace you'll finish the month on <b style="color:${!tt||gap>=0?"var(--good)":"var(--bad)"}">${gbp(Math.round(fc))}</b>${tt?(gap>=0?` · on course to beat your target by ${gbp(Math.round(gap))}`:` · ${gbp(Math.round(-gap))} short of target unless something changes`):""}</p>`})()}</div>
       <div class="acts"><button type="button" class="save" style="padding:8px 16px;font-size:15px" data-open="${pid}">Open practice</button><button type="button" class="ghost" data-ren="${pid}">Rename</button></div></article>`}).join("");
   $("hGrid").innerHTML=cards;
   $("hSum").innerHTML=`<div class="sum"><div class="k">All practices: taken</div><div class="v">${kgbp(gT)}</div><div class="s">${gTarget?"of "+gbp(gTarget)+" combined target":"set targets to compare"}</div></div>
