@@ -38,6 +38,10 @@ input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
 details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 16px/1.4 Arial,Helvetica,sans-serif}
 details p{color:var(--dim);font:15px/1.6 Arial,Helvetica,sans-serif;margin:10px 0 0}
 footer{padding:30px 0 50px;font:13px/1.5 Arial,Helvetica,sans-serif;color:var(--dim);border-top:1px solid var(--line)}footer a{color:var(--dim)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);display:flex;justify-content:center;box-shadow:0 -8px 24px -12px rgba(0,0,0,.45)}
+.callbar a{display:block;width:100%;max-width:520px;text-align:center;background:var(--gold);color:#2F2A24;font:700 17px/1.2 Arial,Helvetica,sans-serif;text-decoration:none;border-radius:999px;padding:14px 18px}
+.callbar small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+body{padding-bottom:84px}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -133,5 +137,7 @@ document.getElementById("ck-y").onclick=function(){set("yes");b.style.display="n
 document.getElementById("ck-n").onclick=function(){set("no");b.style.display="none"};})();</script>
 <!-- meta-pixel -->
 <script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="calendar.app.google"]');if(a&&window.fbq)fbq('track','Schedule')},true);</script>
+<div class="callbar"><a href="tel:+442045721391">📞 Ring the demo now: 020 4572 1391<small>Free call. Pretend to be a patient. Takes 1 minute.</small></a></div>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.fbq)fbq('track','Contact')},true);</script>
 </body>
 </html>
