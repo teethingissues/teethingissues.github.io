@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sales Partner (commission only) | Teething Issues</title>
+<meta name="description" content="Self-employed, commission-only sales partner for UK dental practices. 15% of every package, up to £1,500 per sale. Training given.">
+<link rel="icon" href="../assets/mino-1.jpg">
+<style>
+:root{--bg:#E7E1D6;--card:#FCFAF3;--ink:#332E27;--dim:#6F655A;--gold:#8C7A62;--line:#D5CBBA;--soft:#F7F3EB;--on-gold:#FCFAF3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1915;--card:#26221D;--ink:#F3ECE2;--dim:#B8AB98;--gold:#B3A48C;--line:#3A342C;--soft:#2E2923;--on-gold:#1C1915}}
+:root[data-theme="dark"]{--bg:#1C1915;--card:#26221D;--ink:#F3ECE2;--dim:#B8AB98;--gold:#B3A48C;--line:#3A342C;--soft:#2E2923;--on-gold:#1C1915}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Cormorant Garamond",Georgia,"Times New Roman",serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{padding:18px 0}nav a{color:var(--ink);text-decoration:none;font-weight:bold;letter-spacing:.02em}
+h1,h2{font-weight:normal;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,7vw,56px);margin-top:28px}h1 em{color:var(--gold)}
+h2{font-size:clamp(26px,4.5vw,36px);margin-bottom:12px}
+.sub{font-size:19px;color:var(--dim);max-width:620px;margin:16px 0 26px}
+.eyebrow{font:600 12px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:700 16px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:15px 24px;text-align:center}
+.btn.primary{background:var(--ink);color:var(--bg)}.btn.ghost{border:2px solid var(--gold);color:var(--ink)}
+.note{font:14px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);margin-top:12px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+header{padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:700px){.calc{grid-template-columns:1fr}}
+label{display:block;font:600 15px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin-bottom:18px}
+label span{display:flex;justify-content:space-between;gap:10px}label b{color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
+.out{background:var(--soft);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;justify-content:center}
+.big{font-size:clamp(38px,8vw,52px);line-height:1.1}.out p{margin:6px 0 0;font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.list .card h3{margin:0 0 6px;font:700 17px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.list .card p{margin:0;color:var(--dim);font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 16px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details p{color:var(--dim);font:15px/1.6 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:10px 0 0}
+footer{padding:30px 0 50px;font:13px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);border-top:1px solid var(--line)}footer a{color:var(--dim)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);display:flex;justify-content:center;box-shadow:0 -8px 24px -12px rgba(0,0,0,.45)}
+.callbar a{display:block;width:100%;max-width:520px;text-align:center;background:var(--gold);color:var(--on-gold);font:700 17px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:14px 18px}
+.callbar small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+body{padding-bottom:84px}
+.byline{display:block;font:500 12px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.perk{margin:16px 0 0;display:inline-block;background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;font:15px/1.45 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.btns .btn{flex:1 1 280px;max-width:380px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;box-sizing:border-box}
+.btn.ghost{border-color:var(--ink)}
+.perk{display:block;max-width:772px}
+</style>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Teething Issues</a><span class="byline">Run by dental professionals</span></nav>
+<header>
+  <div class="eyebrow">Join the team · Remote, UK · Self-employed</div>
+  <h1>Sales Partner, <em>commission only.</em></h1>
+  <p class="sub">Love a good conversation? Help UK dental practices fix their biggest headaches, and earn 15% on every practice you bring in.</p>
+  <div class="btns">
+    <a class="btn primary" href="#apply">Apply now</a>
+    <a class="btn ghost" href="/receptionist/">See what you'd be selling</a>
+  </div>
+</header>
+<section>
+  <p>Teething Issues helps UK dental practices run calmer, compliant, growing practices: every patient call answered, inspection-ready for CQC, the right staff, and a fuller diary. We're built by dental professionals, not marketers, and we're growing.</p>
+  <h2>What you'll earn</h2>
+  <ul>
+    <li>15% commission on every package you sell, on anything up to £10,000.</li>
+    <li>That's about £300 for a Starter package, £750 for Growth and £1,500 for Complete.</li>
+    <li>For example: 2 Growth practices a month = £1,500. 4 Growth practices a month = £3,000. No cap.</li>
+    <li>Paid within 7 days of the practice paying us.</li>
+  </ul>
+  <h2>What you'll do</h2>
+  <ul>
+    <li>Speak to dental practice owners and managers, by phone, email, LinkedIn or people you already know.</li>
+    <li>Book them onto a free 30-minute Practice Growth Review.</li>
+    <li>Once trained, run the review yourself and close the sale.</li>
+  </ul>
+  <h2>What you need</h2>
+  <ul>
+    <li>Confidence picking up the phone and having warm, honest conversations.</li>
+    <li>Your own phone and laptop, and a few hours a week. Work when it suits you.</li>
+    <li>A fit-first attitude: we turn practices down if we can't help them.</li>
+  </ul>
+  <h2>Nice to have (not essential)</h2>
+  <ul>
+    <li>Dental knowledge: you've worked in a practice (any role), sold into dental, or know practice owners.</li>
+    <li>Sales experience, especially selling services to small businesses.</li>
+  </ul>
+  <h2>Training is given</h2>
+  <p>A ready-made pitch, a step-by-step call guide, practice calls with feedback, a demo phone line practices can ring, and your own booking link so every lead is tracked to you.</p>
+  <h2>How we hire</h2>
+  <p>We read every application. Shortlisted applicants do a short practice sales call with a pretend practice owner (about 10 minutes). The call is recorded and scored to help us choose fairly, and a real person makes every decision. Then a short chat with us and a two-week trial.</p>
+  <h2>Pay and status (please read)</h2>
+  <p>This is a self-employed, commission-only role. Commission is paid on our practice packages (Starter, Growth and Complete). There are no upfront costs, nothing to buy, and you are never asked to recruit other people. Working part-time hours, you can earn the equivalent of the National Minimum Wage or more (for example, one Growth practice a month pays £750). Self-employed people are required to register as self-employed with HMRC and are responsible for paying their own tax and National Insurance contributions.</p>
+</section>
+<section id="apply">
+  <h2>Apply</h2>
+  <p>Email <b>hello@teethingissues.com</b> with the subject <b>"Sales Partner"</b>, your name, phone number, and short answers to these 5 questions:</p>
+  <ol>
+    <li>Have you worked in or sold to UK dental practices?</li>
+    <li>Do you have experience selling to small businesses?</li>
+    <li>Are you happy to work self-employed on commission only?</li>
+    <li>How many hours a week could you give?</li>
+    <li>In 2 or 3 sentences: why would a busy practice owner take your call?</li>
+  </ol>
+  <div class="btns"><a class="btn primary" href="mailto:hello@teethingissues.com?subject=Sales%20Partner">Email your application</a></div>
+  <p class="note">We reply to everyone.</p>
+</section>
+<footer>Teething Issues · <a href="/">teethingissues.com</a> · <a href="/privacy/">Privacy</a></footer>
+</div>
+</body></html>
