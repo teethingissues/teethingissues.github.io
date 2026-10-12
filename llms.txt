@@ -41,3 +41,15 @@ inspections.
 
 This site is intentionally selective — Teething Issues does not work with every practice that
 applies, by design, to protect the quality of what its name is associated with.
+
+## Never Miss a Call (dental receptionist)
+
+https://teethingissues.com/receptionist/
+
+A telephone receptionist for UK dental practices, developed by dental care professionals. It covers the calls the team
+can't get to (lunch, after five), speaks multiple languages, spots emergencies, and sends the team a summary of every
+call. It follows the practice's rules: it never makes information up, only answers from what it has been taught (each
+dentist, treatment slot lengths, prices), and never gives medical advice. Upgrade: calls FTAs (failed-to-attend patients)
+and rebooks them, fills cancellations, and books appointments (directly on Dentally; on SOE and other systems it offers a
+time for the team to confirm). From £199 a month, no long contract, UK based and ICO registered.
+Demo line: 020 4572 1391.
