@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Never Miss a Call | Teething Issues</title>
+<meta name="description" content="A friendly receptionist that answers every call your team can't. Work out what missed calls cost your practice, then ring our demo line.">
+<link rel="icon" href="../assets/mino-1.jpg">
+<style>
+:root{--bg:#EFE9DF;--card:#FBF8F2;--ink:#2F2A24;--dim:#6D6356;--gold:#B68A3E;--line:#D9CFBF;--soft:#F6F1E9;--on-gold:#FBF8F2;color-scheme:light}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Cormorant Garamond",Georgia,"Times New Roman",serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{padding:18px 0}nav a{color:var(--ink);text-decoration:none;font-weight:bold;letter-spacing:.02em}
+h1,h2{font-weight:normal;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,7vw,56px);margin-top:28px}h1 em{color:var(--gold)}
+h2{font-size:clamp(26px,4.5vw,36px);margin-bottom:12px}
+.sub{font-size:19px;color:var(--dim);max-width:620px;margin:16px 0 26px}
+.eyebrow{font:600 12px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:700 16px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:15px 24px;text-align:center}
+.btn.primary{background:var(--ink);color:var(--bg)}.btn.ghost{border:2px solid var(--gold);color:var(--ink)}
+.note{font:14px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);margin-top:12px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+header{padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:700px){.calc{grid-template-columns:1fr}}
+label{display:block;font:600 15px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin-bottom:18px}
+label span{display:flex;justify-content:space-between;gap:10px}label b{color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
+.out{background:var(--soft);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;justify-content:center}
+.big{font-size:clamp(38px,8vw,52px);line-height:1.1}.out p{margin:6px 0 0;font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.list .card h3{margin:0 0 6px;font:700 17px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.list .card p{margin:0;color:var(--dim);font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 16px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details p{color:var(--dim);font:15px/1.6 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:10px 0 0}
+footer{padding:30px 0 50px;font:13px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);border-top:1px solid var(--line)}footer a{color:var(--dim)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,248,242,.94);border-top:1px solid var(--line);display:flex;justify-content:center;box-shadow:0 -8px 24px -14px rgba(47,42,36,.18)}
+.callbar a{display:block;width:100%;max-width:520px;text-align:center;background:var(--ink);color:var(--card);font:700 17px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:14px 18px}
+.callbar small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+body{padding-bottom:84px}
+.byline{display:block;font:500 12px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.perk{margin:16px 0 0;display:inline-block;background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;font:15px/1.45 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.btns .btn{flex:1 1 280px;max-width:380px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;box-sizing:border-box}
+.btn.ghost{border-color:var(--ink)}
+.perk{display:block;max-width:772px}
+</style>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<div class="wrap">
+<nav><a href="/">Teething Issues</a><span class="byline">Run by dental professionals</span></nav>
+
+<header>
+  <div class="eyebrow">Never Miss a Call</div>
+  <h1>Every call answered. <em>Even at lunch.</em></h1>
+  <p class="sub">A friendly receptionist picks up whenever your team can't, takes the patient's details, and passes everything straight to your team.</p>
+  <div class="btns">
+    <a class="btn primary" href="tel:+442045721391">📞 Hear it now: ring 020 4572 1391</a>
+    <a class="btn ghost" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener">📅 Book your free Growth Review</a>
+  </div>
+  <p class="perk">🎁 <b>Free upgrade:</b> daily appointment reminder calls included, so fewer no-shows and empty chairs. <b>Book your Growth Review by 30 November 2026.</b></p>
+  <p class="note">The demo answers as a made-up practice, Willow Tree Dental. Try being a patient with toothache, or ask about Invisalign.</p>
+</header>
+
+<section id="calculator">
+  <h2>What are missed calls costing you?</h2>
+  <div class="card calc">
+    <div>
+      <label for="m"><span>Missed calls a week <b id="mv">10</b></span><input id="m" type="range" min="1" max="60" value="10"></label>
+      <label for="n"><span>Of those, new patients <b id="nv">1 in 3</b></span><input id="n" type="range" min="10" max="60" step="1" value="33"></label>
+      <label for="g"><span>New patients who go ahead <b id="gv">40%</b></span><input id="g" type="range" min="10" max="80" step="5" value="40"></label>
+      <label for="v"><span>A new patient is worth <b id="vv">£1,000</b></span><input id="v" type="range" min="200" max="5000" step="100" value="1000"></label>
+    </div>
+    <div class="out">
+      <div class="eyebrow">Roughly lost each month</div>
+      <div class="big" id="month">£6,067</div>
+      <p>That's about <b id="year">£72,800</b> a year, from calls nobody picked up.</p>
+      <p>Change the sliders to match your practice.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What it does</h2>
+  <div class="list">
+    <div class="card"><h3>Answers every call</h3><p>When reception is busy, at lunch, after five and at weekends. No voicemail, no ringing out.</p></div>
+    <div class="card"><h3>Takes the details</h3><p>Name, number, new or existing patient and why they're calling, then a tidy summary to your team straight away.</p></div>
+    <div class="card"><h3>Books patients in</h3><p>On Dentally it can book straight into your diary. On other systems, like SOE, it offers a time and your team confirms it.</p></div>
+    <div class="card"><h3>Spots emergencies</h3><p>Pain, swelling or trauma are flagged to your team at once, and callers are pointed to 999 or 111 when they need it.</p></div>
+    <div class="card"><h3>Knows your prices</h3><p>Shares your "from" prices, always saying the dentist confirms the cost at the consultation. Never gives clinical advice.</p></div>
+    <div class="card"><h3>Reminds patients the day before (free upgrade until 30 Nov)</h3><p>A friendly reminder call before each appointment. Patients confirm, or ask for a new time and your team calls them back, so fewer empty chairs.</p></div>
+    <div class="card"><h3>Never makes things up</h3><p>It only gives answers from your own information. If it doesn't know, it says the team will check, and it never tells a patient something is booked until it really is.</p></div>
+    <div class="card"><h3>Sounds like your practice</h3><p>Answers with your practice name, in a warm, friendly voice, and helps your team rather than replacing anyone.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Want it for your practice?</h2>
+  <p class="sub" style="margin-top:0">Book a free 30-minute Practice Growth Review. We'll look at your calls and your numbers, and set it up in about a week.</p>
+  <a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener">Book your free Practice Growth Review</a>
+  <p class="note">No obligation · Rough numbers are fine</p>
+</section>
+
+<section>
+  <h2>Questions</h2>
+  <details><summary>Will it replace my receptionist?</summary><p>No. It picks up the calls your team can't get to, so they can focus on the patients in front of them.</p></details>
+  <details><summary>Can it book appointments?</summary><p>If you use Dentally, yes, straight into your diary. With other practice software it offers a time and your team confirms it in your system. We'll check yours at the Growth Review.</p></details>
+  <details><summary>What if a patient asks something it doesn't know?</summary><p>It says so, takes the question, and your team calls back with the answer. It never guesses prices or clinical details, and never confirms a booking or payment that hasn't actually happened.</p></details>
+  <details><summary>Is patient data safe?</summary><p>Yes. We're registered with the ICO, work under UK GDPR, and agree a data processing agreement with every practice. Callers are told calls are recorded.</p></details>
+  <details><summary>How quickly can it start?</summary><p>Usually within a week of your Growth Review.</p></details>
+</section>
+
+<footer>© Teething Issues · <a href="/">teethingissues.com</a> · hello@teethingissues.com · <a href="/privacy/">Privacy</a></footer>
+</div>
+<script>
+const $=id=>document.getElementById(id), gbp=n=>"£"+Math.round(n).toLocaleString("en-GB");
+function calc(){
+  const m=+$("m").value,n=+$("n").value/100,g=+$("g").value/100,v=+$("v").value;
+  $("mv").textContent=m; $("nv").textContent=Math.round(n*100)+"%"; $("gv").textContent=Math.round(g*100)+"%"; $("vv").textContent=gbp(v);
+  const month=m*52/12*n*g*v; $("month").textContent=gbp(month); $("year").textContent=gbp(month*12);
+}
+["m","n","g","v"].forEach(id=>$(id).addEventListener("input",calc)); calc();
+</script>
+<!-- clarity-consent -->
+<div id="ck" role="dialog" aria-label="Cookie choice" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;
+background:#111827;color:#FFFFFF;border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:14px 16px;box-shadow:0 18px 50px -12px rgba(0,0,0,.6);
+font-size:14px;line-height:1.45">
+<p style="margin:0 0 10px">We'd like to use cookies (Microsoft Clarity and Meta) to see how people use this site and whether our adverts work. Nothing is sold. <a href="/privacy/" style="color:#FFFFFF;text-decoration:underline">Privacy</a></p>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" id="ck-y" style="font:inherit;font-size:14px;font-weight:700;border-radius:999px;padding:9px 18px;cursor:pointer;width:auto;margin:0;box-shadow:none;filter:none;grid-column:auto;line-height:1.2;background:#FFFFFF;color:#111827;border:0">Accept</button>
+<button type="button" id="ck-n" style="font:inherit;font-size:14px;font-weight:700;border-radius:999px;padding:9px 18px;cursor:pointer;width:auto;margin:0;box-shadow:none;filter:none;grid-column:auto;line-height:1.2;background:transparent;color:#FFFFFF;border:1px solid rgba(255,255,255,.25)">No thanks</button>
+</div></div>
+<script>(function(){var K="ck-consent",ID="ysnskra6j8",b=document.getElementById("ck");
+function load(){try{!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2039772640055190');fbq('track','PageView');}catch(e){}(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",ID);}
+function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+function set(v){try{localStorage.setItem(K,v)}catch(e){}}
+var v=get(); if(v==="yes"){load();return} if(v==="no")return; b.style.display="block";
+document.getElementById("ck-y").onclick=function(){set("yes");b.style.display="none";load()};
+document.getElementById("ck-n").onclick=function(){set("no");b.style.display="none"};})();</script>
+<!-- meta-pixel -->
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="calendar.app.google"]');if(a&&window.fbq)fbq('track','Schedule')},true);</script>
+<div class="callbar"><a href="tel:+442045721391">📞 Ring the demo now: 020 4572 1391<small>Free call. Pretend to be a patient. Takes 1 minute.</small></a></div>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.fbq)fbq('track','Contact')},true);</script>
+</body>
+</html>
