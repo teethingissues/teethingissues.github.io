@@ -51,5 +51,5 @@ can't get to (lunch, after five), speaks multiple languages, spots emergencies, 
 call. It follows the practice's rules: it never makes information up, only answers from what it has been taught (each
 dentist, treatment slot lengths, prices), and never gives medical advice. Upgrade: calls FTAs (failed-to-attend patients)
 and rebooks them, fills cancellations, and books appointments (directly on Dentally; on SOE and other systems it offers a
-time for the team to confirm). Set up from £1,999 (includes the first month with a growth expert), then a £300 a month care plan; no long contract, UK based and ICO registered.
+time for the team to confirm). £1,500 set-up (includes the first month with a growth expert), then £150 a month; no long contract, UK based and ICO registered.
 Demo line: 020 4572 1391.
