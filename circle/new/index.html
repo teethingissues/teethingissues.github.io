@@ -70,6 +70,9 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
 .sticky a{box-shadow:0 10px 30px rgba(47,42,36,.25)}
 .heroctas{display:grid;gap:12px}
 .heroctas .ghost{margin-top:0}
+.offers ul,.mini{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:4px}
+.offers ul li,.mini li{padding-left:18px;position:relative;font-size:17px;line-height:1.4}
+.offers ul li::before,.mini li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--gold)}
 .how{list-style:none;padding:0;margin:4px 0 16px;display:grid;gap:10px}
 .how li{padding-left:30px;position:relative;font-size:18.5px;line-height:1.45}
 .how li::before{content:"";position:absolute;left:0;top:6px;width:18px;height:18px;border-radius:50%;background:var(--gold);box-shadow:inset 0 0 0 4px var(--paper)}
@@ -95,13 +98,12 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
   <header><a class="brand" href="/">Teething Issues</a><span class="tag">For dental entrepreneurs &amp; managers</span></header>
 
   <h1>Get your evenings <em>back.</em></h1>
-  <ul class="how" aria-label="How">
-    <li><b>Every call answered,</b> even at lunch and after hours.</li>
-    <li><b>Empty chairs filled</b> with reminder calls, recalls and follow-ups.</li>
-    <li><b>CQC paperwork sorted</b> in minutes, not at the weekend.</li>
-    <li><b>Found first</b> when patients search Google or ask ChatGPT.</li>
-  </ul>
-  <p class="lead">Do it yourself with easy step-by-step guides, or let us do it all for you. Either way, we're with you every step of the way.</p>
+  <ul class="how" aria-label="What you get">
+    <li><b>Free time back.</b> Evenings and weekends that are yours again.</li>
+    <li><b>Don't do it on your own.</b> We're with you every step of the way.</li>
+    <li><b>A calm practice.</b> Phones answered, chairs filled, CQC sorted.</li>
+    <li><b>Get ahead of your competition.</b> Be the practice patients find first.</li>
+  </ul>  <p class="lead">Do it yourself with easy step-by-step guides, or let us do it all for you. Either way, we're with you every step of the way.</p>
 
   <div class="heroctas" id="join">
     <a class="cta" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join-top">Join the Circle</a>
@@ -112,15 +114,13 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
   <section>
     <h2>Everything we help with</h2>
     <ul class="offers">
-      <li><b>Every call answered</b>A friendly receptionist picks up whenever your team can't, books and rebooks, and flags anything urgent. Reminder calls cut no-shows.
-        <span class="try">Hear it now: <a href="tel:+442045721391" data-t="demo-call">020 4572 1391</a></span></li>
-      <li><b>More patients in the chair</b>Bring back patients who've lapsed, collect more reviews, get more referrals and turn more consultations into treatment.</li>
-      <li><b>Found on Google and ChatGPT</b>When patients search or ask "who's the best dentist near me?", make sure the answer is you.</li>
-      <li><b>CQC inspection ready</b>Your Pre-Inspection Score in 5 minutes, then policies, your evidence folder, staff file checks and mock inspection prep.
-        <span class="try"><a href="https://teethingissues.com/circle/tools/cqc-score/" target="_blank" rel="noopener" data-t="cqc-score">Take the free CQC score</a></span></li>
-      <li><b>Your team, supported</b>Hiring, onboarding, rotas and simple systems, so the practice keeps running smoothly even on your day off.</li>
-      <li><b>Your numbers, made clear</b>Daily figures, monthly targets for each dentist and team member, and the money being left on the table.</li>
-      <li><b>Social media, sorted</b>A month of posts and replies to comments and reviews, written within UK dental advertising rules.</li>
+      <li><b>Phones answered</b><ul><li>Every call picked up, even at lunch</li><li>Bookings and rebookings</li><li>Reminder calls cut no-shows</li></ul><span class="try">Hear it: <a href="tel:+442045721391" data-t="demo-call">020 4572 1391</a></span></li>
+      <li><b>More patients</b><ul><li>Lapsed patients brought back</li><li>More reviews and referrals</li><li>More consults turned into treatment</li></ul></li>
+      <li><b>Found first</b><ul><li>Top of Google</li><li>Recommended by ChatGPT</li></ul></li>
+      <li><b>CQC ready</b><ul><li>Free score in 5 minutes</li><li>Policies and evidence folder</li><li>Staff file checks</li></ul><span class="try"><a href="https://teethingissues.com/circle/tools/cqc-score/" target="_blank" rel="noopener" data-t="cqc-score">Take the free CQC score</a></span></li>
+      <li><b>Your team</b><ul><li>Hiring and onboarding</li><li>Rotas and simple systems</li></ul></li>
+      <li><b>Your numbers</b><ul><li>Daily figures and targets</li><li>Money left on the table</li></ul></li>
+      <li><b>Social media</b><ul><li>A month of posts</li><li>Replies to reviews</li></ul></li>
     </ul>
   </section>
 
@@ -130,13 +130,13 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
       <div class="way">
         <p class="wk">Do it yourself, with us beside you</p>
         <h3>The Teething Issues Circle</h3>
-        <p>Easy step-by-step guides for everything above, a monthly live Q&amp;A, ready-made tools, and a community of practice owners and managers who get it.</p>
+        <ul class="mini"><li>Easy step-by-step guides</li><li>Monthly live Q&amp;A</li><li>Ready-made tools</li><li>People who get it</li></ul>
         <a class="cta" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join-mid">Join the Circle</a>
       </div>
       <div class="way">
         <p class="wk">We do it all for you</p>
         <h3>Done for you</h3>
-        <p>We set it up and run it for you, starting small so we never overwhelm your team. It begins with a free 30-minute Practice Growth Review of your phones, diary and numbers.</p>
+        <ul class="mini"><li>We set it up and run it</li><li>We start small, your team stays in control</li><li>Free 30-minute Growth Review first</li></ul>
         <a class="ghost" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book-review">Book your free Growth Review</a>
       </div>
     </div>
@@ -145,7 +145,7 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
 
   <section>
     <h2>Who's behind it</h2>
-    <p>Teething Issues was started by a dental care professional with 15+ years' experience in practices, who helped grow one practice to £135k a month. Everything we share comes from doing the job.</p>
+    <ul class="mini"><li>Dental care professional, 15+ years</li><li>Helped grow a practice to £135k a month</li><li>Everything comes from doing the job</li></ul>
     <blockquote>"We're there to make the team's lives easier, so we'll never be treading on anyone's toes."</blockquote>
     <p style="font-family:var(--serif);font-size:22px;font-style:italic;margin:14px 0 0">Your practice, made perfect. Without the chaos of running it alone.</p>
     <a class="cta" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" style="margin-top:20px" data-t="join-bottom">Join the Circle</a>
