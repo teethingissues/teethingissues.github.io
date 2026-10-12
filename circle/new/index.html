@@ -70,6 +70,10 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
 .sticky a{box-shadow:0 10px 30px rgba(47,42,36,.25)}
 .heroctas{display:grid;gap:12px}
 .heroctas .ghost{margin-top:0}
+.how{list-style:none;padding:0;margin:4px 0 16px;display:grid;gap:10px}
+.how li{padding-left:30px;position:relative;font-size:18.5px;line-height:1.45}
+.how li::before{content:"";position:absolute;left:0;top:6px;width:18px;height:18px;border-radius:50%;background:var(--gold);box-shadow:inset 0 0 0 4px var(--paper)}
+.how b{font-weight:600}
 .strip{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px}
 .strip li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:500}
 .offers{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px}
@@ -91,16 +95,19 @@ footer{padding:26px 0 120px;font-size:13px;color:var(--ink-faint);text-align:cen
   <header><a class="brand" href="/">Teething Issues</a><span class="tag">For UK dental practices</span></header>
 
   <h1>Get your evenings <em>back.</em></h1>
-  <p class="lead">Get ahead of your competition with easy step-by-step guides, or let us do it all for you. Either way, we're with you every step of the way.</p>
+  <ul class="how" aria-label="How">
+    <li><b>Every call answered,</b> even at lunch and after hours.</li>
+    <li><b>Empty chairs filled</b> with reminder calls, recalls and follow-ups.</li>
+    <li><b>CQC paperwork sorted</b> in minutes, not at the weekend.</li>
+    <li><b>Found first</b> when patients search Google or ask ChatGPT.</li>
+  </ul>
+  <p class="lead">Do it yourself with easy step-by-step guides, or let us do it all for you. Either way, we're with you every step of the way.</p>
 
   <div class="heroctas" id="join">
     <a class="cta" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join-top">Join the Circle</a>
     <a class="ghost" href="#work" data-t="work-top">Or work with us</a>
     <p class="note">A free community for UK practices. Only the first 20 practices get Premium free, for good. After that, the price goes up.</p>
   </div>
-  <ul class="strip" aria-label="What we help with">
-    <li>Phones answered</li><li>More patients</li><li>CQC ready</li><li>Found on Google &amp; ChatGPT</li>
-  </ul>
 
   <section>
     <h2>Everything we help with</h2>
