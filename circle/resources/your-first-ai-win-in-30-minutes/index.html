@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Bringing AI Into Your Practice</div><h1>Your First AI Win: 30-Minute Worksheet</h1><p class="dim">Print this, pick one task, and work down the page as you go. It keeps you on safe ground with no patient data and helps you record your time saved, ready to share.</p><h2>Before you start: safety check</h2><ul><li>☐ I have chosen a task that needs no patient data</li><li>☐ If using a Google review, I have removed any names or identifying details before pasting</li><li>☐ I am only pasting our own practice documents (not anyone else&#x27;s)</li><li>☐ I will read and check everything the AI produces before using it</li></ul><h2>Pick one task</h2><ul><li>☐ Review reply: paste a non-identifying Google review and ask for a warm, professional reply in our practice&#x27;s voice</li><li>☐ Team rota: describe our team and opening hours and ask for a draft rota</li><li>☐ Team meeting: describe our team and ask for a 30-minute team meeting agenda</li><li>☐ Policy summary: paste one of our own policies and ask for a one-page staff summary and five quiz questions</li><li>☐ Website (Premium members): install the Bobby AI Visibility Check &amp; Fix and get a score and ready-to-paste fixes</li></ul><h2>Do it and check it</h2><ul><li>Task chosen: ____________________________</li><li>What I asked the AI (my prompt): ____________________________</li><li>☐ I read the result in full and corrected anything inaccurate</li><li>☐ It sounds like our practice and is ready to use</li><li>Where I will use it (e.g. Google, staff room, team meeting): ____________________________</li></ul><h2>Record your before-and-after</h2><ul><li>How long this would have taken without AI: ______ minutes</li><li>How long it took with AI (including checking): ______ minutes</li><li>Time saved: ______ minutes</li><li>One thing I would do differently next time: ____________________________</li><li>☐ Posted my before-and-after in the discussion</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · CQC Compliance Foundations</div><h1>Close the Loop: Audit Actions Log and Gap Response Checklist</h1><p class="dim">Use the first two sections to check your audits now and keep the actions log going after every audit. Keep the gap response steps to hand for inspection day, so the team knows exactly what to do if an inspector finds something.</p><h2>Audit loop check (infection control and radiographs)</h2><ul><li>☐ Last two infection control audits are on file, not just the latest</li><li>☐ Last two radiograph audits are on file, not just the latest</li><li>☐ Each audit has an action plan attached</li><li>☐ Each action has a named owner and a deadline</li><li>☐ Re-audit booked 3–6 months after the audit. Date: ________</li><li>☐ Re-audit result recorded and compared with the previous score</li></ul><h2>Evidence chain check (clinical and safeguarding areas)</h2><ul><li>Area being checked: ____________________</li><li>☐ Requirement identified</li><li>☐ Policy in place and current</li><li>☐ Training delivered and recorded</li><li>☐ Staff can explain it when asked</li><li>☐ Records kept</li><li>☐ Audited, with findings, actions and re-audit logged</li></ul><h2>Actions log (copy one line per finding)</h2><ul><li>Finding: ____________________</li><li>Owner: ____________________</li><li>Deadline: ____ / ____ / ______</li><li>Done date: ____ / ____ / ______</li><li>Evidence of the fix filed at: ____________________</li></ul><h2>If an inspector finds a gap</h2><ul><li>☐ Acknowledge it openly, without being defensive</li><li>☐ Fix it promptly (for example, sign the risk assessment or book testing with named dates)</li><li>☐ Document the fix with a date</li><li>☐ Be ready to show the evidence</li><li>☐ Send any evidence you already had but didn&#x27;t produce on the day</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

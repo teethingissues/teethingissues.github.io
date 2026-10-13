@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Team &amp; Delegation</div><h1>Staff File Checklist by Role (Regulation 19)</h1><p class="dim">Print one copy per team member, fill in their details and role group, then work down the sections that apply to them. Each group needs everything in the sections above it, plus its own extras.</p><h2>Staff member details</h2><ul><li>Name: ____________________</li><li>Role: ____________________</li><li>Role group (circle): Non-clinical / Unqualified clinical / Qualified clinical / Clinician</li><li>Start date at this practice: ____________ (before 2014? See final section)</li></ul><h2>Everyone needs (all four groups)</h2><ul><li>☐ Photo ID</li><li>☐ Right to work</li><li>☐ Proof of address</li><li>☐ Staff details form</li><li>☐ Medical history form</li><li>☐ Enhanced DBS</li><li>☐ CV</li><li>☐ Two references</li><li>☐ Job offer letter (best practice)</li><li>☐ Signed contract</li><li>☐ Job description</li><li>☐ Induction checklist</li><li>☐ Annual appraisal</li></ul><h2>Clinical staff also need (trainee nurses, dental nurses, clinicians)</h2><ul><li>☐ Hep B evidence</li><li>☐ Personal development plan</li></ul><h2>Registered staff also need (GDC-registered nurses and clinicians)</h2><ul><li>☐ GDC certificate</li><li>☐ Indemnity</li><li>☐ Qualification certificates</li><li>☐ NHS practices only, clinicians: performer letter</li></ul><h2>Before you sign the file off</h2><ul><li>☐ Started before 2014? Contract, CV, references and qualification certificates not needed on file (follows the person&#x27;s start date, so it survives a change of owner)</li><li>☐ Hard stop checked: anyone who should be GDC-registered is registered (trainee nurses aside), or they cannot work</li><li>Missing documents to chase: ______________________  Checked by: ________  Date: ________</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

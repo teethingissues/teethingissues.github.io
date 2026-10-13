@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Team &amp; Delegation</div><h1>Who&#x27;s Responsible for What: Named Leads Sheet</h1><p class="dim">Fill in a name (and a deputy where you can) for every role, then display the sheet where the whole team can see it. Use the final sections to hand over your first job as a clear outcome and to check the team can answer inspector questions.</p><h2>Named leads (write a name for each)</h2><ul><li>Radiation Protection Supervisor (RPS): ____________</li><li>Infection control (cross-infection) lead: ____________</li><li>First aider: ____________</li><li>Health and safety lead: ____________</li><li>Safeguarding lead: ____________</li><li>CQC Registered Manager: ____________</li><li>Nominated Individual: ____________</li><li>Fire wardens: ____________</li><li>Information governance lead / Data Protection Officer: ____________</li><li>Person who reports significant events: ____________</li></ul><h2>Display and share</h2><ul><li>☐ Sheet printed and put up in the staff room</li><li>☐ Date displayed: ____________</li><li>☐ Team told where the sheet is and who holds each role</li><li>☐ Sheet updated whenever someone leaves or changes role</li></ul><h2>Hand over one outcome (not just a task)</h2><ul><li>Job I&#x27;m handing over first: ____________</li><li>Owned by: ____________</li><li>What &quot;done&quot; looks like and how often (e.g. logged every Friday): ____________</li><li>Where it&#x27;s recorded: ____________</li></ul><h2>Inspector-ready check</h2><ul><li>☐ Asked a team member &quot;Who is our safeguarding lead?&quot; and they answered correctly</li><li>☐ Asked a team member &quot;Who is our RPS?&quot; and they answered correctly</li><li>☐ Every role above has a name, with no blanks left</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

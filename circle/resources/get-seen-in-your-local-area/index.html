@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Growth &amp; Patient Numbers</div><h1>Local Visibility Plan and Tracker</h1><p class="dim">Fill this in with your practice manager or front desk team at the start of the month, then keep it at reception so everyone can update the tracker. Review it at month end to decide what&#x27;s worth repeating.</p><h2>This month&#x27;s targets</h2><ul><li>Local business to approach: ____________________</li><li>Contact name and phone/email: ____________________</li><li>Staff discount we&#x27;ll offer: ____________________</li><li>GP surgery to approach: ____________________</li><li>Practice manager or contact name: ____________________</li><li>☐ Leaflets dropped off at GP surgery (date: ________)</li><li>☐ Leaflets dropped off at local hospital (date: ________)</li></ul><h2>Where people already are</h2><ul><li>☐ Nearest busy footfall area identified: ____________________</li><li>☐ Supermarket pop-up requested (store and date: ____________________)</li><li>☐ Drinks, leaflets and friendly team members booked for the stand</li><li>☐ Car park leaflet drop planned (location and date: ____________________)</li><li>☐ Door-to-door leaflet streets chosen: ____________________</li></ul><h2>Open day</h2><ul><li>Date and time: ____________________</li><li>☐ Team members on the rota to meet visitors</li><li>☐ Invitations shared locally (leaflets, nearby businesses, GP surgery)</li><li>☐ Practice tidied and ready for tours</li></ul><h2>Track it</h2><ul><li>☐ &quot;How did you hear about us?&quot; added to the new patient form</li><li>☐ Front desk team briefed to ask every new patient</li><li>☐ Options listed: GP/hospital, local employer, stand/pop-up, leaflet, open day, friend or family, other</li><li>Month-end count of new patients by source: ____________________</li><li>Idea to repeat next month: ____________________</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

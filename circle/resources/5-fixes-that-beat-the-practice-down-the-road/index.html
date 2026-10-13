@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Beat Your Competition on Google &amp; AI Search</div><h1>5 Fixes Website &amp; Google Profile Checklist</h1><p class="dim">Work through each section with your website and Google Business Profile open side by side, ticking what&#x27;s already done and marking the gaps. Then pick one gap to fix this week and come back for the next.</p><h2>Fix 1: Words, not pictures</h2><ul><li>☐ Opening hours are written in plain text, not only in an image or slider</li><li>☐ Prices (or prices from £) are written in plain text, not only in a PDF or image</li><li>☐ Treatments are listed in plain text on the homepage or a treatments page</li><li>☐ Anything important in a slider or banner is also written out on the page</li></ul><h2>Fix 2 &amp; 3: Say where you are, what you do, and the real facts</h2><ul><li>☐ Opening line names the practice, the town, NHS and/or private, and key treatments</li><li>Our new opening line: ________________________________________</li><li>☐ Years open stated: ______</li><li>☐ Number of dentists stated: ______</li><li>☐ Prices from £ shown for main treatments</li><li>☐ How fast new patients are seen stated: ______</li><li>☐ &quot;Welcome to our friendly practice&quot;-style fluff replaced with facts</li></ul><h2>Fix 4: FAQ section</h2><ul><li>☐ How much does treatment cost?</li><li>☐ Are you taking NHS patients?</li><li>☐ What do I do in a dental emergency?</li><li>☐ I&#x27;m a nervous patient. How can you help?</li><li>☐ Is there parking?</li><li>☐ Do you offer finance?</li><li>Other questions our reception team hears often: ________________________</li></ul><h2>Fix 5: Google Business Profile</h2><ul><li>☐ Practice name, address and phone are exactly the same on the website, Google and other listings</li><li>☐ The right primary category is selected</li><li>☐ Up-to-date photos added</li><li>☐ Every treatment listed</li><li>☐ Replies posted to reviews</li><li>Person responsible for review replies: ______________</li></ul><h2>This week&#x27;s fix</h2><ul><li>The one fix we&#x27;re doing this week: ______________________</li><li>Who is doing it: ______________</li><li>Done by (date): ______________</li><li>☐ Posted &quot;done ✅&quot; in the community</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

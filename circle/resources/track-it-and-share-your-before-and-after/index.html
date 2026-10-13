@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Beat Your Competition on Google &amp; AI Search</div><h1>Monthly AI Check Tracker</h1><p class="dim">Print this and keep it with your marketing notes, or copy it into a spreadsheet. Fill in one row each month, because AI answers change over weeks, not days, so monthly is the right rhythm.</p><h2>Set up (do once)</h2><ul><li>☐ Monthly reminder called &quot;AI check&quot; added to the diary</li><li>☐ Reminder set for the same day each month (e.g. first Monday)</li><li>☐ The 3 ChatGPT questions from lesson 1 written out word for word below</li><li>Question 1: ____________________________</li><li>Question 2: ____________________________</li><li>Question 3: ____________________________</li></ul><h2>Each month: run the check</h2><ul><li>☐ Re-run your score (Premium members: use the AI Visibility skill, which keeps the tracker for you)</li><li>☐ Ask ChatGPT question 1 and note if your practice is named</li><li>☐ Ask ChatGPT question 2 and note if your practice is named</li><li>☐ Ask ChatGPT question 3 and note if your practice is named</li></ul><h2>Each month: record the results</h2><ul><li>Month: ____________</li><li>Score: ______ (last month: ______)</li><li>Mentioned in ______ of 3 ChatGPT answers</li><li>Fixes done since last check: ____________________________</li><li>Anything else that changed (new reviews, website updates, Google profile edits): ____________________________</li></ul><h2>Share and next steps</h2><ul><li>☐ Score has climbed or ChatGPT has started naming us, so post the before and after in the Wins category</li><li>☐ Next fix to work on before the next check: ____________________________</li><li>☐ Would rather have it done for you (fixes, free SEO health check, before-and-after report)? Message the team in the Circle</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

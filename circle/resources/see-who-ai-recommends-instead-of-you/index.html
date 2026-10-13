@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Beat Your Competition on Google &amp; AI Search</div><h1>Competitor AI Comparison Checklist</h1><p class="dim">Fill in one column per competitor from lesson 1, then compare against your own practice. Circle the two or three gaps that appear most often. That&#x27;s your shortlist.</p><h2>Competitors to check (from lesson 1)</h2><ul><li>Competitor 1: ____________________</li><li>Competitor 2: ____________________</li><li>Competitor 3: ____________________</li></ul><h2>Website check (tick for each competitor, then for you)</h2><ul><li>☐ Town is stated clearly on the homepage</li><li>☐ Main treatments are stated clearly on the homepage</li><li>☐ Real facts about the practice are shown (e.g. team, opening hours, services)</li><li>☐ Prices are shown</li><li>☐ There is an FAQ page or section</li></ul><h2>Google reviews check</h2><ul><li>Number of Google reviews: ________</li><li>Date of most recent review: ________</li><li>Roughly how many reviews in the last few months: ________</li><li>☐ They have more or more recent reviews than us</li></ul><h2>Ask ChatGPT</h2><ul><li>Prompt used: &quot;Why would you recommend [competitor] for dental care in [town]?&quot;</li><li>What it liked about Competitor 1: ____________________</li><li>What it liked about Competitor 2: ____________________</li><li>What it liked about Competitor 3: ____________________</li></ul><h2>Your shortlist</h2><ul><li>Thing they do that we don&#x27;t (1): ____________________</li><li>Thing they do that we don&#x27;t (2): ____________________</li><li>Thing they do that we don&#x27;t (3): ____________________</li><li>The one we&#x27;ll tackle first, and what we&#x27;ll do: ____________________</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

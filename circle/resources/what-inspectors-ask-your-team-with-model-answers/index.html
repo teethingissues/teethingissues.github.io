@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · CQC Compliance Foundations</div><h1>Inspector Questions Team Practice Sheet</h1><p class="dim">Use this at a team meeting or a quiet five minutes. Ask each question, let the person answer in their own words (no scripts), then tick if they covered the key points or note what to revisit.</p><h2>Before the session</h2><ul><li>☐ Our Radiation Protection Supervisor is: ____________________</li><li>☐ Our safeguarding lead is: ____________________</li><li>☐ Our first aider is: ____________________</li><li>☐ Emergency kit location (exact place): ____________________ and it is signposted</li></ul><h2>Receptionist questions</h2><ul><li>☐ Duty of Candour: covers apologising to the person and offering support or a remedy to put it right where we can</li><li>☐ Emergency kit: names the exact place and knows it is signposted</li><li>☐ Safeguarding: knows where the contact details and flowchart are, says 999 if someone is in immediate danger, knows social services can be contacted</li><li>☐ Empty reception: nothing left on the desk, screens locked, papers shredded, and ready for &quot;show me your desk right now&quot;</li><li>☐ Patients in pain: explains we hold emergency slots and never turn a patient in pain away</li></ul><h2>Dental nurse questions</h2><ul><li>☐ Decontamination: closed, lidded transport box, never hand-handle sharp instruments, follows the decon room poster for PPE, same process every day, and ready to &quot;show me&quot;</li><li>☐ Autoclave validation: daily checks confirm it reaches 134°C and holds for 2 minutes, logged every day, serviced every year, and can show today&#x27;s log</li><li>☐ Wrong-site treatment: confirms name and date of birth, shows the patient which tooth, checks the treatment plan, gets verbal and written consent</li><li>☐ Radiation Protection Supervisor: can give the name straight away</li><li>☐ Needlestick from a high-risk patient: knows where the sharps injury flowchart is, including assessing the source patient&#x27;s risk</li></ul><h2>After the session</h2><ul><li>☐ Question that tripped us up: ____________________</li><li>☐ Who needs a refresher, and on what: ____________________</li><li>☐ Date we will re-run this round: ____________________</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

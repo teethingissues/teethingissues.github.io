@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Start Here</div><h1>Circle Getting-Started Checklist</h1><p class="dim">Print this and tick it off over your first week so you know where everything is and get value from the Circle straight away. Keep it by your desk and fill in the lines as you go.</p><h2>Set up (today)</h2><ul><li>☐ Notifications turned on so I don&#x27;t miss the live Q&amp;A</li><li>☐ Checked the Calendar for the next monthly live Q&amp;A</li><li>☐ Next live Q&amp;A date added to my diary: ____________</li><li>☐ Introduced myself in the next lesson</li></ul><h2>Find your way round</h2><ul><li>☐ Opened the Classroom and looked at the courses: CQC compliance, your team, growing patient numbers, using AI</li><li>☐ Opened the Community and read a few recent posts</li><li>☐ Found the Calendar</li><li>☐ Read about the Premium tools (the AI Visibility Check &amp; Fix is available now; the Staff Paperwork Audit unlocks at 50 members)</li></ul><h2>Choose your first course</h2><ul><li>The biggest issue in my practice right now is: ____________</li><li>The course that matters most to me right now is: ____________</li><li>☐ Completed lesson 1 of that course</li><li>☐ Done the action steps at the end of lesson 1</li><li>☐ Used the discussion link at the end of the lesson to comment or ask a question</li></ul><h2>Get ready for the live Q&amp;A</h2><ul><li>A real question I want to bring to the live Q&amp;A: ____________</li><li>A second question, if there&#x27;s time: ____________</li><li>☐ Posted one question or comment in the Community (no question is too small)</li><li>☐ Liked or replied to another member&#x27;s post</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

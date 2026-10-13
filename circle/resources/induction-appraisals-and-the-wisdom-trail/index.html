@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Team &amp; Delegation</div><h1>Induction, Appraisal and Wisdom Trail Checklist</h1><p class="dim">Use this to check your induction records, plan appraisals and confirm that each person&#x27;s appraisal, PDP and CPD link together. Keep a copy with each team member&#x27;s file and review it at every appraisal.</p><h2>Induction records</h2><ul><li>☐ Each induction area covered properly (for example GDPR, cross-infection and fire)</li><li>☐ Each section signed by the new starter</li><li>☐ Each section signed by the person delivering the induction</li><li>☐ Completed induction stored in the team member&#x27;s file</li></ul><h2>Appraisal tracker</h2><ul><li>Team member: ____________ Last appraisal date: ____________</li><li>☐ Over 12 months ago? Appraisal booked for: ____________</li><li>☐ Every team member checked and overdue appraisals booked</li></ul><h2>Annual appraisal (looking back)</h2><ul><li>☐ Objective review of performance over the year</li><li>☐ Reflection from the team member</li><li>☐ Reflection from the appraiser</li><li>☐ GDC scope of practice checked</li><li>☐ Signed and dated by both people</li><li>Gaps identified: ________________________________</li></ul><h2>Personal development plan (looking forward)</h2><ul><li>☐ Goals written straight from the gaps discussed at appraisal</li><li>☐ Goals are SMART</li><li>☐ GDC recommended topics included</li><li>☐ Training needs listed</li><li>☐ Target date set for each goal</li></ul><h2>Wisdom Trail check (Appraisal → PDP → CPD)</h2><ul><li>☐ Appraisal gaps appear as PDP goals</li><li>☐ CPD certificates added during the year match PDP goals</li><li>☐ Any mismatches noted (it won&#x27;t always line up perfectly, and that&#x27;s fine)</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

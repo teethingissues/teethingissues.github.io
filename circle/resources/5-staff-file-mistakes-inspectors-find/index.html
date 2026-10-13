@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · Team &amp; Delegation</div><h1>Staff File Mistakes Checker: 5 Things Inspectors Find (Plus GDC Bonus)</h1><p class="dim">Print one copy per staff member and work through their file section by section, ticking each item that is in place. Anything unticked goes on your action list with a date to fix it.</p><h2>Staff member details</h2><ul><li>Name: ____________________</li><li>Role (clinical / non-clinical): ____________________</li><li>Date file checked: ____________ Checked by: ____________________</li></ul><h2>Hep B and DBS</h2><ul><li>☐ Hep B blood test result on file (not just the vaccination card) – clinical staff</li><li>☐ Antibody level (titre) is 100 mIU/mL or more, before any exposure-prone work</li><li>☐ DBS is an Enhanced DBS</li><li>☐ Disclosure fields read &quot;none recorded&quot;</li><li>☐ DBS renewed within the last 3 years (CQC preference, not law) OR staff member is on the DBS Update Service</li><li>☐ If DBS is missing or pending: &quot;Awaiting DBS&quot; risk assessment completed and on file</li></ul><h2>References</h2><ul><li>☐ Two references on file, covering the last 3 years</li><li>☐ One reference is from the current or most recent employer</li><li>☐ Neither reference is from a friend or family member</li><li>☐ If one employer covers the whole 3 years: second reference is from a different person at that employer</li></ul><h2>Contract</h2><ul><li>☐ No other practice&#x27;s name left in the template</li><li>☐ No [placeholders] left unfilled</li><li>☐ Signed by the employer as well as the staff member</li><li>☐ Conditions-of-employment clause included, covering Hep B, GDC, indemnity, DBS and CPD</li></ul><h2>Induction and GDC</h2><ul><li>☐ Induction signed by the person who ran it</li><li>☐ Induction signed by the new starter</li><li>☐ Signed section by section, not one tick at the end</li><li>☐ GDC certificate on file (registrants)</li><li>☐ GDC expiry read from the sentence after the person&#x27;s name, not the first date on the page – expiry date: ____________</li><li>Gaps found and fix-by date: ______________________________________</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>

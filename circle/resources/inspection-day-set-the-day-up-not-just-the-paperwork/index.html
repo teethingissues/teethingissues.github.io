@@ -11,4 +11,20 @@ li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)
 <div class="kick">Teething Issues Circle · CQC Compliance Foundations</div><h1>Inspection Day Plan: Setting Up the Day, Not Just the Paperwork</h1><p class="dim">Keep this with your CQC folder and work through it as soon as an inspection is confirmed. Tick each item as it&#x27;s done, and use the huddle section on the morning itself.</p><h2>Diary and staffing</h2><ul><li>☐ Diaries kept light, with fewer patients booked so the team isn&#x27;t juggling production pressure and inspectors</li><li>☐ Fewer dentists running clinics on the day</li><li>☐ No difficult patients booked</li><li>☐ Senior staff member in and free to walk with inspectors and find evidence. Name: ________</li><li>☐ Back-up senior contact if needed. Name: ________</li></ul><h2>Diary blocks so standards visibly happen</h2><ul><li>☐ Cleaning and zoning time blocked into every clinical diary</li><li>☐ Emergency time blocked into the diary</li><li>☐ Team told these blocks must not be overbooked or skipped</li></ul><h2>Emergency kit check</h2><ul><li>☐ Emergency kit location confirmed today: ________</li><li>☐ Oxygen location confirmed: ________</li><li>☐ Defib location confirmed: ________</li><li>☐ Emergency drugs location confirmed: ________</li><li>☐ If anything has recently moved, every team member has been shown the new spot</li><li>☐ Every person can point to oxygen, defib and drugs with no hesitation</li></ul><h2>Team preparation</h2><ul><li>☐ Each person has read the questions an inspector is likely to ask their role</li><li>☐ Each person can answer in their own words: confident, not reciting</li><li>☐ Anyone needing extra support identified and paired with a senior colleague. Names: ________</li></ul><h2>Morning huddle (calm, short)</h2><ul><li>☐ Reset nerves and remind everyone it&#x27;s a normal working day, just lighter</li><li>☐ Confirm roles, including who walks with the inspectors</li><li>☐ Remind everyone of the emergency kit, oxygen and defib locations</li><li>☐ Recap the light-diary plan and the blocked cleaning and emergency time</li></ul>
 <a class="btn" href="javascript:window.print()">Print or save as PDF</a>
 <p class="dim" style="font-size:13px;margin-top:22px">For Circle members. General guidance from dental professionals; always follow current CQC and GDC guidance. © Teething Issues</p>
-</div></body></html>
+</div><!-- visit-tracker -->
+<script>(function(){
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, no IDs, nothing personal.
+  var t0=Date.now(),maxS=0,taps=[],sent=false;
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n")taps.push(label(a))},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:[],
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+</body></html>
