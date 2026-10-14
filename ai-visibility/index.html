@@ -234,7 +234,7 @@ f.addEventListener("submit",function(e){e.preventDefault();var err=$("v-err"),bt
  var email=$("v-email").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){err.textContent="Please enter a valid email address.";$("v-email").focus();return}
  if(!$("v-consent").checked){err.textContent="Please tick the box so we can email you your result.";return}
  btn.disabled=true;btn.textContent="Sending…";
- var summary="Visibility check | Practice: "+$("v-practice").value.trim();
+ var summary="Visibility check | Practice: "+$("v-practice").value.trim()+" | Name: "+$("v-name").value.trim();
  fetch("https://ti-waitlist.teethingissues.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},
   body:JSON.stringify({email:email,name:$("v-name").value.trim(),issues:summary.slice(0,600),consent:true,website:$("website").value,source:"visibility-check"})})
  .then(function(r){return r.json()}).then(function(d){
