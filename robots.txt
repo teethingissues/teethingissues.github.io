@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://teethingissues.com/sitemap.xml
+
+User-agent: *
+Disallow: /twiml/

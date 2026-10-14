@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Play>https://teethingissues.com/twiml/ring.mp3</Play>
+  <Redirect method="POST">https://api.elevenlabs.io/twilio/inbound_call</Redirect>
+</Response>
