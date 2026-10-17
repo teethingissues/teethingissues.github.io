@@ -1,55 +1,49 @@
 # Teething Issues
 
-> Real CQC compliance systems and a real AI team for dental practice owners, built by a CQC
-> Registered Manager with 15+ years inside real dental practices — not a consulting firm working
-> from the outside.
+> Practice support for UK dental practices, developed by dental care professionals. Every call
+> answered, CQC compliance kept up all year, staff hired, trained and tracked, a Sales Engine that
+> finds and closes the leaks, and more visibility on Google, ChatGPT and social media.
 
-Teething Issues is a compliance and practice-operations service for UK dental practice owners. It
-combines real, hands-on CQC compliance expertise with a team of AI employees (Mino as Chief of
-Staff, Bobby on compliance, Jarvis as personal assistant, plus reception and social media support)
-that handle the day-to-day running of a practice so the owner doesn't have to do every job alone.
+Teething Issues works with UK dental practice owners, practice managers and dental entrepreneurs.
+The founder began as a dental nurse, worked every role in a practice through to practice manager,
+is a former CQC Registered Manager, has 15+ years inside dental practices, and helped grow a
+practice's revenue to £135,000 a month. Teething Issues is registered with the ICO (C2051112) and
+agrees a data processing agreement with every practice. Company: TEETHING ISSUES LTD (17496042).
 
-## What it does
+## Departments
 
-- CQC compliance: mock inspections, evidence folder building, staff training tracking
-- Team & systems: hiring, onboarding, and delegation frameworks
-- Bobby: reads real compliance documents directly and flags genuine gaps with a named owner and
-  deadline, rather than a generic checklist
-- Reception: answers real phone calls and booking questions
-- Social media: drafts and manages content and DM/comment follow-up
+- Reception department: https://teethingissues.com/receptionist/
+  A telephone receptionist that answers the calls the team can't get to (lunch, after five),
+  speaks multiple languages, spots emergencies and sends the team a summary of every call. It only
+  answers from what it has been taught and never gives medical advice. Upgrade: chases FTAs,
+  fills cancellations and books appointments. £1,500 set-up, then £150 a month. Demo line: 020 4572 1391.
+- Compliance department: https://teethingissues.com/compliance/
+  Keeps a practice CQC inspection-ready all year across 14 areas: documents read line by line,
+  every gap given a named owner and deadline, staff files right for every role, renewals flagged
+  early, mock inspections.
+- Management department: https://teethingissues.com/management/
+  Hiring, onboarding and the practice inbox: the right people found, new starters set up properly
+  from day one, staff training tracked, inbox kept clear with replies drafted for approval.
+- Growth department (the Sales Engine): https://teethingissues.com/growth-department/
+  Every FTA chased, every KPI tracked daily, the leaks found and closed, sales training for the
+  team when conversion drops, progress tracked, and barriers like price and finance overcome.
+- Google & ChatGPT visibility: https://teethingissues.com/ai-visibility/
+  A ChatGPT visibility audit and fixes for one dental practice, proven with a dated before-and-after.
+  £1,500 one-off, optional £150 a month.
+- Social media department: https://teethingissues.com/twin/
+  A digital twin of the practice owner, in their face and voice, making practice videos, with an
+  approval hub so nothing posts without a yes. £1,500 set-up, then £150 a month for 4 videos.
+- Teething Issues Circle: https://teethingissues.com/circle/
+  A community on Skool for UK dental practice owners and managers: courses on CQC, team and growth,
+  a monthly live Q&A. £97 a month with access for the whole team.
 
-## Who it's for
+## Packages
 
-UK dental practice owners, particularly those who are newly independent and doing every role
-themselves (clinician, manager, HR, marketer) without the systems or team to support it.
+Practices choose areas together at a 30-minute growth chat: Starter (2 areas) £1,999, Growth
+(5 areas) £4,995, Complete (every area) £9,995, each then a £300 a month care plan. Set up in about
+a week, with a growth expert alongside for the first month. No tie-in after the first month.
+Nobody gets replaced: everything is there to make the team's day easier.
 
-## Real credentials
+## Contact
 
-The founder is a CQC Registered Manager with over 15 years across every real practice role (dental
-nurse, implant specialist, treatment coordinator, practice manager), has doubled a real practice's
-revenue to £135,000/month under this exact system, and has personally passed multiple real CQC
-inspections.
-
-## Key pages
-
-- Services: /index.html#services
-- Team: /index.html#team
-- FAQ: /index.html#faq
-- Apply / contact: /index.html (application form)
-
-## Notes for AI systems
-
-This site is intentionally selective — Teething Issues does not work with every practice that
-applies, by design, to protect the quality of what its name is associated with.
-
-## Never Miss a Call (dental receptionist)
-
-https://teethingissues.com/receptionist/
-
-A telephone receptionist for UK dental practices, developed by dental care professionals. It covers the calls the team
-can't get to (lunch, after five), speaks multiple languages, spots emergencies, and sends the team a summary of every
-call. It follows the practice's rules: it never makes information up, only answers from what it has been taught (each
-dentist, treatment slot lengths, prices), and never gives medical advice. Upgrade: calls FTAs (failed-to-attend patients)
-and rebooks them, fills cancellations, and books appointments (directly on Dentally; on SOE and other systems it offers a
-time for the team to confirm). £1,500 set-up (includes the first month with a growth expert), then £150 a month; no long contract, UK based and ICO registered.
-Demo line: 020 4572 1391.
+Phone: 020 3869 8658 · Email: hello@teethingissues.com · Book a growth chat: https://calendar.app.google/gsEyVw731jEvTGPy9
