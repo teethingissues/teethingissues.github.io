@@ -137,9 +137,10 @@ nav.site{position:sticky;top:12px;z-index:40;display:flex;justify-content:center
 .way{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
 .way .tag{align-self:flex-start;background:var(--accent-soft);color:var(--accent);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 11px;border-radius:999px}
 .way h3{margin-top:12px;font-size:22px;font-weight:600}
-.way ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;flex:1}
+.way ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;flex:1;align-content:start}
 .way li{font-size:14px;color:var(--ink-dim);display:flex;gap:9px}
 .way li::before{content:"—";color:var(--accent-dim);flex:none}
+.way .intro{margin:10px 0 0;font-size:14.5px;line-height:1.5;color:var(--ink)}
 .way .price{margin-top:14px;font-size:13.5px;color:var(--ink)}
 .way .btn{margin-top:16px}
 .steps{list-style:none;margin:28px auto 0;padding:0;max-width:720px;display:grid;gap:10px}
@@ -272,24 +273,6 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   </div>
 </section>
 
-<section class="elevate">
-  <div class="wrap">
-    <div class="el-eyebrow">The Real Operating System Behind It</div>
-    <h2 class="el-h">Elevate Your Practice.</h2>
-    <p class="el-sub">Judgement at the top, a real team underneath, and a real result at the end of every task.</p>
-    <div class="os-tiers">
-      <div class="tier"><div class="tier-label">The Judgement</div><div class="glass-row">
-        <div class="glass-card wide">Every finding checked the way a real inspector would, before anything reaches you.</div></div></div>
-      <div class="tier"><div class="tier-label">The Team</div><div class="glass-row">
-        <div class="glass-card">Reception</div><div class="glass-card">Growth</div><div class="glass-card">Compliance</div>
-        <div class="glass-card">Operations</div><div class="glass-card">Training</div><div class="glass-card">Social Media</div></div></div>
-      <div class="tier"><div class="tier-label">The Result</div><div class="glass-row">
-        <div class="glass-card pill">✓ Call answered</div><div class="glass-card pill">✓ Patient followed up</div>
-        <div class="glass-card pill">✓ Found on ChatGPT</div><div class="glass-card pill">✓ CQC-ready</div></div></div>
-    </div>
-  </div>
-</section>
-
 <div class="statstrip">
   <div class="wrap">
     <div class="shead"><div class="eyebrow">Why us</div><h2>Developed by <em>dental care professionals.</em></h2></div>
@@ -307,19 +290,20 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   <div class="wrap">
     <div class="shead"><div class="eyebrow">Two ways to work with us</div><h2>Do it yourself, or <em>let us do it all for you.</em></h2></div>
     <div class="way-grid">
+      <div class="way"><span class="tag">New community · Do it yourself</span><h3>The Teething Issues Circle</h3>
+        <p class="intro">Times are changing. Modernise your practice and stay ahead, with dental professionals beside you. You're not alone.</p><ul>
+        <li>Practical courses on CQC, your team, growth and the modern tools practices are starting to use</li>
+        <li>A monthly live Q&amp;A</li>
+        <li>A community of practice owners and managers who get it</li>
+        <li>Built by dental professionals who have run practices themselves. Not marketers. Not theory</li></ul>
+        <p class="price">£97 a month, with access for your whole team.</p>
+        <a class="btn ghost" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join">Join the Circle</a></div>
       <div class="way"><span class="tag">We do it all for you</span><h3>Done for you</h3><ul>
         <li>We pick the areas together at your growth chat</li>
         <li>A clear plan and a fixed price, before anything starts</li>
         <li>Set up in about a week, with a growth expert beside you for the first month</li>
         <li>Then a monthly care plan keeps it all running. No long contract</li></ul>
         <a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a></div>
-      <div class="way"><span class="tag">Do it yourself</span><h3>The Teething Issues Circle</h3><ul>
-        <li>Step-by-step guides that take you through each area</li>
-        <li>Tools you can use straight away</li>
-        <li>Live Q&amp;As and other practice owners to learn from</li>
-        <li>Access for your whole team</li></ul>
-        <p class="price">£97 a month, with access for your whole team.</p>
-        <a class="btn ghost" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join">Join the Circle</a></div>
     </div>
     <ol class="steps">
       <li><b>1</b><span><b style="all:unset;font-weight:500">A growth chat.</b> 30 minutes: your numbers, what's slipping, what matters most.</span></li>
