@@ -4,524 +4,334 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Teething Issues — Your Practice Made Perfect</title>
-<meta name="description" content="We keep your phones, your team and your CQC steady, and help more patients say yes. Book a growth chat.">
+<meta name="description" content="For dental entrepreneurs and practice managers. Every call answered, every treatment plan followed up, found first on Google and ChatGPT, and you're never doing it alone. Book a growth chat.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Teething Issues",
-  "description": "Practice support for UK dental practice owners: every call answered, more patients saying yes, hiring and staff files, practice manager cover and CQC readiness, from a CQC Registered Manager.",
+  "description": "Practice support for UK dental practice owners: every call answered, more patients saying yes, found first on Google and ChatGPT, hiring and staff files, practice manager cover and CQC readiness, from a CQC Registered Manager.",
   "areaServed": "GB",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Dental practice owners"
-  },
-  "founder": {
-    "@type": "Person",
-    "jobTitle": "CQC Registered Manager"
-  },
-  "makesOffer": [
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CQC Intensive Prep" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Practice Coaching" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Practice Transformation" } }
-  ]
+  "audience": { "@type": "Audience", "audienceType": "Dental practice owners" },
+  "founder": { "@type": "Person", "jobTitle": "CQC Registered Manager" }
 }
 </script>
+<link rel="preload" as="image" href="assets/mino-1-900.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light}
 :root{
-  /* Same theme tokens as the rest of Bobby OS (Command Deck, the trackers) — kept identical on
-     purpose so this site reads as part of the same family, not a separate invented look. */
   --bg:#E7E1D6; --bg2:#DDD5C7; --panel:#F7F3EB; --panel-2:#FCFAF3;
   --line:#D5CBBA; --line-2:#C2B7A2;
   --ink:#332E27; --ink-dim:#6F655A; --ink-faint:#978C7C;
   --accent:#8C7A62; --accent-dim:#B3A48C; --accent-soft:rgba(140,122,98,.12);
-  --good:#7E9B7A; --risk:#BE7C6B; --risk-soft:rgba(190,124,107,.12);
+  --gold:#B68A3E; --good:#7E9B7A; --risk:#BE7C6B;
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
-/* LOADING SCREEN — a brief intro before the real page reveals itself */
-#loader{position:fixed;inset:0;z-index:999;background:var(--bg);display:flex;align-items:center;justify-content:center;
-  transition:opacity .6s ease, visibility .6s ease}
-#loader .loader-word{font-family:var(--serif);font-size:22px;font-weight:600;letter-spacing:.04em;color:var(--ink);opacity:0;animation:loaderFade 1.6s ease forwards}
-#loader.hide{opacity:0;visibility:hidden;pointer-events:none}
-@keyframes loaderFade{0%{opacity:0;transform:scale(.96)}60%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
-
-/* SCROLL REVEAL — sections fade/rise into view as you scroll, instead of all being visible at once */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease}
-.reveal.in{opacity:1;transform:none}
-body{
-  background:radial-gradient(1100px 620px at 15% -10%, #EFEAE0 0%, rgba(231,225,214,0) 62%), var(--bg);
-  background-attachment:fixed;
-  margin:0;color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:.01em;
-}
+body{background:var(--bg);margin:0;color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:.01em;overflow-x:hidden}
 h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0}
 a{color:inherit;text-decoration:none}
 img{max-width:100%}
-.wrap{max-width:1100px;margin:0 auto;padding-inline:24px}
-.narrow{max-width:680px;margin:0 auto;padding-inline:24px}
-.eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:20px}
+.narrow{max-width:680px;margin:0 auto;padding-inline:20px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.shead{text-align:center;max-width:640px;margin:0 auto 32px}
+.shead h2{margin-top:10px;font-size:clamp(26px,4vw,36px);font-weight:600}
+.shead h2 em{font-style:italic;color:var(--accent)}
 
-/* NAV */
-nav.site{position:sticky;top:16px;z-index:40;display:flex;justify-content:center;padding:0 16px}
-.nav-row{display:flex;align-items:center;justify-content:space-between;gap:22px;width:100%;max-width:920px;
-  background:var(--ink);border-radius:999px;padding:11px 10px 11px 24px;
-  box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
-.navlinks{display:flex;gap:26px;font-size:13px;color:rgba(247,243,235,.72)}
-.navlinks a:hover{color:var(--panel-2)}
-.nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:12px 20px;white-space:nowrap}
+/* NAV — dark pill, floats over the hero */
+nav.site{position:sticky;top:12px;z-index:40;display:flex;justify-content:center;padding:0 12px;margin-bottom:-62px}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;max-width:920px;
+  background:var(--ink);border-radius:999px;padding:9px 9px 9px 22px;box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
 .brand{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.02em;color:var(--panel-2)}
-@media(max-width:720px){.navlinks{display:none}}
+.navlinks{display:flex;gap:24px;font-size:13px;color:rgba(247,243,235,.72)}
+.navlinks a:hover{color:var(--panel-2)}
+.nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:11px 18px;white-space:nowrap}
+@media(max-width:760px){.navlinks{display:none}}
 
-/* HERO — full-bleed photo of Mino, nav floats over it, text overlaid with a dark scrim */
-.hero{position:relative;min-height:680px;display:flex;align-items:flex-end;padding:60px 0 70px;text-align:center;overflow:hidden}
-.hero-media{position:absolute;inset:0;z-index:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
-.hero-scrim{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(33,28,21,.05) 0%,rgba(33,28,21,.20) 60%,rgba(33,28,21,.72) 100%)}
-.hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
-.hero-badge{display:inline-flex;align-items:center;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);
-  border:1px solid rgba(255,255,255,.28);color:#F8F1E0;font-size:12px;letter-spacing:.03em;
-  padding:9px 18px;border-radius:999px;margin-bottom:24px}
-.hero-h{margin-top:0;font-size:clamp(32px,5.6vw,54px);font-weight:600;letter-spacing:-.01em;color:#F8F1E0}
+/* HERO — Mino photo, pain → fix → one button */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:96px 0 34px;overflow:hidden;color:#F8F1E0}
+.hero-media{position:absolute;inset:0;z-index:0;background:#3A3226}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,28,21,.15) 0%,rgba(33,28,21,.55) 34%,rgba(33,28,21,.88) 62%,rgba(28,24,18,.96) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:620px;margin:0 auto;width:100%}
+.hero-for{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E3C98E;font-weight:600}
+.hero-h{margin-top:8px;font-size:clamp(34px,8.5vw,56px);line-height:1.05;font-weight:600;letter-spacing:-.01em}
 .hero-h em{font-style:italic;color:#E3C98E}
-.hero-tag{margin-top:14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:rgba(248,241,224,.7);font-weight:600}
-.hero .sub{margin:22px auto 0;font-size:16.5px;color:rgba(248,241,224,.88);max-width:52ch;line-height:1.7}
-.cta-row{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
-.hero .btn.ghost{border-color:rgba(255,255,255,.5);color:#fff}
-.btn{font:600 14px/1 var(--sans);border-radius:999px;padding:16px 28px;display:inline-block;transition:transform .15s}
+.hero-tag{margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(248,241,224,.75);font-weight:600}
+.pains{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:8px}
+.pains li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;line-height:1.35;color:#F8F1E0}
+.pains li b{font-weight:500}
+.pains .x{flex:none;width:20px;height:20px;border-radius:50%;background:rgba(190,124,107,.9);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:600;margin-top:1px}
+.fixline{margin-top:16px;font-family:var(--serif);font-style:italic;font-size:22px;color:#E3C98E;line-height:1.25}
+.btn{font:600 15px/1 var(--sans);border-radius:999px;padding:17px 28px;display:inline-block;text-align:center;transition:transform .15s}
 .btn.primary{background:var(--ink);color:var(--panel-2)}
-.btn.primary:hover{transform:translateY(-1px)}
+.btn.light{background:var(--panel-2);color:var(--ink)}
 .btn.ghost{border:1.5px solid var(--line-2);color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.hero .btn.light{display:block;width:100%;margin-top:16px;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+.hero-alt{display:block;margin-top:12px;text-align:center;font-size:14.5px;color:#F8F1E0;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(227,201,142,.7)}
+.reassure{margin-top:10px;text-align:center;font-size:12.5px;color:rgba(248,241,224,.7)}
+@media(min-width:761px){.hero{min-height:760px;padding-bottom:64px}.hero .btn.light{display:inline-block;width:auto}.hero-alt,.reassure{text-align:left}.hero-alt{display:inline-block;margin-left:18px}}
 
-/* CREDENTIAL STATS — real numbers, given the same weight a bold stat tile deserves */
-.statstrip{background:var(--panel-2);border-bottom:1px solid var(--line);padding:44px 0}
+/* WHAT WE DO — short department tiles, each one goes to its own page */
+.depts{padding:52px 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto}
+@media(max-width:760px){.dept-grid{grid-template-columns:1fr 1fr}}
+.dept{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:96px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;transition:transform .15s,border-color .15s}
+.dept:hover{transform:translateY(-2px);border-color:var(--gold)}
+.dept b{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.15}
+.dept span{font-size:12.5px;color:var(--gold);font-weight:500}
+
+/* FOUR FIXES — the 4 key messages, each with HOW underneath */
+.fixes{padding:60px 0;background:var(--panel-2);border-bottom:1px solid var(--line)}
+.fix-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.fix-grid{grid-template-columns:1fr}}
+.fix{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.fix .n{font-family:var(--serif);color:var(--gold);font-weight:600;font-size:14px}
+.fix h3{margin-top:4px;font-size:21px;font-weight:600}
+.fix ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.fix li{font-size:14px;color:var(--ink-dim);line-height:1.45;display:flex;gap:9px}
+.fix li::before{content:"✓";color:var(--good);font-weight:600;flex:none}
+
+/* DASHBOARD — the dark "operating system" panel: judgement, team, result */
+.elevate{position:relative;overflow:hidden;padding:64px 0 68px;text-align:center;color:#F3ECDD;
+  background:radial-gradient(1100px 600px at 50% -10%, rgba(196,168,118,.22), transparent 60%),linear-gradient(165deg,#3A3226 0%,#2B251C 60%,#211C15 100%)}
+.el-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
+.el-h{margin-top:12px;font-size:clamp(28px,5vw,44px);font-weight:600;color:#F8F1E0}
+.el-sub{margin:14px auto 0;max-width:46ch;color:#CDBFA0;font-size:15px}
+.os-tiers{margin-top:36px;display:flex;flex-direction:column;gap:26px}
+.tier-label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#B7A480;font-weight:600;margin-bottom:12px}
+.glass-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.glass-card{background:rgba(251,246,234,.08);border:1px solid rgba(251,246,234,.18);border-radius:14px;padding:13px 17px;font-size:13.5px;color:#F1E9D6}
+.glass-card.wide{max-width:520px;font-family:var(--serif);font-style:italic;font-size:17px;color:#F8F1E0}
+.glass-card.pill{border-radius:999px;font-size:12.5px;font-weight:500;color:#DCEAD6;background:rgba(126,155,122,.14);border-color:rgba(126,155,122,.3)}
+
+/* WHY US — credentials strip */
+.statstrip{background:var(--panel-2);border-bottom:1px solid var(--line);padding:56px 0}
 .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
 @media(max-width:760px){.stat-grid{grid-template-columns:1fr 1fr}.stat-grid>.stat-tile:last-child{grid-column:1/-1}}
-.stat-bar{display:flex;gap:3px;margin-bottom:12px}
+.stat-bar{display:flex;gap:3px;margin-bottom:10px}
 .stat-bar span{width:14px;height:4px;border-radius:2px;background:var(--line-2)}
 .stat-bar span:first-child{background:var(--accent)}
-.stat-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
-.stat-big{margin-top:10px;font-family:var(--serif);font-size:clamp(22px,3.4vw,30px);font-weight:600;color:var(--ink)}
-.stat-tile p{margin-top:8px;font-size:12px;color:var(--ink-dim);line-height:1.5}
+.stat-big{font-family:var(--serif);font-size:clamp(24px,3.4vw,30px);font-weight:600}
+.stat-tile p{margin-top:4px;font-size:12.5px;color:var(--ink-dim);line-height:1.45}
 
-/* ELEVATE — the futuristic "operating system" section, in-theme (same gold/cream palette, just a
-   deeper, richer shade for contrast/drama) rather than borrowing a foreign colour scheme. */
-.elevate{position:relative;overflow:hidden;padding:72px 0 76px;text-align:center;color:#F3ECDD;
-  background:radial-gradient(1100px 600px at 50% -10%, rgba(196,168,118,.22), transparent 60%),
-    linear-gradient(165deg,#3A3226 0%,#2B251C 60%,#211C15 100%)}
-.el-eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
-.el-h{margin-top:14px;font-size:clamp(30px,5vw,46px);font-weight:600;color:#F8F1E0}
-.el-sub{margin:16px auto 0;max-width:52ch;color:#CDBFA0;font-size:15px}
-.sphere-wrap{display:flex;justify-content:center;margin:42px 0 8px;perspective:900px}
-.sphere{width:120px;height:120px;border-radius:50%;position:relative;
-  background:radial-gradient(circle at 32% 28%, #FBF0D6 0%, #D8B879 28%, #A9793F 62%, #6E4F28 100%);
-  box-shadow:0 30px 60px -20px rgba(0,0,0,.55), inset -10px -14px 30px rgba(60,40,10,.35), inset 8px 10px 18px rgba(255,250,235,.4);
-  animation:sphereFloat 6s ease-in-out infinite}
-@keyframes sphereFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.os-tiers{margin-top:44px;display:flex;flex-direction:column;gap:30px}
-.tier-label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#B7A480;font-weight:600;margin-bottom:14px}
-.glass-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-.glass-card{background:rgba(251,246,234,.08);border:1px solid rgba(251,246,234,.18);border-radius:14px;
-  padding:16px 20px;font-size:13.5px;color:#F1E9D6;backdrop-filter:blur(6px);
-  box-shadow:0 10px 26px -18px rgba(0,0,0,.5);transition:transform .2s,background .2s}
-.glass-card:hover{transform:translateY(-3px);background:rgba(251,246,234,.13)}
-.glass-card.wide{max-width:560px;font-family:var(--serif);font-style:italic;font-size:17px;color:#F8F1E0}
-.glass-card.pill{border-radius:999px;font-size:12.5px;font-weight:500;color:#DCEAD6;
-  background:rgba(126,155,122,.14);border-color:rgba(126,155,122,.3)}
+/* TWO WAYS + STEPS */
+.ways{padding:60px 0}
+.way-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.way-grid{grid-template-columns:1fr}}
+.way{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.way .tag{align-self:flex-start;background:var(--accent-soft);color:var(--accent);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 11px;border-radius:999px}
+.way h3{margin-top:12px;font-size:22px;font-weight:600}
+.way ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;flex:1}
+.way li{font-size:14px;color:var(--ink-dim);display:flex;gap:9px}
+.way li::before{content:"—";color:var(--accent-dim);flex:none}
+.way .price{margin-top:14px;font-size:13.5px;color:var(--ink)}
+.way .btn{margin-top:16px}
+.steps{list-style:none;margin:28px auto 0;padding:0;max-width:720px;display:grid;gap:10px}
+.steps li{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:14.5px}
+.steps b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600}
+.promise{margin:28px auto 0;max-width:720px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+.promise h3{font-size:20px;font-weight:600}
+.promise ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.promise li{font-size:14px;color:var(--ink-dim);display:flex;gap:9px}
+.promise li::before{content:"✓";color:var(--good);font-weight:600;flex:none}
 
-/* HOOK */
-.hook{padding:64px 0;text-align:center;border-bottom:1px solid var(--line)}
-.hook h2{font-size:clamp(24px,3.8vw,34px);max-width:22ch;margin:0 auto}
-.hook h2 em{font-style:italic;color:var(--accent)}
-.hook p{margin:18px auto 0;max-width:58ch;color:var(--ink-dim);font-size:15px}
-
-/* PAIN */
-.pain{padding:64px 0;border-bottom:1px solid var(--line);background:var(--panel-2)}
-.pain h2{text-align:center;font-size:clamp(24px,3.6vw,32px);max-width:24ch;margin:0 auto}
-.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
-@media(max-width:760px){.pain-grid{grid-template-columns:1fr}}
-.pain-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
-.pain-card .x{color:var(--risk);font-size:16px;margin-bottom:8px}
-.pain-card p{margin:0;font-size:13.5px;color:var(--ink-dim);line-height:1.55}
-.pivot{text-align:center;margin-top:32px;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--accent)}
-
-/* SERVICES */
-.services{padding:70px 0}
-.shead{text-align:center;max-width:640px;margin:0 auto 40px}
-.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-@media(max-width:640px){.sgrid{grid-template-columns:1fr}}
-.scard{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 14px 34px -26px rgba(90,78,60,.4)}
-.scard .n{font-family:var(--serif);color:var(--accent-dim);font-weight:600;font-size:13px}
-.scard h3{margin-top:10px;font-size:19px;font-weight:600}
-.scard p{margin-top:9px;font-size:13.5px;color:var(--ink-dim);line-height:1.6}
-.scard .stags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.scard .stag{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;color:var(--ink-dim);
-  background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
-
-/* LEAD — Mino (Chief of Staff) and Jarvis (Personal Assistant), two distinct named employees */
-.lead-group{display:flex;flex-wrap:wrap;gap:36px;justify-content:center;max-width:820px;margin:0 auto}
-.lead-person{display:flex;gap:18px;align-items:center;flex:1;min-width:260px}
-.lead-av{width:64px;height:64px;border-radius:50%;flex:none;overflow:hidden;
-  box-shadow:0 12px 26px -12px rgba(90,78,60,.5)}
-.lead-av img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
-.lead-av.lead-av-ph{background:linear-gradient(160deg,var(--accent),var(--accent-dim));color:var(--panel-2);
-  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:22px}
-.lead-copy h3{margin-top:6px;font-size:18px;font-weight:600}
-.lead-copy p{margin-top:8px;font-size:13px;color:var(--ink-dim);line-height:1.6}
-.lead-line{width:1px;height:36px;background:var(--line-2);margin:26px auto}
-
-/* TEAM — no "AI" language anywhere in visible copy */
-.team{background:var(--panel);padding:70px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:38px}
-@media(max-width:520px){.team-grid{grid-template-columns:1fr}}
-.tcard{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:24px 20px;text-align:center;box-shadow:0 10px 24px -22px rgba(90,78,60,.4)}
-.tcard .av{width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--panel-2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:17px;margin:0 auto 12px}
-.tcard b{display:block;font-family:var(--serif);font-size:16px;font-weight:600}
-.tcard span{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin-top:4px;font-weight:500}
-.tcard p{margin-top:12px;font-size:12.5px;color:var(--ink-dim);line-height:1.55}
-
-/* FOUNDER */
-.founder{padding:70px 0}
-.f-grid{display:grid;grid-template-columns:.55fr 1fr;gap:44px;align-items:center}
-@media(max-width:820px){.f-grid{grid-template-columns:1fr}}
-.f-photo{aspect-ratio:1;border-radius:18px;background:linear-gradient(160deg,var(--panel-2),var(--bg2));
-  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:16px;color:var(--ink-faint);text-align:center;padding:20px}
-.f-quote{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;color:var(--ink)}
-.f-cred{margin-top:18px;font-size:14px;color:var(--ink-dim);line-height:1.75}
-.f-cred b{color:var(--ink);font-weight:500}
-
-/* APPLY — the invite-only application, replacing a plain email box */
-.apply{padding:76px 0 88px;text-align:center;background:var(--panel-2);border-top:1px solid var(--line)}
-.apply-h{margin-top:14px;font-size:clamp(27px,4.4vw,38px);max-width:20ch;margin-inline:auto}
-.apply-h em{font-style:italic;color:var(--accent)}
-.apply .sub{margin:16px auto 0;max-width:48ch}
-.apply-form{margin:40px auto 0;max-width:520px;text-align:left}
-.af-field{padding:26px 0}
-.af-field+.af-field{border-top:1px solid var(--line)}
-.af-field label{display:block;font-family:var(--serif);font-size:26px;font-weight:600;color:var(--ink)}
-.af-field .af-hint{margin-top:6px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
-.af-field input,.af-field textarea{width:100%;border:none;background:transparent;margin-top:18px;
-  font-family:var(--sans);font-size:16px;color:var(--ink);padding:4px 0;resize:none}
-.af-field input:focus,.af-field textarea:focus{outline:none}
-.apply-note{margin-top:18px;font-size:12.5px;color:var(--ink-faint)}
-.af-thanks{display:none;margin:18px auto 0;max-width:520px;background:var(--good-soft, rgba(126,155,122,.14));
-  border:1px solid var(--good);border-radius:10px;padding:12px 16px;font-size:13.5px;color:#4d6a49}
-.af-thanks.show{display:block}
-
-/* MOMENTS — full-bleed stacked vignettes, Nubo's Kitchen/School Run/Front Door pattern */
-.moments{padding:70px 0 20px;background:var(--panel-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.vign{margin-top:52px}
-.vign-media{position:relative;width:100vw;margin-left:calc(50% - 50vw);aspect-ratio:16/11;max-height:560px;overflow:hidden;
-  background:linear-gradient(160deg,var(--bg2),var(--panel));border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
-.vign-media .ph-note{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-faint);line-height:1.7;max-width:44ch}
-.vign-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
-.vign-pill{position:absolute;top:20px;left:20px;background:rgba(51,46,39,.88);color:var(--panel-2);
-  font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;padding:8px 14px;border-radius:999px}
-.vign-body{max-width:600px;margin:28px auto 0;padding-inline:24px}
-.vign-body h3{font-size:clamp(21px,3.2vw,28px);font-weight:600}
-.vign-body p{margin-top:12px;font-size:14px;color:var(--ink-dim);line-height:1.7}
-.vign-line{height:1px;background:var(--line);margin:20px 0 14px}
-.vign-tag{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
-
-/* QUOTE PANEL — dark contrast panel, "more judgement than checklist" positioning */
-.quotepanel{padding:76px 0;text-align:center;color:#F3ECDD;
-  background:radial-gradient(900px 480px at 50% 110%, rgba(196,168,118,.18), transparent 60%),
-    linear-gradient(165deg,#2B251C 0%,#211C15 100%)}
-.quotepanel h2{font-size:clamp(28px,4.6vw,42px);max-width:18ch;margin:0 auto;color:#F8F1E0}
-.quotepanel p{margin:18px auto 0;max-width:48ch;font-size:14px;color:#CDBFA0;letter-spacing:.02em}
-
-/* PRICING — three real tiers, real figures, no popularity claims */
-.pricing{padding:76px 0}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:stretch}
-@media(max-width:860px){.price-grid{grid-template-columns:1fr}}
-.price-card{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);
-  border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;box-shadow:0 14px 34px -26px rgba(90,78,60,.4)}
-.price-tag{display:inline-block;align-self:flex-start;background:var(--accent-soft);color:var(--accent);
-  font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 11px;border-radius:999px}
-.price-card h3{margin-top:16px;font-size:19px;font-weight:600}
-.price-amt{margin-top:10px;font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink)}
-.price-note{font-size:11.5px;color:var(--ink-faint);letter-spacing:.04em;text-transform:uppercase;margin-top:4px}
-.price-list{margin:18px 0 0;padding:0;list-style:none;font-size:13px;color:var(--ink-dim);line-height:2}
-.price-list li::before{content:"—";margin-right:8px;color:var(--accent-dim)}
-.price-card .btn{margin-top:22px;text-align:center}
-.price-fit{margin-top:12px;font-size:12px;color:var(--ink-faint);text-align:center}
-.price-fit b{color:var(--accent)}
-.price-custom{text-align:center;margin-top:30px;font-size:13.5px;color:var(--ink-dim)}
-.price-custom a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
-
-/* MINO CARE — ongoing monthly subscription add-on, separate from the one-off packages above */
-.minocare{margin-top:36px;background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line);
-  border-radius:20px;padding:32px 28px;display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between}
-.minocare-info{flex:1;min-width:240px}
-.minocare-info h3{margin-top:12px;font-size:22px;font-weight:600;font-family:var(--serif)}
-.minocare-info p{margin-top:8px;font-size:13.5px;color:var(--ink-dim);max-width:46ch;line-height:1.6}
-.minocare-list{margin:16px 0 0;padding:0;list-style:none;font-size:12.5px;color:var(--ink-dim);line-height:1.9}
-.minocare-list li::before{content:"—";margin-right:8px;color:var(--accent-dim)}
-.minocare-cta{flex:none;text-align:center}
-.minocare-price{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink)}
-.minocare-price span{font-size:14px;color:var(--ink-faint);font-weight:400}
-.minocare-price .fixme{color:var(--risk);font-size:14px;font-weight:600}
-
-/* PROCESS — 4 real onboarding steps */
-.process{padding:76px 0;background:var(--panel-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
-@media(max-width:860px){.process-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.process-grid{grid-template-columns:1fr}}
-.pstep .pn{font-family:var(--serif);font-size:26px;font-weight:600;color:var(--accent-dim)}
-.pstep h3{margin-top:8px;font-size:15.5px;font-weight:600}
-.pstep p{margin-top:8px;font-size:12.5px;color:var(--ink-dim);line-height:1.6}
-
-/* FAQ — real questions, honest answers, no invented policy details */
-.faq{padding:70px 0}
-.faq-list{margin-top:34px;border-top:1px solid var(--line)}
-.faq-item{border-bottom:1px solid var(--line);padding:20px 0}
-.faq-item summary{cursor:pointer;font-family:var(--serif);font-size:17px;font-weight:600;list-style:none;
-  display:flex;justify-content:space-between;align-items:center;gap:16px}
+/* FAQ */
+.faq{padding:60px 0;background:var(--panel-2);border-top:1px solid var(--line)}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.faq-item summary{cursor:pointer;font-family:var(--serif);font-size:18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:"+";font-size:20px;color:var(--accent);flex:none}
 .faq-item[open] summary::after{content:"–"}
-.faq-item p{margin-top:12px;font-size:13.5px;color:var(--ink-dim);line-height:1.65}
+.faq-item p{margin:10px 0 0;font-size:14px;color:var(--ink-dim);line-height:1.6}
 
-footer{border-top:1px solid var(--line);padding:32px 0;font-size:12px;color:var(--ink-faint)}
-.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.hero .reassure{margin:12px auto 0;font-size:14px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)}
-.hero .steps3{list-style:none;display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;padding:8px 16px;margin:12px 0 0;font-size:14.5px;color:#fff;background:rgba(30,26,22,.55);border-radius:999px}
-.hero .steps3 li{display:flex;align-items:center;gap:8px}.hero .steps3 b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#B68A3E;color:#fff;font-size:12px}
+/* FINAL CTA */
+.final{padding:64px 0 72px;text-align:center;color:#F3ECDD;background:linear-gradient(165deg,#2B251C 0%,#211C15 100%)}
+.final h2{font-size:clamp(28px,4.6vw,42px);max-width:18ch;margin:0 auto;color:#F8F1E0;font-weight:600}
+.final h2 em{font-style:italic;color:#E3C98E}
+.final .btn{margin-top:24px}
+.final .hero-alt{margin-top:16px}
+.final p.note{margin-top:14px;font-size:12.5px;color:#B7A480}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-row a{text-decoration:underline;text-underline-offset:3px}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics --></head>
 <body>
 
-<div id="loader"><span class="loader-word">Teething Issues</span></div>
-
 <nav class="site">
   <div class="nav-row">
-    <a href="index.html" class="brand">Teething Issues</a>
+    <a href="/" class="brand">Teething Issues</a>
     <div class="navlinks">
-      <a href="#services">Services</a>
-      <a href="#team">About</a>
-      <a href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener">Contact</a>
+      <a href="#what">What we do</a>
+      <a href="receptionist/">Receptionist</a>
+      <a href="ai-visibility/">Google &amp; ChatGPT</a>
+      <a href="circle/">The Circle</a>
     </div>
-    <a class="nav-cta" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener">Get in touch</a>
+    <a class="nav-cta" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="hero-media"><img src="assets/mino-1.jpg" alt="Mino"><div class="hero-scrim"></div></div>
+  <div class="hero-media"><img src="assets/mino-1-900.jpg" srcset="assets/mino-1-900.jpg 900w, assets/mino-1.jpg 1306w" sizes="100vw" alt="Mino, our practice assistant, holding a tablet" fetchpriority="high"><div class="hero-scrim"></div></div>
   <div class="wrap hero-inner">
-    <div class="hero-badge">Always thorough. Mostly invisible.</div>
+    <div class="hero-for">For dental entrepreneurs &amp; practice managers</div>
     <h1 class="hero-h">Your Practice, <em>Made Perfect.</em></h1>
-    <div class="hero-tag">Without the Chaos of Running It Alone</div>
-    <p class="sub">We keep your phones, your team and your CQC steady, and help more patients say yes. Built by someone who's actually run a practice.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a>
-      <a class="btn ghost" href="#services">See what we do</a>
-    </div>
+    <div class="hero-tag">Without the chaos of running it alone</div>
+    <ul class="pains">
+      <li><span class="x">✕</span><span><b>Your phone rings out at lunch</b> and after five</span></li>
+      <li><span class="x">✕</span><span><b>Treatment plans go cold</b> after "I'll think about it"</span></li>
+      <li><span class="x">✕</span><span><b>ChatGPT names the practice down the road</b>, not you</span></li>
+      <li><span class="x">✕</span><span><b>You're doing it all on your own</b>, every evening</span></li>
+    </ul>
+    <p class="fixline">We fix all of it, so you get your time back.</p>
+    <a class="btn light" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a>
+    <a class="hero-alt" href="ai-visibility/#check" data-t="score">Or check your ChatGPT score →</a>
     <p class="reassure">30 minutes · No obligation · Rough numbers are fine</p>
-    <ol class="steps3"><li><b>1</b>A growth chat</li><li><b>2</b>A clear plan and a fixed price</li><li><b>3</b>Set up in a week, with you for a month</li></ol>
   </div>
 </header>
 
+<section class="depts" id="what">
+  <div class="wrap">
+    <div class="shead" style="margin-bottom:24px"><div class="eyebrow">What we do</div><h2>Every department, <em>handled.</em></h2></div>
+    <div class="dept-grid">
+      <a class="dept" href="receptionist/" data-t="dept:reception"><b>Reception department</b><span>See how →</span></a>
+      <a class="dept" href="twin/" data-t="dept:social"><b>Social media department</b><span>Your twin →</span></a>
+      <a class="dept" href="twin/#hub" data-t="dept:hub"><b>Approval hub</b><span>See how →</span></a>
+      <a class="dept" href="circle/tools/cqc-score/" data-t="dept:compliance"><b>Compliance department</b><span>See how →</span></a>
+      <a class="dept" href="ai-visibility/" data-t="dept:chatgpt"><b>Google &amp; ChatGPT</b><span>See how →</span></a>
+      <a class="dept" href="growth/" data-t="dept:growth"><b>Growth department</b><span>See how →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="fixes" id="fixes">
+  <div class="wrap">
+    <div class="shead">
+      <div class="eyebrow">What changes</div>
+      <h2>Four things you'll <em>feel</em> straight away.</h2>
+    </div>
+    <div class="fix-grid">
+      <div class="fix"><div class="n">01</div><h3>Get your evenings back</h3><ul>
+        <li>Every call answered, even at lunch and after five</li>
+        <li>The admin that eats your evenings, taken off your plate</li>
+        <li>A short weekly update, so you always know your numbers</li></ul></div>
+      <div class="fix"><div class="n">02</div><h3>You're never on your own</h3><ul>
+        <li>A growth expert with you for your first month</li>
+        <li>A help line after that, for as long as you're with us</li>
+        <li>Step-by-step guides in the Circle, with access for your whole team</li></ul></div>
+      <div class="fix"><div class="n">03</div><h3>A calmer practice</h3><ul>
+        <li>A calmer front desk, and your team gets their breaks back</li>
+        <li>Every "maybe" followed up, so treatment plans don't go cold</li>
+        <li>CQC-ready before they ring, checked by a CQC Registered Manager</li></ul></div>
+      <div class="fix"><div class="n">04</div><h3>Get ahead of your competition</h3><ul>
+        <li>Found first when patients search on Google and ChatGPT</li>
+        <li>More five-star reviews</li>
+        <li>Ads for the treatments you want more of</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="elevate">
+  <div class="wrap">
+    <div class="el-eyebrow">The Real Operating System Behind It</div>
+    <h2 class="el-h">Elevate Your Practice.</h2>
+    <p class="el-sub">Judgement at the top, a real team underneath, and a real result at the end of every task.</p>
+    <div class="os-tiers">
+      <div class="tier"><div class="tier-label">The Judgement</div><div class="glass-row">
+        <div class="glass-card wide">Every finding checked the way a real inspector would, before anything reaches you.</div></div></div>
+      <div class="tier"><div class="tier-label">The Team</div><div class="glass-row">
+        <div class="glass-card">Reception</div><div class="glass-card">Growth</div><div class="glass-card">Compliance</div>
+        <div class="glass-card">Operations</div><div class="glass-card">Training</div><div class="glass-card">Social Media</div></div></div>
+      <div class="tier"><div class="tier-label">The Result</div><div class="glass-row">
+        <div class="glass-card pill">✓ Call answered</div><div class="glass-card pill">✓ Patient followed up</div>
+        <div class="glass-card pill">✓ Found on ChatGPT</div><div class="glass-card pill">✓ CQC-ready</div></div></div>
+    </div>
+  </div>
+</section>
+
 <div class="statstrip">
-  <div class="wrap stat-grid">
-    <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-label">Regulatory Credential</div><div class="stat-big">CQC</div><p>Registered Manager status — not a consultant title borrowed for marketing.</p></div>
-    <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-label">Real Experience</div><div class="stat-big">Expert</div><p>Inside real dental practices — nurse to practice manager, not a classroom.</p></div>
-    <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-label">Proven Result</div><div class="stat-big">£135k/mo</div><p>Real practice revenue, doubled under this exact system.</p></div>
-    <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-label">Track Record</div><div class="stat-big">Multiple</div><p>Real CQC inspections passed — not simulated ones.</p></div>
-    <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-label">In-house</div><div class="stat-big">Advanced</div><p>Our own advanced software, built for dental practices.</p></div>
+  <div class="wrap">
+    <div class="shead"><div class="eyebrow">Why us</div><h2>Developed by <em>dental care professionals.</em></h2></div>
+    <div class="stat-grid">
+      <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-big">CQC</div><p>Registered Manager, not a borrowed consultant title</p></div>
+      <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-big">15+ years</div><p>Inside real dental practices, nurse to practice manager</p></div>
+      <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-big">£135k/mo</div><p>Real practice revenue, grown under this system</p></div>
+      <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-big">ICO</div><p>Registered, UK based, and a data agreement with every practice</p></div>
+      <div class="stat-tile"><div class="stat-bar"><span></span><span></span><span></span><span></span></div><div class="stat-big">In-house</div><p>Our own advanced software, built for dental practices</p></div>
+    </div>
   </div>
 </div>
 
-<section class="elevate reveal">
+<section class="ways">
   <div class="wrap">
-    <div class="el-head">
-      <div class="el-eyebrow">The Real Operating System Behind It</div>
-      <h2 class="el-h">Elevate Your Practice.</h2>
-      <p class="el-sub">Not a checklist. A real system: judgement at the top, a real team underneath, and a real result at the end of every task.</p>
+    <div class="shead"><div class="eyebrow">Two ways to work with us</div><h2>Do it yourself, or <em>let us do it all for you.</em></h2></div>
+    <div class="way-grid">
+      <div class="way"><span class="tag">We do it all for you</span><h3>Done for you</h3><ul>
+        <li>We pick the areas together at your growth chat</li>
+        <li>A clear plan and a fixed price, before anything starts</li>
+        <li>Set up in about a week, with a growth expert beside you for the first month</li>
+        <li>Then a monthly care plan keeps it all running. No long contract</li></ul>
+        <a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a></div>
+      <div class="way"><span class="tag">Do it yourself</span><h3>The Teething Issues Circle</h3><ul>
+        <li>Step-by-step guides that take you through each area</li>
+        <li>Tools you can use straight away</li>
+        <li>Live Q&amp;As and other practice owners to learn from</li>
+        <li>Access for your whole team</li></ul>
+        <p class="price">£97 a month, with access for your whole team.</p>
+        <a class="btn ghost" href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" data-t="join">Join the Circle</a></div>
     </div>
-    <div class="sphere-wrap"><div class="sphere"></div></div>
-    <div class="os-tiers">
-      <div class="tier reveal">
-        <div class="tier-label">The Judgement</div>
-        <div class="glass-row">
-          <div class="glass-card wide">Every finding checked the way a real inspector would, before anything reaches you.</div>
-        </div>
-      </div>
-      <div class="tier reveal">
-        <div class="tier-label">The Team</div>
-        <div class="glass-row">
-          <div class="glass-card">Compliance</div>
-          <div class="glass-card">Operations</div>
-          <div class="glass-card">Training</div>
-          <div class="glass-card">Growth</div>
-          <div class="glass-card">Maintenance</div>
-          <div class="glass-card">Reception</div>
-          <div class="glass-card">Social Media</div>
-        </div>
-      </div>
-      <div class="tier reveal">
-        <div class="tier-label">The Result</div>
-        <div class="glass-row">
-          <div class="glass-card pill">✓ Audit complete</div>
-          <div class="glass-card pill">✓ Report ready</div>
-          <div class="glass-card pill">✓ Training logged</div>
-          <div class="glass-card pill">✓ Gap assigned</div>
-        </div>
-      </div>
-    </div>
+    <ol class="steps">
+      <li><b>1</b><span><b style="all:unset;font-weight:500">A growth chat.</b> 30 minutes: your numbers, what's slipping, what matters most.</span></li>
+      <li><b>2</b><span><b style="all:unset;font-weight:500">A clear plan and a fixed price.</b> We always tell you the price first.</span></li>
+      <li><b>3</b><span><b style="all:unset;font-weight:500">Set up in a week, with you for a month.</b> We do the work and stay beside you.</span></li>
+    </ol>
+    <div class="promise"><h3>Our promise</h3><ul>
+      <li>Every call answered, or that month's care plan is on us</li>
+      <li>If it hasn't paid for itself in 90 days, we keep working at no extra cost until it has</li>
+      <li>No tie-in after the first month</li>
+      <li>Nobody gets replaced. Everything we do makes your team's day easier</li></ul></div>
   </div>
 </section>
 
-<section class="moments reveal">
-  <div class="wrap">
-    <div class="shead">
-      <div class="eyebrow">Ordinary Moments, Handled Quietly</div>
-      <h2 style="margin-top:12px;font-size:clamp(26px,4vw,34px)">It doesn't do tricks. It just never lets anything slip.</h2>
-    </div>
-    <div class="vign">
-      <div class="vign-media"><span class="vign-pill">The Quiet Audit</span><img src="assets/mino-1.jpg" alt="Mino reviewing a compliance folder"></div>
-      <div class="vign-body">
-        <h3>Reviewing before you even think to ask.</h3>
-        <p>The actual compliance folder, read properly. No dashboard theatre, just the real document and what it says.</p>
-        <div class="vign-line"></div>
-        <div class="vign-tag">Nothing slips through</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="pain reveal">
-  <div class="wrap">
-    <h2>Sound familiar?</h2>
-    <div class="pain-grid">
-      <div class="pain-card"><div class="x">✕</div><p><b style="color:var(--ink)">Calls going unanswered</b> at lunch and after five.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p><b style="color:var(--ink)">"I'll think about it"</b>, and the patient never comes back.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p><b style="color:var(--ink)">Your manager's left</b> and everything lands on you.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p><b style="color:var(--ink)">CQC could ring any day</b>, and you're not sure you're ready.</p></div>
-      <div class="pain-card"><div class="x">✕</div><p><b style="color:var(--ink)">Admin every evening</b>, instead of time at home.</p></div>
-    </div>
-    <p class="pivot">Every call answered. Every maybe followed up. A calmer team, CQC-ready before they ring, and a short weekly update so you always know your numbers.</p>
-  </div>
-</section>
-
-<section class="services reveal" id="services">
-  <div class="wrap">
-    <div class="shead">
-      <div class="eyebrow">Ways We Help</div>
-      <h2 style="margin-top:12px;font-size:clamp(26px,4vw,34px)">Pick the areas that matter most. We'll build the plan around them.</h2>
-      <p style="margin-top:14px;color:var(--ink-dim);font-size:14.5px">We choose the areas together at your growth chat, then you get a clear plan and a fixed price. We set it up in a week and stay with you for the first month.</p>
-    </div>
-    <div class="sgrid">
-      <div class="scard"><div class="n">01</div><h3>Never Miss a Call</h3><p>Calls answered when reception is busy, at lunch or closed, with every detail passed straight to your team to book.</p><div class="stags"><span class="stag">Every Call Answered</span><span class="stag">After Hours</span></div></div>
-      <div class="scard"><div class="n">02</div><h3>More Patients Say Yes</h3><p>Your reception and treatment coordinators practise real patient calls, get clear feedback, and every undecided patient gets a warm follow-up.</p><div class="stags"><span class="stag">Call Training</span><span class="stag">Follow-ups</span></div></div>
-      <div class="scard"><div class="n">03</div><h3>Found First Online</h3><p>How you show up when patients search, more five-star reviews, and ads for the treatments you want more of.</p><div class="stags"><span class="stag">Search</span><span class="stag">Reviews</span><span class="stag">Ads</span></div></div>
-      <div class="scard"><div class="n">04</div><h3>Hire Right + Staff Files</h3><p>The right person hired, and every staff file correct for their role and ready for CQC from day one.</p><div class="stags"><span class="stag">Hiring</span><span class="stag">Staff Files</span></div></div>
-      <div class="scard"><div class="n">05</div><h3>Practice Manager Cover</h3><p>Between managers? We keep rotas, phones, the team and CQC steady, so nothing slips while you hire.</p><div class="stags"><span class="stag">Cover</span><span class="stag">Team Support</span></div></div>
-      <div class="scard"><div class="n">06</div><h3>CQC Readiness</h3><p>Mock inspections and a policy check by a CQC Registered Manager, so you know you're ready before they ring.</p><div class="stags"><span class="stag">Mock Inspections</span><span class="stag">Evidence Folders</span></div></div>
-    </div>
-    <div class="pain-card" style="margin-top:28px"><div class="x">✓</div><p><b style="color:var(--ink)">Our promise.</b> Every call answered, or that month's care plan is on us. If it hasn't paid for itself in 90 days, we keep working at no extra cost until it has. No tie-in after the first month.</p></div>
-  </div>
-</section>
-
-<section class="team reveal" id="team">
-  <div class="wrap">
-    <div class="lead-group">
-      <div class="lead-person">
-        <div class="lead-av"><img src="assets/mino-1.jpg" alt="Mino"></div>
-        <div class="lead-copy">
-          <div class="eyebrow">Chief of Staff</div>
-          <h3>Mino runs the room, so you don't have to.</h3>
-          <p>You talk to one person. Behind him is a real team — and when Compliance or Growth finds something, he tells you it's theirs, not his. Nothing gets flattened into one voice pretending to know everything.</p>
-        </div>
-      </div>
-      <div class="lead-person">
-        <div class="lead-av lead-av-ph">J</div>
-        <div class="lead-copy">
-          <div class="eyebrow">Personal Assistant</div>
-          <h3>Jarvis keeps the day moving.</h3>
-          <p>Calendar, reminders, the small admin that eats an afternoon — handled quietly in the background, so Mino and the team can stay focused on your practice.</p>
-        </div>
-      </div>
-    </div>
-    <div class="lead-line" aria-hidden="true"></div>
-    <div class="shead">
-      <div class="eyebrow">Every Department, Tailored To Your Practice</div>
-      <h2 style="margin-top:12px;font-size:clamp(26px,4vw,34px)">A real company, with a real team behind it.</h2>
-      <p style="margin-top:14px;color:var(--ink-dim);font-size:14.5px">Teething Issues isn't one person doing everything alone. It's our founder, backed by a full team — each department set up around your practice specifically, not a one-size-fits-all package.</p>
-    </div>
-    <div class="team-grid">
-      <div class="tcard"><div class="av">C</div><b>Compliance Team</b><span>Led by Bobby</span><p>Reads your actual CQC documents line by line — not a dashboard summary — and catches what's genuinely missing or expired. Every real gap gets a named owner and a deadline, then gets tracked until it's actually closed.</p></div>
-      <div class="tcard"><div class="av">O</div><b>Operations Team</b><span>Systems &amp; Delegation</span><p>Builds the actual day-to-day systems your practice runs on — rotas, checklists, handover notes — so the practice doesn't grind to a halt the moment you take a day off.</p></div>
-      <div class="tcard"><div class="av">T</div><b>Training Team</b><span>Staff CPD</span><p>Tracks every staff member's training and CPD against their real role and renewal dates, and flags it well before anything quietly lapses — not the week of an inspection.</p></div>
-      <div class="tcard"><div class="av">S</div><b>Growth Team</b><span>Patient &amp; Practice Growth</span><p>Works the referrals, reviews, and patient-growth angles most practices never have time to run properly — turning a full diary into a genuinely growing one.</p></div>
-      <div class="tcard"><div class="av">M</div><b>Maintenance Team</b><span>Equipment &amp; Servicing</span><p>Tracks every service date — autoclaves, X-ray, fire safety — against real manufacturer schedules, so nothing lapses without you ever noticing it was due.</p></div>
-      <div class="tcard"><div class="av">R</div><b>Reception Team</b><span>Calls &amp; Booking</span><p>Answers every call that comes in, sounds like a real person on the line, and handles real questions about your practice — bookings, hours, availability — so no patient ever hits a voicemail.</p></div>
-      <div class="tcard"><div class="av">S</div><b>Social Media Team</b><span>Led by Spark</span><p>Drafts your posts, watches your comments and DMs, and follows up on real leads that come through social — you approve everything before a single word goes out.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="faq reveal" id="faq">
+<section class="faq" id="faq">
   <div class="narrow">
-    <div class="shead">
-      <div class="eyebrow">Common Questions</div>
-      <h2 style="margin-top:12px;font-size:clamp(26px,4vw,34px)">Real answers, no vague marketing-speak.</h2>
-    </div>
+    <div class="shead"><div class="eyebrow">Questions</div><h2>Real answers.</h2></div>
     <div class="faq-list">
-      <details class="faq-item"><summary>How does it work?</summary><p>It starts with a 30-minute growth chat. We look at your numbers and what's slipping, agree the areas that matter most, and give you a clear plan with a fixed price. We set it up in about a week and stay with you for the first month.</p></details>
       <details class="faq-item"><summary>What does it cost?</summary><p>One service on its own (like the receptionist) is £1,500 to set up, then £150 a month. Packages: Starter (2 areas) £1,999, Growth (5 areas) £4,995, Complete (every area) £9,995, then a £300 a month care plan. We always tell you the price first.</p></details>
       <details class="faq-item"><summary>Am I tied in?</summary><p>No. After the first month the care plan is month to month. Stay because it works.</p></details>
       <details class="faq-item"><summary>How quickly will I see a difference?</summary><p>Missed calls change in the first week. Conversion and the team build over the first month.</p></details>
       <details class="faq-item"><summary>Will this replace my staff?</summary><p>No. Nobody gets replaced. Everything we do is there to make your team's day easier.</p></details>
+      <details class="faq-item"><summary>Does it work with my practice software?</summary><p>Yes. We work with Dentally, Software of Excellence (SOE) and other practice systems. We'll check yours at your growth chat.</p></details>
       <details class="faq-item"><summary>Is our patient data safe?</summary><p>Yes. We're registered with the ICO, work under UK GDPR, and agree a data processing agreement with every practice before we handle any patient details.</p></details>
       <details class="faq-item"><summary>Why are you selective about which practices you take on?</summary><p>Our name is attached to every practice we work with. We only take on practices we can genuinely help.</p></details>
     </div>
   </div>
 </section>
 
-
-<section class="apply reveal">
-  <div class="narrow" style="text-align:center">
-    <div class="eyebrow" style="text-align:center">Your Next Step</div>
-    <h2 class="apply-h">Book a <em>growth chat.</em></h2>
-    <p class="sub" style="text-align:center;margin-inline:auto">30 minutes on a call. Your numbers, what's slipping, and a simple plan for the next month. We only take on practices we can genuinely help.</p>
-    <a class="btn primary" style="margin-top:22px" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a> <a class="btn ghost" style="margin-top:22px" href="tel:+442038698658" data-t="call">Call us now</a>
-    <p class="apply-note">No obligation · Rough numbers are fine</p>
-    <p class="apply-note" style="margin-top:18px">Want to learn alongside other practice owners? <a href="circle/" style="text-decoration:underline">Join the Teething Issues Circle</a>.</p>
+<section class="final">
+  <div class="narrow">
+    <h2>Modernise your practice and get <em>ahead of your competition.</em></h2>
+    <a class="btn light" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat</a><br>
+    <a class="hero-alt" href="ai-visibility/#check" data-t="score">Or check your ChatGPT score →</a>
+    <p class="note">No obligation · Rough numbers are fine · We only take on practices we can genuinely help</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-row">
-    <span>© Teething Issues — Your Practice Made Perfect</span>
-    <span>hello@teethingissues.com</span>
+    <span>© Teething Issues Ltd · <a href="receptionist/">Receptionist</a> · <a href="ai-visibility/">Google &amp; ChatGPT</a> · <a href="circle/">The Circle</a> · <a href="mino/">Mino</a> · <a href="careers/">Careers</a> · <a href="privacy/">Privacy</a></span>
+    <span>hello@teethingissues.com · UK based · ICO registered</span>
   </div>
 </footer>
-
-<script>
-
-// Loading screen — a short intro, then reveal the real page.
-window.addEventListener('load', () => {
-  setTimeout(() => { document.getElementById('loader').classList.add('hide'); }, 900);
-});
-
-// Scroll reveal — each section fades/rises into view once, immersing the reader
-// progressively instead of showing everything at once.
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  });
-}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
 
 <!-- clarity-consent -->
 <div id="ck" role="dialog" aria-label="Cookie choice" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:560px;margin:0 auto;
