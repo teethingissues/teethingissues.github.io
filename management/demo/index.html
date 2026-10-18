@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hiring &amp; Onboarding Demo for Dental Practices | Teething Issues</title>
+<link rel="canonical" href="https://teethingissues.com/management/demo/">
+<meta name="description" content="Watch a dental nurse go from job advert to fully onboarded: applicants screened, fair scored interviews, the right paperwork for the role, DBS and Hep B checked, first week planned and renewals tracked.">
+<meta property="og:title" content="See hiring and onboarding in action">
+<meta property="og:image" content="https://teethingissues.com/mino/mino-training.jpg">
+<link rel="icon" href="/assets/mino-1.jpg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+body{margin:0}a.back{color:var(--muted);text-decoration:none;font-size:14px}a.back:hover{color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.cta a{text-decoration:none}
+/* Layout: a five-stop route map across the top (the whole journey at a glance), then the live stage below it, then the staff file it produces. */
+:root{
+  /* Teething Issues site palette (ti-site/index.html), light only like the site */
+  --bg:#E7E1D6; --panel:#F7F3EB; --ink:#332E27; --muted:#6F655A; --line:#D5CBBA;
+  --accent:#8C7A62; --accent-soft:#E6DCCB; --warn:#9A6B2E; --warn-soft:#F1E3C8; --bad:#A95F4E; --bad-soft:#F0DAD2; --ok:#5F7C5B; --ok-soft:#DFE7D9;
+  --display:"Cormorant Garamond",Georgia,serif; --body:"Jost",-apple-system,"Segoe UI",sans-serif; --mono:"Jost",-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px}
+.wrap{max-width:1100px;margin:0 auto;display:grid;gap:22px}
+h1{font:600 clamp(32px,4.6vw,46px)/1.05 var(--display);margin:0;text-wrap:balance}
+h2{font:600 24px/1.15 var(--display);margin:0 0 10px;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:6px 0 0}
+.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.example{display:inline-block;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;background:var(--warn-soft);color:var(--warn);padding:5px 8px;border-radius:4px;margin-top:10px}
+
+/* route map */
+.route{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 18px;overflow-x:auto}
+.stops{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:0;position:relative;min-width:760px}
+.stop{position:relative;padding:0 10px;text-align:center;cursor:pointer;background:none;border:0;color:inherit;font:inherit}
+.stop:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+.stop::before{content:"";position:absolute;top:19px;left:0;right:0;height:3px;background:var(--line)}
+.stop:first-child::before{left:50%}.stop:last-child::before{right:50%}
+.stop.done::before,.stop.now::before{background:var(--accent)}
+.dot{position:relative;z-index:1;width:40px;height:40px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;background:var(--panel);border:3px solid var(--line);font:600 15px var(--mono);color:var(--muted);transition:all .3s}
+.stop.done .dot{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.stop.now .dot{border-color:var(--accent);color:var(--accent);box-shadow:0 0 0 6px var(--accent-soft)}
+.stop b{display:block;font-weight:600;font-size:14.5px}
+.stop span{display:block;color:var(--muted);font-size:12.5px;line-height:1.35;margin-top:3px}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+label.role{display:flex;gap:8px;align-items:center;font-weight:500}
+select,button.btn{font:500 14px var(--body);border-radius:8px;padding:9px 14px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+button.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+button.btn:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.speed{margin-left:auto;color:var(--muted);font-size:13px;display:flex;gap:6px;align-items:center}
+
+/* live area */
+.live{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}
+@media (max-width:820px){.live{grid-template-columns:1fr}.speed{margin-left:0}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}
+.cat{font-size:13px;color:var(--muted);margin:-4px 0 12px}
+.docs{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.docs li{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:8px 10px;border-radius:8px;background:var(--bg);font-size:14px}
+.docs li small{display:block;color:var(--muted);font-size:12px;line-height:1.35}
+.pill{font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:5px 8px;border-radius:999px;white-space:nowrap}
+.p-wait{background:var(--line);color:var(--muted)}
+.p-asked{background:var(--accent-soft);color:var(--accent)}
+.p-flag{background:var(--warn-soft);color:var(--warn)}
+.p-stop{background:var(--bad-soft);color:var(--bad)}
+.p-ok{background:var(--ok-soft);color:var(--ok)}
+.p-na{background:transparent;color:var(--muted);border:1px dashed var(--line)}
+.feed{list-style:none;margin:0;padding:0;display:grid;gap:8px;max-height:460px;overflow-y:auto}
+.feed li{display:grid;grid-template-columns:56px 1fr;gap:10px;font-size:14px;animation:in .35s ease}
+.feed time{font:500 11.5px/1.6 var(--mono);color:var(--muted)}
+.feed .who{font-weight:600}
+.feed .flag{color:var(--warn)}.feed .stopx{color:var(--bad)}.feed .good{color:var(--ok)}
+.feed .human{background:var(--accent-soft);border-radius:8px;padding:8px 10px}
+@keyframes in{from{opacity:.2;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.feed li{animation:none}.dot{transition:none}}
+
+/* induction + file */
+.weeks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:620px){.weeks{grid-template-columns:1fr}}
+.week{background:var(--bg);border-radius:10px;padding:12px}
+.week h3{margin:0 0 6px;font:600 14px var(--body)}
+.week ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--muted)}
+.week li.t{color:var(--ink)}.week li.t::marker{content:"✓  ";color:var(--ok)}
+.file{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.renew{background:var(--bg);border-radius:10px;padding:12px;display:grid;gap:2px}
+.renew b{font-weight:600;font-size:14px}
+.renew .d{font:500 13px var(--mono);color:var(--accent);font-variant-numeric:tabular-nums}
+.renew small{color:var(--muted);font-size:12.5px}
+.empty{color:var(--muted);font-size:14px;padding:6px 0}
+.tabs{display:flex;gap:6px;border-bottom:1px solid var(--line)}
+.tab{font:600 15px var(--body);background:none;border:0;border-bottom:3px solid transparent;padding:10px 14px;color:var(--muted);cursor:pointer}
+.tab.on{color:var(--ink);border-bottom-color:var(--accent)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cands{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.cands th{text-align:left;font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line)}
+.cands td{padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.cands tr.picked td{background:var(--ok-soft)}
+.score td:not(:first-child),.score th:not(:first-child){text-align:center}
+.score td:first-child{white-space:normal;min-width:220px}
+.score tr.total td{font-weight:600}
+.rules{font-size:13px;color:var(--muted);display:grid;gap:4px;margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="back" href="/management/">← Teething Issues · Management</a>
+    <div class="eyebrow" style="margin-top:14px">Live demo · hiring &amp; onboarding</div>
+    <h1>From job advert to fully onboarded</h1>
+    <p class="lede">Part 1 finds the right person. Part 2 gets them ready to work, with every document checked and every renewal date tracked. Press Play on each part.</p>
+    <span class="example">Example people, not real candidates</span>
+  </header>
+
+  <div class="tabs" role="tablist">
+    <button class="tab on" id="tabHire" role="tab">1 · Hiring</button>
+    <button class="tab" id="tabOb" role="tab">2 · Onboarding</button>
+  </div>
+
+  <div id="hire" class="wrap">
+    <nav class="route" aria-label="Hiring journey"><div class="stops" id="hstops"></div></nav>
+    <div class="controls">
+      <span class="role">Dental Nurse (qualified) · 1 vacancy</span>
+      <button class="btn primary" id="hplay">▶ Play</button>
+      <button class="btn" id="hstep">Next step</button>
+      <button class="btn" id="hreset">Start again</button>
+    </div>
+    <section class="live">
+      <div class="card">
+        <h2>Candidates</h2>
+        <p class="cat" id="hcat">Every applicant logged, nobody lost in the inbox.</p>
+        <div style="overflow-x:auto"><table class="cands"><thead><tr><th>Name</th><th>Must-haves</th><th>Phone screen</th><th>Interview</th><th>Status</th></tr></thead><tbody id="cands"></tbody></table></div>
+        <div class="rules">
+          <div>Must-haves for this role: GDC registered, right to work, chairside experience.</div>
+          <div>Full work history with <b>every gap explained</b> (CQC Regulation 19).</div>
+          <div>Same questions and scoring for every candidate, so it's fair.</div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>What's happening</h2>
+        <ul class="feed" id="hfeed"><li class="empty" style="display:block">Press Play to watch it run.</li></ul>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Interview scorecard</h2>
+      <p class="cat">Scored 1–5 by the interviewer straight after. Mino adds up and compares, the manager decides.</p>
+      <div style="overflow-x:auto"><table class="cands score"><thead><tr><th>Question</th><th id="sc1">—</th><th id="sc2">—</th><th id="sc3">—</th></tr></thead><tbody id="score"></tbody></table></div>
+      <button class="btn primary" id="toOb" hidden style="margin-top:14px">Start onboarding Sophie →</button>
+    </section>
+  </div>
+
+  <div id="ob" class="wrap" hidden>
+  <nav class="route" aria-label="Onboarding journey">
+    <div class="stops" id="stops"></div>
+  </nav>
+
+  <div class="controls">
+    <label class="role" for="role">Role
+      <select id="role">
+        <option value="rec">Receptionist</option>
+        <option value="tdn">Trainee Dental Nurse</option>
+        <option value="dn" selected>Dental Nurse (qualified)</option>
+        <option value="dent">Dentist / Hygienist / Therapist</option>
+      </select>
+    </label>
+    <button class="btn primary" id="play">▶ Play</button>
+    <button class="btn" id="step">Next step</button>
+    <button class="btn" id="reset">Start again</button>
+    <span class="speed"><label for="spd">Speed</label>
+      <select id="spd"><option value="1400">Calm</option><option value="800" selected>Normal</option><option value="300">Fast</option></select></span>
+  </div>
+
+  <section class="live">
+    <div class="card">
+      <h2>Paperwork for this role</h2>
+      <p class="cat" id="cat"></p>
+      <ul class="docs" id="docs"></ul>
+      <div class="rules">
+        <div>DBS must be <b>Enhanced</b>, "none recorded", rechecked every 3 years (CQC preference).</div>
+        <div>Hep B needs the <b>blood test titre (100 mIU/mL or more)</b>, not just the vaccination card.</div>
+        <div>2 references covering 3 years. Never friends or family.</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>What's happening</h2>
+      <ul class="feed" id="feed"><li class="empty" style="display:block">Press Play to watch it run.</li></ul>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>First week plan</h2>
+    <p class="cat">From the practice induction checklist. Each line is signed by the inductor and the new starter.</p>
+    <div class="weeks" id="weeks"></div>
+  </section>
+
+  <section class="card">
+    <h2>Staff file: renewals tracked</h2>
+    <p class="cat">Every dated document gets a recheck date, so nothing quietly runs out. These feed the Appraisal Line later.</p>
+    <div class="file" id="file"><div class="empty">Fills in once the file is approved.</div></div>
+  </section>
+  </div>
+  <section class="card">
+    <h2>Want this running in your practice?</h2>
+    <p class="cat">We set it up around your team and your diary. Nothing goes out without your say.</p>
+    <div class="cta"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener">Book a growth chat with the team</a> <a class="btn" href="/management/">Back to Management</a></div>
+  </section>
+</div>
+
+<script>
+const STAGES=[
+  {t:"Offer accepted",s:"Role picked, welcome pack sent"},
+  {t:"Paperwork",s:"Right documents for the role, collected"},
+  {t:"Checked",s:"Each one checked properly, gaps flagged"},
+  {t:"First week",s:"Induction plan, signed off"},
+  {t:"Tracked",s:"Staff file live, renewals dated"}
+];
+// Required-documents-by-role matrix (Staff Paperwork dept knowledge §1). Tier: 0 non-clinical, 1 unqualified clinical, 2 qualified clinical, 3 clinician
+const DOCS=[
+  ["Staff details & emergency contact",0],["Medical history form",0],["Photo ID",0],["Proof of address",0],["Right to work",0],
+  ["GDC registration",2],["Enhanced DBS",0],["Hep B & immunisations",1],["Indemnity certificate",2],["Qualification certificates",2],
+  ["Performer letter (NHS work)",3],["CV",0],["2 references",0],["Job offer letter",0],["Signed contract",0],["Job description",0],
+  ["Induction checklist",0],["Personal development plan",1]
+];
+const ROLES={
+  rec:{tier:0,label:"Receptionist",cat:"Non-clinical",name:"Amira"},
+  tdn:{tier:1,label:"Trainee Dental Nurse",cat:"Unqualified clinical",name:"Jade"},
+  dn:{tier:2,label:"Dental Nurse",cat:"Qualified clinical",name:"Sophie"},
+  dent:{tier:3,label:"Dentist",cat:"Clinician (treats patients in the chair)",name:"Dr Patel"}
+};
+const WEEKS=[
+  {h:"Day 1",items:["Fire evacuation & facilities","Contract, pay & sickness contact","Medical emergencies: oxygen, drugs, defib","Infection control & needle-stick"]},
+  {h:"Days 2–3",items:["Job description & reporting line","Safeguarding & Mental Capacity Act","COSHH, manual handling, risk assessments","Computer access & phone procedure"]},
+  {h:"Week 1",items:["Mentor introduced","Probation explained","PDP & training plan agreed","Appraisal process explained"]}
+];
+const $=id=>document.getElementById(id);
+let role,state,queue,qi,timer,clock;
+
+function docsFor(r){return DOCS.filter(d=>d[1]<=ROLES[r].tier).map(d=>d[0])}
+function setStage(n){[...$("stops").children].forEach((el,i)=>{el.className="stop"+(i<n?" done":i===n?" now":"")})}
+function pill(st){const m={wait:["p-wait","Not yet"],asked:["p-asked","Requested"],flag:["p-flag","Needs more"],stop:["p-stop","Can't start"],ok:["p-ok","Checked"]};const[c,t]=m[st];return`<span class="pill ${c}">${t}</span>`}
+function renderDocs(){
+  $("cat").textContent=`${ROLES[role].cat}: ${docsFor(role).length} documents needed (of 18).`;
+  $("docs").innerHTML=docsFor(role).map(d=>`<li><span>${d}${state.note[d]?`<small>${state.note[d]}</small>`:""}</span>${pill(state.doc[d]||"wait")}</li>`).join("");
+}
+function renderWeeks(){
+  $("weeks").innerHTML=WEEKS.map((w,wi)=>`<div class="week"><h3>${w.h}</h3><ul>${w.items.map((it,ii)=>`<li class="${state.ind[wi+"-"+ii]?"t":""}">${it}</li>`).join("")}</ul></div>`).join("");
+}
+function renderFile(){
+  if(!state.file){$("file").innerHTML='<div class="empty">Fills in once the file is approved.</div>';return}
+  const t=ROLES[role].tier, rows=[["Enhanced DBS","3 Nov 2029","3-year recheck (CQC preference)"]];
+  if(t>=2)rows.push(["GDC registration",t===3?"31 Dec 2026":"31 Jul 2027",t===3?"Annual renewal, dentists":"Annual renewal, nurses & DCPs"],["Indemnity","From certificate","Renewal date read from the document"]);
+  if(t>=1)rows.push(["Hep B booster","Flag if needed","Rechecked after any needle-stick"]);
+  rows.push(["Probation review","Practice sets length","Booked as an Appraisal Line call"],["First appraisal","3 Nov 2027","Feeds the PDP, then CPD"]);
+  $("file").innerHTML=rows.map(r=>`<div class="renew"><b>${r[0]}</b><span class="d">${r[1]}</span><small>${r[2]}</small></div>`).join("");
+}
+function log(who,msg,cls=""){
+  const f=$("feed"); if(f.querySelector(".empty"))f.innerHTML="";
+  const li=document.createElement("li"); li.innerHTML=`<time>${clock}</time><div class="${cls}"><span class="who">${who}:</span> ${msg}</div>`;
+  f.appendChild(li); f.scrollTop=f.scrollHeight;
+}
+function build(){
+  const r=ROLES[role],n=r.name,ds=docsFor(role),q=[];
+  const at=(c,fn)=>q.push(()=>{clock=c;fn()});
+  at("Mon 9:02",()=>{setStage(0);log("Manager",`Offer accepted. ${n} starts as ${r.label} on Mon 3 Nov.`,"human")});
+  at("Mon 9:03",()=>log("Mino",`${r.cat} role, so ${n} needs ${ds.length} documents. Welcome email sent with a checklist and upload link.`));
+  at("Mon 9:04",()=>{setStage(1);ds.forEach(d=>state.doc[d]="asked");renderDocs();log("Mino","Every document requested. Start date pencilled in.")});
+  const easy=ds.filter(d=>!["Enhanced DBS","Hep B & immunisations","2 references","GDC registration","Induction checklist","Personal development plan"].includes(d));
+  easy.forEach((d,i)=>at(i<4?"Tue 18:40":"Wed 12:15",()=>{state.doc[d]="ok";renderDocs();if(i===0||i===4)log(n,i===0?"Uploaded ID, address, right to work and forms.":"Uploaded CV, offer letter, signed contract and job description.");if(i===0)setStage(2)}));
+  at("Wed 12:20",()=>log("Mino",`${easy.length} documents checked: in date, names match, contract signed both sides.`,"good"));
+  if(ds.includes("GDC registration"))at("Wed 12:21",()=>{state.doc["GDC registration"]="ok";state.note["GDC registration"]="Checked on the GDC register";renderDocs();log("Mino",`GDC register checked: ${n} is registered.`,"good")});
+  at("Wed 14:00",()=>{state.doc["Enhanced DBS"]="flag";state.note["Enhanced DBS"]="Applied, not back yet";renderDocs();log("Mino","DBS not back yet. 'Awaiting DBS' risk assessment drafted for the manager to sign.","flag")});
+  if(ds.includes("Hep B & immunisations")){
+    at("Wed 14:05",()=>{state.doc["Hep B & immunisations"]="stop";state.note["Hep B & immunisations"]="Vaccination card only, no blood test";renderDocs();log("Mino",`Only the vaccination card came in. ${n} can't work chairside until the titre result arrives. Asked for it.`,"stopx")});
+  }
+  at("Thu 10:30",()=>{state.doc["2 references"]="flag";state.note["2 references"]="Ref 1 back, Ref 2 chased";renderDocs();log("Mino","Reference 1 from current employer is back. Reference 2 chased.","flag")});
+  if(ds.includes("Hep B & immunisations"))at("Thu 16:10",()=>{state.doc["Hep B & immunisations"]="ok";state.note["Hep B & immunisations"]="Titre 240 mIU/mL";renderDocs();log(n,"Uploaded blood test: titre 240 mIU/mL.");log("Mino","Over 100 mIU/mL, so Hep B is cleared.","good")});
+  at("Fri 9:15",()=>{state.doc["2 references"]="ok";state.note["2 references"]="Both in, 3 years covered";renderDocs();log("Mino","Both references in. Dates, job title and reason for leaving all shown. 3 years covered.","good")});
+  at("Fri 11:00",()=>{state.doc["Enhanced DBS"]="ok";state.note["Enhanced DBS"]="Enhanced, none recorded, number logged";renderDocs();log("Mino","Enhanced DBS back: 'none recorded'. Certificate number logged.","good")});
+  at("Fri 11:05",()=>log("Manager","Reviewed the file and approved the start. Signed the DBS risk assessment as closed.","human"));
+  at("Mon 3 Nov",()=>{setStage(3);log("Mino",`Day 1 for ${n}. Induction plan sent to ${n} and their mentor.`)});
+  WEEKS.forEach((w,wi)=>w.items.forEach((_,ii)=>at(wi===0?"Mon 3 Nov":wi===1?"Wed 5 Nov":"Fri 7 Nov",()=>{state.ind[wi+"-"+ii]=1;renderWeeks();if(ii===3)log("Inductor",`${w.h} signed off by both.`,"human")})));
+  at("Fri 7 Nov",()=>{state.doc["Induction checklist"]="ok";if(ds.includes("Personal development plan")){state.doc["Personal development plan"]="ok"}renderDocs();log("Mino","Induction checklist filed"+(ds.includes("Personal development plan")?" and PDP agreed.":"."),"good")});
+  at("Fri 7 Nov",()=>{setStage(4);state.file=1;renderFile();log("Mino",`Staff file 100% complete. Renewal dates set. Probation review booked on the Appraisal Line.`,"good")});
+  at("Fri 7 Nov",()=>{setStage(5);log("Manager",`${n} is fully onboarded. Nothing chased by hand.`,"human");stop()});
+  return q;
+}
+function reset(){
+  stop(); role=$("role").value; state={doc:{},note:{},ind:{},file:0}; queue=build(); qi=0; clock="";
+  $("stops").innerHTML=STAGES.map((s,i)=>`<button class="stop" data-i="${i}"><div class="dot">${i+1}</div><b>${s.t}</b><span>${s.s}</span></button>`).join("");
+  setStage(-1); renderDocs(); renderWeeks(); renderFile();
+  $("feed").innerHTML='<li class="empty" style="display:block">Press Play to watch it run.</li>';
+}
+function next(){ if(qi<queue.length){queue[qi++]();} else stop(); }
+function play(){ if(timer){stop();return} if(qi>=queue.length)reset(); $("play").textContent="❚❚ Pause"; next(); timer=setInterval(next,+$("spd").value); }
+function stop(){ clearInterval(timer); timer=null; $("play").textContent=qi>=(queue||[]).length&&qi?"↻ Play again":"▶ Play"; }
+$("play").onclick=play; $("step").onclick=()=>{if(timer)stop();next()}; $("reset").onclick=reset; $("role").onchange=reset;
+$("spd").onchange=()=>{if(timer){clearInterval(timer);timer=setInterval(next,+$("spd").value)}};
+reset();
+
+/* ---------- Part 1: Hiring ---------- */
+const HSTAGES=[
+  {t:"Advert",s:"Job description + advert written and posted"},
+  {t:"Applicants",s:"Every CV logged, replied to, screened"},
+  {t:"Shortlist",s:"10-minute phone screen, interviews booked"},
+  {t:"Interview",s:"Same questions, scored, trial shift"},
+  {t:"Offer",s:"Offer made subject to checks, others told kindly"}
+];
+const QS=["Your chairside experience so far","Calming an anxious patient","Decontaminating instruments, step by step","A patient complains at the desk: what do you do?","Gaps in your work history explained","Trial shift (manager's view)"];
+const CANDS=[
+  {n:"Sophie",must:1,ph:"Good",sc:[5,5,4,4,5,5]},
+  {n:"Megan",must:1,ph:"Good",sc:[4,3,4,3,5,3]},
+  {n:"Priya",must:1,ph:"OK",sc:[3,4,3,4,2,0]},
+  {n:"Tom",must:1,ph:"No answer x2"},
+  {n:"Leah",must:0,why:"Not GDC registered"},
+  {n:"Chloe",must:0,why:"No right to work answer"}
+];
+let H,hq,hqi,htimer,hclock;
+function hpill(st){const m={new:["p-wait","New"],no:["p-na","Not this time"],short:["p-asked","Shortlisted"],int:["p-asked","Interview booked"],trial:["p-flag","Trial shift"],offer:["p-ok","Offer accepted"],hold:["p-wait","Kept on file"]};const[c,t]=m[st];return`<span class="pill ${c}">${t}</span>`}
+function hSet(n){[...$("hstops").children].forEach((el,i)=>{el.className="stop"+(i<n?" done":i===n?" now":"")})}
+function hRender(){
+  $("cands").innerHTML=H.shown.map(i=>{const c=CANDS[i],s=H.c[i]||{};return`<tr class="${s.st==="offer"?"picked":""}"><td>${c.n}</td><td>${s.must==null?"…":s.must?"✓ all 3":"✗ "+c.why}</td><td>${s.ph||"—"}</td><td>${s.tot!=null?s.tot+" / 30":"—"}</td><td>${hpill(s.st||"new")}</td></tr>`}).join("")||'<tr><td colspan="5" class="empty">No applicants yet.</td></tr>';
+  $("hcat").textContent=H.shown.length?`${H.shown.length} applicants. Every one gets a reply.`:"Every applicant logged, nobody lost in the inbox.";
+  const top=[0,1,2];top.forEach((i,k)=>$("sc"+(k+1)).textContent=H.scored[i]?CANDS[i].n:"—");
+  $("score").innerHTML=QS.map((q,qi2)=>`<tr><td>${q}</td>${top.map(i=>`<td>${H.scored[i]?(CANDS[i].sc[qi2]||"—"):""}</td>`).join("")}</tr>`).join("")+`<tr class="total"><td>Total</td>${top.map(i=>`<td>${H.scored[i]?CANDS[i].sc.reduce((a,b)=>a+b,0)+" / 30":""}</td>`).join("")}</tr>`;
+}
+function hlog(who,msg,cls=""){const f=$("hfeed");if(f.querySelector(".empty"))f.innerHTML="";const li=document.createElement("li");li.innerHTML=`<time>${hclock}</time><div class="${cls}"><span class="who">${who}:</span> ${msg}</div>`;f.appendChild(li);f.scrollTop=f.scrollHeight}
+function hBuild(){
+  const q=[],at=(c,fn)=>q.push(()=>{hclock=c;fn();hRender()});
+  at("Mon 6 Oct",()=>{hSet(0);hlog("Manager","We need a qualified dental nurse, 4 days a week.","human")});
+  at("Mon 6 Oct",()=>hlog("Mino","Job description made from the practice template. Advert drafted with pay, hours and must-haves."));
+  at("Mon 6 Oct",()=>hlog("Manager","Approved the advert. Posted on Indeed.","human"));
+  CANDS.forEach((c,i)=>at(i<3?"Tue 7 Oct":"Thu 9 Oct",()=>{if(i===0)hSet(1);H.shown.push(i);if(i===0)hlog("Mino","First applicants in. Each one gets a thank-you reply within the hour.")}));
+  CANDS.forEach((c,i)=>at("Fri 10 Oct",()=>{H.c[i]={must:c.must,st:c.must?"new":"no"};if(i===5)hlog("Mino","Screened all 6 against the must-haves. 4 meet them. The other 2 got a kind 'not this time' email, ready for you to check and send.","flag")}));
+  at("Mon 13 Oct",()=>{hSet(2);[0,1,2,3].forEach(i=>H.c[i].ph=CANDS[i].ph);hlog("Mino","10-minute phone screens done on the practice line with 4 candidates (recorded, with their OK). Tom didn't answer twice.")});
+  at("Mon 13 Oct",()=>{[0,1,2].forEach(i=>H.c[i].st="short");H.c[3].st="hold";hlog("Manager","Shortlisted Sophie, Megan and Priya.","human")});
+  at("Mon 13 Oct",()=>{[0,1,2].forEach(i=>H.c[i].st="int");hlog("Mino","Interviews booked for Wed. Calendar invites sent, plus the address and what to bring (ID, GDC number, work history).")});
+  [0,1,2].forEach(i=>at("Wed 15 Oct",()=>{if(i===0)hSet(3);H.scored[i]=1;H.c[i].tot=CANDS[i].sc.slice(0,5).reduce((a,b)=>a+b,0);if(i===2)hlog("Mino","Priya has a 2-year gap with no reason given. Flagged: this must be explained in writing before any offer.","flag")}));
+  at("Wed 15 Oct",()=>hlog("Mino","All 3 interviews scored on the same 5 questions. Sophie 23, Megan 19, Priya 16."));
+  at("Fri 17 Oct",()=>{[0,1].forEach(i=>{H.c[i].st="trial"});hlog("Manager","Trial shifts for Sophie and Megan on Friday.","human")});
+  at("Fri 17 Oct",()=>{[0,1].forEach(i=>H.c[i].tot=CANDS[i].sc.reduce((a,b)=>a+b,0));hlog("Mino","Trial shift scores added. Sophie 28 / 30, Megan 22 / 30.")});
+  at("Mon 20 Oct",()=>{hSet(4);hlog("Manager","Offer to Sophie.","human")});
+  at("Mon 20 Oct",()=>{H.c[0].st="offer";H.c[1].st="hold";H.c[2].st="no";hlog("Mino","Offer letter sent, subject to references, Enhanced DBS, right to work and Hep B. Sophie accepted. Megan kept on file, Priya thanked (drafts for you to send).","good")});
+  at("Mon 20 Oct",()=>{hSet(5);hlog("Mino","Hiring done. Sophie moves straight into onboarding.","good");$("toOb").hidden=false;hStop()});
+  return q;
+}
+function hReset(){hStop();H={shown:[],c:{},scored:{}};hq=hBuild();hqi=0;$("toOb").hidden=true;
+  $("hstops").innerHTML=HSTAGES.map((s,i)=>`<button class="stop"><div class="dot">${i+1}</div><b>${s.t}</b><span>${s.s}</span></button>`).join("");
+  hSet(-1);hRender();$("hfeed").innerHTML='<li class="empty" style="display:block">Press Play to watch it run.</li>'}
+function hNext(){if(hqi<hq.length)hq[hqi++]();else hStop()}
+function hPlay(){if(htimer){hStop();return}if(hqi>=hq.length)hReset();$("hplay").textContent="❚❚ Pause";hNext();htimer=setInterval(hNext,+$("spd").value)}
+function hStop(){clearInterval(htimer);htimer=null;$("hplay").textContent=hqi&&hqi>=hq.length?"↻ Play again":"▶ Play"}
+$("hplay").onclick=hPlay;$("hstep").onclick=()=>{if(htimer)hStop();hNext()};$("hreset").onclick=hReset;
+function tab(which){const h=which==="hire";$("hire").hidden=!h;$("ob").hidden=h;$("tabHire").classList.toggle("on",h);$("tabOb").classList.toggle("on",!h);
+  // the speed control lives in the onboarding controls; move it so it shows on both
+  (h?$("hire"):$("ob")).querySelector(".controls").appendChild(document.querySelector(".speed"))}
+$("tabHire").onclick=()=>tab("hire");$("tabOb").onclick=()=>tab("ob");
+$("toOb").onclick=()=>{tab("ob");$("role").value="dn";reset();window.scrollTo({top:0,behavior:"smooth"})};
+hReset();tab("hire");
+</script>
+</body>
+</html>
