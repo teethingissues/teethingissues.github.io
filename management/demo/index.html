@@ -144,7 +144,7 @@ button.btn:focus-visible,select:focus-visible{outline:2px solid var(--accent);ou
     </section>
     <section class="card">
       <h2>Interview scorecard</h2>
-      <p class="cat">Scored 1–5 by the interviewer straight after. Mino adds up and compares, the manager decides.</p>
+      <p class="cat">Scored 1–5 by the interviewer straight after. The system adds up and compares, the manager decides.</p>
       <div style="overflow-x:auto"><table class="cands score"><thead><tr><th>Question</th><th id="sc1">—</th><th id="sc2">—</th><th id="sc3">—</th></tr></thead><tbody id="score"></tbody></table></div>
       <button class="btn primary" id="toOb" hidden style="margin-top:14px">Start onboarding Sophie →</button>
     </section>
@@ -263,25 +263,25 @@ function build(){
   const r=ROLES[role],n=r.name,ds=docsFor(role),q=[];
   const at=(c,fn)=>q.push(()=>{clock=c;fn()});
   at("Mon 9:02",()=>{setStage(0);log("Manager",`Offer accepted. ${n} starts as ${r.label} on Mon 3 Nov.`,"human")});
-  at("Mon 9:03",()=>log("Mino",`${r.cat} role, so ${n} needs ${ds.length} documents. Welcome email sent with a checklist and upload link.`));
-  at("Mon 9:04",()=>{setStage(1);ds.forEach(d=>state.doc[d]="asked");renderDocs();log("Mino","Every document requested. Start date pencilled in.")});
+  at("Mon 9:03",()=>log("Assistant",`${r.cat} role, so ${n} needs ${ds.length} documents. Welcome email sent with a checklist and upload link.`));
+  at("Mon 9:04",()=>{setStage(1);ds.forEach(d=>state.doc[d]="asked");renderDocs();log("Assistant","Every document requested. Start date pencilled in.")});
   const easy=ds.filter(d=>!["Enhanced DBS","Hep B & immunisations","2 references","GDC registration","Induction checklist","Personal development plan"].includes(d));
   easy.forEach((d,i)=>at(i<4?"Tue 18:40":"Wed 12:15",()=>{state.doc[d]="ok";renderDocs();if(i===0||i===4)log(n,i===0?"Uploaded ID, address, right to work and forms.":"Uploaded CV, offer letter, signed contract and job description.");if(i===0)setStage(2)}));
-  at("Wed 12:20",()=>log("Mino",`${easy.length} documents checked: in date, names match, contract signed both sides.`,"good"));
-  if(ds.includes("GDC registration"))at("Wed 12:21",()=>{state.doc["GDC registration"]="ok";state.note["GDC registration"]="Checked on the GDC register";renderDocs();log("Mino",`GDC register checked: ${n} is registered.`,"good")});
-  at("Wed 14:00",()=>{state.doc["Enhanced DBS"]="flag";state.note["Enhanced DBS"]="Applied, not back yet";renderDocs();log("Mino","DBS not back yet. 'Awaiting DBS' risk assessment drafted for the manager to sign.","flag")});
+  at("Wed 12:20",()=>log("Assistant",`${easy.length} documents checked: in date, names match, contract signed both sides.`,"good"));
+  if(ds.includes("GDC registration"))at("Wed 12:21",()=>{state.doc["GDC registration"]="ok";state.note["GDC registration"]="Checked on the GDC register";renderDocs();log("Assistant",`GDC register checked: ${n} is registered.`,"good")});
+  at("Wed 14:00",()=>{state.doc["Enhanced DBS"]="flag";state.note["Enhanced DBS"]="Applied, not back yet";renderDocs();log("Assistant","DBS not back yet. 'Awaiting DBS' risk assessment drafted for the manager to sign.","flag")});
   if(ds.includes("Hep B & immunisations")){
-    at("Wed 14:05",()=>{state.doc["Hep B & immunisations"]="stop";state.note["Hep B & immunisations"]="Vaccination card only, no blood test";renderDocs();log("Mino",`Only the vaccination card came in. ${n} can't work chairside until the titre result arrives. Asked for it.`,"stopx")});
+    at("Wed 14:05",()=>{state.doc["Hep B & immunisations"]="stop";state.note["Hep B & immunisations"]="Vaccination card only, no blood test";renderDocs();log("Assistant",`Only the vaccination card came in. ${n} can't work chairside until the titre result arrives. Asked for it.`,"stopx")});
   }
-  at("Thu 10:30",()=>{state.doc["2 references"]="flag";state.note["2 references"]="Ref 1 back, Ref 2 chased";renderDocs();log("Mino","Reference 1 from current employer is back. Reference 2 chased.","flag")});
-  if(ds.includes("Hep B & immunisations"))at("Thu 16:10",()=>{state.doc["Hep B & immunisations"]="ok";state.note["Hep B & immunisations"]="Titre 240 mIU/mL";renderDocs();log(n,"Uploaded blood test: titre 240 mIU/mL.");log("Mino","Over 100 mIU/mL, so Hep B is cleared.","good")});
-  at("Fri 9:15",()=>{state.doc["2 references"]="ok";state.note["2 references"]="Both in, 3 years covered";renderDocs();log("Mino","Both references in. Dates, job title and reason for leaving all shown. 3 years covered.","good")});
-  at("Fri 11:00",()=>{state.doc["Enhanced DBS"]="ok";state.note["Enhanced DBS"]="Enhanced, none recorded, number logged";renderDocs();log("Mino","Enhanced DBS back: 'none recorded'. Certificate number logged.","good")});
+  at("Thu 10:30",()=>{state.doc["2 references"]="flag";state.note["2 references"]="Ref 1 back, Ref 2 chased";renderDocs();log("Assistant","Reference 1 from current employer is back. Reference 2 chased.","flag")});
+  if(ds.includes("Hep B & immunisations"))at("Thu 16:10",()=>{state.doc["Hep B & immunisations"]="ok";state.note["Hep B & immunisations"]="Titre 240 mIU/mL";renderDocs();log(n,"Uploaded blood test: titre 240 mIU/mL.");log("Assistant","Over 100 mIU/mL, so Hep B is cleared.","good")});
+  at("Fri 9:15",()=>{state.doc["2 references"]="ok";state.note["2 references"]="Both in, 3 years covered";renderDocs();log("Assistant","Both references in. Dates, job title and reason for leaving all shown. 3 years covered.","good")});
+  at("Fri 11:00",()=>{state.doc["Enhanced DBS"]="ok";state.note["Enhanced DBS"]="Enhanced, none recorded, number logged";renderDocs();log("Assistant","Enhanced DBS back: 'none recorded'. Certificate number logged.","good")});
   at("Fri 11:05",()=>log("Manager","Reviewed the file and approved the start. Signed the DBS risk assessment as closed.","human"));
-  at("Mon 3 Nov",()=>{setStage(3);log("Mino",`Day 1 for ${n}. Induction plan sent to ${n} and their mentor.`)});
+  at("Mon 3 Nov",()=>{setStage(3);log("Assistant",`Day 1 for ${n}. Induction plan sent to ${n} and their mentor.`)});
   WEEKS.forEach((w,wi)=>w.items.forEach((_,ii)=>at(wi===0?"Mon 3 Nov":wi===1?"Wed 5 Nov":"Fri 7 Nov",()=>{state.ind[wi+"-"+ii]=1;renderWeeks();if(ii===3)log("Inductor",`${w.h} signed off by both.`,"human")})));
-  at("Fri 7 Nov",()=>{state.doc["Induction checklist"]="ok";if(ds.includes("Personal development plan")){state.doc["Personal development plan"]="ok"}renderDocs();log("Mino","Induction checklist filed"+(ds.includes("Personal development plan")?" and PDP agreed.":"."),"good")});
-  at("Fri 7 Nov",()=>{setStage(4);state.file=1;renderFile();log("Mino",`Staff file 100% complete. Renewal dates set. Probation review booked on the Appraisal Line.`,"good")});
+  at("Fri 7 Nov",()=>{state.doc["Induction checklist"]="ok";if(ds.includes("Personal development plan")){state.doc["Personal development plan"]="ok"}renderDocs();log("Assistant","Induction checklist filed"+(ds.includes("Personal development plan")?" and PDP agreed.":"."),"good")});
+  at("Fri 7 Nov",()=>{setStage(4);state.file=1;renderFile();log("Assistant",`Staff file 100% complete. Renewal dates set. Probation review booked on the Appraisal Line.`,"good")});
   at("Fri 7 Nov",()=>{setStage(5);log("Manager",`${n} is fully onboarded. Nothing chased by hand.`,"human");stop()});
   return q;
 }
@@ -328,20 +328,20 @@ function hlog(who,msg,cls=""){const f=$("hfeed");if(f.querySelector(".empty"))f.
 function hBuild(){
   const q=[],at=(c,fn)=>q.push(()=>{hclock=c;fn();hRender()});
   at("Mon 6 Oct",()=>{hSet(0);hlog("Manager","We need a qualified dental nurse, 4 days a week.","human")});
-  at("Mon 6 Oct",()=>hlog("Mino","Job description made from the practice template. Advert drafted with pay, hours and must-haves."));
+  at("Mon 6 Oct",()=>hlog("Assistant","Job description made from the practice template. Advert drafted with pay, hours and must-haves."));
   at("Mon 6 Oct",()=>hlog("Manager","Approved the advert. Posted on Indeed.","human"));
-  CANDS.forEach((c,i)=>at(i<3?"Tue 7 Oct":"Thu 9 Oct",()=>{if(i===0)hSet(1);H.shown.push(i);if(i===0)hlog("Mino","First applicants in. Each one gets a thank-you reply within the hour.")}));
-  CANDS.forEach((c,i)=>at("Fri 10 Oct",()=>{H.c[i]={must:c.must,st:c.must?"new":"no"};if(i===5)hlog("Mino","Screened all 6 against the must-haves. 4 meet them. The other 2 got a kind 'not this time' email, ready for you to check and send.","flag")}));
-  at("Mon 13 Oct",()=>{hSet(2);[0,1,2,3].forEach(i=>H.c[i].ph=CANDS[i].ph);hlog("Mino","10-minute phone screens done on the practice line with 4 candidates (recorded, with their OK). Tom didn't answer twice.")});
+  CANDS.forEach((c,i)=>at(i<3?"Tue 7 Oct":"Thu 9 Oct",()=>{if(i===0)hSet(1);H.shown.push(i);if(i===0)hlog("Assistant","First applicants in. Each one gets a thank-you reply within the hour.")}));
+  CANDS.forEach((c,i)=>at("Fri 10 Oct",()=>{H.c[i]={must:c.must,st:c.must?"new":"no"};if(i===5)hlog("Assistant","Screened all 6 against the must-haves. 4 meet them. The other 2 got a kind 'not this time' email, ready for you to check and send.","flag")}));
+  at("Mon 13 Oct",()=>{hSet(2);[0,1,2,3].forEach(i=>H.c[i].ph=CANDS[i].ph);hlog("Assistant","10-minute phone screens done on the practice line with 4 candidates (recorded, with their OK). Tom didn't answer twice.")});
   at("Mon 13 Oct",()=>{[0,1,2].forEach(i=>H.c[i].st="short");H.c[3].st="hold";hlog("Manager","Shortlisted Sophie, Megan and Priya.","human")});
-  at("Mon 13 Oct",()=>{[0,1,2].forEach(i=>H.c[i].st="int");hlog("Mino","Interviews booked for Wed. Calendar invites sent, plus the address and what to bring (ID, GDC number, work history).")});
-  [0,1,2].forEach(i=>at("Wed 15 Oct",()=>{if(i===0)hSet(3);H.scored[i]=1;H.c[i].tot=CANDS[i].sc.slice(0,5).reduce((a,b)=>a+b,0);if(i===2)hlog("Mino","Priya has a 2-year gap with no reason given. Flagged: this must be explained in writing before any offer.","flag")}));
-  at("Wed 15 Oct",()=>hlog("Mino","All 3 interviews scored on the same 5 questions. Sophie 23, Megan 19, Priya 16."));
+  at("Mon 13 Oct",()=>{[0,1,2].forEach(i=>H.c[i].st="int");hlog("Assistant","Interviews booked for Wed. Calendar invites sent, plus the address and what to bring (ID, GDC number, work history).")});
+  [0,1,2].forEach(i=>at("Wed 15 Oct",()=>{if(i===0)hSet(3);H.scored[i]=1;H.c[i].tot=CANDS[i].sc.slice(0,5).reduce((a,b)=>a+b,0);if(i===2)hlog("Assistant","Priya has a 2-year gap with no reason given. Flagged: this must be explained in writing before any offer.","flag")}));
+  at("Wed 15 Oct",()=>hlog("Assistant","All 3 interviews scored on the same 5 questions. Sophie 23, Megan 19, Priya 16."));
   at("Fri 17 Oct",()=>{[0,1].forEach(i=>{H.c[i].st="trial"});hlog("Manager","Trial shifts for Sophie and Megan on Friday.","human")});
-  at("Fri 17 Oct",()=>{[0,1].forEach(i=>H.c[i].tot=CANDS[i].sc.reduce((a,b)=>a+b,0));hlog("Mino","Trial shift scores added. Sophie 28 / 30, Megan 22 / 30.")});
+  at("Fri 17 Oct",()=>{[0,1].forEach(i=>H.c[i].tot=CANDS[i].sc.reduce((a,b)=>a+b,0));hlog("Assistant","Trial shift scores added. Sophie 28 / 30, Megan 22 / 30.")});
   at("Mon 20 Oct",()=>{hSet(4);hlog("Manager","Offer to Sophie.","human")});
-  at("Mon 20 Oct",()=>{H.c[0].st="offer";H.c[1].st="hold";H.c[2].st="no";hlog("Mino","Offer letter sent, subject to references, Enhanced DBS, right to work and Hep B. Sophie accepted. Megan kept on file, Priya thanked (drafts for you to send).","good")});
-  at("Mon 20 Oct",()=>{hSet(5);hlog("Mino","Hiring done. Sophie moves straight into onboarding.","good");$("toOb").hidden=false;hStop()});
+  at("Mon 20 Oct",()=>{H.c[0].st="offer";H.c[1].st="hold";H.c[2].st="no";hlog("Assistant","Offer letter sent, subject to references, Enhanced DBS, right to work and Hep B. Sophie accepted. Megan kept on file, Priya thanked (drafts for you to send).","good")});
+  at("Mon 20 Oct",()=>{hSet(5);hlog("Assistant","Hiring done. Sophie moves straight into onboarding.","good");$("toOb").hidden=false;hStop()});
   return q;
 }
 function hReset(){hStop();H={shown:[],c:{},scored:{}};hq=hBuild();hqi=0;$("toOb").hidden=true;
