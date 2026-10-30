@@ -4,10 +4,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 /* Layout: a single scorecard column. Live score dial at top (sticky on desktop), then the 10 areas as tick lists, then the "share your score" box. */
-:root{--bg:#EFE9DF;--panel:#FBF8F2;--panel-2:#F5F0E7;--line:#D9CFBF;--ink:#2F2A24;--dim:#6D6356;--faint:#9A8F80;--gold:#B68A3E;--good:#3F7A45;--warn:#A8741A;--bad:#A8463A;
+:root{--bg:#E7E1D6;--panel:#FCFAF3;--panel-2:#F7F3EB;--line:#D5CBBA;--ink:#332E27;--dim:#6F655A;--faint:#978C7C;--gold:#8C7A62;--good:#3F7A45;--warn:#7A6A55;--bad:#A8463A;
  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",-apple-system,"Segoe UI",sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1D1A16;--panel:#27231E;--panel-2:#2F2A24;--line:#423B32;--ink:#EFE7DA;--dim:#B9AD9B;--faint:#8C8170;--gold:#D3A85E;--good:#7DBB80;--warn:#E0AE57;--bad:#E08A7C}}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#1D1A16;--panel:#27231E;--panel-2:#2F2A24;--line:#423B32;--ink:#EFE7DA;--dim:#B9AD9B;--faint:#8C8170;--gold:#D3A85E;--good:#7DBB80;--warn:#E0AE57;--bad:#E08A7C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#1D1A16;--panel:#27231E;--panel-2:#332E27;--line:#423B32;--ink:#EFE7DA;--dim:#B9AD9B;--faint:#8C8170;--gold:#B3A48C;--good:#7DBB80;--warn:#B3A48C;--bad:#E08A7C}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#1D1A16;--panel:#27231E;--panel-2:#332E27;--line:#423B32;--ink:#EFE7DA;--dim:#B9AD9B;--faint:#8C8170;--gold:#B3A48C;--good:#7DBB80;--warn:#B3A48C;--bad:#E08A7C}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.55;padding-inline:18px}
 .wrap{max-width:860px;margin-inline:auto;padding-block:26px 60px}
 .eyebrow{font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
@@ -44,7 +44,7 @@ h1,h2,.big{font-variant-numeric:lining-nums}
 <div id="areas"></div>
 <div class="share"><h2>Share your score</h2><p class="note">Copy this and post it in the Inspection Ready discussion. We'll help you with your weakest area first.</p>
 <textarea id="post" rows="5" readonly aria-label="Your score to share"></textarea><button type="button" id="copy">Copy my score</button> <span class="note" id="copied" role="status"></span>
-<p style="margin-top:18px;padding:16px 18px;background:#FBF8F2;border:1px solid #D9CFBF;border-radius:14px;font-size:15.5px"><b>Not in the Circle yet?</b> Join free, share your score in the discussion, and get help with your weakest areas from people who've been there.<br><a href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#2F2A24;color:#FBF8F2;text-decoration:none;padding:11px 20px;border-radius:999px;font-weight:500">Join Teething Issues Circle, free</a></p></div>
+<p style="margin-top:18px;padding:16px 18px;background:#FCFAF3;border:1px solid #D5CBBA;border-radius:14px;font-size:15.5px"><b>Not in the Circle yet?</b> Join free, share your score in the discussion, and get help with your weakest areas from people who've been there.<br><a href="https://www.skool.com/teething-issues-for-dentists-9743/about" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#332E27;color:#FCFAF3;text-decoration:none;padding:11px 20px;border-radius:999px;font-weight:500">Join Teething Issues Circle, free</a></p></div>
 <div class="officer"><span class="eyebrow">Want the full check?</span><b>Meet our AI compliance officer</b><span>This score is a rough guide. Our AI compliance officer goes through the real documents: every staff file, certificate, training record and audit, the way a CQC inspector would. You get a clear Yes/No report and an action plan, and your files never leave your computer. It unlocks for Teething Issues Circle members when the Circle reaches 50 members.</span></div>
 <p class="note">Based on the original Teething Issues CQC Pre-Inspection Checklist. A preparation tool, not a guarantee of an inspection outcome.</p>
 </div>

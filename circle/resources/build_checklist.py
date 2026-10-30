@@ -13,7 +13,7 @@ from reportlab.lib.styles import ParagraphStyle
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONTS = os.environ.get("FONTS_DIR", "")
-INK, DIM, GOLD, LINE, PAPER = colors.HexColor("#2F2A24"), colors.HexColor("#6D6356"), colors.HexColor("#B68A3E"), colors.HexColor("#D9CFBF"), colors.HexColor("#FBF8F2")
+INK, DIM, GOLD, LINE, PAPER = colors.HexColor("#332E27"), colors.HexColor("#6F655A"), colors.HexColor("#8C7A62"), colors.HexColor("#D5CBBA"), colors.HexColor("#FCFAF3")
 try:
     pdfmetrics.registerFont(TTFont("Serif", os.path.join(FONTS, "Cormorant.ttf")))
     pdfmetrics.registerFont(TTFont("Sans", os.path.join(FONTS, "Jost.ttf")))
@@ -76,7 +76,7 @@ def box():
     return b
 
 def area_block(num, title, reg, items, tip):
-    head = Paragraph(f'<font color="#B68A3E">{num}</font>&nbsp;&nbsp;{title}' + (f'&nbsp;&nbsp;<font size="7.5" color="#9A8F80">{reg}</font>' if reg else ""), H2)
+    head = Paragraph(f'<font color="#8C7A62">{num}</font>&nbsp;&nbsp;{title}' + (f'&nbsp;&nbsp;<font size="7.5" color="#978C7C">{reg}</font>' if reg else ""), H2)
     rows = [[box(), Paragraph(i, ITEM)] for i in items]
     t = Table(rows, colWidths=[5*mm, None])
     t.setStyle(TableStyle([("VALIGN",(0,0),(-1,-1),"TOP"),("LEFTPADDING",(0,0),(-1,-1),0),("RIGHTPADDING",(0,0),(-1,-1),2),
@@ -119,7 +119,7 @@ def build(out):
         story.append(area_block(*a))
     et = Table([[box(), Paragraph(e, ITEM)] for e in EXTRA], colWidths=[5*mm, None])
     et.setStyle(TableStyle([("VALIGN",(0,0),(-1,-1),"TOP"),("LEFTPADDING",(0,0),(-1,-1),0),("TOPPADDING",(0,0),(-1,-1),1.2),("BOTTOMPADDING",(0,0),(-1,-1),1.2)]))
-    story.append(KeepTogether([Paragraph('<font color="#B68A3E">+</font>&nbsp;&nbsp;Also have ready', H2), Spacer(1, 3), et, Spacer(1, 8)]))
+    story.append(KeepTogether([Paragraph('<font color="#8C7A62">+</font>&nbsp;&nbsp;Also have ready', H2), Spacer(1, 3), et, Spacer(1, 8)]))
     story.append(KeepTogether([Paragraph("Three rules that save inspections", H2), Spacer(1, 3),
              Paragraph("1. Lapsed? Book it now, even if the date falls after the inspection, and keep the booking as evidence.", ITEM), Spacer(1,2),
              Paragraph("2. Every audit needs an action plan, and a re-audit 3–6 months later that shows what improved.", ITEM), Spacer(1,2),

@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://teethingissues.com/mino/mino-compliance.jpg">
 <link rel="icon" href="https://teethingissues.com/assets/mino-1.jpg">
 <style>
-:root{--bg:#EFE9DF;--card:#FBF8F2;--ink:#2F2A24;--dim:#6D6356;--gold:#B68A3E;--line:#D9CFBF;--soft:#F6F1E9;--on-gold:#FBF8F2;color-scheme:light}
+:root{--bg:#E7E1D6;--card:#FCFAF3;--ink:#332E27;--dim:#6F655A;--gold:#8C7A62;--line:#D5CBBA;--soft:#F7F3EB;--on-gold:#FCFAF3;color-scheme:light}
 
 
 *{box-sizing:border-box}
@@ -51,7 +51,7 @@ body{padding-bottom:84px}
 .btns .btn{flex:1 1 280px;max-width:380px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;box-sizing:border-box}
 .btn.ghost{border-color:var(--ink)}
 .perk{display:block;max-width:772px}
-.money{text-align:left;margin-top:22px}.money p{margin:0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}.money .faint{color:#9A8F80;font-size:14px}
+.money{text-align:left;margin-top:22px}.money p{margin:0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}.money .faint{color:#978C7C;font-size:14px}
 section>.card{margin-bottom:14px}.card h2{font-size:clamp(24px,4vw,30px)}h2 em{color:var(--gold)}
 .photo{width:100%;height:auto;max-height:240px;object-fit:cover;object-position:center 25%;border-radius:12px;display:block;margin:0 0 16px}
 .ticks{list-style:none;padding:0;margin:8px 0 4px}.ticks li{font:300 16px/1.5 Jost,sans-serif;color:var(--dim);padding:4px 0 4px 26px;position:relative}.ticks li:before{content:"\2713";position:absolute;left:0;color:var(--gold)}
@@ -64,7 +64,7 @@ summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inh
 </style>
 <style>.art h2{margin:34px 0 10px;font-size:clamp(24px,4.5vw,32px)}.art p,.art li{font:300 17px/1.7 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}.art ul{padding-left:20px}.art .src{font-size:14px;color:var(--dim)}.art a{color:var(--gold)}</style>
 <style>
-.draftbar{background:#2F2A24;color:#FBF8F2;font:600 13px/1.4 Jost,sans-serif;text-align:center;padding:9px 16px}
+.draftbar{background:#332E27;color:#FCFAF3;font:600 13px/1.4 Jost,sans-serif;text-align:center;padding:9px 16px}
 .art ol{padding-left:22px}.art table{border-collapse:collapse;width:100%;font:300 15px/1.5 Jost,sans-serif}
 .art td,.art th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}.art th{font-weight:600}
 .tw{overflow-x:auto}
@@ -153,7 +153,30 @@ summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inh
  ]
 }
 </script>
-</head>
+<style id="glass">
+body{background:radial-gradient(40% 30% at 10% 20%,rgba(194,183,162,.7),transparent 70%),radial-gradient(35% 30% at 90% 55%,rgba(182,160,120,.4),transparent 70%),radial-gradient(40% 30% at 20% 90%,rgba(194,183,162,.6),transparent 70%),var(--bg)}
+.gcard{position:relative;margin:0 0 30px;padding:28px 30px 24px;border-radius:26px;
+ background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22));
+ border:1px solid rgba(255,255,255,.75);
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 50px 80px -40px rgba(51,46,39,.4),0 14px 28px -14px rgba(51,46,39,.2);
+ opacity:0;transform:perspective(1400px) rotateX(8deg) translateY(30px);transform-origin:50% 100%;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gcard.in{opacity:1;transform:perspective(1400px) rotateX(3deg)}
+.gcard.in:hover{transform:perspective(1400px) rotateX(0) translateY(-6px)}
+.gcard::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 72%,rgba(255,255,255,.22) 100%)}
+.gcard>h2:first-child{margin-top:0}
+.gcard table td,.gcard table th{border-color:rgba(140,122,98,.25)}
+@media(max-width:640px){.gcard{padding:22px 18px}}
+@media (prefers-reduced-motion:reduce){.gcard{opacity:1;transform:none;transition:none}}
+</style><meta name="robots" content="noindex"><style id="glass-site">
+body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transparent 70%),radial-gradient(36% 30% at 92% 52%,rgba(182,160,120,.32),transparent 70%),radial-gradient(42% 30% at 18% 92%,rgba(194,183,162,.5),transparent 70%),var(--bg,#E7E1D6)}
+.card,.tile,.ai-glass{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22))!important;
+ border:1px solid rgba(255,255,255,.75)!important;border-radius:24px!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 44px 70px -38px rgba(51,46,39,.38),0 12px 24px -14px rgba(51,46,39,.2)!important;
+ transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gl-up{opacity:0;transform:translateY(12px)}.gl-up.in{opacity:1;transform:none}
+.gl-up.in:hover{transform:translateY(-5px)}
+@media (prefers-reduced-motion:reduce){.gl-up{opacity:1;transform:none}}
+</style></head>
 <body>
 <div class="wrap">
 <nav><a href="/">Teething Issues</a><span class="byline">Developed by dental care professionals</span></nav>
@@ -163,23 +186,24 @@ summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inh
   <p class="sub">For dental entrepreneurs and practice managers. Written by dental care professionals, including a dental care professional, CQC expert and former CQC Registered Manager, who is also a growth business consultant for dental practices.</p>
 </header>
 <article class="art">
-<h2>How do you grow a dental practice?</h2>
+<div class="gcard"><h2>How do you grow a dental practice?</h2>
 <p>Grow from the patients you already get before paying for more. Most practices lose patients and income at the same few points, so the fastest growth usually comes from closing those gaps first:</p>
 <ol><li><b><a href="/dental-practice-missed-calls/" style="color:inherit">Answer every call</a></b>, so new patient enquiries become bookings.</li><li><b><a href="/dental-failed-appointments/" style="color:inherit">Rebook every failed appointment and cancellation</a></b>, so the diary stays full.</li><li><b>Turn more consultations into treatment</b>, with kind, clear conversations about options, price and finance.</li><li><b>Follow up treatment plans that go cold</b>, instead of waiting for the patient to ring.</li><li><b>Keep patients coming back</b> with recalls, reminders and practice plans.</li><li><b>Then bring in more new patients</b>: Google reviews, being found on Google and ChatGPT, referrals and ads.</li></ol>
-<p>Track the numbers for each step every day, so you know where you stand on the 3rd of the month, not the 28th.</p>
-<h2>Should I spend more on marketing to grow my practice?</h2>
-<p>Not first. If calls ring out, failed appointments aren't rebooked and consultations don't turn into treatment, more marketing pours more patients into a leaky bucket. Fix the leaks, then spend on marketing, and every new patient is worth more to you.</p>
-<h2>Which numbers should a dental practice track?</h2>
+<p>Track the numbers for each step every day, so you know where you stand on the 3rd of the month, not the 28th.</p></div>
+<div class="gcard"><h2>Should I spend more on marketing to grow my practice?</h2>
+<p>Not first. If calls ring out, failed appointments aren't rebooked and consultations don't turn into treatment, more marketing pours more patients into a leaky bucket. Fix the leaks, then spend on marketing, and every new patient is worth more to you.</p></div>
+<div class="gcard"><h2>Which numbers should a dental practice track?</h2>
 <div class="tw"><table><tr><th>Number</th><th>How to work it out</th></tr><tr><td>Taken vs target</td><td>Money taken so far this month, compared with where you should be by today</td></tr><tr><td>New patient enquiries</td><td>Calls, forms and messages from new patients each week</td></tr><tr><td>Missed calls</td><td>From your phone system's call report</td></tr><tr><td>Failed appointment rate</td><td>Failed appointments ÷ appointments in the diary</td></tr><tr><td>Consultation conversion</td><td>Consultations that went ahead with treatment ÷ consultations seen</td></tr><tr><td>Open treatment plans</td><td>Plans given but not yet booked, and how old they are</td></tr><tr><td>Practice plan members</td><td>New sign-ups and cancellations each month</td></tr><tr><td>Google reviews</td><td>New reviews each month, and your average rating</td></tr></table></div>
-<p>Look at them daily as a team, not only at month end. Each number that's behind gets one action, one owner and a date.</p>
-<h2>How do I improve treatment conversion at my practice?</h2>
-<ul><li>Give every consultation a clear structure: listen first, explain options in plain words, then talk about price and finance.</li><li>Train treatment coordinators, dentists and reception to use the same simple words for price, finance and "I need to think about it".</li><li>Practise with role-play every week, with real feedback.</li><li>Follow up every patient who didn't decide on the day, at an agreed time.</li><li>Keep it kind. Good sales in dentistry means helping patients understand their options and feel confident saying yes to the care they want. Never push.</li></ul>
-<h2>How can a dental practice get more new patients?</h2>
-<ul><li><b>Answer every call.</b> A new patient who can't get through rings the next practice on Google.</li><li><b>Ask every patient for a Google review.</b> Google's rules say a business must not offer anything in return for a review, and must not ask only the patients it expects to be happy, so ask everyone the same way.</li><li><b>Be the practice that answers patients' questions.</b> Clear pages about your treatments, prices and what to expect help you show up when patients search on Google and ask ChatGPT.</li><li><b>Make referrals easy</b> for happy patients.</li><li><b>Run ads for the treatments you want more of</b>, once the leaks above are fixed.</li></ul>
-<h2>How do I keep patients coming back?</h2>
-<ul><li>Book the next recall before the patient leaves.</li><li>Send reminders a few days before and the day before, and make it easy to confirm or rebook.</li><li>Offer a practice plan that spreads the cost of routine care.</li><li>Keep a short-notice list, so a cancellation becomes a booking.</li></ul>
-<h2>Do I need a dental practice consultant to grow?</h2>
-<p>Not always. Many practices grow by tracking the numbers above and fixing one leak at a time. Outside help is worth it when you don't have the time, your team needs sales training, or you've tried and the numbers haven't moved. Look for people who have worked inside dental practices, who show you the numbers every week, and who tell you the price first.</p>
+<p>Look at them daily as a team, not only at month end. Each number that's behind gets one action, one owner and a date.</p></div>
+<div class="gcard"><h2>How do I improve treatment conversion at my practice?</h2>
+<ul><li>Give every consultation a clear structure: listen first, explain options in plain words, then talk about price and finance.</li><li>Train treatment coordinators, dentists and reception to use the same simple words for price, finance and "I need to think about it".</li><li>Practise with role-play every week, with real feedback.</li><li>Follow up every patient who didn't decide on the day, at an agreed time.</li><li>Keep it kind. Good sales in dentistry means helping patients understand their options and feel confident saying yes to the care they want. Never push.</li></ul></div>
+<div class="gcard"><h2>How can a dental practice get more new patients?</h2>
+<ul><li><b>Answer every call.</b> A new patient who can't get through rings the next practice on Google.</li><li><b>Ask every patient for a Google review.</b> Google's rules say a business must not offer anything in return for a review, and must not ask only the patients it expects to be happy, so ask everyone the same way.</li><li><b>Be the practice that answers patients' questions.</b> Clear pages about your treatments, prices and what to expect help you show up when patients search on Google and ask ChatGPT.</li><li><b>Make referrals easy</b> for happy patients.</li><li><b>Run ads for the treatments you want more of</b>, once the leaks above are fixed.</li></ul></div>
+<div class="gcard"><h2>How do I keep patients coming back?</h2>
+<ul><li>Book the next recall before the patient leaves.</li><li>Send reminders a few days before and the day before, and make it easy to confirm or rebook.</li><li>Offer a practice plan that spreads the cost of routine care.</li><li>Keep a short-notice list, so a cancellation becomes a booking.</li></ul></div>
+<div class="gcard"><h2>Do I need a dental practice consultant to grow?</h2>
+<p>Not always. Many practices grow by tracking the numbers above and fixing one leak at a time. Outside help is worth it when you don't have the time, your team needs sales training, or you've tried and the numbers haven't moved. Look for people who have worked inside dental practices, who show you the numbers every week, and who tell you the price first.</p></div>
+
 <p class="src">Sources: Method only, using your own practice's figures. No national statistics are used on this page. Google review rules: Google Maps, Prohibited and restricted content (Google Maps Help).</p>
 </article>
 <section>
@@ -200,7 +224,7 @@ summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inh
   <p class="note" style="font-size:16px">We find the leaks in your numbers and close them with you: every call answered, every failed appointment chased, your team trained in kind sales, and your numbers tracked every day. You stay in charge, get your evenings back and run a calmer practice. <a href="/growth-department/" style="color:var(--gold)">See our growth department →</a></p>
   <div class="btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat with the team</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a></div>
 </section>
-<nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6D6356;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#B68A3E;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/management/" style="color:inherit">Management department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/ai-visibility/" style="color:inherit">Google &amp; ChatGPT visibility</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#B68A3E;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
+<nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6F655A;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/management/" style="color:inherit">Management department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/ai-visibility/" style="color:inherit">Google &amp; ChatGPT visibility</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
 <footer>© Teething Issues · <a href="/">teethingissues.com</a> · <a href="/receptionist/">Receptionist</a> · hello@teethingissues.com · <a href="/privacy/">Privacy</a></footer>
 
 </div>
@@ -247,5 +271,5 @@ document.getElementById("ck-n").onclick=function(){set("no");b.style.display="no
     try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
   addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
 })();</script>
-</body>
+<script>(function(){var c=document.querySelectorAll('.gcard');if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script><script id="glass-site-js">(function(){var c=[].slice.call(document.querySelectorAll('.card,.tile,.ai-glass'));c.forEach(function(e){e.classList.add('gl-up')});if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script></body>
 </html>

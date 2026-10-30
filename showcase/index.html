@@ -14,8 +14,8 @@
 /* Layout: a founder's showcase in the Teething Issues stone palette — a clear "live today" vs "the vision" split,
    each live item carrying its proof (numbers, screenshots, links), then one worked example of a messy job handled. */
 :root{
-  --oat:#EFE9DF; --paper:#FBF8F2; --line:#D9CFBF; --ink:#2F2A24; --dim:#6D6356; --faint:#9A8F80;
-  --gold:#B68A3E; --live:#4F7A4B; --live-soft:rgba(79,122,75,.12); --vision:#8C7A62; --vision-soft:rgba(140,122,98,.12);
+  --oat:#E7E1D6; --paper:#FCFAF3; --line:#D5CBBA; --ink:#332E27; --dim:#6F655A; --faint:#978C7C;
+  --gold:#8C7A62; --live:#4F7A4B; --live-soft:rgba(79,122,75,.12); --vision:#8C7A62; --vision-soft:rgba(140,122,98,.12);
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif; --sans:"Jost",-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
@@ -496,7 +496,7 @@ footer{margin-top:50px;border-top:1px solid var(--line);padding-top:20px;color:v
     </div>
     <div class="fc-card">
       <h3>Takings by year</h3>
-      <div class="fc-legend"><span><i style="background:#B8741F"></i>Tailored AI systems</span><span><i style="background:#276E9E"></i>Bobby OS subscriptions</span></div>
+      <div class="fc-legend"><span><i style="background:#8C7A62"></i>Tailored AI systems</span><span><i style="background:#276E9E"></i>Bobby OS subscriptions</span></div>
       <div class="fc-chartwrap" id="fc-cw"><svg id="fc-chart" viewBox="0 0 960 360" role="img" aria-label="Stacked bar chart of yearly takings"></svg><div class="fc-tip" id="fc-tip" role="status"></div></div>
     </div>
     <div class="fc-card">
@@ -616,9 +616,9 @@ function drawChart(rows) {
     const cx = L + band * i + band / 2, x = cx - bw / 2;
     const yb = y(r.buildRev), yt = y(r.rev);
     const hb = Math.max(0, T + ih - yb), hs = Math.max(0, yb - yt - (r.buildRev > 0 && r.bobbyRev > 0 ? 2 : 0));
-    if (hb > 0) g += `<path d="${barPath(x, yb, bw, hb, r.bobbyRev <= 0)}" fill="#B8741F"/>`;
+    if (hb > 0) g += `<path d="${barPath(x, yb, bw, hb, r.bobbyRev <= 0)}" fill="#8C7A62"/>`;
     if (hs > 0) g += `<path d="${barPath(x, yt, bw, hs, true)}" fill="#276E9E"/>`;
-    g += `<text x="${cx}" y="${yt - 8}" text-anchor="middle" font-size="12.5" font-weight="500" fill="#2F2A24">${short(r.rev)}</text>`;
+    g += `<text x="${cx}" y="${yt - 8}" text-anchor="middle" font-size="12.5" font-weight="500" fill="#332E27">${short(r.rev)}</text>`;
     g += `<text x="${cx}" y="${H - 16}" text-anchor="middle" font-size="12.5" fill="#5E554A">${r.y}</text>`;
     g += `<rect class="hit" data-i="${i}" x="${L + band * i}" y="${T}" width="${band}" height="${ih}" fill="transparent"/>`;
   });
@@ -628,7 +628,7 @@ function drawChart(rows) {
   svg.querySelectorAll(".hit").forEach(h => {
     h.addEventListener("mousemove", e => {
       const r = rows[+h.dataset.i], box = cw.getBoundingClientRect();
-      tip.innerHTML = `<b>${r.y}</b><br><span class="sw" style="background:#B8741F"></span>AI systems ${gbp(r.buildRev)} (${r.builds})<br><span class="sw" style="background:#276E9E"></span>Bobby OS ${gbp(r.bobbyRev)}<br>Total ${gbp(r.rev)} · keep ${gbp(r.keep)}`;
+      tip.innerHTML = `<b>${r.y}</b><br><span class="sw" style="background:#8C7A62"></span>AI systems ${gbp(r.buildRev)} (${r.builds})<br><span class="sw" style="background:#276E9E"></span>Bobby OS ${gbp(r.bobbyRev)}<br>Total ${gbp(r.rev)} · keep ${gbp(r.keep)}`;
       tip.style.left = (e.clientX - box.left + cw.scrollLeft) + "px"; tip.style.top = (e.clientY - box.top) + "px"; tip.style.opacity = 1;
     });
     h.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
