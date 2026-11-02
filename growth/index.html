@@ -108,6 +108,8 @@ $("f").addEventListener("submit",async e=>{
 
 <!-- visit-tracker -->
 <script>(function(){
+  // "It's us" switch: open any page with ?internal=1 once on each device and our own visits stop being counted (?internal=0 undoes it).
+  try{var Q=location.search;if(/[?&]internal=1(&|$)/.test(Q))localStorage.setItem("ti_internal","1");if(/[?&]internal=0(&|$)/.test(Q))localStorage.removeItem("ti_internal");if(localStorage.getItem("ti_internal")==="1")return}catch(x){}
   // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, nothing personal.
   // v = random number for this browser tab only (sessionStorage, gone when the tab closes) so one visit's pages can be joined up; e = sites linked out to.
   var t0=Date.now(),maxS=0,taps=[],outs=[],sent=false,v="",n=0;
