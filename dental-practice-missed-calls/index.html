@@ -160,10 +160,48 @@ body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transpare
 .gl-up{opacity:0;transform:translateY(12px)}.gl-up.in{opacity:1;transform:none}
 .gl-up.in:hover{transform:translateY(-5px)}
 @media (prefers-reduced-motion:reduce){.gl-up{opacity:1;transform:none}}
-</style><style id="ck-slim">@media(max-width:700px){#ck{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border-radius:0!important;padding:7px 12px!important;font-size:12px!important}#ck p{display:inline!important;margin:0 8px 0 0!important}#ck div{display:inline-flex!important;gap:6px!important;vertical-align:middle}#ck button{padding:5px 12px!important;font-size:12.5px!important}}</style><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style></head>
+</style><style id="ck-slim">@media(max-width:700px){#ck{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border-radius:0!important;padding:7px 12px!important;font-size:12px!important}#ck p{display:inline!important;margin:0 8px 0 0!important}#ck div{display:inline-flex!important;gap:6px!important;vertical-align:middle}#ck button{padding:5px 12px!important;font-size:12.5px!important}}</style><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style><style id="site-shell">:root{--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif;--ink:#332E27;--ink-dim:#6F655A;--ink-faint:#8E8374;--panel-2:#FBF8F2;--line:#D5CBBA;--accent:#8C7A62;--bg:#E7E1D6}nav.site{margin:12px 0 18px!important}nav.site a,footer a{text-decoration:none}footer a{color:inherit}footer .wrap,footer{max-width:1100px;margin:0 auto}footer{padding:24px 16px}nav.site .nav-row a{color:#F1E6CF}nav.site .nav-cta{color:#332E27!important}</style><style id="home-nav">/* NAV — dark pill, floats over the hero */
+nav.site{position:sticky;top:12px;z-index:40;display:flex;justify-content:center;padding:0 12px;margin-bottom:-62px}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;max-width:920px;
+  background:var(--ink);border-radius:999px;padding:9px 9px 9px 22px;box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
+.brand{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.02em;color:var(--panel-2)}
+.navlinks{display:flex;gap:36px;font-size:16.5px;font-weight:600;letter-spacing:.03em;color:#F7F3EB}
+.navlinks a:hover{color:#D8BE8E}
+.nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:11px 18px;white-space:nowrap}
+@media(max-width:760px){.navlinks{display:none}}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-row a{text-decoration:underline;text-underline-offset:3px}
+.navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}
+.navlinks a:hover::after{transform:scaleX(1)}</style><style id="nav-dd">
+.nav-dd{position:relative;display:inline-block}
+.nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px}
+.nav-ddb span{font-size:12px;margin-left:2px}
+.nav-ddm{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:250px;padding:8px;border-radius:16px;background:#332E27;box-shadow:0 20px 40px -12px rgba(0,0,0,.45);display:none;z-index:50}
+.nav-ddm::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.nav-dd:hover .nav-ddm,.nav-dd:focus-within .nav-ddm{display:block}
+.nav-ddm a{display:block;padding:10px 12px;border-radius:10px;font-family:var(--sans)!important;font-size:15px!important;font-weight:600!important;color:#F7F3EB!important;letter-spacing:0!important}
+.nav-ddm a::after{display:none!important}
+.nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
+.nav-ddm a:hover{background:rgba(255,255,255,.08)}
+</style>
+<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style></head>
 <body>
+<nav class="site">
+  <div class="nav-row">
+    <a href="/" class="brand">Teething Issues</a>
+    <div class="navlinks">
+      <a href="/management/">Operations</a>
+      <a href="/compliance/">Compliance</a>
+      <a href="/growth-department/">Growth</a>
+      <div class="nav-dd"><button type="button" class="nav-ddb" aria-haspopup="true">Demos <span>&#9662;</span></button><div class="nav-ddm"><a href="/receptionist/" data-t="nav:demo-phone">Receptionist<small>Hear it answer &middot; part of Growth</small></a><a href="/twin/" data-t="nav:demo-twin">Digital twin<small>Videos without filming &middot; part of Growth</small></a><a href="/management/demo/" data-t="nav:demo-hiring">Hiring manager<small>Advert to day one &middot; part of Operations</small></a></div></div>
+    </div>
+    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a>
+  </div>
+</nav>
 <div class="wrap">
-<nav><a href="/">Teething Issues</a><span class="byline">Developed by dental care professionals</span></nav>
+
 <header>
   <div class="eyebrow">Guide · Updated 26 October 2026</div>
   <h1>Missed calls at a dental practice: <em>what they cost, and how to answer every one.</em></h1>
@@ -200,10 +238,16 @@ body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transpare
 <section>
   <h2>Want every call <em>answered?</em></h2>
   <p class="note" style="font-size:16px">We answer every call, day and night, in your practice's name, and take every booking for your team to confirm. Your team gets their time back for the patients in front of them. <a href="/receptionist/" style="color:var(--gold)">See our reception department →</a></p>
-  <div class="btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat with the team</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a></div>
+  <div class="btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a></div>
 </section>
 <nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6F655A;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/management/" style="color:inherit">Management department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/ai-visibility/" style="color:inherit">Google &amp; ChatGPT visibility</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
-<footer>© Teething Issues · <a href="/">teethingissues.com</a> · <a href="/receptionist/">Receptionist</a> · hello@teethingissues.com · <a href="/privacy/">Privacy</a></footer>
+<p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
+<footer>
+  <div class="wrap foot-row">
+    <span>© Teething Issues Ltd · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
+    <span>hello@teethingissues.com · UK based · ICO registered · <a href="https://maps.google.com/?cid=10940364418897089874" target="_blank" rel="noopener" data-t="gbp">Find us on Google</a> · <a href="https://g.page/r/CRySTyo-SU45EBM/review" target="_blank" rel="noopener" data-t="gbp:review">Leave a review</a></span>
+  </div>
+</footer>
 
 </div>
 <script>(function(){var ids=['n','p','b','v'],el={};ids.forEach(function(k){el[k]=document.getElementById('mc-'+k)});
@@ -213,7 +257,7 @@ document.getElementById('mc-nv').textContent=n;document.getElementById('mc-pv').
 document.getElementById('mc-out').textContent=f(wk);document.getElementById('mc-sum').textContent=n+' calls × '+p+'% × '+b+'% = '+(Math.round(pts*10)/10)+' new patients × '+f(v);
 document.getElementById('mc-yr').textContent='About '+f(wk*48)+' over a 48-week year'}
 ids.forEach(function(k){el[k].addEventListener('input',go)});go()})();</script>
-<div class="callbar"><a href="tel:+442038698658" data-t="call">📞 Call us now: 020 3869 8658<small>Talk to the team about answering every call.</small></a></div>
+
 <script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.fbq)fbq('track','Contact')},true);</script>
 <!-- visit-tracker -->
 <script>(function(){
