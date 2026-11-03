@@ -1,476 +1,117 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ChatGPT Visibility Audit for Dental Practices | Teething Issues</title>
+<meta name="description" content="Is ChatGPT recommending your dental practice? Teething Issues checks how ChatGPT and similar tools see your practice, fixes it, and proves the result with a dated before-and-after. Paid once, email only.">
 <link rel="canonical" href="https://teethingissues.com/ai-visibility/">
-<title>Google &amp; ChatGPT Visibility for Dental Practices | Teething Issues</title>
-<meta name="description" content="Is ChatGPT recommending your dental practice? We check whether you come up, fix what&rsquo;s stopping it, and prove the result with a dated before-and-after.">
-
-
+<meta property="og:title" content="Is ChatGPT recommending your practice? | Teething Issues">
+<meta property="og:description" content="ChatGPT visibility audits and fixes for UK dental practices, proven with a before-and-after.">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"ChatGPT Visibility Audit for Dental Practices","serviceType":"Generative engine optimisation (GEO) audit and fixes","provider":{"@type":"Organization","name":"Teething Issues","url":"https://teethingissues.com/","email":"hello@teethingissues.com"},"areaServed":"GB","audience":{"@type":"Audience","audienceType":"UK dental practices"},"offers":[{"@type":"Offer","name":"One-off ChatGPT visibility audit and fixes plan","description":"Paid once"},{"@type":"Offer","name":"Ongoing GEO management","description":"Optional, monthly"}]}</script>
 <style>
-:root{color-scheme:light}
+/* Layout: the Teething Issues site's own palette and type (warm stone, Cormorant + Jost). A consultant's
+   explainer: question-led sections a practice owner (and ChatGPT) can read top to bottom, one clear ask. */
 :root{
   --bg:#E7E1D6; --bg2:#DDD5C7; --panel:#F7F3EB; --panel-2:#FCFAF3;
-  --line:#D5CBBA; --line-2:#C2B7A2;
-  --ink:#332E27; --ink-dim:#6F655A; --ink-faint:#978C7C;
+  --line:#D5CBBA; --ink:#332E27; --ink-dim:#6F655A; --ink-faint:#978C7C;
   --accent:#8C7A62; --accent-dim:#B3A48C; --accent-soft:rgba(140,122,98,.12);
-  --gold:#B68A3E; --good:#7E9B7A; --risk:#BE7C6B;
+  --good:#5E7F5A; --risk:#A9604F;
   --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
   --sans:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);margin:0;color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:.01em;overflow-x:hidden}
-h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-.wrap{max-width:1100px;margin:0 auto;padding-inline:20px}
-.narrow{max-width:680px;margin:0 auto;padding-inline:20px}
-.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.shead{text-align:center;max-width:640px;margin:0 auto 32px}
-.shead h2{margin-top:10px;font-size:clamp(26px,4vw,36px);font-weight:600}
-.shead h2 em{font-style:italic;color:var(--accent)}
-
-/* NAV — dark pill, floats over the hero */
-nav.site{position:sticky;top:12px;z-index:40;display:flex;justify-content:center;padding:0 12px;margin-bottom:-62px}
-.nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;max-width:920px;
-  background:var(--ink);border-radius:999px;padding:9px 9px 9px 22px;box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
-.brand{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.02em;color:var(--panel-2)}
-.navlinks{display:flex;gap:36px;font-size:16.5px;font-weight:600;letter-spacing:.03em;color:#F7F3EB}
-.navlinks a:hover{color:#D8BE8E}
-.nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:11px 18px;white-space:nowrap}
-@media(max-width:760px){.navlinks{display:none}}
-
-/* HERO — Mino photo (live look Ruby loves: light wash, face visible, centred), pain panel → one button */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:110px 0 40px;overflow:hidden;color:#F8F1E0;text-align:center}
-.hero-media{position:absolute;inset:0;z-index:0;background:#3A3226}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
-.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,28,21,.04) 0%,rgba(33,28,21,.18) 22%,rgba(33,28,21,.62) 36%,rgba(33,28,21,.78) 58%,rgba(33,28,21,.9) 100%)}
-.hero-inner{position:relative;z-index:1;max-width:720px;margin:0 auto;width:100%}
-.hero-for{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E3C98E;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.8)}
-.hero-h{margin-top:8px;font-size:clamp(34px,6vw,56px);line-height:1.05;font-weight:600;letter-spacing:-.01em;text-shadow:0 2px 6px rgba(0,0,0,.55),0 4px 28px rgba(0,0,0,.6)}
-.hero-h em{font-style:italic;color:#E3C98E}
-.hero-tag{margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#F8F1E0;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.8)}
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px auto 0;max-width:760px;text-align:left}
-.panel{background:rgba(30,26,22,.45);border:1px solid rgba(251,246,234,.18);border-radius:18px;padding:16px 20px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-.ptitle{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#E3C98E;font-weight:600;margin-bottom:10px}
-.pains{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.pains.wins .x{background:none;width:auto;height:auto;font-size:14px;color:#E3C98E;transform:none;border-radius:0}.pains.wins .x::before{content:"✓"}
-.pains li{display:flex;gap:12px;align-items:baseline;font-size:15.5px;line-height:1.4;color:rgba(248,241,224,.86)}
-.pains li b{font-weight:500;color:#F8F1E0}
-.pains .x{flex:none;width:7px;height:7px;border-radius:50%;background:#E3C98E;font-size:0;transform:translateY(-2px)}
-.fixline{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:23px;color:#E3C98E;line-height:1.25;text-shadow:0 1px 10px rgba(0,0,0,.4)}
-.btn{font:600 15px/1 var(--sans);border-radius:999px;padding:17px 28px;display:inline-block;text-align:center;transition:transform .15s}
+body{margin:0;background:radial-gradient(1100px 620px at 15% -10%,#EFEAE0 0%,rgba(231,225,214,0) 62%),var(--bg);color:var(--ink);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;padding-inline:18px}
+.wrap{max-width:900px;margin-inline:auto}
+a{color:var(--accent)}
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);text-decoration:none}
+.nav-cta{font-size:14px;font-weight:500;color:var(--panel-2);background:var(--ink);padding:9px 18px;border-radius:999px;text-decoration:none}
+header{padding-block:clamp(40px,7vw,80px) 30px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,6vw,64px);line-height:1.02;margin:12px 0 0;text-wrap:balance}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-size:clamp(18px,2vw,21px);color:var(--ink-dim);max-width:46ch;margin:18px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;font-weight:500;font-size:16px;padding:14px 24px;border-radius:999px;text-decoration:none}
 .btn.primary{background:var(--ink);color:var(--panel-2)}
-.btn.light{background:var(--panel-2);color:var(--ink)}
-.btn.ghost{border:1.5px solid var(--line-2);color:var(--ink)}
-.btn:hover{transform:translateY(-1px)}
-.hero .btn.light{display:inline-block;margin-top:18px;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
-.hero-alt{display:block;margin-top:12px;text-align:center;font-size:14.5px;color:#F8F1E0;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(227,201,142,.7)}
-.proof{list-style:none;margin:18px auto 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.proof li{font-size:12.5px;letter-spacing:.04em;color:#F8F1E0;background:rgba(227,201,142,.16);border:1px solid rgba(227,201,142,.45);border-radius:999px;padding:7px 13px}
-.proof b{color:#E3C98E;font-weight:600}
-.reassure{margin-top:8px;text-align:center;font-size:12.5px;color:rgba(248,241,224,.75)}
-@media(max-width:760px){.hero{padding-bottom:30px}.hero-scrim{background:linear-gradient(180deg,rgba(33,28,21,.1) 0%,rgba(33,28,21,.35) 35%,rgba(33,28,21,.8) 62%,rgba(28,24,18,.92) 100%)}
-  .duo{grid-template-columns:1fr;gap:10px;margin-top:16px}.panel{padding:12px 16px}.pains{gap:4px}.pains li{font-size:14.5px;line-height:1.32}.fixline{display:none}.hero .btn.light{display:block;width:100%}}
+.btn.ghost{border:1px solid var(--ink);color:var(--ink)}
+.btn:focus-visible,.nav-cta:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.note{font-size:14px;color:var(--ink-faint);margin-top:12px}
+section{padding-block:clamp(34px,6vw,64px);border-top:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,42px);line-height:1.1;margin:0;text-wrap:balance}
+h3{font-family:var(--serif);font-weight:600;font-size:24px;margin:0}
+p{max-width:68ch}
+.panel{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:22px}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.proof div{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:16px}
+.proof b{display:block;font-family:var(--serif);font-size:40px;line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
+.proof span{font-size:14px;color:var(--ink-dim)}
+.proof .up b{color:var(--good)}
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:22px}
+.price{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.price.main{border-color:var(--accent)}
+.price .amt{font-family:var(--serif);font-size:36px;font-weight:600;line-height:1}
+.price .what{font-size:14.5px;color:var(--ink-dim);margin-top:8px}
+ol.steps{padding-left:22px}
+ol.steps li{margin-top:10px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details:first-of-type{border-top:1px solid var(--line);margin-top:18px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:22px}
+details[open] summary::after{content:"–"}
+summary h3{font-size:21px}
+details p{color:var(--ink-dim);margin:10px 0 0}
+.final{text-align:center}
+.final p{margin-inline:auto}
+footer{border-top:1px solid var(--line);padding-block:26px 40px;color:var(--ink-faint);font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.vform{display:grid;gap:14px;max-width:520px;margin:26px auto 0;text-align:left}
+.vform label{display:grid;gap:6px;font-size:15px;font-weight:500}
+.vform input:not([type=checkbox]),.vform select{font:inherit;font-weight:300;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2);color:var(--ink);width:100%}
+.vform .tick{display:flex;gap:10px;align-items:flex-start;font-weight:300;font-size:14px;color:var(--ink-dim)}
+.vform .tick input{margin-top:5px}
+.vform .err{color:var(--risk);font-size:14px;margin:0;min-height:1em}
+.vform button{border:0;cursor:pointer;justify-self:start;font-family:inherit}
 
-/* WHAT WE DO — short department tiles, each one goes to its own page */
-.depts{padding:52px 0;background:var(--bg);border-bottom:1px solid var(--line)}
-.dept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto}
-@media(max-width:760px){.dept-grid{grid-template-columns:1fr 1fr}}
-.dept{display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-height:96px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:16px 16px 14px;transition:transform .15s,border-color .15s}
-.dept:hover{transform:translateY(-2px);border-color:var(--gold)}
-.dept b{font-family:var(--serif);font-size:19px;font-weight:600;line-height:1.15}
-.dept span{font-size:12.5px;color:var(--gold);font-weight:500}
-
-/* FOUR FIXES — the 4 key messages, each with HOW underneath */
-.fixes{padding:60px 0;background:var(--panel-2);border-bottom:1px solid var(--line)}
-.fix-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-@media(max-width:760px){.fix-grid{grid-template-columns:1fr}}
-.fix{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
-.fix .n{font-family:var(--serif);color:var(--gold);font-weight:600;font-size:14px}
-.fix h3{margin-top:4px;font-size:21px;font-weight:600}
-.fix ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:7px}
-.fix li{font-size:14px;color:var(--ink-dim);line-height:1.45;display:flex;gap:9px}
-.fix li::before{content:"✓";color:var(--good);font-weight:600;flex:none}
-
-/* DASHBOARD — the dark "operating system" panel: judgement, team, result */
-.elevate{position:relative;overflow:hidden;padding:64px 0 68px;text-align:center;color:#F3ECDD;
-  background:radial-gradient(1100px 600px at 50% -10%, rgba(196,168,118,.22), transparent 60%),linear-gradient(165deg,#3A3226 0%,#2B251C 60%,#211C15 100%)}
-.el-eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
-.el-h{margin-top:12px;font-size:clamp(28px,5vw,44px);font-weight:600;color:#F8F1E0}
-.el-sub{margin:14px auto 0;max-width:46ch;color:#CDBFA0;font-size:15px}
-.os-tiers{margin-top:36px;display:flex;flex-direction:column;gap:26px}
-.tier-label{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#B7A480;font-weight:600;margin-bottom:12px}
-.glass-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.glass-card{background:rgba(251,246,234,.08);border:1px solid rgba(251,246,234,.18);border-radius:14px;padding:13px 17px;font-size:13.5px;color:#F1E9D6}
-.glass-card.wide{max-width:520px;font-family:var(--serif);font-style:italic;font-size:17px;color:#F8F1E0}
-.glass-card.pill{border-radius:999px;font-size:12.5px;font-weight:500;color:#DCEAD6;background:rgba(126,155,122,.14);border-color:rgba(126,155,122,.3)}
-
-/* WHY US — credentials strip */
-.statstrip{background:var(--panel-2);border-bottom:1px solid var(--line);padding:56px 0}
-.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-@media(max-width:760px){.stat-grid{grid-template-columns:1fr 1fr}.stat-grid>.stat-tile:last-child{grid-column:1/-1}}
-.stat-bar{display:flex;gap:3px;margin-bottom:10px}
-.stat-bar span{width:14px;height:4px;border-radius:2px;background:var(--line-2)}
-.stat-bar span:first-child{background:var(--accent)}
-.stat-big{font-family:var(--serif);font-size:clamp(24px,3.4vw,30px);font-weight:600}
-.stat-tile p{margin-top:4px;font-size:12.5px;color:var(--ink-dim);line-height:1.45}
-
-/* TWO WAYS + STEPS */
-.ways{padding:60px 0}
-.way-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:760px){.way-grid{grid-template-columns:1fr}}
-.way{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
-.way .tag{align-self:flex-start;background:var(--accent-soft);color:var(--accent);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 11px;border-radius:999px}
-.way h3{margin-top:12px;font-size:22px;font-weight:600}
-.way ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px;flex:1;align-content:start}
-.way li{font-size:14px;color:var(--ink-dim);display:flex;gap:9px}
-.way li::before{content:"—";color:var(--accent-dim);flex:none}
-.way .intro{margin:10px 0 0;font-size:14.5px;line-height:1.5;color:var(--ink)}
-.way .price{margin-top:14px;font-size:13.5px;color:var(--ink)}
-.way .btn{margin-top:16px}
-.steps{list-style:none;margin:28px auto 0;padding:0;max-width:720px;display:grid;gap:10px}
-.steps li{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:14.5px}
-.steps b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600}
-.promise{margin:28px auto 0;max-width:720px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:20px 22px}
-.promise h3{font-size:20px;font-weight:600}
-.promise ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
-.promise li{font-size:14px;color:var(--ink-dim);display:flex;gap:9px}
-.promise li::before{content:"✓";color:var(--good);font-weight:600;flex:none}
-
-/* FAQ */
-.faq{padding:60px 0;background:var(--panel-2);border-top:1px solid var(--line)}
-.faq-list{border-top:1px solid var(--line)}
-.faq-item{border-bottom:1px solid var(--line);padding:18px 0}
-.faq-item summary{cursor:pointer;font-family:var(--serif);font-size:18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:"+";font-size:20px;color:var(--accent);flex:none}
-.faq-item[open] summary::after{content:"–"}
-.faq-item p{margin:10px 0 0;font-size:14px;color:var(--ink-dim);line-height:1.6}
-
-/* FINAL CTA */
-.final{padding:64px 0 72px;text-align:center;color:#F3ECDD;background:linear-gradient(165deg,#2B251C 0%,#211C15 100%)}
-.final h2{font-size:clamp(28px,4.6vw,42px);max-width:18ch;margin:0 auto;color:#F8F1E0;font-weight:600}
-.final h2 em{font-style:italic;color:#E3C98E}
-.final .btn{margin-top:24px}
-.final .hero-alt{margin-top:16px}
-.final p.note{margin-top:14px;font-size:12.5px;color:#B7A480}
-footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
-.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.foot-row a{text-decoration:underline;text-underline-offset:3px}
+/* Home page look (Ruby 14 Oct: "this visual style"): dark pill nav, full-bleed hero, gold serif, dashboard tiles */
+nav.site{border-bottom:0;justify-content:center;position:sticky;top:16px;z-index:40;display:flex;justify-content:center;padding:16px 0 0;margin-inline:-18px;padding-inline:16px}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:22px;width:100%;max-width:920px;background:var(--ink);border-radius:999px;padding:11px 10px 11px 24px;box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
+.nav-row .brand{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--panel-2);text-decoration:none}
+.navlinks{display:flex;gap:26px;font-size:13px}
+.navlinks a{color:rgba(247,243,235,.72);text-decoration:none}
+.navlinks a:hover{color:var(--panel-2)}
+.nav-row .nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:12px 20px;white-space:nowrap;text-decoration:none}
+@media(max-width:720px){.navlinks{display:none}}
+.hero{position:relative;min-height:620px;display:flex;align-items:flex-end;padding:120px 18px 64px;margin:-76px -18px 0;text-align:center;overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,28,21,.25) 0%,rgba(33,28,21,.45) 45%,rgba(33,28,21,.82) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:760px;margin:0 auto}
+.hero-badge{display:inline-flex;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);color:#F8F1E0;font-size:12px;letter-spacing:.03em;padding:9px 18px;border-radius:999px;margin-bottom:22px}
+.hero-h{margin:0;font-family:var(--serif);font-size:clamp(34px,5.6vw,56px);font-weight:600;line-height:1.05;color:#F8F1E0;text-wrap:balance}
+.hero-h em{font-style:italic;color:#D5CBBA}
+.hero .sub{margin:20px auto 0;font-size:16.5px;color:rgba(248,241,224,.9);max-width:52ch;line-height:1.7}
+.hero .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.hero .btn.primary{background:var(--panel-2);color:var(--ink)}
+.hero .btn.ghost{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.hero .reassure{margin-top:16px;font-size:13.5px;color:rgba(248,241,224,.75)}
+.hero .reassure a{color:#D5CBBA}
+.proof div,.price{position:relative;padding-top:30px!important;box-shadow:0 14px 34px -26px rgba(90,78,60,.4)}
+.proof div::before,.price::before{content:"";position:absolute;top:16px;left:16px;width:14px;height:4px;border-radius:2px;background:var(--accent);box-shadow:17px 0 0 var(--line),34px 0 0 var(--line),51px 0 0 var(--line)}
+@media (max-width:600px){ .proof{grid-template-columns:1fr} }
 summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inherit}
 </style>
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics -->
-<style>.os-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.os{border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:24px;background:#fff}.os b{display:block;font-size:1.35rem;margin-bottom:10px}.os p{margin:0 0 16px;line-height:1.5}.os a{font-weight:600}@media(max-width:760px){.os-grid{grid-template-columns:1fr}}</style><style id="first-screen">
-.hero-sub{margin:14px auto 0;max-width:46ch;font-size:17px;line-height:1.5;color:#F8F1E0;text-shadow:0 1px 10px rgba(0,0,0,.7)}
-.hero .btn.light{margin-top:22px}
-.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}.hero-btns .btn{margin:0!important}.hero .btn.hc2{display:inline-block;padding:14px 26px;border-radius:999px;border:1px solid rgba(227,201,142,.75);color:#F8F1E0;background:rgba(255,255,255,.08);text-decoration:none;font-weight:500}
-.navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}.navlinks a:hover::after{transform:scaleX(1)}
-.hero-sub .hs1{display:block;font-family:var(--serif);font-size:clamp(22px,2.4vw,28px);font-weight:600;letter-spacing:.02em;color:#E3C98E}
-.hero-sub .hs2{display:block;margin-top:2px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,23px);color:#F8F1E0}
-.runby span{display:block;margin-top:6px;font-size:12.5px;letter-spacing:.04em;text-transform:none;font-weight:400;color:#F8F1E0}
-.runby{margin:22px 0 0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#E3C98E;text-shadow:0 1px 10px rgba(0,0,0,.8)}
-.hero .reassure{margin-top:10px;font-size:13px;color:#E9DFCB}
-.hero .proof{margin-top:22px}
-/* PHONE ONLY (Ruby 2 Nov): Mino + glowing tooth on top, words underneath on a beige glass panel, nothing over her face */
-@media(max-width:700px){
- .hero{display:block!important;padding:0!important;background:var(--bg);color:var(--ink);text-align:center}
- .hero-media{position:relative!important;inset:auto!important;height:45svh;min-height:300px;margin-top:88px;background:var(--bg)!important}
- .hero-media img{object-position:70% 0!important}
- .hero-scrim{background:linear-gradient(180deg,rgba(33,28,21,.28) 0%,rgba(33,28,21,0) 26%,rgba(33,28,21,0) 80%,rgba(231,225,214,.9) 100%)!important}
- .hero-inner{margin:-34px 16px 0!important;width:auto!important;padding:24px 18px 22px;border-radius:24px;
-  background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,255,255,.55));border:1px solid rgba(255,255,255,.85);
-  box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 30px 50px -30px rgba(51,46,39,.4)}
- .hero-for{color:var(--accent)!important;text-shadow:none!important;font-size:10px!important}
- .hero-h{font-size:29px!important;color:var(--ink)!important;text-shadow:none!important}
- .hero-h em{color:var(--accent)!important}
- .hero-sub{font-size:15px;color:var(--ink-dim);text-shadow:none}
- .hero .btn.light{background:#332E27!important;color:#FCFAF3!important;margin-top:16px}
- .hero .reassure{color:var(--ink-dim)}
- .hero-btns{flex-direction:column}.hero .btn.hc2{color:var(--ink);border-color:var(--accent);background:transparent;text-align:center}
- .hero-sub .hs1{color:var(--accent)}.hero-sub .hs2{color:var(--ink-dim)}.runby{color:var(--accent);text-shadow:none}.runby span{color:var(--ink-dim)}
- .hero .proof{margin-top:14px;gap:6px}
- .hero .proof li{font-size:11px;padding:5px 9px;color:var(--ink-dim);background:rgba(140,122,98,.08);border-color:var(--line)}
- .hero .proof b{color:var(--ink)}
- #ck{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border-radius:0!important;padding:7px 12px!important;font-size:12px!important}
- #ck p{display:inline!important;margin:0 8px 0 0!important}#ck div{display:inline-flex!important;gap:6px!important;vertical-align:middle}
- #ck button{padding:5px 12px!important;font-size:12.5px!important}}
-</style><style id="proofs">
-.proofs{padding:44px 0 8px;background:var(--bg)}
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1040px;margin:0 auto}
-.pcard{display:block;text-decoration:none;color:var(--ink);padding:26px 24px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22));border:1px solid rgba(255,255,255,.75);box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 44px 70px -38px rgba(51,46,39,.38)}
-.pk{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.pcard h3{margin-top:10px;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.2}
-.pcard p{margin-top:8px;font-size:14.5px;line-height:1.5;color:var(--ink-dim)}
-.pcard i{display:inline-block;margin-top:12px;font-style:normal;font-weight:600;font-size:14px;border-bottom:1px solid var(--accent-dim)}
-.xp{max-width:1040px;margin:0 auto 16px;padding:28px 30px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22));border:1px solid rgba(255,255,255,.75);box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 44px 70px -38px rgba(51,46,39,.38)}.xp h2{margin:0;text-align:center;font-family:var(--serif);font-weight:600}.xp h2 em{color:var(--accent)}.xp ul{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}.xp li{display:flex;gap:10px;font-size:15.5px;line-height:1.45;color:var(--ink)}.xp li::before{content:"\2713";color:var(--good);font-weight:600}@media(max-width:760px){.xp{margin:0 16px 16px}.xp ul{grid-template-columns:1fr}}
-.hcard{display:flex;align-items:center;justify-content:space-between;gap:28px;max-width:1040px;margin:0 auto;padding:30px 36px;border-radius:24px;text-decoration:none;color:var(--ink);background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 50px 80px -40px rgba(51,46,39,.42);transition:transform .35s cubic-bezier(.2,.8,.2,1)}.hcard:hover{transform:translateY(-5px)}.hcard h2{margin:0;font-family:var(--serif);font-weight:600}.hcard h2 em{display:block;color:var(--accent)}.hcard p{margin:8px 0 0;color:var(--ink-dim);font-size:15.5px}.hbtn{flex:none;padding:14px 26px;border-radius:999px;background:linear-gradient(180deg,#4A4238,#2B2620);color:#FCFAF3;font-weight:500;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 28px -10px rgba(0,0,0,.5)}@media(max-width:760px){.hcard{flex-direction:column;align-items:flex-start;margin:0 16px;padding:24px 22px}}
-.xp ul{grid-template-columns:1fr 1fr!important;align-items:start}
-.xp li b{color:var(--ink);font-weight:600}
-.stats{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:18px 0 4px}.stats div{flex:0 0 calc(33.333% - 10px);box-sizing:border-box;min-height:104px;display:flex;flex-direction:column;justify-content:center;padding:16px 14px;border-radius:18px;background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.85);text-align:center}.stats b{display:block;font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink);font-variant-numeric:lining-nums;line-height:1.1}.stats span{display:block;margin-top:6px;font-size:13px;color:var(--ink-dim);line-height:1.35}@media(max-width:760px){.stats div{flex-basis:calc(50% - 7px)}.stats b{font-size:24px}}
-.cta2{text-align:center;padding:10px 0 36px;background:var(--bg)}.cta2 p{margin-top:8px;font-size:13px;color:var(--ink-dim)}
-@media(max-width:760px){.pgrid{grid-template-columns:1fr;padding:0 16px}}
-</style><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style><style id="pa-tidy">.pa .pains li{font-size:15.5px!important;line-height:1.45}.pa .pains li b{font-weight:500}.pa .wg-h{border-bottom:0!important;margin:14px 0 4px!important;padding:0!important}.pa .wg:first-child .wg-h{margin-top:4px!important}.pa .panel{display:flex;flex-direction:column;justify-content:center}</style><style id="sys-3d">
-.sys-row{animation:ghover 9s ease-in-out infinite;transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s}
-.sys-row:nth-of-type(2){animation-delay:-3s}.sys-row:nth-of-type(3){animation-delay:-6s}
-.sys-row:hover{transform:translateY(-8px)!important;box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 70px 90px -40px rgba(51,46,39,.45),0 18px 30px -14px rgba(51,46,39,.22)!important}
-.sys-panel{background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.15))!important;border:1px solid rgba(255,255,255,.8)!important;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 24px 40px -26px rgba(51,46,39,.35)!important}
-.sp-funnel div,.sp-list div{background:rgba(255,255,255,.6)!important;border-color:rgba(255,255,255,.85)!important;box-shadow:0 8px 18px -12px rgba(51,46,39,.3)}
-@media (prefers-reduced-motion:reduce){.sys-row{animation:none}}
-</style><style id="wow-glass">
-body{background:radial-gradient(42% 38% at 12% 18%,rgba(196,176,140,.55),transparent 70%),radial-gradient(40% 36% at 88% 42%,rgba(176,150,112,.42),transparent 70%),radial-gradient(46% 40% at 30% 85%,rgba(206,190,160,.5),transparent 72%),var(--bg)!important}
-@media(min-width:900px){body{background-attachment:fixed!important}}
-.pa,.sys,.fixes,.proofs,.how,.guides,.faq{background:transparent!important}
-.pa .panel,.sys-row,.how-steps li,.fix,.pcard,.xp,.gcard{background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12))!important;
- -webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);
- border:1px solid rgba(255,255,255,.8)!important;
- box-shadow:0 1px 0 rgba(255,255,255,1) inset,0 -1px 0 rgba(140,122,98,.2) inset,0 50px 80px -40px rgba(51,46,39,.42),0 14px 28px -14px rgba(51,46,39,.22)!important}
-.btn,.hero .btn.hc2,.cta2 .btn{position:relative;border-radius:999px!important;
- background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(236,228,214,.85))!important;color:#332E27!important;border:1px solid rgba(255,255,255,.95)!important;
- box-shadow:0 1px 0 #fff inset,0 -2px 0 rgba(140,122,98,.25) inset,0 14px 28px -10px rgba(0,0,0,.45),0 4px 10px -4px rgba(0,0,0,.25)!important;
- transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s!important}
-.btn:hover,.hero .btn.hc2:hover{transform:translateY(-3px)}
-.hero .btn.hc2{background:linear-gradient(180deg,rgba(179,164,140,.75),rgba(140,122,98,.7))!important;color:#FCFAF3!important;border:1px solid rgba(227,201,142,.8)!important;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-.btn.primary{background:linear-gradient(180deg,#4A4238,#2B2620)!important;color:#FCFAF3!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 28px -10px rgba(0,0,0,.5)!important}
-@media(max-width:700px){.hero .btn.light{background:linear-gradient(180deg,#4A4238,#2B2620)!important;color:#FCFAF3!important}.hero .btn.hc2{color:#332E27!important;background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(236,228,214,.7))!important}}
-</style><style id="three-up">
-.pa .panel,.sys-row{animation:none!important}
-.pa-duo{display:block!important;max-width:1040px!important}
-.pa-duo>.panel:first-child{margin-bottom:18px}
-.pa-duo>.panel:first-child .pains{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px}
-.pa-duo>.panel:last-child{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-.pa-duo>.panel:last-child>.ptitle{text-align:center;margin:8px 0 12px}
-.pa .wgroups{display:grid!important;grid-template-columns:repeat(3,1fr);gap:18px}
-.pa .wg{padding:24px 24px 20px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 50px 80px -40px rgba(51,46,39,.42),0 14px 28px -14px rgba(51,46,39,.22);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
-.pa .wg:hover{transform:translateY(-6px)}
-.pa .wg .wg-h{font-size:12px!important;margin:0 0 10px!important}
-@media(max-width:860px){.pa .wgroups{grid-template-columns:1fr}.pa-duo>.panel:first-child .pains{grid-template-columns:1fr}}
-</style><style id="screens-move">
-.sys-panel{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-.sp-list div{align-items:flex-start!important}.sp-list span{line-height:1.4}.sp-list small{display:block;font-size:10.5px;letter-spacing:.12em;color:var(--accent);font-weight:600;margin-bottom:1px}.sp-list b{font-weight:600;color:var(--ink)}
-.sys-text h3 em{font-style:italic;color:var(--accent)}.sys-text li b{color:var(--ink);font-weight:500}.sys-text li{display:block!important;position:relative;padding-left:24px}.sys-text li::before{position:absolute;left:0;top:0}.sys-sub2{margin:4px 0 0;font-family:var(--serif);font-style:italic;font-size:19px;color:var(--accent)}
-.sp-funnel b{font-variant-numeric:lining-nums;font-size:24px!important}.sp-pills{display:flex;gap:10px;flex-wrap:wrap}.sp-money{display:grid;gap:8px;margin-top:4px}.sm-top{display:flex;justify-content:space-between;font-size:11.5px;color:var(--ink-faint)}.sm-top b{color:var(--ink);font-variant-numeric:lining-nums}.sm-big b{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink);font-variant-numeric:lining-nums}.sm-big span{font-size:13px;color:var(--ink-dim)}.sm-bar{height:8px;border-radius:5px;background:var(--bg2);overflow:hidden}.sm-bar em{display:block;height:100%;width:84%;border-radius:5px;background:linear-gradient(90deg,#B3A48C,#8C7A62);transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .3s}.sys-row.in .sm-bar em{transform:scaleX(1)}.sp-pills .pill b{font-variant-numeric:lining-nums}
-@keyframes lit{0%,100%{transform:none}8%{transform:translateY(-6px) scale(1.06)}16%{transform:none}}
-.sys-row.in .sp-funnel div{animation:lit 4.5s ease-in-out 1 both}
-.sys-row.in .sp-funnel div:nth-of-type(2){animation-delay:1.2s}.sys-row.in .sp-funnel div:nth-of-type(3){animation-delay:2.4s}.sys-row.in .sp-funnel div:nth-of-type(4){animation-delay:3.6s}
-@keyframes flow{0%{transform:translateX(-6px);opacity:0}100%{transform:none;opacity:1}}
-.sys-row .sp-funnel i{display:inline-block;opacity:0}.sys-row.in .sp-funnel i{animation:flow .6s ease-out 1 both}.sys-row.in .sp-funnel i:nth-of-type(1){animation-delay:.9s}.sys-row.in .sp-funnel i:nth-of-type(2){animation-delay:2.1s}.sys-row.in .sp-funnel i:nth-of-type(3){animation-delay:3.3s}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.sys-row.in .sys-panel .glass-card{animation:breathe 1.6s ease-in-out 1 both}
-.sys-row.in .sys-panel .glass-card+.glass-card{animation-delay:1.6s}
-@keyframes tick{0%,100%{transform:none;opacity:1}5%{transform:translateX(6px);opacity:.55}10%{transform:none;opacity:1}}
-.sys-row.in .sp-list div{animation:tick 3s ease-in-out 1 both}
-.sys-row.in .sp-list div:nth-of-type(2){animation-delay:.5s}.sys-row.in .sp-list div:nth-of-type(3){animation-delay:1s}.sys-row.in .sp-list div:nth-of-type(4){animation-delay:1.5s}
-@keyframes fillpulse{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
-.sys-row.in .sp-bars em::after{transform-origin:left;animation:fillpulse 1.4s cubic-bezier(.2,.7,.2,1) 1 both}
-.sys-row.in .sp-bars div:nth-child(2) em::after{animation-delay:.25s}.sys-row.in .sp-bars div:nth-child(3) em::after{animation-delay:.5s}.sys-row.in .sp-bars div:nth-child(4) em::after{animation-delay:.75s}.sys-row.in .sp-bars div:nth-child(5) em::after{animation-delay:1s}
-@media (prefers-reduced-motion:reduce){.sys-panel *{animation:none!important}}
-</style><style>.sp-bars div{grid-template-columns:130px 1fr!important}.kq{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--ink-dim)}.kq span{white-space:nowrap}.kq span::first-letter{color:var(--good);font-weight:700}</style><style id="sf-css">
-.sf{padding:64px 0 24px}
-.sf-card{max-width:760px;margin:0 auto;padding:44px 48px 40px;border-radius:28px;text-align:center;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 50px 80px -40px rgba(51,46,39,.42),0 14px 28px -14px rgba(51,46,39,.22)}
-.sf-card h2{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink)}.sf-card h2 em{color:var(--accent)}
-.sf-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:0}
-.sf-list li{padding:12px 0;border-bottom:1px solid rgba(140,122,98,.18);font-size:17px;color:var(--ink-dim);opacity:0;transform:translateY(10px);transition:opacity .45s ease,transform .45s ease}
-.sf-list li:last-child{border-bottom:0}
-.sf-list li b{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink);margin-right:4px}
-.sf.in .sf-list li,.sf-list li.in{opacity:1;transform:none}
-.sf-turn{display:inline-block;margin-top:22px;font-family:var(--serif);font-style:italic;font-size:24px;color:var(--accent);text-decoration:none}
-.sf-turn span{display:inline-block;margin-left:6px;transition:transform .3s}.sf-turn:hover span{transform:translateY(4px)}
-@media(max-width:700px){.sf-card{margin:0 16px;padding:30px 22px}.sf-list li{font-size:15.5px}.sf-list li b{font-size:19px;display:block}}
-@media (prefers-reduced-motion:reduce){.sf-list li{opacity:1;transform:none}}
-</style><style id="sf-tiles">
-.sf-head{text-align:center;margin-bottom:22px}.sf-head h2{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink)}.sf-head h2 em{color:var(--accent)}
-.sf-grid{list-style:none;margin:0 auto;padding:0;max-width:1040px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}.sf-grid li{flex:0 0 calc(25% - 11px);min-height:0;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center!important;padding:20px 16px!important}
-.sf-grid li{padding:22px 20px;border-radius:22px;text-align:left;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 40px 60px -36px rgba(51,46,39,.4);opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
-.sf-grid li.in{opacity:1;transform:none}
-.sf-grid li b{display:block;white-space:nowrap;font-family:var(--serif);font-size:18.5px;line-height:1.2;font-weight:600;color:var(--ink)}
-.sf-grid li span{display:block;margin-top:4px;font-size:14px;color:var(--ink-dim)}
-
-.sf-foot{text-align:center;margin-top:8px}
-@media(max-width:1100px){.sf-grid li b{white-space:normal}}@media(max-width:900px){.sf-grid li{flex-basis:calc(50% - 7px)}}
-@media(max-width:560px){.sf-grid{padding:0 12px;gap:10px}.sf-grid li{flex-basis:calc(50% - 5px);min-height:0;padding:16px 10px!important}.sf-grid li b{font-size:16px}.sf-grid li span{font-size:12.5px}}
-@media (prefers-reduced-motion:reduce){.sf-grid li{opacity:1;transform:none}}
-</style><style id="feel-css">
-.feel{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:1040px;margin:0 auto}
-.ft{flex:0 0 calc(33.333% - 11px);box-sizing:border-box;padding:26px 24px;border-radius:24px;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 50px 80px -40px rgba(51,46,39,.42);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.ft:hover{transform:translateY(-5px)}
-.ft .n{font-family:var(--serif);color:var(--accent);font-size:15px}
-.ft h3{margin:6px 0 0;font-family:var(--serif);font-weight:600;color:var(--ink)}
-.ft p{margin:8px 0 0;font-size:15px;line-height:1.5;color:var(--ink-dim)}
-@media(max-width:860px){.ft{flex-basis:calc(50% - 8px)}}@media(max-width:560px){.feel{padding:0 16px}.ft{flex-basis:100%}}
-</style><style>.final .hero-btns{margin-top:22px}.final .btn.callbtn{display:inline-block;padding:14px 26px;border-radius:999px;color:#FCFAF3!important;background:linear-gradient(180deg,rgba(179,164,140,.75),rgba(140,122,98,.7))!important;border:1px solid rgba(227,201,142,.8)!important;text-decoration:none;font-weight:500}.final .note{margin-top:16px}</style><style>
-.guides{padding:56px 0;background:var(--bg)}.ggrid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.gcard{display:flex;flex-direction:column;gap:8px;background:var(--panel-2);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}.gcard:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(51,46,39,.1)}.gcard span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600}.gcard b{font-family:var(--serif);font-weight:400;font-size:18px;line-height:1.25;flex:1}.gcard i{font-style:normal;font-size:13px;color:var(--accent)}@media(max-width:900px){.ggrid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.ggrid{grid-template-columns:1fr}}
-.pa{padding:56px 0 20px;background:var(--bg)}
-.pa-duo{max-width:980px;margin:0 auto;gap:20px}
-.pa .panel{background:var(--panel-2);border:1px solid var(--line);border-radius:22px;padding:30px 32px;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:0 10px 30px rgba(51,46,39,.06)}
-.pa .ptitle{color:var(--accent);font-size:11.5px;margin-bottom:14px}
-.pa .pains li{color:var(--ink-dim);font-size:16px}
-.pa .pains li b{color:var(--ink);font-weight:500}
-.pa .pains .x{background:var(--accent-dim)}
-.pa .pains.wins .x{color:var(--good);background:none}
-.pa .wg-h{color:var(--accent);border-bottom-color:var(--line)}
-.pa .pains li{opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
-.pa .pains li.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.pa .pains li{opacity:1;transform:none;transition:none}}
-
-.wgroups{display:grid;gap:12px}.wg-h{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#CBBE9E;font-weight:600;margin-bottom:5px;padding-bottom:4px;border-bottom:1px solid rgba(251,246,234,.14)}.wg .pains{gap:5px}
-.sys{padding:64px 0 56px;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.sys .el-eyebrow{color:var(--accent)}
-.sys-head{text-align:center;margin-bottom:28px}
-.sys-h{margin-top:8px;font-size:clamp(26px,4vw,36px);font-weight:600;color:var(--ink)}
-.sys-h em{font-style:italic;color:var(--accent)}
-.sys-sub{margin:10px auto 0;max-width:52ch;color:var(--ink-dim);font-size:14.5px;line-height:1.55}
-.sys-row{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding:36px 38px;margin-top:20px;background:var(--panel-2);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 30px rgba(51,46,39,.06)}
-.sys-row.flip .sys-text{order:2}
-.sys-n{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.sys-text h3{margin-top:8px;font-family:var(--serif);font-size:clamp(23px,2.8vw,29px);font-weight:600;color:var(--ink);line-height:1.2}
-.sys-text ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px}
-.sys-text li{display:flex;gap:9px;font-size:15px;color:var(--ink-dim);line-height:1.45}
-.sys-text li::before{content:"✓";color:var(--good);font-weight:600;flex:none}
-.sys-link{display:inline-block;margin-top:14px;font-size:14px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--accent-dim);padding-bottom:2px}
-.sys-panel{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:10px;box-shadow:0 8px 24px rgba(51,46,39,.06)}
-.sp-top{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);font-weight:600}
-.sp-funnel{display:flex;align-items:center;gap:5px}
-.sp-funnel div{flex:1;background:var(--panel-2);transition:opacity .5s,transform .5s;border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center}
-.sp-funnel b{display:block;font-family:var(--serif);font-size:16px;color:var(--ink)}.sp-funnel span{font-size:10.5px;color:var(--ink-faint)}
-.sp-funnel i{color:var(--accent-dim);font-style:normal}
-.sp-bars{display:grid;gap:8px}
-.sp-bars div{display:grid;grid-template-columns:86px 1fr;align-items:center;gap:10px;font-size:12px;color:var(--ink-dim)}
-.sp-bars em{height:7px;border-radius:4px;background:var(--bg2);position:relative;overflow:hidden}
-.sp-bars em::after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,#AAA28E,#8E8670);border-radius:4px}
-.sp-list{display:grid;gap:6px}
-.sp-list div{transition:opacity .5s,transform .5s;display:flex;gap:9px;align-items:center;background:var(--panel-2);border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;color:var(--ink)}
-.sp-list i{font-style:normal;color:var(--good);font-weight:700}
-.sys-panel .glass-card{justify-self:start;background:var(--panel-2);border:1px solid var(--line);color:var(--ink-dim);font-family:inherit;font-style:normal;font-size:12px;border-radius:999px;padding:7px 13px}
-.sys-panel .glass-card.gold{color:var(--accent);border-color:var(--accent-dim)}
-.sys-note{margin-top:10px;text-align:center;font-size:11px;color:var(--ink-faint)}
-@media(max-width:760px){.sys-row{grid-template-columns:1fr;gap:18px;padding:24px 20px}.sys-row.flip .sys-text{order:0}}
-.how{padding:60px 0;background:var(--bg)}
-.how-steps{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.how-steps li{background:var(--panel-2);border:1px solid var(--line);border-radius:20px;padding:26px 22px;box-shadow:0 8px 24px rgba(51,46,39,.05)}
-.how-steps li b{width:34px;height:34px;font-size:15px;border-radius:50%;background:#8E8670;color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600}
-.how-steps h3{margin-top:14px;font-size:20px;font-weight:600}
-.how-steps p{margin-top:8px;font-size:14.5px;color:var(--ink-dim);line-height:1.5}
-.how-cta{text-align:center;margin-top:22px}
-.circle-mini{margin:24px auto 0;max-width:820px;display:flex;gap:16px;align-items:center;justify-content:space-between;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:16px 20px;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
-.circle-mini b{color:var(--ink)}
-@media(max-width:900px){.how-steps{grid-template-columns:1fr 1fr}}@media(max-width:560px){.how-steps{grid-template-columns:1fr}.circle-mini{flex-direction:column;align-items:flex-start}}
-
-/* scroll motion */
-.sys-row,.how-steps li{opacity:0;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
-.sys-row.in,.how-steps li.in{opacity:1;transform:none}
-.sys-row .sp-funnel div,.sys-row .sp-list div,.sys-row .glass-card{opacity:0;transform:translateY(8px)}
-.sys-row.in .sp-funnel div,.sys-row.in .sp-list div,.sys-row.in .glass-card{opacity:1;transform:none}
-.sys-row .glass-card{transition:opacity .5s,transform .5s}
-.sys-row .sp-bars em::after{width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
-.sys-row.in .sp-bars em::after{width:var(--w)}
-@media (prefers-reduced-motion:reduce){.sys-row,.how-steps li,.sys-row *{opacity:1!important;transform:none!important;transition:none!important}.sys-row .sp-bars em::after{width:var(--w)}}
-</style><style id="glass-home">
-.pa,.sys,.fixes{background:radial-gradient(38% 40% at 18% 40%,rgba(194,183,162,.55),transparent 75%),radial-gradient(38% 40% at 82% 60%,rgba(182,160,120,.32),transparent 75%),var(--bg)!important}
-.pa .panel,.sys-row,.how-steps li,.fix{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22))!important;
- border:1px solid rgba(255,255,255,.75)!important;border-radius:26px!important;
- box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 50px 80px -40px rgba(51,46,39,.38),0 14px 28px -14px rgba(51,46,39,.2)!important}
-.pa .panel{animation:ghover 8s ease-in-out infinite;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
-.pa .panel:hover{transform:translateY(-6px)}
-@keyframes ghover{0%,100%{translate:0 0}50%{translate:0 -6px}}
-@media (prefers-reduced-motion:reduce){.pa .panel{animation:none}}
-</style><style id="nav-dd">
-.nav-dd{position:relative;display:inline-flex;align-items:center}
-.nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px;margin:0;line-height:inherit;display:inline-flex;align-items:center;gap:4px;position:relative;top:-1px}
-.nav-ddb span{font-size:12px;margin-left:2px}
-.nav-ddm{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:250px;padding:8px;border-radius:16px;background:#332E27;box-shadow:0 20px 40px -12px rgba(0,0,0,.45);display:none;z-index:50}
-.nav-ddm::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
-.nav-dd:hover .nav-ddm,.nav-dd:focus-within .nav-ddm{display:block}
-.nav-ddm a{display:block;padding:10px 12px;border-radius:10px;font-family:var(--sans)!important;font-size:15px!important;font-weight:600!important;color:#F7F3EB!important;letter-spacing:0!important}
-.nav-ddm a::after{display:none!important}
-.nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
-.nav-ddm a:hover{background:rgba(255,255,255,.08)}
-</style><style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style><meta property="og:type" content="website"><meta property="og:title" content="Is ChatGPT recommending your practice?"><meta property="og:description" content="Is ChatGPT recommending your dental practice? We check whether you come up, fix what&rsquo;s stopping it, and prove the result with a dated before-and-after."><meta property="og:url" content="https://teethingissues.com/ai-visibility/"><meta property="og:image" content="https://teethingissues.com/assets/mino-1.jpg"><meta name="twitter:card" content="summary_large_image"><style id="nav-phone">
-.nav-burger{display:none;background:none;border:0;cursor:pointer;padding:8px 6px;margin-left:4px}
-.nav-burger span{display:block;width:20px;height:2px;margin:4px 0;background:#F1E6CF;border-radius:2px}
-.nav-phone{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#332E27;border-radius:22px;padding:14px;display:grid;gap:2px;z-index:60}
-.nav-phone[hidden]{display:none!important}
-.nav-phone a{display:block;padding:11px 12px;border-radius:12px;font-family:var(--serif);font-size:19px;font-weight:600;color:#F7F3EB!important}
-.nav-phone a small{font-family:var(--sans);font-size:12px;font-weight:400;color:#CDBFA8;margin-left:6px}
-.nav-phone .np-h{margin:8px 12px 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
-.nav-phone .np-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
-.nav-phone .np-btns a{font-family:var(--sans);font-size:14px;text-align:center;border-radius:999px;padding:13px 10px}
-.nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
-nav.site{position:sticky}
-@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}
-</style><style id="how3">.how-steps{grid-template-columns:repeat(3,1fr)!important}@media(max-width:760px){.how-steps{grid-template-columns:1fr!important}}</style><script type="application/ld+json">{
- "@context": "https://schema.org",
- "@type": "Service",
- "name": "Google and ChatGPT visibility for dental practices",
- "description": "Checks whether ChatGPT and Google recommend a dental practice, fixes the website so they can, and proves it with a dated before-and-after.",
- "url": "https://teethingissues.com/ai-visibility/",
- "areaServed": "GB",
- "audience": {
-  "@type": "Audience",
-  "audienceType": "UK dental practices"
- },
- "provider": {
-  "@type": "Organization",
-  "name": "Teething Issues",
-  "url": "https://teethingissues.com/"
- }
-}</script><script type="application/ld+json">{
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a7d0d95bfbfd4839b8247c5ca6453a17"}'></script><!-- End Cloudflare Web Analytics --><script type="application/ld+json">
+{
  "@context": "https://schema.org",
  "@type": "FAQPage",
  "mainEntity": [
-  {
-   "@type": "Question",
-   "name": "How can I check if ChatGPT recommends my dental practice?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "The quickest way to check is to ask ChatGPT the questions your patients ask, in the way they ask them: for example, “Who is the best private dentist in [your town]?”, “Where can I get Invisalign near [your town]?” or “Which dentist in [your town] takes emergency appointments?”. Note which practices are named, and whether yours is one of them. Try it on a phone and a laptop, because answers can differ, and repeat it every month. Then check your website: does it answer fees, finance, emergencies, treatments, opening hours and location in clear, complete sentences that ChatGPT can quote? Teething Issues does both checks for you, using a citability score out of 100 and a town-by-town record of whether ChatGPT names your practice, then sends you your real score, what’s holding you back and how to fix it, with a dated before-and-after."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What does ChatGPT look for when it recommends a dentist?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "When a patient asks ChatGPT to recommend a dentist, it looks for practices it can clearly understand and trust. That usually means a website that answers patients’ real questions in complete, self-contained sentences: what treatments the practice offers, what they cost or start from, whether finance is available, how to get an emergency appointment, opening hours, parking and exactly where the practice is. It also weighs signs of trust from elsewhere, such as Google reviews, a complete Google Business Profile, mentions on other trusted websites and consistent practice details everywhere. Pages that are mostly images, vague slogans or answers hidden in PDFs are hard for ChatGPT to quote, so the practice gets left out. Teething Issues measures how quotable each page is with a citability score out of 100, then rewrites the weakest sections so ChatGPT can name the practice with confidence."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "How long does it take for ChatGPT to start recommending my practice?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "It usually takes weeks to months, not days. Once the fixes are live on your website, ChatGPT and Google need time to read the updated pages again, and to see the same clear details about your practice elsewhere, such as your Google Business Profile and reviews. Some practices start appearing for a few searches within a few weeks, but it can take up to 6 months for ChatGPT and Google to recommend a practice consistently. That’s why Teething Issues measures before and after with the same tools, re-tests on a set date, and tells you honestly where you stand each time, rather than promising an overnight result. The sooner the fixes go live, the sooner the clock starts, and most local competitors haven’t started yet."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What is a ChatGPT visibility audit?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "A ChatGPT visibility audit is a check of how easily ChatGPT, Perplexity and Google's answer boxes can find, understand and recommend a dental practice. This newer kind of search optimisation is often called GEO, short for generative engine optimisation. Traditional SEO helps a practice appear in Google's list of links. GEO helps a practice appear inside the answer itself when a patient asks ChatGPT for a recommendation. Teething Issues runs two real measurements for every practice. First, a citability score out of 100, which measures how much of the practice website ChatGPT can clearly read and quote. Second, a town-by-town check, which asks ChatGPT for the best private dentists in the practice's town and records whether the practice appears. Most practices have never checked either, and many score around 40 out of 100."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "Why does ChatGPT visibility matter for a dental practice?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "ChatGPT visibility matters because more patients are starting their search with ChatGPT instead of scrolling through a page of links. When a patient asks ChatGPT for a family dentist, an emergency appointment or Invisalign in a particular town, ChatGPT names a small number of practices and explains why. A practice that is not named in that answer is invisible to that patient, however good the dentistry is. The practices ChatGPT and similar tools recommend are usually the ones whose websites answer patients' questions clearly: fees, finance, emergency appointments, treatments, opening hours and location, written as complete, self-contained answers. The good news is that ChatGPT visibility is still new. Most dental practices, and most of their local competitors, have not started working on it yet, so the practices that fix their websites early have a real head start in their area."
-   }
-  },
-  {
-   "@type": "Question",
-   "name": "What results can a practice expect?",
-   "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "A practice can expect a measurable improvement, shown with a dated before-and-after, rather than a promise of a perfect score. On the citability measurement, well-run websites typically score between 60 and 75 out of 100, and most dental practices we check start at around 40. No real website scores 100, because the scale rewards writing styles no patient would want to read. What matters most is the town-by-town result: whether the practice now comes up when patients in that town ask ChatGPT for a dentist. For example, we applied exactly the same method to our own newest website, a consumer site for Christmas phone calls, and took the citability score from 32.5 to 62.8 in one afternoon, with no section left graded D or F. Every client gets the same before-and-after, measured with the same tools, so the result is proof rather than marketing."
-   }
-  },
   {
    "@type": "Question",
    "name": "Will my website score 100?",
@@ -504,7 +145,81 @@ nav.site{position:sticky}
    }
   }
  ]
-}</script><style id="sys-page">
+}
+</script>
+<style id="glass-site">
+body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transparent 70%),radial-gradient(36% 30% at 92% 52%,rgba(182,160,120,.32),transparent 70%),radial-gradient(42% 30% at 18% 92%,rgba(194,183,162,.5),transparent 70%),var(--bg,#E7E1D6)}
+.card,.tile,.ai-glass{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22))!important;
+ border:1px solid rgba(255,255,255,.75)!important;border-radius:24px!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 44px 70px -38px rgba(51,46,39,.38),0 12px 24px -14px rgba(51,46,39,.2)!important;
+ transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gl-up{opacity:0;transform:translateY(12px)}.gl-up.in{opacity:1;transform:none}
+.gl-up.in:hover{transform:translateY(-5px)}
+@media (prefers-reduced-motion:reduce){.gl-up{opacity:1;transform:none}}
+</style><meta name="robots" content="noindex"><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style><style id="home-nav-btn">/* NAV — dark pill, floats over the hero */
+nav.site{position:sticky;top:12px;z-index:40;display:flex;justify-content:center;padding:0 12px;margin-bottom:-62px}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;max-width:920px;
+  background:var(--ink);border-radius:999px;padding:9px 9px 9px 22px;box-shadow:0 16px 34px -16px rgba(51,46,39,.5)}
+.brand{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:.02em;color:var(--panel-2)}
+.navlinks{display:flex;gap:36px;font-size:16.5px;font-weight:600;letter-spacing:.03em;color:#F7F3EB}
+.navlinks a:hover{color:#D8BE8E}
+.nav-cta{font:600 12.5px/1 var(--sans);background:var(--panel-2);color:var(--ink);border-radius:999px;padding:11px 18px;white-space:nowrap}
+@media(max-width:760px){.navlinks{display:none}}
+.btn{font:600 15px/1 var(--sans);border-radius:999px;padding:17px 28px;display:inline-block;text-align:center;transition:transform .15s}
+.btn.primary{background:var(--ink);color:var(--panel-2)}
+.btn.light{background:var(--panel-2);color:var(--ink)}
+.btn.ghost{border:1.5px solid var(--line-2);color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-row a{text-decoration:underline;text-underline-offset:3px}
+.navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}
+.navlinks a:hover::after{transform:scaleX(1)}
+.btn.primary{background:linear-gradient(180deg,#4A4238,#2B2620)!important;color:#FCFAF3!important;border-color:rgba(255,255,255,.18)!important;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 14px 28px -10px rgba(0,0,0,.5)!important}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}
+@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}</style>
+<style id="sf-tiles">
+.sf-head{text-align:center;margin-bottom:22px}.sf-head h2{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink)}.sf-head h2 em{color:var(--accent)}
+.sf-grid{list-style:none;margin:0 auto;padding:0;max-width:1040px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}.sf-grid li{flex:0 0 calc(25% - 11px);min-height:0;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center!important;padding:20px 16px!important}
+.sf-grid li{padding:22px 20px;border-radius:22px;text-align:left;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 40px 60px -36px rgba(51,46,39,.4);opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
+.sf-grid li.in{opacity:1;transform:none}
+.sf-grid li b{display:block;white-space:nowrap;font-family:var(--serif);font-size:18.5px;line-height:1.2;font-weight:600;color:var(--ink)}
+.sf-grid li span{display:block;margin-top:4px;font-size:14px;color:var(--ink-dim)}
+
+.sf-foot{text-align:center;margin-top:8px}
+@media(max-width:1100px){.sf-grid li b{white-space:normal}}@media(max-width:900px){.sf-grid li{flex-basis:calc(50% - 7px)}}
+@media(max-width:560px){.sf-grid{padding:0 12px;gap:10px}.sf-grid li{flex-basis:calc(50% - 5px);min-height:0;padding:16px 10px!important}.sf-grid li b{font-size:16px}.sf-grid li span{font-size:12.5px}}
+@media (prefers-reduced-motion:reduce){.sf-grid li{opacity:1;transform:none}}
+</style>
+<style id="nav-dd">
+.nav-dd{position:relative;display:inline-flex;align-items:center}
+.nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px;margin:0;line-height:inherit;display:inline-flex;align-items:center;gap:4px;position:relative;top:-1px}
+.nav-ddb span{font-size:12px;margin-left:2px}
+.nav-ddm{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:250px;padding:8px;border-radius:16px;background:#332E27;box-shadow:0 20px 40px -12px rgba(0,0,0,.45);display:none;z-index:50}
+.nav-ddm::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.nav-dd:hover .nav-ddm,.nav-dd:focus-within .nav-ddm{display:block}
+.nav-ddm a{display:block;padding:10px 12px;border-radius:10px;font-family:var(--sans)!important;font-size:15px!important;font-weight:600!important;color:#F7F3EB!important;letter-spacing:0!important}
+.nav-ddm a::after{display:none!important}
+.nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
+.nav-ddm a:hover{background:rgba(255,255,255,.08)}
+</style>
+<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style>
+<style id="nav-phone">
+.nav-burger{display:none;background:none;border:0;cursor:pointer;padding:8px 6px;margin-left:4px}
+.nav-burger span{display:block;width:20px;height:2px;margin:4px 0;background:#F1E6CF;border-radius:2px}
+.nav-phone{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#332E27;border-radius:22px;padding:14px;display:grid;gap:2px;z-index:60}
+.nav-phone[hidden]{display:none!important}
+.nav-phone a{display:block;padding:11px 12px;border-radius:12px;font-family:var(--serif);font-size:19px;font-weight:600;color:#F7F3EB!important}
+.nav-phone a small{font-family:var(--sans);font-size:12px;font-weight:400;color:#CDBFA8;margin-left:6px}
+.nav-phone .np-h{margin:8px 12px 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
+.nav-phone .np-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.nav-phone .np-btns a{font-family:var(--sans);font-size:14px;text-align:center;border-radius:999px;padding:13px 10px}
+.nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}
+</style><style id="shero-css">
 .shero{padding:clamp(120px,14vw,150px) 0 clamp(40px,6vw,64px);text-align:center;background:radial-gradient(40% 60% at 15% 30%,rgba(194,183,162,.55),transparent 75%),radial-gradient(40% 60% at 85% 70%,rgba(182,160,120,.35),transparent 75%),var(--bg)}
 .shero-for{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600}
 .shero-part{margin-top:6px;font-size:13.5px;color:var(--ink-dim)}
@@ -528,13 +243,11 @@ nav.site{position:sticky}
 .dd-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
 .dd-chips span{font-size:13px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.6);border:1px solid var(--line);color:var(--ink)}
 .sys-one .sys-row{margin-top:8px}
-.res-line{margin:14px 0 0;font-size:14px;font-weight:600;color:#8C7A62}.vis-n{font-family:Jost,sans-serif;font-weight:500;font-size:clamp(40px,5vw,56px);color:#332E27;margin:6px 0 2px}.vis-n span{color:#D8BE8E}
 .demo-num a{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,40px);color:var(--ink);letter-spacing:.01em;margin:6px 0 2px}.demo-p{margin:0;color:var(--ink-dim);font-size:15px;line-height:1.5}.sys-panel .btn{justify-self:start}
 @media(max-width:760px){.dd-grid{grid-template-columns:1fr}.dd{padding:22px 18px}}
 @media (prefers-reduced-motion:reduce){.dd{opacity:1;transform:none}}
-</style><meta name="robots" content="noindex"></head>
+</style><style id="refresh-fit">.sf{padding:clamp(40px,6vw,70px) 0}.sf-head h2,.sf-h{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink);font-size:clamp(24px,3vw,30px)}.sf-h em{color:var(--accent)}.sf-grid li{opacity:1;transform:none}.sf .wrap{max-width:1100px}.sf-grid{max-width:1040px}.shero-intro{max-width:640px;margin:12px auto 0;font-size:15px;color:var(--ink-dim);line-height:1.55}.shero-intro:empty{display:none}</style><style id="res-line-css">.res-line{margin:14px 0 0;font-size:14px;font-weight:600;color:#8C7A62;letter-spacing:.02em}</style></head>
 <body>
-
 <nav class="site">
   <div class="nav-row">
     <a href="/" class="brand">Teething Issues</a>
@@ -548,55 +261,79 @@ nav.site{position:sticky}
   </div><div class="nav-phone" hidden><a href="/">Home</a><div class="np-h">Demos</div><a href="/receptionist/">Receptionist <small>part of Growth</small></a><a href="/twin/">Digital twin <small>part of Growth</small></a><a href="/management/demo/">Hiring manager <small>part of Operations</small></a><div class="np-btns"><a class="np-gold" href="/free-trial/">Start free trial</a><a class="np-dark" href="tel:+442038698658">Call us now</a></div></div>
 </nav>
 
-<header class="shero"><div class="wrap"><div class="shero-for">Google &amp; ChatGPT visibility</div><div class="shero-part">Part of Growth &middot; included, no extra cost</div><h1 class="shero-h">Is ChatGPT recommending <em>your practice?</em></h1><p class="shero-sub"><span>Patients now ask ChatGPT for a dentist.</span> We make sure it names you.</p><div class="shero-btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a><a class="btn hc2" href="/free-trial/" data-t="trial:hero">Start free trial</a></div><p class="res-line">&#10003; Results seen in 2 weeks</p></div></header>
+<header class="shero"><div class="wrap"><div class="shero-for">Google &amp; ChatGPT visibility</div><div class="shero-part">Part of Growth &middot; included, no extra cost</div><h1 class="shero-h">Is ChatGPT recommending <em>your practice?</em></h1><p class="shero-sub"><span>Patients now ask ChatGPT for a dentist.</span> We check if you come up, fix it, and prove it.</p><p class="shero-intro">Patients now ask ChatGPT &ldquo;who&rsquo;s a good private dentist near me?&rdquo;. Teething Issues checks whether your dental practice comes up in ChatGPT and Google&rsquo;s answers, fixes what&rsquo;s stopping it, and proves the result with a dated before-and-after.</p><div class="shero-btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a><a class="btn hc2" href="/free-trial/" data-t="trial:hero">Start free trial</a></div><p class="res-line">&#10003; Results seen in 2 weeks</p></div><div class="pa sf"><div class="wrap"><div class="sf-head"><p class="sf-h">A patient asks ChatGPT for a dentist. <em>It names someone else.</em></p></div><ul class="sf-grid"><li><b>&ldquo;Best dentist near me?&rdquo;</b><span>and you&rsquo;re not in the answer.</span></li><li><b>The practice down the road</b><span>gets named instead.</span></li><li><b>Fees, finance, emergencies,</b><span>answered nowhere on your site.</span></li><li><b>No idea</b><span>what ChatGPT says about you.</span></li></ul><div class="sf-foot"><a class="sf-turn" href="#what-is" data-t="sf:turn">There&rsquo;s a better way. <span>&darr;</span></a></div></div></div></header>
 
-<section class="pa sf"><div class="wrap"><div class="sf-head"><h2>A patient asks ChatGPT for a dentist. <em>It names someone else.</em></h2></div><ul class="sf-grid"><li><b>&ldquo;Best dentist near me?&rdquo;</b><span>and you&rsquo;re not in the answer.</span></li><li><b>The practice down the road</b><span>gets named instead.</span></li><li><b>Fees, finance, emergencies,</b><span>answered nowhere on your site.</span></li><li><b>No idea</b><span>what ChatGPT says about you.</span></li></ul><div class="sf-foot"><a class="sf-turn" href="#what" data-t="sf:turn">There&rsquo;s a better way. <span>&darr;</span></a></div></div></section>
+<div class="wrap">
+  <section class="final" id="check" style="scroll-margin-top:80px;text-align:center"><h2>Is ChatGPT naming <em>your practice?</em></h2><p>Find out where you really stand in 3 minutes, then try it free.</p><div class="shero-btns" style="justify-content:center;margin-top:18px"><a class="btn primary" href="/free-trial/" data-t="trial:geo">Start free trial</a><a class="btn hc2" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a></div></section>
 
-<section class="sys sys-one" id="what"><div class="wrap"><div class="sys-head"><div class="el-eyebrow">What we do</div><h2 class="sys-h">Found on Google. <em>Named by ChatGPT.</em></h2></div><div class="sys-row"><div class="sys-text"><div class="sys-n">What we do</div><h3>We check. We fix. <em>We prove it.</em></h3>
-   <ul><li><b>Your real score,</b> out of 100, for how easily ChatGPT can quote you.</li><li><b>Your town check:</b> does ChatGPT name you when local patients ask?</li><li><b>Every fix written for you,</b> ready to paste in.</li><li><b>A dated before-and-after,</b> with the same tools.</li></ul></div>
-   <div class="sys-panel" data-stamp="example"><div class="sp-top">Our own website</div><div class="vis-n">0 <span>&rarr;</span> 44</div><p class="demo-p">Blocked from ChatGPT before. Fixed, rewritten and re-tested.</p>
-   <div class="glass-card pill">Found on Google within 2 weeks</div></div></div></div></section><section class="dd-wrap"><div class="wrap"><div class="shead"><div class="eyebrow">Piece by piece</div><h2>Here&rsquo;s exactly <em>what you get.</em></h2></div><div class="dd-grid"><article class="dd"><div class="dd-n">Your score</div><h3>Where you <em>really stand.</em></h3><ul><li><b>Every page read,</b> scored out of 100.</li><li><b>Most practices score about 40.</b> Well-run sites score 60 to 75.</li><li><b>No one scores 100,</b> and we never promise it.</li></ul></article><article class="dd"><div class="dd-n">The fixes</div><h3>Written for you. <em>Ready to paste.</em></h3><ul><li><b>Fees, finance, emergencies and treatments</b> answered clearly.</li><li><b>Google basics fixed too:</b> titles, descriptions and headings.</li><li><b>Or we put it all live for you,</b> as part of Growth.</li></ul></article><article class="dd"><div class="dd-n">Your town check</div><h3>Does ChatGPT <em>name you?</em></h3><ul><li><b>We ask ChatGPT what your patients ask,</b> in your town.</li><li><b>We record who it names,</b> and whether it&rsquo;s you.</li><li><b>Then we check again</b> after the fixes.</li></ul></article><article class="dd"><div class="dd-n">Proof</div><h3>Before and after. <em>Side by side.</em></h3><ul><li><b>Re-tested on a set date,</b> with the same tools.</li><li><b>Results seen in 2 weeks</b> on our own site.</li><li><b>Recommended every time</b> can take up to 6 months, and we say so.</li></ul></article></div></div></section>
+  <section>
+    <h2>What is a ChatGPT visibility audit?</h2>
+    <p>A ChatGPT visibility audit is a check of how easily ChatGPT, Perplexity and Google's answer boxes can find, understand and recommend a dental practice. This newer kind of search optimisation is often called GEO, short for generative engine optimisation. Traditional SEO helps a practice appear in Google's list of links. GEO helps a practice appear inside the answer itself when a patient asks ChatGPT for a recommendation. Teething Issues runs two real measurements for every practice. First, a citability score out of 100, which measures how much of the practice website ChatGPT can clearly read and quote. Second, a town-by-town check, which asks ChatGPT for the best private dentists in the practice's town and records whether the practice appears. Most practices have never checked either, and many score around 40 out of 100.</p>
+  </section>
 
-<section class="proofs"><div class="wrap"><div class="xp"><h2>Not theory. <em>Done inside real practices.</em></h2>
-<div class="stats"><div><b>12+</b><span>practices worked with</span></div><div><b>15+</b><span>years as dental care professionals</span></div><div><b>&pound;80k &rarr; &pound;125k</b><span>monthly revenue grown</span></div><div><b>3</b><span>new practices opened, from CQC registration to a full diary</span></div><div><b>CQC</b><span>inspections led, calm on the day</span></div></div></div><a class="hcard" href="/free-trial/" data-t="trial:proof"><div><h2>Where does your practice <em>really stand?</em></h2><p>3 minutes, off the top of your head. Then a free trial, picked for your practice.</p></div><span class="hbtn">Start free trial &rarr;</span></a></div></div></section>
-<section class="fixes" id="fixes"><div class="wrap"><div class="shead"><div class="eyebrow">What changes</div><h2>What you&rsquo;ll <em>feel</em> first.</h2></div><div class="feel"><div class="ft"><div class="n">01</div><h3>Found first.</h3><p>Named when local patients ask ChatGPT and Google.</p></div><div class="ft"><div class="n">02</div><h3>Ahead of the practice down the road.</h3><p>Most haven&rsquo;t started yet.</p></div><div class="ft"><div class="n">03</div><h3>Proof, not promises.</h3><p>A dated before-and-after you can see.</p></div></div></div></section>
+  <section>
+    <h2>Why does ChatGPT visibility matter for a dental practice?</h2>
+    <p>ChatGPT visibility matters because more patients are starting their search with ChatGPT instead of scrolling through a page of links. When a patient asks ChatGPT for a family dentist, an emergency appointment or Invisalign in a particular town, ChatGPT names a small number of practices and explains why. A practice that is not named in that answer is invisible to that patient, however good the dentistry is. The practices ChatGPT and similar tools recommend are usually the ones whose websites answer patients' questions clearly: fees, finance, emergency appointments, treatments, opening hours and location, written as complete, self-contained answers. The good news is that ChatGPT visibility is still new. Most dental practices, and most of their local competitors, have not started working on it yet, so the practices that fix their websites early have a real head start in their area.</p>
+  </section>
 
+  <section>
+    <h2>What results can a practice expect?</h2>
+    <p>A practice can expect a measurable improvement, shown with a dated before-and-after, rather than a promise of a perfect score. On the citability measurement, well-run websites typically score between 60 and 75 out of 100, and most dental practices we check start at around 40. No real website scores 100, because the scale rewards writing styles no patient would want to read. What matters most is the town-by-town result: whether the practice now comes up when patients in that town ask ChatGPT for a dentist. For example, we applied exactly the same method to our own newest website, a consumer site for Christmas phone calls, and took the citability score from 32.5 to 62.8 in one afternoon, with no section left graded D or F. Every client gets the same before-and-after, measured with the same tools, so the result is proof rather than marketing.</p>
+    <div class="proof">
+      <div><b>32.5</b><span>Our own site, before</span></div>
+      <div class="up"><b>62.8</b><span>After, same afternoon</span></div>
+      <div><b>0</b><span>Sections left graded D or F</span></div>
+    </div>
+  </section>
 
+  <section id="price">
+    <h2>How much does a ChatGPT visibility audit cost?</h2>
+    <p>A ChatGPT visibility audit and fixes plan for a single dental practice is paid once. It covers a full audit of every page on the practice website, the exact fixes named one by one, new content sections written ready to paste in, an SEO health check with the Google basics fixed (page titles, descriptions, headings and structured data), and a dated before-and-after re-test. Practices that would rather not do the work themselves can add ongoing GEO management, where Teething Issues puts the fixes live and re-tests every month. We always tell you the price first. <a href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a>.</p>
+    <div class="prices">
+      <div class="price main"><div class="amt">One-off</div><div class="what">Audit and fixes plan for one practice, SEO health check included</div></div>
+      <div class="price ai-glass"><div class="amt">Monthly</div><div class="what">Optional ongoing management: we put the fixes live and re-test monthly</div></div>
+    </div>
+  </section>
 
-<div class="cta2"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a><p>30 minutes &middot; No obligation</p></div>
-<section class="how">
-  <div class="wrap">
-    <div class="shead"><div class="eyebrow">How we work</div><h2>Step by step, <em>never all at once.</em></h2></div>
-    <ol class="how-steps"><li><b>1</b><h3>A chat</h3><p>30 minutes on your numbers and what matters most. Rough is fine.</p></li><li><b>2</b><h3>One system at a time</h3><p>Side by side with your team, until it&rsquo;s second nature.</p></li><li><b>3</b><h3>Proof, then the next step</h3><p>Your real numbers before and after. Then we decide together.</p></li></ol>
-    <div class="how-cta"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a></div>
-  </div>
-</section>
+  <section>
+    <h2>How does it work, step by step?</h2>
+    <ol class="steps">
+      <li><b>Check my practice.</b> Pop your name, email and practice in the form below. We email you your real score, what's holding you back, and how to fix it.</li>
+      <li><b>Want us to do the fix?</b> Just reply yes, and we send a secure payment link (card, Apple Pay or Google Pay).</li>
+      <li><b>Full audit.</b> We check every page of the website and every question patients ask ChatGPT and similar tools about dentists in your town.</li>
+      <li><b>Fixes plan.</b> You receive the fixes, the new content written ready to paste in, and simple instructions for whoever looks after your website. On the monthly plan, we put it live for you.</li>
+      <li><b>Re-test.</b> We run the same checks again and send a dated before-and-after report.</li>
+    </ol>
+    <p class="note">Once the fixes are live, it can take up to 6 months for ChatGPT and Google to start recommending you. We re-test and tell you honestly where you stand each time.</p>
+  </section>
 
+  <section>
+    <h2>Questions practice owners ask</h2>
+    <details><summary><h3>How can I check if ChatGPT recommends my dental practice?</h3></summary><p>The quickest way to check is to ask ChatGPT the questions your patients ask, in the way they ask them: for example, &ldquo;Who is the best private dentist in [your town]?&rdquo;, &ldquo;Where can I get Invisalign near [your town]?&rdquo; or &ldquo;Which dentist in [your town] takes emergency appointments?&rdquo;. Note which practices are named, and whether yours is one of them. Try it on a phone and a laptop, because answers can differ, and repeat it every month. Then check your website: does it answer fees, finance, emergencies, treatments, opening hours and location in clear, complete sentences that ChatGPT can quote? Teething Issues does both checks for you, using a citability score out of 100 and a town-by-town record of whether ChatGPT names your practice, then sends you your real score, what&rsquo;s holding you back and how to fix it, with a dated before-and-after.</p></details>
+<details><summary><h3>What does ChatGPT look for when it recommends a dentist?</h3></summary><p>When a patient asks ChatGPT to recommend a dentist, it looks for practices it can clearly understand and trust. That usually means a website that answers patients&rsquo; real questions in complete, self-contained sentences: what treatments the practice offers, what they cost or start from, whether finance is available, how to get an emergency appointment, opening hours, parking and exactly where the practice is. It also weighs signs of trust from elsewhere, such as Google reviews, a complete Google Business Profile, mentions on other trusted websites and consistent practice details everywhere. Pages that are mostly images, vague slogans or answers hidden in PDFs are hard for ChatGPT to quote, so the practice gets left out. Teething Issues measures how quotable each page is with a citability score out of 100, then rewrites the weakest sections so ChatGPT can name the practice with confidence.</p></details>
+<details><summary><h3>How long does it take for ChatGPT to start recommending my practice?</h3></summary><p>It usually takes weeks to months, not days. Once the fixes are live on your website, ChatGPT and Google need time to read the updated pages again, and to see the same clear details about your practice elsewhere, such as your Google Business Profile and reviews. Some practices start appearing for a few searches within a few weeks, but it can take up to 6 months for ChatGPT and Google to recommend a practice consistently. That&rsquo;s why Teething Issues measures before and after with the same tools, re-tests on a set date, and tells you honestly where you stand each time, rather than promising an overnight result. The sooner the fixes go live, the sooner the clock starts, and most local competitors haven&rsquo;t started yet.</p></details>
+<details><summary><h3>Will my website score 100?</h3></summary><p>No, and be careful of any company that promises 100 out of 100. The citability scale is a measuring tool, and it rewards a style of writing that no real patient would want to read, so real websites do not score 100. Well-run websites usually score between 60 and 75. What you get from us is more useful: a real, measured improvement, shown with a dated before-and-after using the same tools, and a clear town-by-town record of whether your practice appears when patients ask ChatGPT for a dentist in your area. Most practices start at around 40, so moving into the 60 to 75 range is a big, visible change, and it is the change that affects whether ChatGPT and similar tools recommend you.</p></details>
+    <details><summary><h3>Is GEO the same as SEO?</h3></summary><p>GEO and SEO are related but not the same. SEO, search engine optimisation, helps a website rank in Google's list of links. GEO, generative engine optimisation, helps a website get named inside the answers that ChatGPT, Perplexity and Google's overviews write for patients. Many of the fixes help both: clear, complete answers to patients' questions, correct structured data, and a well-organised website. That is why every Teething Issues audit includes an SEO health check alongside the ChatGPT visibility work. A practice can rank well on Google and still be missing from ChatGPT's answers, and the reverse can also happen, which is why we measure both separately.</p></details>
+    <details><summary><h3>Do I need to know anything technical?</h3></summary><p>No technical knowledge is needed. Teething Issues writes every fix in plain English, including the new content, the page titles and descriptions, and the behind-the-scenes structured data. The practice simply passes the fixes pack to whoever looks after the website, such as a web developer or the company that built the site, along with our step-by-step instructions. Practices that use WordPress, which many dental websites do, usually find the changes quick to make. Practices that would rather not deal with it at all can choose ongoing GEO management, and Teething Issues puts the fixes live directly, with the practice's permission and a website login.</p></details>
+    <details><summary><h3>How long does it take?</h3></summary><p>Your score and the fix come back by email once we have run the real measurements on your website. After you say yes and pay, the full audit and fixes plan follow, and the before-and-after re-test is run once the fixes are live on your website, because ChatGPT and similar tools need to see the updated pages. The exact timing depends on how quickly the fixes are put live. Practices on the monthly management plan, where Teething Issues makes the changes directly, usually see the re-test fastest. Once the fixes are live, it can take up to 6 months for ChatGPT and Google to start recommending you. We re-test and tell you honestly where you stand each time.</p></details>
+  </section>
 
+  <section class="final">
+    <h2>Does ChatGPT recommend your practice?</h2>
+    <div class="ctas" style="justify-content:center;margin-top:10px">
+      <a class="btn primary" href="#check" data-t="score">Check my practice</a> <a class="btn ghost" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a>
+    </div>
+  </section>
 
-<section class="faq" id="faq">
-  <div class="narrow">
-    <div class="shead"><div class="eyebrow">Questions</div><h2>Real answers.</h2></div>
-    <div class="faq-list"><details class="faq-item"><summary><h3 class="q">How can I check if ChatGPT recommends my dental practice?</h3></summary><p>The quickest way to check is to ask ChatGPT the questions your patients ask, in the way they ask them: for example, &ldquo;Who is the best private dentist in [your town]?&rdquo;, &ldquo;Where can I get Invisalign near [your town]?&rdquo; or &ldquo;Which dentist in [your town] takes emergency appointments?&rdquo;. Note which practices are named, and whether yours is one of them. Try it on a phone and a laptop, because answers can differ, and repeat it every month. Then check your website: does it answer fees, finance, emergencies, treatments, opening hours and location in clear, complete sentences that ChatGPT can quote? Teething Issues does both checks for you, using a citability score out of 100 and a town-by-town record of whether ChatGPT names your practice, then sends you your real score, what&rsquo;s holding you back and how to fix it, with a dated before-and-after.</p></details><details class="faq-item"><summary><h3 class="q">What does ChatGPT look for when it recommends a dentist?</h3></summary><p>When a patient asks ChatGPT to recommend a dentist, it looks for practices it can clearly understand and trust. That usually means a website that answers patients&rsquo; real questions in complete, self-contained sentences: what treatments the practice offers, what they cost or start from, whether finance is available, how to get an emergency appointment, opening hours, parking and exactly where the practice is. It also weighs signs of trust from elsewhere, such as Google reviews, a complete Google Business Profile, mentions on other trusted websites and consistent practice details everywhere. Pages that are mostly images, vague slogans or answers hidden in PDFs are hard for ChatGPT to quote, so the practice gets left out. Teething Issues measures how quotable each page is with a citability score out of 100, then rewrites the weakest sections so ChatGPT can name the practice with confidence.</p></details><details class="faq-item"><summary><h3 class="q">How long does it take for ChatGPT to start recommending my practice?</h3></summary><p>It usually takes weeks to months, not days. Once the fixes are live on your website, ChatGPT and Google need time to read the updated pages again, and to see the same clear details about your practice elsewhere, such as your Google Business Profile and reviews. Some practices start appearing for a few searches within a few weeks, but it can take up to 6 months for ChatGPT and Google to recommend a practice consistently. That&rsquo;s why Teething Issues measures before and after with the same tools, re-tests on a set date, and tells you honestly where you stand each time, rather than promising an overnight result. The sooner the fixes go live, the sooner the clock starts, and most local competitors haven&rsquo;t started yet.</p></details><details class="faq-item"><summary><h3 class="q">What is a ChatGPT visibility audit?</h3></summary><p>A ChatGPT visibility audit is a check of how easily ChatGPT, Perplexity and Google's answer boxes can find, understand and recommend a dental practice. This newer kind of search optimisation is often called GEO, short for generative engine optimisation. Traditional SEO helps a practice appear in Google's list of links. GEO helps a practice appear inside the answer itself when a patient asks ChatGPT for a recommendation. Teething Issues runs two real measurements for every practice. First, a citability score out of 100, which measures how much of the practice website ChatGPT can clearly read and quote. Second, a town-by-town check, which asks ChatGPT for the best private dentists in the practice's town and records whether the practice appears. Most practices have never checked either, and many score around 40 out of 100.</p></details><details class="faq-item"><summary><h3 class="q">Why does ChatGPT visibility matter for a dental practice?</h3></summary><p>ChatGPT visibility matters because more patients are starting their search with ChatGPT instead of scrolling through a page of links. When a patient asks ChatGPT for a family dentist, an emergency appointment or Invisalign in a particular town, ChatGPT names a small number of practices and explains why. A practice that is not named in that answer is invisible to that patient, however good the dentistry is. The practices ChatGPT and similar tools recommend are usually the ones whose websites answer patients' questions clearly: fees, finance, emergency appointments, treatments, opening hours and location, written as complete, self-contained answers. The good news is that ChatGPT visibility is still new. Most dental practices, and most of their local competitors, have not started working on it yet, so the practices that fix their websites early have a real head start in their area.</p></details><details class="faq-item"><summary><h3 class="q">What results can a practice expect?</h3></summary><p>A practice can expect a measurable improvement, shown with a dated before-and-after, rather than a promise of a perfect score. On the citability measurement, well-run websites typically score between 60 and 75 out of 100, and most dental practices we check start at around 40. No real website scores 100, because the scale rewards writing styles no patient would want to read. What matters most is the town-by-town result: whether the practice now comes up when patients in that town ask ChatGPT for a dentist. For example, we applied exactly the same method to our own newest website, a consumer site for Christmas phone calls, and took the citability score from 32.5 to 62.8 in one afternoon, with no section left graded D or F. Every client gets the same before-and-after, measured with the same tools, so the result is proof rather than marketing.</p></details><details class="faq-item"><summary><h3 class="q">Will my website score 100?</h3></summary><p>No, and be careful of any company that promises 100 out of 100. The citability scale is a measuring tool, and it rewards a style of writing that no real patient would want to read, so real websites do not score 100. Well-run websites usually score between 60 and 75. What you get from us is more useful: a real, measured improvement, shown with a dated before-and-after using the same tools, and a clear town-by-town record of whether your practice appears when patients ask ChatGPT for a dentist in your area. Most practices start at around 40, so moving into the 60 to 75 range is a big, visible change, and it is the change that affects whether ChatGPT and similar tools recommend you.</p></details><details class="faq-item"><summary><h3 class="q">Is GEO the same as SEO?</h3></summary><p>GEO and SEO are related but not the same. SEO, search engine optimisation, helps a website rank in Google's list of links. GEO, generative engine optimisation, helps a website get named inside the answers that ChatGPT, Perplexity and Google's overviews write for patients. Many of the fixes help both: clear, complete answers to patients' questions, correct structured data, and a well-organised website. That is why every Teething Issues audit includes an SEO health check alongside the ChatGPT visibility work. A practice can rank well on Google and still be missing from ChatGPT's answers, and the reverse can also happen, which is why we measure both separately.</p></details><details class="faq-item"><summary><h3 class="q">Do I need to know anything technical?</h3></summary><p>No technical knowledge is needed. Teething Issues writes every fix in plain English, including the new content, the page titles and descriptions, and the behind-the-scenes structured data. The practice simply passes the fixes pack to whoever looks after the website, such as a web developer or the company that built the site, along with our step-by-step instructions. Practices that use WordPress, which many dental websites do, usually find the changes quick to make. Practices that would rather not deal with it at all can choose ongoing GEO management, and Teething Issues puts the fixes live directly, with the practice's permission and a website login.</p></details><details class="faq-item"><summary><h3 class="q">How long does it take?</h3></summary><p>Your score and the fix come back by email once we have run the real measurements on your website. After you say yes and pay, the full audit and fixes plan follow, and the before-and-after re-test is run once the fixes are live on your website, because ChatGPT and similar tools need to see the updated pages. The exact timing depends on how quickly the fixes are put live. Practices on the monthly management plan, where Teething Issues makes the changes directly, usually see the re-test fastest. Once the fixes are live, it can take up to 6 months for ChatGPT and Google to start recommending you. We re-test and tell you honestly where you stand each time.</p></details></div>
-</div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="narrow">
-    <h2>Be the practice <em>ChatGPT names.</em></h2>
-    <div class="hero-btns"><a class="btn light" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a><a class="btn hc2 callbtn" href="tel:+442038698658" data-t="call:final">Or call our sales team now</a></div>
-    <p class="note">No obligation · Rough numbers are fine · We only take on practices we can genuinely help</p>
-  </div>
-</section>
-
+  <nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6F655A;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/management/" style="color:inherit">Management department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
 <p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
 <footer>
   <div class="wrap foot-row">
-    <span>© Teething Issues Ltd. All rights reserved · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/" aria-current="page" style="color:var(--accent)">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
+    <span>© Teething Issues Ltd. All rights reserved · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
     <span>hello@teethingissues.com · UK based · ICO registered · <a href="https://maps.google.com/?cid=10940364418897089874" target="_blank" rel="noopener" data-t="gbp">Find us on Google</a> · <a href="https://g.page/r/CRySTyo-SU45EBM/review" target="_blank" rel="noopener" data-t="gbp:review">Leave a review</a></span>
   </div>
 </footer>
+</div>
 
 <!-- visit-tracker -->
 <script>(function(){
@@ -618,15 +355,22 @@ nav.site{position:sticky}
     try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
   addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
 })();</script>
-<script>(function(){var done=new WeakSet();var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting||done.has(e.target))return;done.add(e.target);
-e.target.querySelectorAll('.cnt').forEach(function(el,i){var n=+el.dataset.n,t0=null,d=1200;el.textContent=(el.dataset.pre||'')+'0';
-setTimeout(function(){function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d);el.textContent=(el.dataset.pre||'')+Math.round(n*(1-Math.pow(1-p,3))).toLocaleString('en-GB');if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)},i*350)})})},{rootMargin:'0px 0px -15% 0px'});
-document.querySelectorAll('.sys-row').forEach(function(r){if(r.querySelector('.cnt'))io.observe(r)})})();</script><script>(function(){var l=document.querySelectorAll('.sf-grid li');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(li,i){setTimeout(function(){li.classList.add('in')},i*140)});io.disconnect()}})},{rootMargin:'0px 0px -10% 0px'});var c=document.querySelector('.sf-grid');if(c)io.observe(c)})();</script><script>(function(){var els=[].slice.call(document.querySelectorAll('.sys-row,.how-steps li,.pa .pains li'));
-document.querySelectorAll('.pa .panel').forEach(function(p){p.querySelectorAll('.pains li').forEach(function(l,i){l.style.transitionDelay=(i*0.05)+'s'})});
-els.forEach(function(r){[].slice.call(r.querySelectorAll('.sp-funnel div,.sp-list div,.glass-card')).forEach(function(c,i){c.style.transitionDelay=(0.1+i*0.08)+'s'})});
-document.querySelectorAll('.how-steps li').forEach(function(l,i){l.style.transitionDelay=(i*0.06)+'s'});
-if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});
-els.forEach(function(e){io.observe(e)})})();</script><script>(function(){var l=document.querySelectorAll('.dd');if(!('IntersectionObserver' in window)){l.forEach(function(e){e.classList.add('in')});return}
-var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});l.forEach(function(e){o.observe(e)})})();</script></body>
+<script>
+(function(){var f=document.getElementById("vf");if(!f)return;var $=function(i){return document.getElementById(i)};
+f.addEventListener("submit",function(e){e.preventDefault();var err=$("v-err"),btn=$("v-go");err.textContent="";
+ var req=["v-name","v-email","v-practice","v-site","v-town"];for(var i=0;i<req.length;i++){if(!$(req[i]).value.trim()){err.textContent="Please fill in every box so we can run your check.";$(req[i]).focus();return}}
+ var email=$("v-email").value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){err.textContent="Please enter a valid email address.";$("v-email").focus();return}
+ if(!$("v-consent").checked){err.textContent="Please tick the first box so we can email you your free report.";return}
+ btn.disabled=true;btn.textContent="Sending…";
+ var summary="Visibility check | Practice: "+$("v-practice").value.trim()+" | Name: "+$("v-name").value.trim()+" | Website: "+$("v-site").value.trim()+" | Town: "+$("v-town").value.trim()+" | More of: "+($("v-more").value.trim()||"-")+" | Marketing: "+($("v-mkt").checked?"YES":"no");
+ fetch("https://ti-waitlist.teethingissues.workers.dev",{method:"POST",headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({email:email,name:$("v-name").value.trim(),issues:summary.slice(0,600),consent:true,website:$("website").value,source:"visibility-check"})})
+ .then(function(r){return r.json()}).then(function(d){
+  if(d.ok){f.style.display="none";$("v-ok").style.display="block";try{window.fbq&&fbq("track","Lead",{content_name:"Visibility check"})}catch(x){}}
+  else{err.textContent=d.error||"Something went wrong. Please try again.";btn.disabled=false;btn.textContent="Send me my score"}})
+ .catch(function(){err.textContent="We couldn't send that just now. Please try again in a minute.";btn.disabled=false;btn.textContent="Send me my score"});
+});})();
+</script>
+<script id="glass-site-js">(function(){var c=[].slice.call(document.querySelectorAll('.card,.tile,.ai-glass'));c.forEach(function(e){e.classList.add('gl-up')});if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script><style id="hc-pill-css">.hc-pill{position:fixed;right:18px;bottom:18px;z-index:900;padding:12px 18px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(255,255,255,.65));border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 40px -18px rgba(51,46,39,.45);color:#332E27;font:500 14px Jost,sans-serif;text-decoration:none}.hc-pill b{color:#8C7A62;font-weight:600}@media(max-width:700px){.hc-pill{left:0;right:0;bottom:0;border-radius:0;text-align:center;padding:11px 12px;font-size:13.5px}}</style><a class="hc-pill" href="/free-trial/" data-t="trial:pill"><b>Free trial:</b> where does your practice really stand? &rarr;</a>
+</body>
 </html>
