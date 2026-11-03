@@ -456,7 +456,7 @@ nav.site{position:sticky}
 .sent{margin-top:14px;font-size:14px;color:var(--good)}
 .note-s{margin-top:14px;font-size:12.5px;color:var(--ink-faint);text-align:center}
 @media(max-width:560px){.tr-card{padding:22px 16px}.sc b{font-size:28px}.ch button{padding:10px 13px;font-size:13.5px}}
-</style><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head>
+</style></head>
 <body>
 
 <nav class="site">
@@ -587,10 +587,10 @@ function results(){
    (claimed?'':'<p class="alts">Rather try '+alts.map(function(x){return '<button type="button" data-alt="'+x+'">'+(x==='operations'?'Operations':x.charAt(0).toUpperCase()+x.slice(1))+'</button>'}).join(' or ')+' instead?</p>');
   $('r-trial').querySelectorAll('[data-alt]').forEach(function(b){b.addEventListener('click',function(){key=b.dataset.alt==='operations'?opsKey:b.dataset.alt;paint(key)})});
   var c=$('r-trial').querySelector('.claim');if(c)c.addEventListener('click',function(){claimed=true;send('CLAIMED | ');
-   if(key!=='growth'){ // hands-on trial in the Team app (Compliance chat, 3 Nov): normal form POST, email never in the URL
-    var f=document.createElement('form');f.method='POST';f.action='https://trial.31-97-118-70.sslip.io/start';f.style.display='none';
+   if(key!=='growth'){ // hands-on trials (Growth goes live after Ruby's review): Team app (Compliance/Operations) or Sales Engine (Growth), normal form POST, email never in the URL
+    var f=document.createElement('form');f.method='POST';f.action=(key==='growth'?'https://growthtrial.31-97-118-70.sslip.io/start':'https://trial.31-97-118-70.sslip.io/start');f.style.display='none';
     var add=function(n,v){var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v;f.appendChild(i)};
-    add('email',em.value.trim());add('practice',$('f-practice').value.trim());
+    add('email',em.value.trim());add('name',$('f-name').value.trim());add('practice',$('f-practice').value.trim());
     top.slice(0,6).forEach(function(r){add('gaps',r[1].replace(/<[^>]+>/g,'').replace(/&rsquo;/g,"'").replace(/&ldquo;|&rdquo;/g,'"').replace(/&[a-z]+;/g,' ').trim())});
     document.body.appendChild(f);setTimeout(function(){f.submit()},250);return}
    paint(key)})}
