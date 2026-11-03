@@ -525,7 +525,9 @@ function ok1(){var e=$('e1');e.textContent='';
  if(!$('f-consent').checked){e.textContent='Please tick the box so we can email you your results.';return false}return true}
 document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){
  if(cur===1&&!ok1())return;
- var st=document.querySelector('.tr-step.on'),d=st.dataset.dept;if(d)skipped[d]=false;
+ var st=document.querySelector('.tr-step.on'),d=st.dataset.dept;
+ if(d){var asked=st.querySelectorAll('.ch'),done=0;asked.forEach(function(g){if(A[g.dataset.q]!=null&&A[g.dataset.q]!=='')done++});
+  if(done===0){skipped[d]=true}else{skipped[d]=false;asked.forEach(function(g){if(A[g.dataset.q]==null){var bs=g.querySelectorAll('button');A[g.dataset.q]=bs[Math.floor(bs.length/2)].dataset.v}})}}
  if(cur===5){if(skipped.growth&&skipped.compliance&&skipped.operations){$('e5').textContent='Answer at least one section so we can find your free trial.';return}results();return}
  show(cur+1)})});
 document.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(cur-1)})});
@@ -574,10 +576,10 @@ function results(){
  $('r-risks').innerHTML=top.map(function(r){return '<li>'+r[1]+'</li>'}).join('');
  // the trial agent: their pick, else the weakest score; ops = file check unless hiring is the problem
  var pick=A.pick&&A.pick!=='auto'&&S[A.pick]!=null?A.pick:Object.keys(S).sort(function(a,b){return S[a]-S[b]})[0];
- var T={growth:['Growth','The Sales Engine, free for 14 days.','Your own numbers, turned into a daily target, your real conversion and the &ldquo;maybes&rdquo; to chase today.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Your trial is already set up with your answers.','Try everything for 14 days. No card, nothing to install.']],
-  compliance:['Compliance','Your compliance system, free for 14 days.','The real system, already showing the gaps from your answers, with pretend staff so you can try it safely.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','See your gaps, and watch a staff file checked in 16 seconds.','Try everything for 14 days. No card, nothing to install.']],
-  opsfile:['Operations','Your operations system, free for 14 days.','The real system with pretend staff: staff files, reminders and servicing, all handled for you.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Add a pretend new starter and watch the paperwork chase itself.','Try everything for 14 days. No card, nothing to install.']],
-  opshire:['Operations','Your next new starter, set up free.','The real system: the right document list for the role, chased in and ready for day one.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Add your new starter&rsquo;s role and watch the paperwork chase itself.','Try everything for 14 days. No card, nothing to install.']]};
+ var T={growth:['Growth','The Sales Engine, free for 14 days.','Your own numbers, turned into a daily target, your real conversion and the &ldquo;maybes&rdquo; to chase today.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Your trial is already set up with your answers.','Try it free for 14 days. No card, nothing to install.']],
+  compliance:['Compliance','Your compliance system, free for 14 days.','The real system, already showing the gaps from your answers, with pretend staff so you can try it safely.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','See your gaps, and watch a staff file checked in 16 seconds.','Try it free for 14 days. No card, nothing to install.']],
+  opsfile:['Operations','Your operations system, free for 14 days.','The real system with pretend staff: staff files, reminders and servicing, all handled for you.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Add a pretend new starter and watch the paperwork chase itself.','Try it free for 14 days. No card, nothing to install.']],
+  opshire:['Operations','Your next new starter, set up free.','The real system: the right document list for the role, chased in and ready for day one.',['Press &ldquo;Open my free trial&rdquo;.','Your sign-in link lands in your inbox in seconds.','Add your new starter&rsquo;s role and watch the paperwork chase itself.','Try it free for 14 days. No card, nothing to install.']]};
  var opsKey=(iss('hiring')||A.starter==='weeks'||A.starter==='never')?'opshire':'opsfile';
  var key=pick==='operations'?opsKey:pick,claimed=false;
  function paint(k){var t=T[k],alts=['growth','compliance','operations'].filter(function(x){return (k.indexOf('ops')===0?'operations':k)!==x});
