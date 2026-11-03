@@ -115,7 +115,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .foot-row a{text-decoration:underline;text-underline-offset:3px}
 .navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}
-.navlinks a:hover::after{transform:scaleX(1)}</style><style id="sf-tiles">
+.navlinks a:hover::after{transform:scaleX(1)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}
+@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}</style><style id="sf-tiles">
 .sf-head{text-align:center;margin-bottom:22px}.sf-head h2{margin:0;font-family:var(--serif);font-weight:600;color:var(--ink)}.sf-head h2 em{color:var(--accent)}
 .sf-grid{list-style:none;margin:0 auto;padding:0;max-width:1040px;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}.sf-grid li{flex:0 0 calc(25% - 11px);min-height:0;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center!important;padding:20px 16px!important}
 .sf-grid li{padding:22px 20px;border-radius:22px;text-align:left;background:linear-gradient(145deg,rgba(255,255,255,.55),rgba(255,255,255,.12));-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border:1px solid rgba(255,255,255,.8);box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(140,122,98,.2) inset,0 40px 60px -36px rgba(51,46,39,.4);opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
@@ -140,7 +143,21 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
 .nav-ddm a:hover{background:rgba(255,255,255,.08)}
 </style>
-<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style><style id="shero-css">
+<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style>
+<style id="nav-phone">
+.nav-burger{display:none;background:none;border:0;cursor:pointer;padding:8px 6px;margin-left:4px}
+.nav-burger span{display:block;width:20px;height:2px;margin:4px 0;background:#F1E6CF;border-radius:2px}
+.nav-phone{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#332E27;border-radius:22px;padding:14px;display:grid;gap:2px;z-index:60}
+.nav-phone[hidden]{display:none!important}
+.nav-phone a{display:block;padding:11px 12px;border-radius:12px;font-family:var(--serif);font-size:19px;font-weight:600;color:#F7F3EB!important}
+.nav-phone a small{font-family:var(--sans);font-size:12px;font-weight:400;color:#CDBFA8;margin-left:6px}
+.nav-phone .np-h{margin:8px 12px 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
+.nav-phone .np-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.nav-phone .np-btns a{font-family:var(--sans);font-size:14px;text-align:center;border-radius:999px;padding:13px 10px}
+.nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}
+</style><style id="shero-css">
 .shero{padding:clamp(120px,14vw,150px) 0 clamp(40px,6vw,64px);text-align:center;background:radial-gradient(40% 60% at 15% 30%,rgba(194,183,162,.55),transparent 75%),radial-gradient(40% 60% at 85% 70%,rgba(182,160,120,.35),transparent 75%),var(--bg)}
 .shero-for{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:600}
 .shero-part{margin-top:6px;font-size:13.5px;color:var(--ink-dim)}
@@ -178,8 +195,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <a href="/growth-department/">Growth</a>
       <div class="nav-dd"><button type="button" class="nav-ddb" aria-haspopup="true">Demos <span>&#9662;</span></button><div class="nav-ddm"><a href="/receptionist/" data-t="nav:demo-phone">Receptionist<small>Hear it answer &middot; part of Growth</small></a><a href="/twin/" data-t="nav:demo-twin">Digital twin<small>Videos without filming &middot; part of Growth</small></a><a href="/management/demo/" data-t="nav:demo-hiring">Hiring manager<small>Advert to day one &middot; part of Operations</small></a></div></div>
     </div>
-    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a>
-  </div>
+    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a><button type="button" class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="var m=this.parentNode.parentNode.querySelector('.nav-phone');var o=m.hidden;m.hidden=!o;this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
+  </div><div class="nav-phone" hidden><a href="/">Home</a><div class="np-h">Demos</div><a href="/receptionist/">Receptionist <small>part of Growth</small></a><a href="/twin/">Digital twin <small>part of Growth</small></a><a href="/management/demo/">Hiring manager <small>part of Operations</small></a><div class="np-btns"><a class="np-gold" href="/free-trial/">Start free trial</a><a class="np-dark" href="tel:+442038698658">Call us now</a></div></div>
 </nav><header class="shero"><div class="wrap"><div class="shero-for">Hiring manager &middot; live demo</div><div class="shero-part">Part of Operations &middot; included, no extra cost</div><h1 class="shero-h">From job advert <em>to ready on day one.</em></h1><p class="shero-sub"><span>Watch it find the right person.</span> Then watch every document get checked.</p><div class="shero-btns"><a class="btn primary" href="#demo" data-t="hire:play">Press play &darr;</a><a class="btn" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a chat</a></div><div class="pa sf"><div class="wrap"><div class="sf-head"><p class="sf-h">Hiring again? <em>Here&rsquo;s what usually happens.</em></p></div><ul class="sf-grid"><li><b>200 applications,</b><span>and no time to read them.</span></li><li><b>The good ones</b><span>lost in the inbox.</span></li><li><b>Interviews</b><span>squeezed between patients.</span></li><li><b>A new starter on Monday,</b><span>and their DBS isn&rsquo;t back.</span></li><li><b>Hep B?</b><span>Just a vaccination card.</span></li><li><b>Chasing references</b><span>the week before they start.</span></li><li><b>A gap in their CV</b><span>nobody asked about.</span></li><li><b>Renewals</b><span>nobody&rsquo;s tracking.</span></li></ul><div class="sf-foot"><a class="sf-turn" href="#demo" data-t="sf:turn">Now watch it done properly. <span>&darr;</span></a></div></div></div></div></header>
 
 <div class="wrap">
@@ -282,7 +299,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 <p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
 <footer>
   <div class="wrap foot-row">
-    <span>© Teething Issues Ltd · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
+    <span>© Teething Issues Ltd. All rights reserved · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
     <span>hello@teethingissues.com · UK based · ICO registered · <a href="https://maps.google.com/?cid=10940364418897089874" target="_blank" rel="noopener" data-t="gbp">Find us on Google</a> · <a href="https://g.page/r/CRySTyo-SU45EBM/review" target="_blank" rel="noopener" data-t="gbp:review">Leave a review</a></span>
   </div>
 </footer>

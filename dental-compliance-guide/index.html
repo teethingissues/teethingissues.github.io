@@ -175,7 +175,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .foot-row a{text-decoration:underline;text-underline-offset:3px}
 .navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}
-.navlinks a:hover::after{transform:scaleX(1)}</style><style id="nav-dd">
+.navlinks a:hover::after{transform:scaleX(1)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}
+@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}</style><style id="nav-dd">
 .nav-dd{position:relative;display:inline-block}
 .nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px}
 .nav-ddb span{font-size:12px;margin-left:2px}
@@ -187,7 +190,21 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
 .nav-ddm a:hover{background:rgba(255,255,255,.08)}
 </style>
-<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style></head>
+<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style>
+<style id="nav-phone">
+.nav-burger{display:none;background:none;border:0;cursor:pointer;padding:8px 6px;margin-left:4px}
+.nav-burger span{display:block;width:20px;height:2px;margin:4px 0;background:#F1E6CF;border-radius:2px}
+.nav-phone{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#332E27;border-radius:22px;padding:14px;display:grid;gap:2px;z-index:60}
+.nav-phone[hidden]{display:none!important}
+.nav-phone a{display:block;padding:11px 12px;border-radius:12px;font-family:var(--serif);font-size:19px;font-weight:600;color:#F7F3EB!important}
+.nav-phone a small{font-family:var(--sans);font-size:12px;font-weight:400;color:#CDBFA8;margin-left:6px}
+.nav-phone .np-h{margin:8px 12px 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
+.nav-phone .np-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.nav-phone .np-btns a{font-family:var(--sans);font-size:14px;text-align:center;border-radius:999px;padding:13px 10px}
+.nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}
+</style></head>
 <body>
 <nav class="site">
   <div class="nav-row">
@@ -198,8 +215,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <a href="/growth-department/">Growth</a>
       <div class="nav-dd"><button type="button" class="nav-ddb" aria-haspopup="true">Demos <span>&#9662;</span></button><div class="nav-ddm"><a href="/receptionist/" data-t="nav:demo-phone">Receptionist<small>Hear it answer &middot; part of Growth</small></a><a href="/twin/" data-t="nav:demo-twin">Digital twin<small>Videos without filming &middot; part of Growth</small></a><a href="/management/demo/" data-t="nav:demo-hiring">Hiring manager<small>Advert to day one &middot; part of Operations</small></a></div></div>
     </div>
-    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a>
-  </div>
+    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a><button type="button" class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="var m=this.parentNode.parentNode.querySelector('.nav-phone');var o=m.hidden;m.hidden=!o;this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
+  </div><div class="nav-phone" hidden><a href="/">Home</a><div class="np-h">Demos</div><a href="/receptionist/">Receptionist <small>part of Growth</small></a><a href="/twin/">Digital twin <small>part of Growth</small></a><a href="/management/demo/">Hiring manager <small>part of Operations</small></a><div class="np-btns"><a class="np-gold" href="/free-trial/">Start free trial</a><a class="np-dark" href="tel:+442038698658">Call us now</a></div></div>
 </nav>
 <div class="wrap">
 
@@ -233,7 +250,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 <p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
 <footer>
   <div class="wrap foot-row">
-    <span>© Teething Issues Ltd · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
+    <span>© Teething Issues Ltd. All rights reserved · <a href="/receptionist/">Reception</a> · <a href="/compliance/">Compliance</a> · <a href="/management/">Operations</a> · <a href="/growth-department/">Growth</a> · <a href="/twin/">Digital twin</a> · <a href="/ai-visibility/">Google &amp; ChatGPT</a> · <a href="/dental-compliance-guide/">Compliance guide</a> · <a href="/how-to-grow-a-dental-practice/">Growth guide</a> · <a href="/careers/sales-partner/">Careers</a> · <a href="/privacy/">Privacy</a></span>
     <span>hello@teethingissues.com · UK based · ICO registered · <a href="https://maps.google.com/?cid=10940364418897089874" target="_blank" rel="noopener" data-t="gbp">Find us on Google</a> · <a href="https://g.page/r/CRySTyo-SU45EBM/review" target="_blank" rel="noopener" data-t="gbp:review">Leave a review</a></span>
   </div>
 </footer>
