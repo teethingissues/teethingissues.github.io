@@ -439,7 +439,7 @@ hReset();tab("hire");
 </script>
 <script>(function(){var d=document.getElementById('hire'),p=document.getElementById('hplay'),done=false;
 if(!d||!p||!('IntersectionObserver' in window))return;
-var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;setTimeout(function(){p.click()},400);o.disconnect()}})},{threshold:0.35});o.observe(d);
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;setTimeout(function(){p.click()},400);o.disconnect()}})},{threshold:0.6});o.observe(p);
 var ob=document.getElementById('tabOb');if(ob)ob.addEventListener('click',function(){ob.classList.remove('nudge');setTimeout(function(){var q=document.getElementById('play');if(q&&!q.dataset.auto){q.dataset.auto=1;q.click()}},500)});
 })();</script></body>
 </html>
