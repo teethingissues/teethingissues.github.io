@@ -52,7 +52,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .foot-row a{text-decoration:underline;text-underline-offset:3px}
 .navlinks a{font-family:var(--serif)!important;font-size:19px!important;font-weight:600!important;letter-spacing:.03em!important;color:#F1E6CF!important;position:relative;padding-bottom:3px}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#E3C98E;transform:scaleX(0);transition:transform .25s}
-.navlinks a:hover::after{transform:scaleX(1)}</style><style id="nav-dd">
+.navlinks a:hover::after{transform:scaleX(1)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative}}</style><style id="nav-dd">
 .nav-dd{position:relative;display:inline-block}
 .nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px}
 .nav-ddb span{font-size:12px;margin-left:2px}
@@ -64,7 +66,21 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
 .nav-ddm a:hover{background:rgba(255,255,255,.08)}
 </style>
-<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style></head><body>
+<style id="lining-nums">body,h1,h2,h3,h4,b,em,.shero-h,.hero-h,.sf-grid b,.ft .n,.stats b,.sc b,.demo-num a{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}</style>
+<style id="nav-phone">
+.nav-burger{display:none;background:none;border:0;cursor:pointer;padding:8px 6px;margin-left:4px}
+.nav-burger span{display:block;width:20px;height:2px;margin:4px 0;background:#F1E6CF;border-radius:2px}
+.nav-phone{position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#332E27;border-radius:22px;padding:14px;display:grid;gap:2px;z-index:60}
+.nav-phone[hidden]{display:none!important}
+.nav-phone a{display:block;padding:11px 12px;border-radius:12px;font-family:var(--serif);font-size:19px;font-weight:600;color:#F7F3EB!important}
+.nav-phone a small{font-family:var(--sans);font-size:12px;font-weight:400;color:#CDBFA8;margin-left:6px}
+.nav-phone .np-h{margin:8px 12px 2px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D8BE8E;font-weight:600}
+.nav-phone .np-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.nav-phone .np-btns a{font-family:var(--sans);font-size:14px;text-align:center;border-radius:999px;padding:13px 10px}
+.nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
+nav.site{position:sticky}
+@media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative}}
+</style></head><body>
 <nav class="site">
   <div class="nav-row">
     <a href="/" class="brand">Teething Issues</a>
@@ -74,8 +90,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <a href="/growth-department/">Growth</a>
       <div class="nav-dd"><button type="button" class="nav-ddb" aria-haspopup="true">Demos <span>&#9662;</span></button><div class="nav-ddm"><a href="/receptionist/" data-t="nav:demo-phone">Receptionist<small>Hear it answer &middot; part of Growth</small></a><a href="/twin/" data-t="nav:demo-twin">Digital twin<small>Videos without filming &middot; part of Growth</small></a><a href="/management/demo/" data-t="nav:demo-hiring">Hiring manager<small>Advert to day one &middot; part of Operations</small></a></div></div>
     </div>
-    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a>
-  </div>
+    <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a><button type="button" class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="var m=this.parentNode.parentNode.querySelector('.nav-phone');var o=m.hidden;m.hidden=!o;this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
+  </div><div class="nav-phone" hidden><a href="/management/">Operations</a><a href="/compliance/">Compliance</a><a href="/growth-department/">Growth</a><div class="np-h">Demos</div><a href="/receptionist/">Receptionist <small>part of Growth</small></a><a href="/twin/">Digital twin <small>part of Growth</small></a><a href="/management/demo/">Hiring manager <small>part of Operations</small></a><div class="np-btns"><a class="np-gold" href="/free-trial/">Start free trial</a><a class="np-dark" href="tel:+442038698658">Call us now</a></div></div>
 </nav>
 <div class="wrap">
 
@@ -95,7 +111,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   <p class="who"><b>Done by a dental care professional, CQC expert and former CQC Registered Manager.</b> Not a template, not a tick-box: your real documents.</p>
 </div>
 <div class="card"><div class="k">Questions</div><details><summary><h3>What is a mock CQC inspection?</h3></summary><p>A mock CQC inspection is a practice run of a Care Quality Commission (CQC) inspection, done before the real one. The Teething Issues CQC Calm Check looks at a dental practice the way an inspector would, against CQC&rsquo;s five key questions: is the practice safe, effective, caring, responsive and well-led? A former CQC Registered Manager reads the practice&rsquo;s real documents line by line, including staff files, the medical emergency kit and drug checks, decontamination and autoclave logs, COSHH assessments and fire and legionella risk assessments. For example, the staff file check flags a DBS certificate that isn&rsquo;t Enhanced or is more than 3 years old. The practice receives a written action plan with every gap, who owns it and the date it should be fixed by.</p></details><details><summary><h3>What happens after a CQC Calm Check?</h3></summary><p>After a CQC Calm Check, the practice owner receives a written action plan and a 30-minute call to go through it with the team. Every gap found has an owner and a date, so the practice manager can work through the list in order of risk. Many practices close the gaps themselves using the plan. Practices that want the work done for them can move on to the Teething Issues Compliance OS, which keeps a practice calm and in order for CQC all year with 481 checks across 20 departments. There is no obligation to go further: the action plan belongs to the practice either way.</p></details></div>
-<p class="trust">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
+
 </div>
 <style id="hc-pill-css">.hc-pill{position:fixed;right:18px;bottom:18px;z-index:900;padding:12px 18px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(255,255,255,.65));border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 40px -18px rgba(51,46,39,.45);color:#332E27;font:500 14px Jost,sans-serif;text-decoration:none}.hc-pill b{color:#8C7A62;font-weight:600}@media(max-width:700px){.hc-pill{left:0;right:0;bottom:0;border-radius:0;text-align:center;padding:11px 12px;font-size:13.5px}}</style><a class="hc-pill" href="/free-trial/" data-t="trial:pill"><b>Free trial:</b> where does your practice really stand? &rarr;</a>
 <p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
