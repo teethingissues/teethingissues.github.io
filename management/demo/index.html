@@ -167,7 +167,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .demo-num a{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,40px);color:var(--ink);letter-spacing:.01em;margin:6px 0 2px}.demo-p{margin:0;color:var(--ink-dim);font-size:15px;line-height:1.5}.sys-panel .btn{justify-self:start}
 @media(max-width:760px){.dd-grid{grid-template-columns:1fr}.dd{padding:22px 18px}}
 @media (prefers-reduced-motion:reduce){.dd{opacity:1;transform:none}}
-</style><style id="hire-fix">nav.site a,.shero a,.sf a{text-decoration:none}footer a,.trust-row a{color:inherit}footer .wrap{max-width:1100px;margin:0 auto;padding:0 16px}.sf-grid li{opacity:1!important;transform:none!important}.shero .btn,.cta .btn{display:inline-block;font:600 15px/1 var(--sans);border-radius:999px;padding:16px 26px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#EFE7DA);color:var(--ink);box-shadow:0 14px 30px -16px rgba(51,46,39,.45)}.shero .btn.primary,.cta .btn.primary{background:linear-gradient(180deg,#4A4238,#2B2620);color:#FCFAF3;border-color:#2B2620}.sf-turn{color:var(--accent);font-family:var(--serif);font-size:22px;font-style:italic}.week{background:rgba(255,255,255,.55)!important;border:1px solid var(--line);border-radius:14px!important;padding:14px 16px!important}.week h3{font:600 17px/1.2 var(--serif)!important;color:var(--ink)!important;margin:0 0 8px!important;letter-spacing:.01em;font-variant-numeric:lining-nums!important}.week ul{list-style:none!important;padding-left:0!important;margin:0!important;font-size:13.5px!important;line-height:1.5!important;color:var(--ink-dim)!important;display:grid;gap:3px}[hidden]{display:none!important}#hire,#ob,.tabs,.example-top{zoom:.86}#hire,#ob{max-width:1060px;margin-left:auto;margin-right:auto}.shero-h{font-size:clamp(30px,4.2vw,44px)!important}.sf-grid li b{font-size:17px!important}.sf-grid li span{font-size:13px!important}.part-h{text-align:center;margin:26px 0 14px}.part-h h2{margin:6px 0 0;font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,34px);color:var(--ink)}.part-h h2 em{color:var(--accent)}</style></head>
+</style><style id="hire-fix">nav.site a,.shero a,.sf a{text-decoration:none}footer a,.trust-row a{color:inherit}footer .wrap{max-width:1100px;margin:0 auto;padding:0 16px}.sf-grid li{opacity:1!important;transform:none!important}.shero .btn,.cta .btn{display:inline-block;font:600 15px/1 var(--sans);border-radius:999px;padding:16px 26px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#EFE7DA);color:var(--ink);box-shadow:0 14px 30px -16px rgba(51,46,39,.45)}.shero .btn.primary,.cta .btn.primary{background:linear-gradient(180deg,#4A4238,#2B2620);color:#FCFAF3;border-color:#2B2620}.sf-turn{color:var(--accent);font-family:var(--serif);font-size:22px;font-style:italic}.week{background:rgba(255,255,255,.55)!important;border:1px solid var(--line);border-radius:14px!important;padding:14px 16px!important}.week h3{font:600 17px/1.2 var(--serif)!important;color:var(--ink)!important;margin:0 0 8px!important;letter-spacing:.01em;font-variant-numeric:lining-nums!important}.week ul{list-style:none!important;padding-left:0!important;margin:0!important;font-size:13.5px!important;line-height:1.5!important;color:var(--ink-dim)!important;display:grid;gap:3px}[hidden]{display:none!important}.tab .new{display:inline-block;margin-left:6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#FCFAF3;background:var(--accent);border-radius:999px;padding:3px 8px;vertical-align:middle}.tab.nudge{animation:nud 1.6s ease-in-out infinite}.tab:not(.nudge) .new{display:none}@keyframes nud{0%,100%{box-shadow:0 0 0 0 rgba(140,122,98,.0)}50%{box-shadow:0 0 0 6px rgba(140,122,98,.25)}}.mid-cta{margin-top:18px}#hire,#ob,.tabs,.example-top{zoom:.86}#hire,#ob{max-width:1060px;margin-left:auto;margin-right:auto}.shero-h{font-size:clamp(30px,4.2vw,44px)!important}.sf-grid li b{font-size:17px!important}.sf-grid li span{font-size:13px!important}.part-h{text-align:center;margin:26px 0 14px}.part-h h2{margin:6px 0 0;font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,34px);color:var(--ink)}.part-h h2 em{color:var(--accent)}</style></head>
 <body>
 <nav class="site">
   <div class="nav-row">
@@ -187,7 +187,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 
   <div class="tabs" role="tablist">
     <button class="tab on" id="tabHire" role="tab">1 · Hiring</button>
-    <button class="tab" id="tabOb" role="tab">2 · Onboarding</button>
+    <button class="tab nudge" id="tabOb" role="tab">2 · Onboarding <span class="new">then watch this</span></button>
   </div>
 
   <div id="hire" class="wrap">
@@ -201,7 +201,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
     <section class="live">
       <div class="card">
         <h2>Candidates</h2>
-        <p class="cat" id="hcat">Every applicant logged, nobody lost in the inbox.</p>
+        <p class="cat" id="hcat">Every applicant logged and screened by your digital hiring manager. Nobody lost in the inbox.</p>
         <div style="overflow-x:auto"><table class="cands"><thead><tr><th>Name</th><th>Must-haves</th><th>Phone screen</th><th>Interview</th><th>Status</th></tr></thead><tbody id="cands"></tbody></table></div>
         <div class="rules">
           <div>Must-haves for this role: GDC registered, right to work, chairside experience.</div>
@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <div style="overflow-x:auto"><table class="cands score"><thead><tr><th>Question</th><th id="sc1">—</th><th id="sc2">—</th><th id="sc3">—</th></tr></thead><tbody id="score"></tbody></table></div>
       <button class="btn primary" id="toOb" hidden style="margin-top:14px">Start onboarding Sophie →</button>
     </section>
-  </div>
+  <section class="card mid-cta"><h2>Like what you see?</h2><p class="cat">Book a chat and we&rsquo;ll set it up around your team. No time? Speak to our sales team now.</p><div class="cta"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book:hire1">Book a chat</a> <a class="btn" href="tel:+442038698658" data-t="call:hire1">Call the sales team: 020 3869 8658</a></div></section></div>
 
   <div id="ob" class="wrap" hidden>
   <div class="part-h"><div class="shero-for">Part 2 &middot; Onboarding</div><h2>Ready <em>for day one.</em></h2></div><nav class="route" aria-label="Onboarding journey">
@@ -399,7 +399,7 @@ function hpill(st){const m={new:["p-wait","New"],no:["p-na","Not this time"],sho
 function hSet(n){[...$("hstops").children].forEach((el,i)=>{el.className="stop"+(i<n?" done":i===n?" now":"")})}
 function hRender(){
   $("cands").innerHTML=H.shown.map(i=>{const c=CANDS[i],s=H.c[i]||{};return`<tr class="${s.st==="offer"?"picked":""}"><td>${c.n}</td><td>${s.must==null?"…":s.must?"✓ all 3":"✗ "+c.why}</td><td>${s.ph||"—"}</td><td>${s.tot!=null?s.tot+" / 30":"—"}</td><td>${hpill(s.st||"new")}</td></tr>`}).join("")||'<tr><td colspan="5" class="empty">No applicants yet.</td></tr>';
-  $("hcat").textContent=H.shown.length?`${H.shown.length} applicants. Every one gets a reply.`:"Every applicant logged, nobody lost in the inbox.";
+  $("hcat").textContent=H.shown.length?`${H.shown.length} applicants. Every one gets a reply.`:"Every applicant logged and screened by your digital hiring manager. Nobody lost in the inbox.";
   const top=[0,1,2];top.forEach((i,k)=>$("sc"+(k+1)).textContent=H.scored[i]?CANDS[i].n:"—");
   $("score").innerHTML=QS.map((q,qi2)=>`<tr><td>${q}</td>${top.map(i=>`<td>${H.scored[i]?(CANDS[i].sc[qi2]||"—"):""}</td>`).join("")}</tr>`).join("")+`<tr class="total"><td>Total</td>${top.map(i=>`<td>${H.scored[i]?CANDS[i].sc.reduce((a,b)=>a+b,0)+" / 30":""}</td>`).join("")}</tr>`;
 }
@@ -437,5 +437,9 @@ $("tabHire").onclick=()=>tab("hire");$("tabOb").onclick=()=>tab("ob");
 $("toOb").onclick=()=>{tab("ob");$("role").value="dn";reset();window.scrollTo({top:0,behavior:"smooth"})};
 hReset();tab("hire");
 </script>
-</body>
+<script>(function(){var d=document.getElementById('hire'),p=document.getElementById('hplay'),done=false;
+if(!d||!p||!('IntersectionObserver' in window))return;
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!done){done=true;setTimeout(function(){p.click()},400);o.disconnect()}})},{threshold:0.35});o.observe(d);
+var ob=document.getElementById('tabOb');if(ob)ob.addEventListener('click',function(){ob.classList.remove('nudge');setTimeout(function(){var q=document.getElementById('play');if(q&&!q.dataset.auto){q.dataset.auto=1;q.click()}},500)});
+})();</script></body>
 </html>
