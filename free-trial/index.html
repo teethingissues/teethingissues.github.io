@@ -379,6 +379,17 @@ body{background:radial-gradient(42% 38% at 12% 18%,rgba(196,176,140,.55),transpa
 .pa .panel:hover{transform:translateY(-6px)}
 @keyframes ghover{0%,100%{translate:0 0}50%{translate:0 -6px}}
 @media (prefers-reduced-motion:reduce){.pa .panel{animation:none}}
+</style><style id="nav-dd">
+.nav-dd{position:relative;display:inline-block}
+.nav-ddb{background:none;border:0;cursor:pointer;font-family:var(--serif);font-size:19px;font-weight:600;letter-spacing:.03em;color:#F1E6CF;padding:0 0 3px}
+.nav-ddb span{font-size:12px;margin-left:2px}
+.nav-ddm{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:250px;padding:8px;border-radius:16px;background:#332E27;box-shadow:0 20px 40px -12px rgba(0,0,0,.45);display:none;z-index:50}
+.nav-ddm::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.nav-dd:hover .nav-ddm,.nav-dd:focus-within .nav-ddm{display:block}
+.nav-ddm a{display:block;padding:10px 12px;border-radius:10px;font-family:var(--sans)!important;font-size:15px!important;font-weight:600!important;color:#F7F3EB!important;letter-spacing:0!important}
+.nav-ddm a::after{display:none!important}
+.nav-ddm a small{display:block;font-weight:400;font-size:12.5px;color:#CDBFA8;margin-top:2px}
+.nav-ddm a:hover{background:rgba(255,255,255,.08)}
 </style><style id="trial-css">
 .tr{padding:clamp(110px,13vw,140px) 0 clamp(56px,8vw,90px);min-height:100svh;background:radial-gradient(40% 50% at 15% 25%,rgba(194,183,162,.55),transparent 75%),radial-gradient(40% 50% at 85% 75%,rgba(182,160,120,.35),transparent 75%),var(--bg)}
 .tr-wrap{max-width:720px;margin:0 auto;padding:0 16px}
@@ -442,7 +453,7 @@ body{background:radial-gradient(42% 38% at 12% 18%,rgba(196,176,140,.55),transpa
       <a href="/management/">Operations</a>
       <a href="/compliance/">Compliance</a>
       <a href="/growth-department/">Growth</a>
-      <a href="/receptionist/">Demo</a>
+      <div class="nav-dd"><button type="button" class="nav-ddb" aria-haspopup="true">Demos <span>&#9662;</span></button><div class="nav-ddm"><a href="/receptionist/" data-t="nav:demo-phone">Receptionist<small>Ring the demo</small></a><a href="/twin/" data-t="nav:demo-twin">Digital twin<small>Your practice videos, without filming</small></a><a href="/management/demo/" data-t="nav:demo-hiring">Hiring manager<small>From job advert to day one</small></a></div></div>
     </div>
     <a class="nav-cta" href="tel:+442038698658" data-t="call">Call us now</a>
   </div>
