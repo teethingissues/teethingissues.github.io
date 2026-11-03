@@ -403,7 +403,7 @@ body{background:radial-gradient(42% 38% at 12% 18%,rgba(196,176,140,.55),transpa
 .nav-phone .np-gold{background:#D8BE8E;color:#332E27!important}.nav-phone .np-dark{border:1px solid rgba(247,243,235,.4)}
 nav.site{position:sticky}
 @media(max-width:760px){.nav-burger{display:block}.nav-row{position:relative;padding:8px 8px 8px 18px!important}nav.site .brand,nav.site .nav-cta,nav.site .nav-dd{display:none!important}nav.site .navlinks{display:flex!important;gap:18px!important;flex:1;justify-content:flex-start}nav.site .navlinks a{font-size:16px!important}}@media(max-width:360px){nav.site .navlinks{gap:12px!important}nav.site .navlinks a{font-size:14.5px!important}}
-</style><style id="trial-css">
+</style><style id="how3">.how-steps{grid-template-columns:repeat(3,1fr)!important}@media(max-width:760px){.how-steps{grid-template-columns:1fr!important}}</style><style id="trial-css">
 .tr{padding:clamp(110px,13vw,140px) 0 clamp(56px,8vw,90px);min-height:100svh;background:radial-gradient(40% 50% at 15% 25%,rgba(194,183,162,.55),transparent 75%),radial-gradient(40% 50% at 85% 75%,rgba(182,160,120,.35),transparent 75%),var(--bg)}
 .tr-wrap{max-width:720px;margin:0 auto;padding:0 16px}
 .tr-head{text-align:center}
@@ -583,10 +583,17 @@ function results(){
  function paint(k){var t=T[k],alts=['growth','compliance','operations'].filter(function(x){return (k.indexOf('ops')===0?'operations':k)!==x});
   $('r-trial').innerHTML='<div class="tr-n">&#10003; Your free trial &middot; '+t[0]+'</div><h3>'+t[1]+'</h3><p>'+t[2]+'</p>'+
    '<ol class="steps">'+t[3].map(function(x){return '<li>'+x+'</li>'}).join('')+'</ol>'+
-   (claimed?'<div class="claimed">&#10003; You&rsquo;re in. We&rsquo;ll be in touch to set up your free trial.</div>':'<button type="button" class="btn primary claim" data-t="trial:claim">Start my free trial &rarr;</button>')+
+   (claimed?'<div class="claimed">&#10003; You&rsquo;re in. We&rsquo;ll be in touch to set up your free trial.</div>':'<button type="button" class="btn primary claim" data-t="trial:claim">'+(key==='growth'?'Start my free trial &rarr;':'Open my free trial &rarr;')+'</button>')+
    (claimed?'':'<p class="alts">Rather try '+alts.map(function(x){return '<button type="button" data-alt="'+x+'">'+(x==='operations'?'Operations':x.charAt(0).toUpperCase()+x.slice(1))+'</button>'}).join(' or ')+' instead?</p>');
   $('r-trial').querySelectorAll('[data-alt]').forEach(function(b){b.addEventListener('click',function(){key=b.dataset.alt==='operations'?opsKey:b.dataset.alt;paint(key)})});
-  var c=$('r-trial').querySelector('.claim');if(c)c.addEventListener('click',function(){claimed=true;paint(key);send('CLAIMED | ')})}
+  var c=$('r-trial').querySelector('.claim');if(c)c.addEventListener('click',function(){claimed=true;send('CLAIMED | ');
+   if(key!=='growth'){ // hands-on trial in the Team app (Compliance chat, 3 Nov): normal form POST, email never in the URL
+    var f=document.createElement('form');f.method='POST';f.action='https://trial.31-97-118-70.sslip.io/start';f.style.display='none';
+    var add=function(n,v){var i=document.createElement('input');i.type='hidden';i.name=n;i.value=v;f.appendChild(i)};
+    add('email',em.value.trim());add('practice',$('f-practice').value.trim());
+    top.slice(0,6).forEach(function(r){add('gaps',r[1].replace(/<[^>]+>/g,'').replace(/&rsquo;/g,"'").replace(/&ldquo;|&rdquo;/g,'"').replace(/&[a-z]+;/g,' ').trim())});
+    document.body.appendChild(f);setTimeout(function(){f.submit()},250);return}
+   paint(key)})}
  paint(key);show(6);
  // send to the team (same route as the visibility check)
  function send(pre){var sum=(pre||'')+'Free trial: '+T[key][0]+' - '+T[key][1]+' | Practice: '+$('f-practice').value.trim()+' ('+(A.size||'?')+')'+' | Marketing: '+($('f-mkt').checked?'YES':'no')+
