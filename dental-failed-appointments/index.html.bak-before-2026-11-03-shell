@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://teethingissues.com/dental-failed-appointments/">
+<title>Failed Appointments at a Dental Practice: The Rules and How to Cut No-Shows (UK, 2026) | Teething Issues</title>
+<meta name="description" content="Can a dental practice charge for missed appointments? What the NHS rules in England say, what private practices can do, and practical ways to cut failed appointments and fill the gaps.">
+<meta property="og:title" content="Failed appointments at a dental practice: the rules, and how to cut no-shows">
+<meta property="og:image" content="https://teethingissues.com/mino/mino-compliance.jpg">
+<link rel="icon" href="https://teethingissues.com/assets/mino-1.jpg">
+<style>
+:root{--bg:#E7E1D6;--card:#FCFAF3;--ink:#332E27;--dim:#6F655A;--gold:#8C7A62;--line:#D5CBBA;--soft:#F7F3EB;--on-gold:#FCFAF3;color-scheme:light}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Cormorant Garamond",Georgia,"Times New Roman",serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{padding:18px 0}nav a{color:var(--ink);text-decoration:none;font-weight:bold;letter-spacing:.02em}
+h1,h2{font-weight:normal;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,7vw,56px);margin-top:28px}h1 em{color:var(--gold)}
+h2{font-size:clamp(26px,4.5vw,36px);margin-bottom:12px}
+.sub{font-size:19px;color:var(--dim);max-width:620px;margin:16px 0 26px}
+.eyebrow{font:600 12px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:700 16px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:15px 24px;text-align:center}
+.btn.primary{background:var(--ink);color:var(--bg)}.btn.ghost{border:2px solid var(--gold);color:var(--ink)}
+.note{font:14px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);margin-top:12px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+header{padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:700px){.calc{grid-template-columns:1fr}}
+label{display:block;font:600 15px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin-bottom:18px}
+label span{display:flex;justify-content:space-between;gap:10px}label b{color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
+.out{background:var(--soft);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;justify-content:center}
+.big{font-size:clamp(38px,8vw,52px);line-height:1.1}.out p{margin:6px 0 0;font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.list .card h3{margin:0 0 6px;font:700 17px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.list .card p{margin:0;color:var(--dim);font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 16px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details p{color:var(--dim);font:15px/1.6 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:10px 0 0}
+footer{padding:30px 0 50px;font:13px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);border-top:1px solid var(--line)}footer a{color:var(--dim)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,248,242,.94);border-top:1px solid var(--line);display:flex;justify-content:center;box-shadow:0 -8px 24px -14px rgba(47,42,36,.18)}
+.callbar a{display:block;width:100%;max-width:520px;text-align:center;background:var(--ink);color:var(--card);font:700 17px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:14px 18px}
+.callbar small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+body{padding-bottom:84px}
+.byline{display:block;font:500 12px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.perk{margin:16px 0 0;display:inline-block;background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;font:15px/1.45 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.btns .btn{flex:1 1 280px;max-width:380px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;box-sizing:border-box}
+.btn.ghost{border-color:var(--ink)}
+.perk{display:block;max-width:772px}
+.money{text-align:left;margin-top:22px}.money p{margin:0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}.money .faint{color:#978C7C;font-size:14px}
+section>.card{margin-bottom:14px}.card h2{font-size:clamp(24px,4vw,30px)}h2 em{color:var(--gold)}
+.photo{width:100%;height:auto;max-height:240px;object-fit:cover;object-position:center 25%;border-radius:12px;display:block;margin:0 0 16px}
+.ticks{list-style:none;padding:0;margin:8px 0 4px}.ticks li{font:300 16px/1.5 Jost,sans-serif;color:var(--dim);padding:4px 0 4px 26px;position:relative}.ticks li:before{content:"\2713";position:absolute;left:0;color:var(--gold)}
+.lead{font-size:22px;font-style:italic;line-height:1.3;margin:16px 0 14px}.lead em{color:var(--gold)}
+header{padding-bottom:40px}section .btn{margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chips span{font:500 13.5px/1 Jost,sans-serif;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--ink)}
+.stat{font-size:clamp(34px,8vw,46px);line-height:1;color:var(--gold)}.stat+p{margin:6px 0 0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inherit}
+</style>
+<style>.art h2{margin:34px 0 10px;font-size:clamp(24px,4.5vw,32px)}.art p,.art li{font:300 17px/1.7 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}.art ul{padding-left:20px}.art .src{font-size:14px;color:var(--dim)}.art a{color:var(--gold)}</style>
+<style>
+.draftbar{background:#332E27;color:#FCFAF3;font:600 13px/1.4 Jost,sans-serif;text-align:center;padding:9px 16px}
+.art ol{padding-left:22px}.art table{border-collapse:collapse;width:100%;font:300 15px/1.5 Jost,sans-serif}
+.art td,.art th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}.art th{font-weight:600}
+.tw{overflow-x:auto}
+.calc .card label{margin-bottom:14px}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Failed appointments at a dental practice: the rules, and how to cut no-shows",
+ "datePublished": "2026-10-26",
+ "dateModified": "2026-10-26",
+ "author": {
+  "@type": "Organization",
+  "name": "Teething Issues",
+  "url": "https://teethingissues.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "Teething Issues"
+ },
+ "mainEntityOfPage": "https://teethingissues.com/dental-failed-appointments/"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Can a dental practice charge for a missed NHS appointment?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, not in England. The British Dental Association's current advice (updated July 2026, after the April 2026 contract changes) is that the NHS contract in England still does not allow practices to charge NHS patients for missed appointments. Practices could charge before the 2006 contract, but not since."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can we remove a patient who keeps missing NHS appointments?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not for a single missed appointment. The BDA says one failure to attend is not grounds for removing a patient from your list, but repeated non-attendance can reasonably be taken into account when deciding whether you can keep offering that patient appointments safely and effectively. Have a written process, apply it the same way to everyone, keep a record of each missed appointment and every reminder you sent, and tell patients about the process up front."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can a private dental practice charge a cancellation fee?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Generally yes, if the patient agreed to it before booking. Put the fee and the notice period (for example, 24 or 48 hours) in your terms, show it when the appointment is booked, and keep it proportionate. Under the Consumer Rights Act 2015, terms with consumers must be fair and transparent, so a fee that is hidden or out of proportion to your real loss is hard to defend."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How can a dental practice reduce failed appointments?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Send a reminder a few days before and again the day before, by text and email, and make it easy to reply to confirm or rebook.Ask patients to confirm, and phone the ones who don't.Keep a short-notice list of patients who want an earlier slot, so a cancellation becomes a booking.Answer the phone when patients ring to cancel. A cancellation you hear about is a gap you can fill. One you miss turns into a no-show.Track your failed-appointment rate every week, by clinician and appointment type, so you can see what is working."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I work out what missed appointments cost my practice?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Multiply the number of missed appointments in a typical week by the average value of those appointments, then multiply by the weeks you are open in a year. Use your own diary figures: your practice software can usually report failed appointments for any date range. The calculator below does the sum for you."
+   }
+  }
+ ]
+}
+</script>
+<style id="glass">
+body{background:radial-gradient(40% 30% at 10% 20%,rgba(194,183,162,.7),transparent 70%),radial-gradient(35% 30% at 90% 55%,rgba(182,160,120,.4),transparent 70%),radial-gradient(40% 30% at 20% 90%,rgba(194,183,162,.6),transparent 70%),var(--bg)}
+.gcard{position:relative;margin:0 0 30px;padding:28px 30px 24px;border-radius:26px;
+ background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22));
+ border:1px solid rgba(255,255,255,.75);
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 50px 80px -40px rgba(51,46,39,.4),0 14px 28px -14px rgba(51,46,39,.2);
+ opacity:0;transform:perspective(1400px) rotateX(8deg) translateY(30px);transform-origin:50% 100%;transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gcard.in{opacity:1;transform:perspective(1400px) rotateX(3deg)}
+.gcard.in:hover{transform:perspective(1400px) rotateX(0) translateY(-6px)}
+.gcard::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 72%,rgba(255,255,255,.22) 100%)}
+.gcard>h2:first-child{margin-top:0}
+.gcard table td,.gcard table th{border-color:rgba(140,122,98,.25)}
+@media(max-width:640px){.gcard{padding:22px 18px}}
+@media (prefers-reduced-motion:reduce){.gcard{opacity:1;transform:none;transition:none}}
+</style><meta name="robots" content="noindex"><style id="glass-site">
+body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transparent 70%),radial-gradient(36% 30% at 92% 52%,rgba(182,160,120,.32),transparent 70%),radial-gradient(42% 30% at 18% 92%,rgba(194,183,162,.5),transparent 70%),var(--bg,#E7E1D6)}
+.card,.tile,.ai-glass{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22))!important;
+ border:1px solid rgba(255,255,255,.75)!important;border-radius:24px!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 44px 70px -38px rgba(51,46,39,.38),0 12px 24px -14px rgba(51,46,39,.2)!important;
+ transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gl-up{opacity:0;transform:translateY(12px)}.gl-up.in{opacity:1;transform:none}
+.gl-up.in:hover{transform:translateY(-5px)}
+@media (prefers-reduced-motion:reduce){.gl-up{opacity:1;transform:none}}
+</style><style id="ck-slim">@media(max-width:700px){#ck{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border-radius:0!important;padding:7px 12px!important;font-size:12px!important}#ck p{display:inline!important;margin:0 8px 0 0!important}#ck div{display:inline-flex!important;gap:6px!important;vertical-align:middle}#ck button{padding:5px 12px!important;font-size:12.5px!important}}</style><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style></head>
+<body>
+<div class="wrap">
+<nav><a href="/">Teething Issues</a><span class="byline">Developed by dental care professionals</span></nav>
+<header>
+  <div class="eyebrow">Guide · Updated 26 October 2026</div>
+  <h1>Failed appointments: <em>the rules, and how to cut no-shows.</em></h1>
+  <p class="sub">For dental practice owners and managers in England. What you can and can't do about missed appointments, and the simple systems that keep the diary full.</p>
+</header>
+<article class="art">
+<div class="gcard"><h2>Can a dental practice charge for a missed NHS appointment?</h2>
+<p>No, not in England. The British Dental Association's current advice (updated July 2026, after the April 2026 contract changes) is that the NHS contract in England still does not allow practices to charge NHS patients for missed appointments. Practices could charge before the 2006 contract, but not since.</p></div>
+<div class="gcard"><h2>Can we remove a patient who keeps missing NHS appointments?</h2>
+<p>Not for a single missed appointment. The BDA says one failure to attend is not grounds for removing a patient from your list, but repeated non-attendance can reasonably be taken into account when deciding whether you can keep offering that patient appointments safely and effectively. Have a written process, apply it the same way to everyone, keep a record of each missed appointment and every reminder you sent, and tell patients about the process up front.</p></div>
+<div class="gcard"><h2>Can a private dental practice charge a cancellation fee?</h2>
+<p>Generally yes, if the patient agreed to it before booking. Put the fee and the notice period (for example, 24 or 48 hours) in your terms, show it when the appointment is booked, and keep it proportionate. Under the Consumer Rights Act 2015, terms with consumers must be fair and transparent, so a fee that is hidden or out of proportion to your real loss is hard to defend.</p></div>
+<div class="gcard"><h2>How can a dental practice reduce failed appointments?</h2>
+<ul><li>Send a reminder a few days before and again the day before, by text and email, and make it easy to reply to confirm or rebook.</li><li>Ask patients to confirm, and phone the ones who don't.</li><li>Keep a short-notice list of patients who want an earlier slot, so a cancellation becomes a booking.</li><li>Answer the phone when patients ring to cancel. A cancellation you hear about is a gap you can fill. One you miss turns into a no-show.</li><li>Track your failed-appointment rate every week, by clinician and appointment type, so you can see what is working.</li></ul></div>
+<div class="gcard"><h2>How do I work out what missed appointments cost my practice?</h2>
+<p>Multiply the number of missed appointments in a typical week by the average value of those appointments, then multiply by the weeks you are open in a year. Use your own diary figures: your practice software can usually report failed appointments for any date range. The calculator below does the sum for you.</p></div>
+
+<p class="src">Sources: British Dental Association, Managing non-attendance in dental practices providing NHS care in England (updated July 2026); Consumer Rights Act 2015, Part 2 (legislation.gov.uk).</p>
+</article>
+<section>
+  <h2>What missed appointments <em>cost you</em></h2>
+  <p class="note" style="font-size:16px">These are example numbers. Move the sliders to your own figures from your diary.</p>
+  <div class="calc card">
+    <div>
+      <label for="fa-n"><span>Missed appointments a week <b id="fa-nv">8</b></span><input type="range" id="fa-n" min="0" max="60" value="8"></label>
+      <label for="fa-v"><span>Average value of an appointment <b id="fa-vv">£90</b></span><input type="range" id="fa-v" min="20" max="400" step="5" value="90"></label>
+      <label for="fa-w"><span>Weeks open a year <b id="fa-wv">48</b></span><input type="range" id="fa-w" min="40" max="52" value="48"></label>
+    </div>
+    <div class="out"><div class="big" id="fa-out">£34,560</div><p>a year of clinical time lost to empty chairs</p><p id="fa-sum">8 × £90 × 48 weeks</p></div>
+  </div>
+</section>
+<section>
+  <h2>Want a fuller <em>diary?</em></h2>
+  <p class="note" style="font-size:16px">We answer every call, day and night, so cancellations get rebooked instead of turning into empty chairs, and reminders go out without your team chasing. <a href="/receptionist/" style="color:var(--gold)">See our reception department →</a></p>
+  <div class="btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat with the team</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a></div>
+</section>
+<nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6F655A;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/management/" style="color:inherit">Management department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/ai-visibility/" style="color:inherit">Google &amp; ChatGPT visibility</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
+<footer>© Teething Issues · <a href="/">teethingissues.com</a> · <a href="/receptionist/">Receptionist</a> · hello@teethingissues.com · <a href="/privacy/">Privacy</a></footer>
+
+</div>
+<script>(function(){var n=document.getElementById('fa-n'),v=document.getElementById('fa-v'),w=document.getElementById('fa-w');
+function f(x){return '£'+Math.round(x).toLocaleString('en-GB')}
+function go(){var a=+n.value,b=+v.value,c=+w.value;document.getElementById('fa-nv').textContent=a;document.getElementById('fa-vv').textContent=f(b);document.getElementById('fa-wv').textContent=c;
+document.getElementById('fa-out').textContent=f(a*b*c);document.getElementById('fa-sum').textContent=a+' × '+f(b)+' × '+c+' weeks'}
+[n,v,w].forEach(function(e){e.addEventListener('input',go)});go()})();</script>
+<div class="callbar"><a href="tel:+442038698658" data-t="call">📞 Call us now: 020 3869 8658<small>Talk to the team about a fuller diary.</small></a></div>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.fbq)fbq('track','Contact')},true);</script>
+<!-- visit-tracker -->
+<script>(function(){
+  // "It's us" switch: open any page with ?internal=1 once on each device and our own visits stop being counted (?internal=0 undoes it).
+  try{var Q=location.search;if(/[?&]internal=1(&|$)/.test(Q))localStorage.setItem("ti_internal","1");if(/[?&]internal=0(&|$)/.test(Q))localStorage.removeItem("ti_internal");if(localStorage.getItem("ti_internal")==="1")return}catch(x){}
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, nothing personal.
+  // v = random number for this browser tab only (sessionStorage, gone when the tab closes) so one visit's pages can be joined up; e = sites linked out to.
+  var t0=Date.now(),maxS=0,taps=[],outs=[],sent=false,v="",n=0;
+  try{var ss=sessionStorage;v=ss.getItem("vt_id")||Math.random().toString(36).slice(2,10);ss.setItem("vt_id",v);n=(+ss.getItem("vt_n")||0)+1;ss.setItem("vt_n",n)}catch(x){}
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n"){taps.push(label(a));if(a.hostname&&a.hostname!==location.hostname&&outs.length<10)outs.push(a.hostname.replace(/^www\./,"").slice(0,30))}},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:outs,v:v,n:n,k:q.get("utm_content")||"",
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+<script>(function(){var c=document.querySelectorAll('.gcard');if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script><script id="glass-site-js">(function(){var c=[].slice.call(document.querySelectorAll('.card,.tile,.ai-glass'));c.forEach(function(e){e.classList.add('gl-up')});if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script><style id="hc-pill-css">.hc-pill{position:fixed;right:18px;bottom:18px;z-index:900;padding:12px 18px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(255,255,255,.65));border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 40px -18px rgba(51,46,39,.45);color:#332E27;font:500 14px Jost,sans-serif;text-decoration:none}.hc-pill b{color:#8C7A62;font-weight:600}@media(max-width:700px){.hc-pill{left:0;right:0;bottom:0;border-radius:0;text-align:center;padding:11px 12px;font-size:13.5px}}</style><a class="hc-pill" href="/free-trial/" data-t="trial:pill"><b>Free trial:</b> where does your practice really stand? &rarr;</a>
+</body>
+</html>

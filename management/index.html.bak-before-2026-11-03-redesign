@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://teethingissues.com/management/">
+<title>Practice Management for Dental Practices | Teething Issues</title>
+<meta name="description" content="Hiring, onboarding and your inbox, handled. We find the right people, get new starters set up properly from day one, and keep your inbox clear so nothing slips.">
+<meta property="og:title" content="The running of the practice, handled.">
+<meta property="og:image" content="https://teethingissues.com/mino/mino-training.jpg">
+<link rel="icon" href="/assets/mino-1.jpg">
+<style>
+:root{--bg:#E7E1D6;--card:#FCFAF3;--ink:#332E27;--dim:#6F655A;--gold:#8C7A62;--line:#D5CBBA;--soft:#F7F3EB;--on-gold:#FCFAF3;color-scheme:light}
+
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Cormorant Garamond",Georgia,"Times New Roman",serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{padding:18px 0}nav a{color:var(--ink);text-decoration:none;font-weight:bold;letter-spacing:.02em}
+h1,h2{font-weight:normal;line-height:1.15;margin:0}
+h1{font-size:clamp(34px,7vw,56px);margin-top:28px}h1 em{color:var(--gold)}
+h2{font-size:clamp(26px,4.5vw,36px);margin-bottom:12px}
+.sub{font-size:19px;color:var(--dim);max-width:620px;margin:16px 0 26px}
+.eyebrow{font:600 12px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font:700 16px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:15px 24px;text-align:center}
+.btn.primary{background:var(--ink);color:var(--bg)}.btn.ghost{border:2px solid var(--gold);color:var(--ink)}
+.note{font:14px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);margin-top:12px}
+section{padding:56px 0;border-top:1px solid var(--line)}
+header{padding-bottom:56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 20px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:700px){.calc{grid-template-columns:1fr}}
+label{display:block;font:600 15px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin-bottom:18px}
+label span{display:flex;justify-content:space-between;gap:10px}label b{color:var(--gold)}
+input[type=range]{width:100%;accent-color:var(--gold);margin-top:8px}
+.out{background:var(--soft);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;justify-content:center}
+.big{font-size:clamp(38px,8vw,52px);line-height:1.1}.out p{margin:6px 0 0;font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim)}
+.list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+.list .card h3{margin:0 0 6px;font:700 17px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.list .card p{margin:0;color:var(--dim);font:15px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details{border-bottom:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font:700 16px/1.4 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+details p{color:var(--dim);font:15px/1.6 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:10px 0 0}
+footer{padding:30px 0 50px;font:13px/1.5 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--dim);border-top:1px solid var(--line)}footer a{color:var(--dim)}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(251,248,242,.94);border-top:1px solid var(--line);display:flex;justify-content:center;box-shadow:0 -8px 24px -14px rgba(47,42,36,.18)}
+.callbar a{display:block;width:100%;max-width:520px;text-align:center;background:var(--ink);color:var(--card);font:700 17px/1.2 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;border-radius:999px;padding:14px 18px}
+.callbar small{display:block;font-weight:400;font-size:12.5px;margin-top:2px}
+body{padding-bottom:84px}
+.byline{display:block;font:500 12px/1.3 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.perk{margin:16px 0 0;display:inline-block;background:var(--soft);border:1px solid var(--gold);border-radius:12px;padding:10px 14px;font:15px/1.45 Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.btns .btn{flex:1 1 280px;max-width:380px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;box-sizing:border-box}
+.btn.ghost{border-color:var(--ink)}
+.perk{display:block;max-width:772px}
+.money{text-align:left;margin-top:22px}.money p{margin:0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}.money .faint{color:#978C7C;font-size:14px}
+section>.card{margin-bottom:14px}.card h2{font-size:clamp(24px,4vw,30px)}h2 em{color:var(--gold)}
+.photo{width:100%;height:auto;max-height:240px;object-fit:cover;object-position:center 25%;border-radius:12px;display:block;margin:0 0 16px}
+.ticks{list-style:none;padding:0;margin:8px 0 4px}.ticks li{font:300 16px/1.5 Jost,sans-serif;color:var(--dim);padding:4px 0 4px 26px;position:relative}.ticks li:before{content:"\2713";position:absolute;left:0;color:var(--gold)}
+.lead{font-size:22px;font-style:italic;line-height:1.3;margin:16px 0 14px}.lead em{color:var(--gold)}
+header{padding-bottom:40px}section .btn{margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chips span{font:500 13.5px/1 Jost,sans-serif;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:var(--ink)}
+.stat{font-size:clamp(34px,8vw,46px);line-height:1;color:var(--gold)}.stat+p{margin:6px 0 0;font:300 15px/1.5 Jost,sans-serif;color:var(--dim)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+summary .q{display:inline;font:inherit;margin:0;color:inherit;letter-spacing:inherit}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Practice management for dental practices",
+ "description": "Hiring, onboarding, staff training tracked and the practice inbox kept clear for UK dental practices.",
+ "url": "https://teethingissues.com/management/",
+ "areaServed": "GB",
+ "audience": {
+  "@type": "Audience",
+  "audienceType": "UK dental practices"
+ },
+ "provider": {
+  "@type": "ProfessionalService",
+  "name": "Teething Issues",
+  "url": "https://teethingissues.com/",
+  "telephone": "+442038698658"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What does the Teething Issues management department do?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The Teething Issues management department takes hiring, onboarding and the practice inbox off a dental practice owner’s plate. Teething Issues finds the right people for the practice, sets new starters up properly from day one with the right paperwork for their role, tracks staff training and renewals, and keeps the inbox clear with replies drafted for approval, so nothing slips."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you replace our practice manager?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. We take the heavy admin off their plate so they can focus on the team and the patients."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you send emails without asking?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. We draft the replies and you choose what goes out."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What does it cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It depends on how many areas you want help with. We always tell you the price first. Book a growth chat."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is our data safe?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We’re registered with the ICO, work under UK GDPR, and agree a data processing agreement with every practice."
+   }
+  }
+ ]
+}
+</script>
+<style id="glass-site">
+body{background:radial-gradient(42% 32% at 8% 18%,rgba(194,183,162,.6),transparent 70%),radial-gradient(36% 30% at 92% 52%,rgba(182,160,120,.32),transparent 70%),radial-gradient(42% 30% at 18% 92%,rgba(194,183,162,.5),transparent 70%),var(--bg,#E7E1D6)}
+.card,.tile,.ai-glass{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.22))!important;
+ border:1px solid rgba(255,255,255,.75)!important;border-radius:24px!important;
+ box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 -1px 0 rgba(140,122,98,.18) inset,0 44px 70px -38px rgba(51,46,39,.38),0 12px 24px -14px rgba(51,46,39,.2)!important;
+ transition:opacity .3s ease,transform .35s cubic-bezier(.2,.8,.2,1)}
+.gl-up{opacity:0;transform:translateY(12px)}.gl-up.in{opacity:1;transform:none}
+.gl-up.in:hover{transform:translateY(-5px)}
+@media (prefers-reduced-motion:reduce){.gl-up{opacity:1;transform:none}}
+</style><meta name="robots" content="noindex"><style id="ck-slim">@media(max-width:700px){#ck{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border-radius:0!important;padding:7px 12px!important;font-size:12px!important}#ck p{display:inline!important;margin:0 8px 0 0!important}#ck div{display:inline-flex!important;gap:6px!important;vertical-align:middle}#ck button{padding:5px 12px!important;font-size:12.5px!important}}</style><style id="type-scale">h1,.hero-h{font-size:clamp(28px,4.2vw,44px)!important;line-height:1.1!important}h2{font-size:clamp(22px,2.8vw,30px)!important;line-height:1.2!important}h3{font-size:clamp(18px,2vw,22px)!important}body{font-size:16px}p,li{font-size:min(1em,17px)}</style></head>
+<body>
+<div class="wrap">
+<nav><a href="/">Teething Issues</a><span class="byline">Developed by dental care professionals</span></nav>
+
+<header>
+  <div class="eyebrow">Management department</div>
+  <h1>Running the practice <em>shouldn&rsquo;t run you.</em></h1>
+  <div class="card fixcard" style="margin-top:18px;padding:20px 18px 14px"><div class="eyebrow">What we do for you</div>
+    <h2 style="font-size:clamp(24px,6vw,30px);margin:6px 0 4px">Hiring, onboarding and your inbox, <em>handled.</em></h2>
+    <ul class='ticks'><li>The right people found for your practice</li><li>New starters set up properly from day one</li><li>Staff trained and tracked, so nothing quietly runs out</li><li>Your inbox kept clear, with only what needs you flagged</li><li>Everything tracked, so you see progress straight away</li></ul>
+  </div>
+  <div class="btns" style="margin-top:18px"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat with the team</a></div>
+</header>
+
+<section>
+  <div class="card">
+    <img class="photo" src="/mino/mino-training.jpg" alt="Our practice assistant training a dental team in front of training record boards" style="max-height:300px">
+    <div class="eyebrow">Hiring</div>
+    <h2>The right people, <em>found for you.</em></h2>
+    <ul class='ticks'><li>We write the job advert and put it in front of the right people</li><li>Applications sorted, so you only see the good ones</li><li>Interviews set up around your diary</li><li>Built by people who&rsquo;ve hired dental teams for years</li></ul>
+  </div>
+
+  <div class="card"><div class="eyebrow">Onboarding</div>
+    <h2>New starters, set up <em>right from day one.</em></h2>
+    <ul class='ticks'><li>The right paperwork for their role: DBS, registrations, training</li><li>A clear first week, so they&rsquo;re useful fast</li><li>Training tracked, with renewals flagged early</li><li>Nobody gets replaced. We make your team&rsquo;s day easier</li></ul>
+    <div class="btns" style="margin-top:14px"><a class="btn primary" href="/management/demo/">▶ See hiring &amp; onboarding in action</a></div>
+  </div>
+
+  <div class="card"><div class="eyebrow">Your inbox</div>
+    <h2>An inbox that&rsquo;s <em>always clear.</em></h2>
+    <ul class='ticks'><li>Every email read and sorted into the right folder</li><li>Replies drafted for you to check and send</li><li>Anything urgent flagged straight away</li><li>Bills, suppliers and patients kept apart, so nothing gets lost</li></ul>
+  </div>
+
+  <div class="card"><div class="eyebrow">You&rsquo;re still in control</div>
+    <ul class='ticks'><li>As much or as little as you want to be</li><li>Nothing goes out without your say</li><li>A short weekly update, so you always know where things stand</li></ul>
+  </div>
+
+  <div class="card"><div class="eyebrow">You&rsquo;re never on your own</div>
+    <ul class='ticks'><li>A growth expert with you for your first month</li><li>A help line after that, for as long as you&rsquo;re with us</li><li>Set up in about a week</li><li>A clear plan and a fixed price before anything starts</li></ul>
+  </div>
+</section>
+
+<section>
+  <h2>Get your time back and <em>get ahead of your competition.</em></h2>
+  <div class="btns"><a class="btn primary" href="https://calendar.app.google/gsEyVw731jEvTGPy9" target="_blank" rel="noopener" data-t="book">Book a growth chat with the team</a> <a class="btn ghost" href="tel:+442038698658" data-t="call">Call us now</a></div>
+  <p class="note">30 minutes · No obligation · We always tell you the price first<p class="price-from" hidden style="margin-top:10px;font-weight:500">From £2,500 a month for 4 months, then £250 a month to keep it all running.</p></p>
+</section>
+
+<section>
+  <h2>Questions</h2>
+  <details><summary><h3 class="q">What does the Teething Issues management department do?</h3></summary><p>The Teething Issues management department takes hiring, onboarding and the practice inbox off a dental practice owner&rsquo;s plate. Teething Issues finds the right people for the practice, sets new starters up properly from day one with the right paperwork for their role, tracks staff training and renewals, and keeps the inbox clear with replies drafted for approval, so nothing slips.</p></details>
+  <details><summary><h3 class="q">Do you replace our practice manager?</h3></summary><p>No. We take the heavy admin off their plate so they can focus on the team and the patients.</p></details>
+  <details><summary><h3 class="q">Do you send emails without asking?</h3></summary><p>No. We draft the replies and you choose what goes out.</p></details>
+  <details><summary><h3 class="q">What does it cost?</h3></summary><p>It depends on how many areas you want help with. We always tell you the price first. Book a growth chat.</p></details>
+  <details><summary><h3 class="q">Is our data safe?</h3></summary><p>Yes. We&rsquo;re registered with the ICO, work under UK GDPR, and agree a data processing agreement with every practice.</p></details>
+</section>
+
+<nav class="alldepts" aria-label="Our departments" style="max-width:880px;margin:0 auto;padding:26px 16px;font:400 15px/1.9 Jost,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#6F655A;border-top:1px solid rgba(0,0,0,.08)"><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin-bottom:6px">Everything we do for dental practices</div><a href="/receptionist/" style="color:inherit">Reception department</a> · <a href="/compliance/" style="color:inherit">Compliance department</a> · <a href="/growth-department/" style="color:inherit">Growth department: the Sales Engine</a> · <a href="/twin/" style="color:inherit">Social media department</a> · <a href="/ai-visibility/" style="color:inherit">Google &amp; ChatGPT visibility</a> · <a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/circle/" style="color:inherit">The Teething Issues Circle</a><div style="font:600 12px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8C7A62;margin:14px 0 6px">Guides for practice owners and managers</div><a href="/dental-compliance-guide/" style="color:inherit">Dental compliance guide</a> · <a href="/how-to-grow-a-dental-practice/" style="color:inherit">How to grow a dental practice</a> · <a href="/dental-practice-missed-calls/" style="color:inherit">Missed calls</a> · <a href="/dental-failed-appointments/" style="color:inherit">Failed appointments</a> · <a href="/dental-nurse-recruitment/" style="color:inherit">Recruiting a dental nurse</a></nav>
+<p class="trust-row" style="margin:0;padding:14px 16px;text-align:center;font:400 12.5px/1.5 Jost,sans-serif;color:#6F655A;background:#E7E1D6;border-top:1px solid #D5CBBA">ICO registered (C2051112) &middot; Teething Issues Ltd, company no. 17496042 &middot; UK GDPR &middot; A data processing agreement with every practice</p>
+<footer>© Teething Issues · <a href="/">teethingissues.com</a> · <a href="/receptionist/">Receptionist</a> · hello@teethingissues.com · <a href="/privacy/">Privacy</a></footer>
+</div>
+
+<div class="callbar"><a href="tel:+442038698658" data-t="call">📞 Call us now: 020 3869 8658<small>Talk to the team about hiring, onboarding and admin.</small></a></div>
+<script>document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="tel:"]');if(a&&window.fbq)fbq('track','Contact')},true);</script>
+<!-- visit-tracker -->
+<script>(function(){
+  // "It's us" switch: open any page with ?internal=1 once on each device and our own visits stop being counted (?internal=0 undoes it).
+  try{var Q=location.search;if(/[?&]internal=1(&|$)/.test(Q))localStorage.setItem("ti_internal","1");if(/[?&]internal=0(&|$)/.test(Q))localStorage.removeItem("ti_internal");if(localStorage.getItem("ti_internal")==="1")return}catch(x){}
+  // Cookie-free visit counter: time on page, how far people scroll and what they tap. No cookies, nothing personal.
+  // v = random number for this browser tab only (sessionStorage, gone when the tab closes) so one visit's pages can be joined up; e = sites linked out to.
+  var t0=Date.now(),maxS=0,taps=[],outs=[],sent=false,v="",n=0;
+  try{var ss=sessionStorage;v=ss.getItem("vt_id")||Math.random().toString(36).slice(2,10);ss.setItem("vt_id",v);n=(+ss.getItem("vt_n")||0)+1;ss.setItem("vt_n",n)}catch(x){}
+  function label(a){var h=a.getAttribute("href")||"";if(a.getAttribute("data-t"))return a.getAttribute("data-t");
+    if(h.indexOf("tel:")===0)return "call";if(/calendar\.app\.google|cal\.com|\/book/.test(h))return "book";
+    if(/skool\.com/.test(h))return "join";if(/stripe\.com|buy\.|checkout/.test(h))return "pay";if(h.indexOf("mailto:")===0)return "email";
+    return "link:"+(a.textContent||"").trim().slice(0,22)}
+  addEventListener("scroll",function(){var h=document.documentElement;var p=Math.round(100*(h.scrollTop+innerHeight)/h.scrollHeight);if(p>maxS)maxS=p},{passive:true});
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button,[data-t]");if(a&&a.id!=="ck-y"&&a.id!=="ck-n"){taps.push(label(a));if(a.hostname&&a.hostname!==location.hostname&&outs.length<10)outs.push(a.hostname.replace(/^www\./,"").slice(0,30))}},true);
+  function send(){if(sent)return;sent=true;var q=new URLSearchParams(location.search),h=location.hostname.replace(/^www\./,"");
+    var b=JSON.stringify({p:(h==="teethingissues.com"?"":h)+location.pathname,s:Math.round((Date.now()-t0)/1000),d:maxS,c:taps.slice(0,20),e:outs,v:v,n:n,k:q.get("utm_content")||"",
+      u:q.get("utm_campaign")||q.get("utm_source")||(q.get("fbclid")?"meta":""),r:(document.referrer||"").split("/")[2]||"",m:innerWidth<700?"m":"d"});
+    try{navigator.sendBeacon("https://invites.31-97-118-70.sslip.io/beacon",new Blob([b],{type:"text/plain"}))}catch(x){}}
+  addEventListener("pagehide",send);document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")send()});
+})();</script>
+<script id="glass-site-js">(function(){var c=[].slice.call(document.querySelectorAll('.card,.tile,.ai-glass'));c.forEach(function(e){e.classList.add('gl-up')});if(!('IntersectionObserver' in window)){c.forEach(function(e){e.classList.add('in')});return}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{threshold:0,rootMargin:'0px 0px 35% 0px'});c.forEach(function(e){o.observe(e)})})();</script><style id="hc-pill-css">.hc-pill{position:fixed;right:18px;bottom:18px;z-index:900;padding:12px 18px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.9),rgba(255,255,255,.65));border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 40px -18px rgba(51,46,39,.45);color:#332E27;font:500 14px Jost,sans-serif;text-decoration:none}.hc-pill b{color:#8C7A62;font-weight:600}@media(max-width:700px){.hc-pill{left:0;right:0;bottom:0;border-radius:0;text-align:center;padding:11px 12px;font-size:13.5px}}</style><a class="hc-pill" href="/cqc-check/" data-t="hc:pill"><b>Free</b> 2-minute CQC + missed calls check &rarr;</a>
+</body>
+</body>
+</html>
