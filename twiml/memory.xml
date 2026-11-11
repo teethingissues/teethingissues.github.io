@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Ruby's private memory line (11 Nov 2026): silently records a merged call for her own notes. No greeting, no beep. -->
+<!-- Ruby's private memory line (11 Nov 2026). Says "Ready" once (only Ruby hears it: the other caller is on hold until she merges),
+     then records silently. Start/Recording + long pauses: never stops on silence or key tones. -->
 <Response>
-  <Record playBeep="false" maxLength="14400" timeout="3600" trim="do-not-trim" action="https://teethingissues.com/twiml/hangup.xml" method="GET"/>
+  <Say voice="Polly.Amy">Ready.</Say>
+  <Start><Recording/></Start>
+  <Pause length="3600"/>
+  <Pause length="3600"/>
+  <Pause length="3600"/>
 </Response>
